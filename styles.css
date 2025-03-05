@@ -408,3 +408,19 @@
     border-radius: 50%; /* Redondear imagen */
     object-fit: cover;
 }
+
+.logouma-image {
+  width: 100px; /* Ajusta el tamaño de la imagen */
+  object-fit: cover;
+}
+
+.logodekra-image {
+  width: 80px; /* Ajusta el tamaño de la imagen */
+  object-fit: cover;
+}
+
+.title-container {
+  display: inline-flex;  /* Alinea los elementos en línea */
+  align-items: center ;  /* Asegura alineación vertical */
+  gap: 10px;  /* Espacio entre el título y la imagen */
+}
