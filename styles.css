@@ -84,27 +84,27 @@
     font-size: 75px;
     font-weight: 900;
     letter-spacing: 1.23px;
-    background: var(--manfred-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #000; /* o el color que prefieras */
   }
-
+  
   .gradient__background {
     display: flex;
     flex-grow: 1;
-    background: var(--manfred-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    color: inherit; /* o color: #000 si quieres asegurarte */
   }
+  
 
   @media (min-width: 728px) {
     h1 {
       font-size: 82px;
       font-weight: 900;
     }
+  }
+
+  .name {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000; /* Negro */
   }
 
   .surname {
@@ -428,21 +428,43 @@
 .language-switch {
   text-align: right;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
 }
 
 .language-button {
   display: inline-block;
-  padding: 12px 20px; /* más alto y ancho */
-  font-size: 1rem; /* tamaño del texto más grande */
+  padding: 12px 20px;
+  font-size: 1rem;
   background-color: #647F57;
-  color: #fdf2e9;;
+  color: #fdf2e9;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
   transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-align: center;
 }
 
 .language-button:hover {
   background-color: #4e6149;
 }
 
+/* Elimina estilos por defecto de button */
+.language-button:focus {
+  outline: none;
+}
+
+.language-button::-moz-focus-inner {
+  border: 0;
+}
+
+/* Evita que se imprima */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
