@@ -424,3 +424,25 @@
   align-items: center ;  /* Asegura alineación vertical */
   gap: 10px;  /* Espacio entre el título y la imagen */
 }
+
+.language-switch {
+  text-align: right;
+  margin: 10px;
+}
+
+.language-button {
+  display: inline-block;
+  padding: 12px 20px; /* más alto y ancho */
+  font-size: 1rem; /* tamaño del texto más grande */
+  background-color: #647F57;
+  color: #fdf2e9;;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.language-button:hover {
+  background-color: #4e6149;
+}
+
