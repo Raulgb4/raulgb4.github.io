@@ -1,0 +1,174 @@
+---
+const currentPath = Astro.url.pathname;
+
+const isActive = (path: string) => currentPath === path;
+
+const linkClass = (path: string) =>
+  `group relative inline-block transition-colors duration-200 ${
+    isActive(path)
+      ? "text-emerald-600 dark:text-emerald-400 font-semibold"
+      : "text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400"
+  }`;
+---
+
+<nav class="w-full border-b border-gray-200 dark:border-gray-700">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <!-- Left: Name -->
+    <div class="font-semibold">
+      <span
+        class="text-xl md:text-2xl
+           bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500
+           dark:from-emerald-300 dark:via-teal-300 dark:to-green-400
+           bg-clip-text text-transparent
+           tracking-tight"
+      >
+        Raulgb
+      </span>
+    </div>
+
+    <!-- Center: Navigation links -->
+    <ul class="hidden md:flex items-center gap-6 text-lg">
+      <li>
+        <a href="/" class={linkClass("/")}>
+          Home
+          <span
+            class={`absolute left-0 -bottom-1 h-[2px] w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
+              isActive("/") ? "scale-x-100" : "group-hover:scale-x-100"
+            }`}></span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/about" class={linkClass("/about")}>
+          About
+          <span
+            class={`absolute left-0 -bottom-1 h-[2px] w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
+              isActive("/about") ? "scale-x-100" : "group-hover:scale-x-100"
+            }`}></span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/help" class={linkClass("/help")}>
+          How I Can Help
+          <span
+            class={`absolute left-0 -bottom-1 h-[2px] w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
+              isActive("/help") ? "scale-x-100" : "group-hover:scale-x-100"
+            }`}></span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/experience" class={linkClass("/experience")}>
+          Experience
+          <span
+            class={`absolute left-0 -bottom-1 h-[2px] w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
+              isActive("/experience")
+                ? "scale-x-100"
+                : "group-hover:scale-x-100"
+            }`}></span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/faq" class={linkClass("/faq")}>
+          FAQ
+          <span
+            class={`absolute left-0 -bottom-1 h-[2px] w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
+              isActive("/faq") ? "scale-x-100" : "group-hover:scale-x-100"
+            }`}></span>
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/contact"
+          class={`relative inline-flex items-center justify-center rounded-full px-5 py-2 font-semibold
+      transition-all duration-300
+      ${
+        isActive("/contact")
+          ? "bg-emerald-500 text-white shadow-lg shadow-emerald-500/25"
+          : "bg-emerald-500/10 text-emerald-600 ring-1 ring-emerald-500/30 hover:bg-emerald-500/15 hover:text-emerald-700 hover:ring-emerald-500/50"
+      }
+      dark:${
+        isActive("/contact")
+          ? "bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-400/20"
+          : "bg-emerald-400/10 text-emerald-300 ring-1 ring-emerald-400/30 hover:bg-emerald-400/15 hover:text-emerald-200 hover:ring-emerald-400/50"
+      }
+      hover:-translate-y-0.5 hover:shadow-xl`}
+        >
+          Contact
+
+          <!-- subtle glow dot -->
+          <span
+            class="ml-2 inline-block h-2 w-2 rounded-full bg-emerald-400/80 shadow-[0_0_12px_rgba(52,211,153,0.65)]"
+            aria-hidden="true"></span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Right: Actions -->
+    <div
+      class="flex items-center gap-4 text-base text-gray-700 dark:text-gray-300"
+    >
+      <!-- Theme toggle -->
+      <button
+        aria-label="Toggle theme"
+        class="p-2 rounded-md hover:text-emerald-600 dark:hover:text-emerald-400
+           transition-colors"
+      >
+        <!-- Heroicons: Moon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          class="h-5 w-5"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.752 15.002A9.718 9.718 0 0112.003 21
+           9.718 9.718 0 012.25 11.248
+           9.718 9.718 0 0111.998 2.25
+           c.41 0 .82.026 1.223.077
+           a.75.75 0 01.374 1.27
+           7.5 7.5 0 006.886 11.405
+           a.75.75 0 01.271.75z"
+          ></path>
+        </svg>
+      </button>
+
+      <!-- Language toggle -->
+      <button
+        aria-label="Toggle language"
+        class="p-2 rounded-md hover:text-emerald-600 dark:hover:text-emerald-400
+           transition-colors"
+      >
+        <!-- Heroicons: Globe -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          class="h-5 w-5"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3c4.97 0 9 4.03 9 9s-4.03 9-9 9
+           -9-4.03-9-9 4.03-9 9-9z"
+          ></path>
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3 12h18M12 3a15.3 15.3 0 010 18M12 3a15.3 15.3 0 000 18"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>

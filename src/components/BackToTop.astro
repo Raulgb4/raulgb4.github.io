@@ -1,0 +1,54 @@
+<button
+  id="backToTop"
+  type="button"
+  aria-label="Back to top"
+  class="fixed bottom-6 right-6 z-50 hidden
+         h-12 w-12 items-center justify-center rounded-full
+         bg-emerald-500/15 text-emerald-400 ring-1 ring-emerald-500/25
+         backdrop-blur
+         shadow-lg shadow-emerald-500/10
+         transition
+         hover:bg-emerald-500/25 hover:ring-emerald-500/40 hover:-translate-y-0.5
+         focus:outline-none focus:ring-2 focus:ring-emerald-500"
+>
+  <!-- Arrow up (heroicon-like) -->
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    class="h-6 w-6"
+    aria-hidden="true"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5"></path>
+    <path stroke-linecap="round" stroke-linejoin="round" d="M6 11l6-6 6 6"
+    ></path>
+  </svg>
+</button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("backToTop");
+    if (!btn) return;
+
+    const SHOW_AFTER = Math.round(window.innerHeight * 0.9);
+
+    const toggle = () => {
+      if (window.scrollY > SHOW_AFTER) {
+        btn.classList.remove("hidden");
+        btn.classList.add("flex");
+      } else {
+        btn.classList.add("hidden");
+        btn.classList.remove("flex");
+      }
+    };
+
+    toggle();
+    window.addEventListener("scroll", toggle, { passive: true });
+
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+</script>

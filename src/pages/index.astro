@@ -1,11 +1,482 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <!-- HERO -->
+  <section class="max-w-7xl mx-auto px-4 py-20">
+    <div class="grid items-center gap-12 md:grid-cols-2">
+      <!-- Left: Text -->
+      <div>
+        <!-- NO tocamos -->
+        <h1 class="text-4xl md:text-5xl font-bold">Raúl García Balongo</h1>
+
+        <!-- NO tocamos -->
+        <h2 class="mt-2 text-xl md:text-2xl text-emerald-500 font-medium">
+          Computer Science Engineer · Data & Analytics
+        </h2>
+
+        <!-- Texto más grande -->
+        <p
+          class="mt-6 max-w-2xl text-xl md:text-2xl leading-relaxed text-gray-600 dark:text-gray-300"
+        >
+          I design and build data-driven solutions, turning raw information into
+          actionable insights for real-world decision making.
+        </p>
+      </div>
+
+      <!-- Right: Avatar -->
+      <div class="flex justify-center md:justify-end">
+        <div
+          class="w-56 h-56 md:w-64 md:h-64 rounded-full
+               bg-gradient-to-br from-emerald-500 to-teal-400
+               p-1 shadow-lg shadow-emerald-500/30"
+        >
+          <div
+            class="w-full h-full rounded-full bg-gray-900 overflow-hidden
+                 border border-white/10"
+          >
+            <img
+              src="/assets/images/PerfilDibujo.png"
+              alt="Raúl García Balongo"
+              class="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="max-w-7xl mx-auto px-4 pb-20 grid gap-6 md:grid-cols-3">
+    <div class="rounded-lg border border-gray-200 dark:border-gray-700 p-6">
+      <h3 class="font-semibold text-xl">Years of training</h3>
+      <p class="mt-3 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+        Strong academic background in Computer Engineering with a continuous
+        learning mindset focused on data and cloud technologies.
+      </p>
+    </div>
+
+    <div class="rounded-lg border border-gray-200 dark:border-gray-700 p-6">
+      <h3 class="font-semibold text-xl">Key technologies</h3>
+      <p class="mt-3 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+        Python, SQL, Power BI, Spark, Astro, TypeScript, Tailwind, Docker, Git.
+      </p>
+    </div>
+
+    <div class="rounded-lg border border-gray-200 dark:border-gray-700 p-6">
+      <h3 class="font-semibold text-xl">Main interest</h3>
+      <p class="mt-3 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+        Data engineering, analytics, and visualization applied to real-world
+        problems and decision making.
+      </p>
+    </div>
+  </section>
+
+  <!-- INTERESTS -->
+  <section class="max-w-7xl mx-auto px-4 pb-24">
+    <header class="mb-12 max-w-3xl mx-auto text-center">
+      <h3
+        class="mt-4 text-4xl md:text-5xl font-bold tracking-tight
+             bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500
+             bg-clip-text text-transparent"
+      >
+        Interests
+      </h3>
+
+      <p
+        class="mt-5 text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300"
+      >
+        Areas where I’m focused on growing and building real impact.
+      </p>
+    </header>
+
+    <div class="grid gap-6 md:grid-cols-3">
+      {
+        [
+          {
+            title: "Data Engineering",
+            text: "Building reliable pipelines, modeling data, and enabling analytics at scale.",
+          },
+          {
+            title: "Analytics & BI",
+            text: "Turning data into clear dashboards and actionable insights for decision-making.",
+          },
+          {
+            title: "Cloud & Automation",
+            text: "Automating workflows and deploying data solutions in cloud environments (Azure).",
+          },
+        ].map((card) => (
+          <div
+            class="group relative overflow-hidden rounded-2xl border border-gray-200/70 dark:border-white/10
+               bg-white/70 dark:bg-white/5 backdrop-blur p-7
+               shadow-sm transition-all duration-300
+               hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+               hover:border-emerald-500/40"
+          >
+            <div
+              class="pointer-events-none absolute -top-20 -right-24 h-56 w-56 rounded-full
+                 bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+                 group-hover:opacity-100"
+              aria-hidden="true"
+            />
+
+            <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
+              {card.title}
+            </h4>
+            <p class="mt-3 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+              {card.text}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- KEY TECHNOLOGIES -->
+  <section class="max-w-7xl mx-auto px-4 pb-24">
+    <!-- Title + subtitle -->
+    <header class="mb-12 max-w-3xl mx-auto text-center">
+      <h3
+        class="mt-4 text-4xl md:text-5xl font-bold tracking-tight
+             bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500
+             bg-clip-text text-transparent"
+      >
+        Key Technologies
+      </h3>
+
+      <p
+        class="mt-5 text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300"
+      >
+        Tools and technologies I use to build data-driven solutions end to end.
+      </p>
+    </header>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      <!-- Card: Data -->
+      <div
+        class="group relative overflow-hidden rounded-2xl border border-gray-200/70 dark:border-white/10
+             bg-white/70 dark:bg-white/5 backdrop-blur p-7
+             shadow-sm transition-all duration-300
+             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+             hover:border-emerald-500/40"
+      >
+        <div
+          class="pointer-events-none absolute -top-20 -right-24 h-56 w-56 rounded-full
+               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+               group-hover:opacity-100"
+          aria-hidden="true"
+        >
+        </div>
+
+        <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
+          Data & Analytics
+        </h4>
+        <p
+          class="mt-2 text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+        >
+          Data extraction, processing, analysis and reporting.
+        </p>
+
+        <div class="mt-5 flex flex-wrap gap-2">
+          {
+            ["Python", "SQL", "Spark", "Power BI", "Tableau"].map((t) => (
+              <span
+                class="rounded-full px-3 py-1 text-sm font-medium
+                   bg-emerald-500/10 text-emerald-300 ring-1 ring-emerald-500/20"
+              >
+                {t}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Card: Web / Tooling -->
+      <div
+        class="group relative overflow-hidden rounded-2xl border border-gray-200/70 dark:border-white/10
+             bg-white/70 dark:bg-white/5 backdrop-blur p-7
+             shadow-sm transition-all duration-300
+             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+             hover:border-emerald-500/40"
+      >
+        <div
+          class="pointer-events-none absolute -top-20 -right-24 h-56 w-56 rounded-full
+               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+               group-hover:opacity-100"
+          aria-hidden="true"
+        >
+        </div>
+
+        <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
+          Development & Tooling
+        </h4>
+        <p
+          class="mt-2 text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+        >
+          Modern web stack + version control and containerization.
+        </p>
+
+        <div class="mt-5 flex flex-wrap gap-2">
+          {
+            ["TypeScript", "Astro", "Tailwind", "Git", "Docker", "Azure"].map(
+              (t) => (
+                <span
+                  class="rounded-full px-3 py-1 text-sm font-medium
+                   bg-emerald-500/10 text-emerald-300 ring-1 ring-emerald-500/20"
+                >
+                  {t}
+                </span>
+              ),
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="max-w-7xl mx-auto px-4 pb-24">
+    <!-- Title + subtitle -->
+    <header class="mb-12 max-w-3xl mx-auto text-center">
+      <h3
+        class="mt-4 text-4xl md:text-5xl font-bold tracking-tight
+           bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500
+           bg-clip-text text-transparent"
+      >
+        What others say
+      </h3>
+
+      <p
+        class="mt-5 text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300"
+      >
+        A couple of words from supervisors and mentors who followed my work in
+        real projects.
+      </p>
+    </header>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      <!-- UMA / TFG -->
+      <blockquote
+        class="group relative overflow-hidden rounded-2xl border border-gray-200/70 dark:border-white/10
+             bg-white/70 dark:bg-white/5 backdrop-blur p-7
+             shadow-sm transition-all duration-300
+             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+             hover:border-emerald-500/40"
+      >
+        <!-- Decorative glow -->
+        <div
+          class="pointer-events-none absolute -top-20 -right-24 h-56 w-56 rounded-full
+               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+               group-hover:opacity-100"
+          aria-hidden="true"
+        >
+        </div>
+
+        <!-- Quote mark -->
+        <div
+          class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl
+               bg-emerald-500/10 text-emerald-500"
+          aria-hidden="true"
+        >
+          <span class="text-2xl leading-none">“</span>
+        </div>
+
+        <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-200">
+          My sincerest congratulations on such a well-crafted project you’ve
+          developed, achieving an excellent grade you truly deserve. Wishing you
+          all the best in this new stage—and what a great way to start it by
+          turning that work into a strong scientific article.
+        </p>
+
+        <footer class="mt-6 flex items-center justify-between gap-4">
+          <div class="min-w-0">
+            <div class="font-semibold text-lg text-gray-900 dark:text-white">
+              Miguel Ángel Molina Cabello
+            </div>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+              Professor & AI Researcher · University of Málaga
+            </div>
+          </div>
+
+          <!-- LinkedIn icon button -->
+          <a
+            href="https://www.linkedin.com/posts/ra%C3%BAl-garc%C3%ADa-balongo-865948350_trabajo-de-fin-de-grado-activity-7382005621501546497-NKx8?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFe0as0B9bj4WEtistOWCuCrcXBR-KsiGss"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="View on LinkedIn"
+            title="View on LinkedIn"
+            class="inline-flex items-center justify-center rounded-full p-2.5
+                 bg-emerald-500/10 text-emerald-600 ring-1 ring-emerald-500/25
+                 hover:bg-emerald-500/15 hover:ring-emerald-500/40 transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="h-5 w-5"
+              aria-hidden="true"
+            >
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037
+                -1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046
+                c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.266 2.37 4.266 5.455v6.286z
+                M5.337 7.433c-1.144 0-2.063-.926-2.063-2.065
+                0-1.138.92-2.063 2.063-2.063
+                1.14 0 2.064.925 2.064 2.063
+                0 1.139-.925 2.065-2.064 2.065z
+                M7.119 20.452H3.555V9h3.564v11.452z
+                M22.225 0H1.771C.792 0 0 .774 0 1.729v20.542
+                C0 23.227.792 24 1.771 24h20.451
+                C23.2 24 24 23.227 24 22.271V1.729
+                C24 .774 23.2 0 22.222 0z"
+              ></path>
+            </svg>
+          </a>
+        </footer>
+      </blockquote>
+
+      <!-- DEKRA -->
+      <blockquote
+        class="group relative overflow-hidden rounded-2xl border border-gray-200/70 dark:border-white/10
+             bg-white/70 dark:bg-white/5 backdrop-blur p-7
+             shadow-sm transition-all duration-300
+             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+             hover:border-emerald-500/40"
+      >
+        <div
+          class="pointer-events-none absolute -top-20 -right-24 h-56 w-56 rounded-full
+               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+               group-hover:opacity-100"
+          aria-hidden="true"
+        >
+        </div>
+
+        <div
+          class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl
+               bg-emerald-500/10 text-emerald-500"
+          aria-hidden="true"
+        >
+          <span class="text-2xl leading-none">“</span>
+        </div>
+
+        <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-200">
+          Thank you, Raúl! We were impressed by how quickly you adapted to the
+          project—contributing from day one and delivering top-level features.
+          It was a pleasure having you on the team. You have a professional
+          career full of success ahead.
+        </p>
+
+        <footer class="mt-6 flex items-center justify-between gap-4">
+          <div class="min-w-0">
+            <div class="font-semibold text-lg text-gray-900 dark:text-white">
+              Antonio Álvarez López
+            </div>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+              Full Stack Development · DEKRA Digital Solutions
+            </div>
+          </div>
+
+          <a
+            href="https://www.linkedin.com/posts/ra%C3%BAl-garc%C3%ADa-balongo-865948350_praercticas-informaertica-cybersecurity-activity-7333574364178604036-1S3m?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFe0as0B9bj4WEtistOWCuCrcXBR-KsiGss"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="View on LinkedIn"
+            title="View on LinkedIn"
+            class="inline-flex items-center justify-center rounded-full p-2.5
+                 bg-emerald-500/10 text-emerald-600 ring-1 ring-emerald-500/25
+                 hover:bg-emerald-500/15 hover:ring-emerald-500/40 transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="h-5 w-5"
+              aria-hidden="true"
+            >
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037
+                -1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046
+                c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.266 2.37 4.266 5.455v6.286z
+                M5.337 7.433c-1.144 0-2.063-.926-2.063-2.065
+                0-1.138.92-2.063 2.063-2.063
+                1.14 0 2.064.925 2.064 2.063
+                0 1.139-.925 2.065-2.064 2.065z
+                M7.119 20.452H3.555V9h3.564v11.452z
+                M22.225 0H1.771C.792 0 0 .774 0 1.729v20.542
+                C0 23.227.792 24 1.771 24h20.451
+                C23.2 24 24 23.227 24 22.271V1.729
+                C24 .774 23.2 0 22.222 0z"
+              ></path>
+            </svg>
+          </a>
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD CV -->
+  <section class="max-w-7xl mx-auto px-4 pb-24">
+    <header class="mb-12 max-w-3xl mx-auto text-center">
+      <h3
+        class="mt-4 text-4xl md:text-5xl font-bold tracking-tight
+             bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500
+             bg-clip-text text-transparent"
+      >
+        Curriculum Vitae
+      </h3>
+
+      <p
+        class="mt-5 text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300"
+      >
+        Download my CV for a detailed overview of my background and experience.
+      </p>
+    </header>
+
+    <div class="flex justify-center">
+      <div
+        class="group relative w-full max-w-3xl overflow-hidden rounded-2xl
+             border border-gray-200/70 dark:border-white/10
+             bg-white/70 dark:bg-white/5 backdrop-blur p-8
+             shadow-sm transition-all duration-300
+             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+             hover:border-emerald-500/40"
+      >
+        <div
+          class="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full
+               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+               group-hover:opacity-100"
+          aria-hidden="true"
+        >
+        </div>
+
+        <div
+          class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
+        >
+          <div class="min-w-0">
+            <h4 class="text-2xl font-semibold text-gray-900 dark:text-white">
+              CV · Raúl García Balongo
+            </h4>
+            <p
+              class="mt-2 text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+            >
+              Includes education, projects, technical skills, and experience.
+            </p>
+          </div>
+
+          <a
+            href="/assets/genericCV/Mi_CV_en_inglés.pdf"
+            download
+            class="inline-flex items-center justify-center rounded-full px-7 py-3
+                   text-base font-semibold
+                   bg-emerald-600 text-white
+                   hover:bg-emerald-700 transition-colors"
+          >
+            Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
