@@ -1,0 +1,103 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <section class="max-w-5xl mx-auto px-4 py-20 space-y-16">
+    <!-- PAGE TITLE -->
+    <header class="max-w-3xl mx-auto text-center">
+      <h1
+        class="text-4xl md:text-5xl font-bold tracking-tight
+             leading-[1.15] pb-1
+             bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500
+             bg-clip-text text-transparent"
+      >
+        Certifications
+      </h1>
+
+      <p
+        class="mt-5 text-lg md:text-xl leading-relaxed
+             text-gray-600 dark:text-gray-300"
+      >
+        Bla bla bla
+      </p>
+    </header>
+
+    <!-- CERTIFICATIONS -->
+    <section class="space-y-6">
+      <header class="space-y-3">
+        <h2
+          class="text-2xl md:text-3xl font-semibold
+           text-emerald-500 tracking-tight"
+        >
+          Certifications
+        </h2>
+
+        <div
+          class="h-[2px] w-16
+           bg-gradient-to-r from-emerald-400 to-teal-400
+           rounded-full"
+        >
+        </div>
+      </header>
+      <p class="text-gray-600 dark:text-gray-300">
+        Selected certifications (full list available in the PDF section of the
+        site assets).
+      </p>
+
+      <div class="grid gap-4 md:grid-cols-2">
+        <!-- You can keep expanding this list incrementally -->
+        <div class="rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+          <p class="font-medium">Power BI</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Santander Open Academy · Nov 2025
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+            Credential ID: OA-2025-1113001958369
+          </p>
+        </div>
+
+        <div class="rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+          <p class="font-medium">
+            Introduction to Microsoft Azure Cloud Services (AZ-900)
+          </p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Microsoft · Dec 2025
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+            Credential ID: PNJGD070TM89
+          </p>
+        </div>
+
+        <div class="rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+          <p class="font-medium">
+            Databases and SQL for Data Science with Python
+          </p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">IBM · Dec 2025</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+            Credential ID: LN8TE88FDW0B
+          </p>
+        </div>
+
+        <div class="rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+          <p class="font-medium">
+            SnowPro Core: Snowflake Cloud Data Platform Features and
+            Architecture
+          </p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Pluralsight · Dec 2025
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+            Skills: Snowflake
+          </p>
+        </div>
+      </div>
+
+      <p class="text-sm text-gray-500 dark:text-gray-400">
+        Note: we can later add a dedicated Certifications page with filters by
+        provider (IBM, Microsoft, Pluralsight, Santander) and direct links to
+        PDF credentials.
+      </p>
+    </section>
+  </section>
+</Layout>

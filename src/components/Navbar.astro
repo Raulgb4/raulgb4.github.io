@@ -13,17 +13,57 @@ const linkClass = (path: string) =>
 
 <nav class="w-full border-b border-gray-200 dark:border-gray-700">
   <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-    <!-- Left: Name -->
-    <div class="font-semibold">
-      <span
-        class="text-xl md:text-2xl
+    <!-- Left: Name + Mini Avatar -->
+    <div class="flex items-center gap-3 font-semibold">
+      <!-- Mini avatar -->
+      <div class="relative group">
+        <!-- Glow -->
+        <div
+          class="pointer-events-none absolute inset-0 rounded-full
+                 bg-gradient-to-br from-emerald-500 via-teal-400 to-cyan-400
+                 blur-lg opacity-50
+                 transition-opacity duration-500
+                 group-hover:opacity-90"
+          aria-hidden="true"
+        >
+        </div>
+
+        <!-- Frame -->
+        <div
+          class="relative w-10 h-10 md:w-12 md:h-12 rounded-full
+                 bg-gradient-to-br from-emerald-400 via-teal-400 to-green-500
+                 p-[2px]"
+        >
+          <!-- Image -->
+          <div
+            class="w-full h-full rounded-full bg-gray-900 overflow-hidden
+                   border border-white/10"
+          >
+            <img
+              src="/assets/images/PerfilDibujo.png"
+              class="w-full h-full object-cover
+                     transition-transform duration-500
+                     group-hover:scale-105"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Name -->
+      <a href="/" class="group">
+        <span
+          class="text-xl md:text-2xl
            bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500
            dark:from-emerald-300 dark:via-teal-300 dark:to-green-400
            bg-clip-text text-transparent
-           tracking-tight"
-      >
-        Raulgb
-      </span>
+           tracking-tight
+           transition-opacity duration-200
+           group-hover:opacity-90"
+        >
+          Raulgb
+        </span>
+      </a>
     </div>
 
     <!-- Center: Navigation links -->
@@ -64,6 +104,18 @@ const linkClass = (path: string) =>
           <span
             class={`absolute left-0 -bottom-1 h-[2px] w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
               isActive("/experience")
+                ? "scale-x-100"
+                : "group-hover:scale-x-100"
+            }`}></span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/certifications" class={linkClass("/certifications")}>
+          Certifications
+          <span
+            class={`absolute left-0 -bottom-1 h-[2px] w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
+              isActive("/certifications")
                 ? "scale-x-100"
                 : "group-hover:scale-x-100"
             }`}></span>

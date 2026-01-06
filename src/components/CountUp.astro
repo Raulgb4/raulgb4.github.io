@@ -1,0 +1,49 @@
+---
+const {
+  to = 100,
+  duration = 900,
+  suffix = "",
+  prefix = "",
+  decimals = 0,
+} = Astro.props;
+
+// id único para cada instancia
+const id = `countup-${Math.random().toString(36).slice(2)}`;
+---
+
+<span id={id} class="tabular-nums">{prefix}{0}{suffix}</span>
+
+<script define:vars={{ id, to, duration, suffix, prefix, decimals }}>
+  const el = document.getElementById(id);
+
+  const animate = () => {
+    const start = performance.now();
+    const from = 0;
+
+    const tick = (now) => {
+      const t = Math.min(1, (now - start) / duration);
+      // easeOutCubic
+      const eased = 1 - Math.pow(1 - t, 3);
+
+      const value = from + (to - from) * eased;
+      el.textContent = prefix + value.toFixed(decimals) + suffix;
+
+      if (t < 1) requestAnimationFrame(tick);
+    };
+
+    requestAnimationFrame(tick);
+  };
+
+  // Solo anima cuando entra en pantalla
+  const obs = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        animate();
+        obs.disconnect();
+      }
+    },
+    { threshold: 0.35 },
+  );
+
+  obs.observe(el);
+</script>

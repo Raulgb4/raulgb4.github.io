@@ -20,5 +20,28 @@ import BackToTop from "../components/BackToTop.astro";
     </main>
     <Footer />
     <BackToTop />
+
+    <script is:inline>
+      const els = document.querySelectorAll("[data-reveal]");
+
+      const io = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+
+            const el = entry.target;
+            const delay = Number(el.getAttribute("data-delay") || "0");
+            el.style.setProperty("--reveal-delay", `${delay}ms`);
+            el.classList.add("is-visible");
+
+            const once = el.getAttribute("data-once") === "true";
+            if (once) io.unobserve(el);
+          }
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -10% 0px" },
+      );
+
+      els.forEach((el) => io.observe(el));
+    </script>
   </body>
 </html>

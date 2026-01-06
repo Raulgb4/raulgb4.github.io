@@ -1,0 +1,17 @@
+---
+const {
+  as: Tag = "div",
+  delay = 0, // ms
+  once = true, // animar solo una vez
+  class: className = "",
+} = Astro.props;
+---
+
+<Tag
+  class={`reveal ${className}`}
+  data-reveal
+  data-delay={delay}
+  data-once={once ? "true" : "false"}
+>
+  <slot />
+</Tag>
