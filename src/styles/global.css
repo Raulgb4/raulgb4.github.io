@@ -57,8 +57,8 @@
 
 /* Caja fija MÁS GRANDE */
 .tech-icon-box {
-    width: 8rem;     /* ↓ antes 10.5rem */
-    height: 5.5rem;  /* ↓ antes 7rem */
+    width: 8rem; /* ↓ antes 10.5rem */
+    height: 5.5rem; /* ↓ antes 7rem */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,8 +66,8 @@
 
 /* Wordmarks: más ancho, un poco menos alto */
 .tech-icon-box--wordmark {
-    width: 9.5rem;   /* ↓ antes 12.5rem */
-    height: 5.2rem;  /* ↓ antes 6.5rem */
+    width: 9.5rem; /* ↓ antes 12.5rem */
+    height: 5.2rem; /* ↓ antes 6.5rem */
 }
 
 /* El img ocupa la caja */
@@ -80,10 +80,9 @@
     transform: translateZ(0) scale(1.06); /* 👈 “boost” base para que se vean más grandes */
     filter: saturate(1);
 
-    transition:
-            transform 260ms ease,
-            opacity 260ms ease,
-            filter 260ms ease;
+    transition: transform 260ms ease,
+    opacity 260ms ease,
+    filter 260ms ease;
 }
 
 /* PNG locales (Power BI) */
@@ -110,14 +109,14 @@
     align-items: center;
     text-align: center;
 
-    gap: 1rem;          /* antes ~0.75 → ahora respira */
+    gap: 1rem; /* antes ~0.75 → ahora respira */
     white-space: nowrap;
-    flex: 0 0 auto;       /* clave para que no “apriete” raro */
+    flex: 0 0 auto; /* clave para que no “apriete” raro */
 }
 
 .tech-label {
     font-size: 0.95rem;
-    line-height: 1.2;   /* antes muy justo */
+    line-height: 1.2; /* antes muy justo */
     margin-top: 0.1rem;
     font-weight: 600;
     opacity: 0.9;
@@ -148,9 +147,8 @@
     --reveal-delay: 0ms;
     opacity: 0;
     transform: translateY(18px);
-    transition:
-            opacity 700ms ease,
-            transform 700ms ease;
+    transition: opacity 700ms ease,
+    transform 700ms ease;
     transition-delay: var(--reveal-delay);
     will-change: opacity, transform;
 }
