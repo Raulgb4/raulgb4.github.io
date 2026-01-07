@@ -72,7 +72,7 @@ const linkClass = (path: string) =>
         <!-- Glow -->
         <div
           class="pointer-events-none absolute inset-0 rounded-full
-                 bg-gradient-to-br from-emerald-500 via-teal-400 to-cyan-400
+                 bg-linear-to-br from-emerald-500 via-teal-400 to-cyan-400
                  blur-lg opacity-50
                  transition-opacity duration-500
                  group-hover:opacity-90"
@@ -83,8 +83,8 @@ const linkClass = (path: string) =>
         <!-- Frame -->
         <div
           class="relative w-10 h-10 md:w-12 md:h-12 rounded-full
-                 bg-gradient-to-br from-emerald-400 via-teal-400 to-green-500
-                 p-[2px]"
+                 bg-linear-to-br from-emerald-400 via-teal-400 to-green-500
+                 p-0.5"
         >
           <!-- Image -->
           <div
@@ -97,6 +97,7 @@ const linkClass = (path: string) =>
                      transition-transform duration-500
                      group-hover:scale-105"
               loading="eager"
+              alt="Dibujo perfil"
             />
           </div>
         </div>
@@ -106,7 +107,7 @@ const linkClass = (path: string) =>
       <a href="/" class="group">
         <span
           class="text-xl md:text-2xl
-           bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500
+           bg-linear-to-r from-emerald-400 via-teal-400 to-green-500
            dark:from-emerald-300 dark:via-teal-300 dark:to-green-400
            bg-clip-text text-transparent
            tracking-tight
@@ -124,7 +125,7 @@ const linkClass = (path: string) =>
         <a href="/" class={linkClass("/")}>
           Home
           <span
-            class={`absolute left-0 -bottom-1 h-[2px] w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
+            class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
               isActive("/") ? "scale-x-100" : "group-hover:scale-x-100"
             }`}></span>
         </a>
@@ -134,7 +135,7 @@ const linkClass = (path: string) =>
         <a href="/about" class={linkClass("/about")}>
           About
           <span
-            class={`absolute left-0 -bottom-1 h-[2px] w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
+            class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
               isActive("/about") ? "scale-x-100" : "group-hover:scale-x-100"
             }`}></span>
         </a>
@@ -144,7 +145,7 @@ const linkClass = (path: string) =>
         <a href="/help" class={linkClass("/help")}>
           How I Can Help
           <span
-            class={`absolute left-0 -bottom-1 h-[2px] w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
+            class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
               isActive("/help") ? "scale-x-100" : "group-hover:scale-x-100"
             }`}></span>
         </a>
@@ -154,7 +155,7 @@ const linkClass = (path: string) =>
         <a href="/experience" class={linkClass("/experience")}>
           Experience
           <span
-            class={`absolute left-0 -bottom-1 h-[2px] w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
+            class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
               isActive("/experience")
                 ? "scale-x-100"
                 : "group-hover:scale-x-100"
@@ -166,7 +167,7 @@ const linkClass = (path: string) =>
         <a href="/certifications" class={linkClass("/certifications")}>
           Certifications
           <span
-            class={`absolute left-0 -bottom-1 h-[2px] w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
+            class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
               isActive("/certifications")
                 ? "scale-x-100"
                 : "group-hover:scale-x-100"
@@ -178,7 +179,7 @@ const linkClass = (path: string) =>
         <a href="/faq" class={linkClass("/faq")}>
           FAQ
           <span
-            class={`absolute left-0 -bottom-1 h-[2px] w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
+            class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
               isActive("/faq") ? "scale-x-100" : "group-hover:scale-x-100"
             }`}></span>
         </a>
@@ -187,6 +188,7 @@ const linkClass = (path: string) =>
       <li>
         <a
           href="/contact"
+          aria-current={isActive("/contact") ? "page" : undefined}
           class={`relative inline-flex items-center justify-center rounded-full px-5 py-2 font-semibold
       transition-all duration-300
       ${
@@ -203,10 +205,16 @@ const linkClass = (path: string) =>
         >
           Contact
 
-          <!-- subtle glow dot -->
-          <span
-            class="ml-2 inline-block h-2 w-2 rounded-full bg-emerald-400/80 shadow-[0_0_12px_rgba(52,211,153,0.65)]"
-            aria-hidden="true"></span>
+          {/* Solo mostrar el dot cuando NO está activo */}
+          {
+            !isActive("/contact") && (
+              <span
+                class="ml-2 inline-block h-2 w-2 rounded-full bg-emerald-400/80
+               shadow-[0_0_12px_rgba(52,211,153,0.65)]"
+                aria-hidden="true"
+              />
+            )
+          }
         </a>
       </li>
     </ul>

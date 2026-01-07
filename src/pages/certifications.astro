@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Reveal from "../components/Reveal.astro";
 
 const certifications = [
   {
@@ -243,7 +244,7 @@ const certifications = [
     dateLabel: "November 2025",
     certificateUrl: "/assets/certifications/C_UpMongoDB.pdf",
     description:
-      "Introductory course on using MongoDB for data analysis with semi-structured data. Covered core concepts such as databases, collections, documents, and BSON, as well as data exploration using MongoDB Compass and mongosh. Included schema analysis and basic querying through both graphical tools and the command line, providing a foundation for analyzing NoSQL data sources.",
+      "Introductory course on using MongoDB for data analysis with semi-structured data. Covered core concepts such as databases, collections, documents, and BSON, as well as data exploration using MongoDB Compass and Mongosh. Included schema analysis and basic querying through both graphical tools and the command line, providing a foundation for analyzing NoSQL data sources.",
     skills: [
       "MongoDB",
       "NoSQL Databases",
@@ -358,21 +359,25 @@ const certifications = [
   <section class="max-w-5xl mx-auto px-4 py-20 space-y-16">
     <!-- PAGE TITLE -->
     <header class="max-w-3xl mx-auto text-center">
-      <h1
-        class="text-4xl md:text-5xl font-bold tracking-tight
-               leading-[1.15] pb-1
-               bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500
-               bg-clip-text text-transparent"
-      >
-        Certifications
-      </h1>
+      <Reveal delay={0}>
+        <h1
+          class="text-4xl md:text-5xl font-bold tracking-tight
+             leading-[1.15] pb-1
+             bg-linear-to-r from-emerald-400 via-teal-400 to-green-500
+             bg-clip-text text-transparent"
+        >
+          Certifications
+        </h1>
+      </Reveal>
 
-      <p
-        class="mt-5 text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300"
-      >
-        A curated selection of certifications that reflect my hands-on learning
-        path in data, cloud, and engineering.
-      </p>
+      <Reveal delay={140}>
+        <p
+          class="mt-5 text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300"
+        >
+          A curated selection of certifications that reflect my hands-on
+          learning path in data, cloud, and engineering.
+        </p>
+      </Reveal>
     </header>
 
     <!-- CERTIFICATIONS -->
@@ -380,99 +385,101 @@ const certifications = [
       <!-- Grid -->
       <div class="grid gap-6">
         {
-          certifications.map((c) => (
-            <article
-              class="group relative overflow-hidden rounded-2xl
-             border border-emerald-500/25
-             bg-white/60 dark:bg-white/5 backdrop-blur
-             p-7 shadow-sm transition-all duration-300
-             hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20
-             hover:border-emerald-400/60"
-            >
-              {/* Top row: provider + date */}
-              <div class="flex items-start justify-between gap-4">
-                <div class="flex items-center gap-4 min-w-0">
-                  <div
-                    class="h-14 w-14 md:h-16 md:w-16
-             shrink-0 rounded-xl
-             border border-emerald-500/20
-             bg-white/90 dark:bg-white/10
-             flex items-center justify-center
-             p-1.5 md:p-1"
-                  >
-                    <img
-                      src={c.providerLogo}
-                      alt={`${c.provider} logo`}
-                      class="max-h-full max-w-full object-contain scale-125"
-                      loading="lazy"
-                    />
+          certifications.map((c, idx) => (
+            <Reveal delay={idx * 120}>
+              <article
+                class="group relative overflow-hidden rounded-2xl
+                   border border-emerald-500/25
+                   bg-white/60 dark:bg-white/5 backdrop-blur
+                   p-7 shadow-sm transition-all duration-300
+                   hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20
+                   hover:border-emerald-400/60"
+              >
+                {/* Top row: provider + date */}
+                <div class="flex items-start justify-between gap-4">
+                  <div class="flex items-center gap-4 min-w-0">
+                    <div
+                      class="h-14 w-14 md:h-16 md:w-16
+                         shrink-0 rounded-xl
+                         border border-emerald-500/20
+                         bg-white/90 dark:bg-white/10
+                         flex items-center justify-center
+                         p-1.5 md:p-1"
+                    >
+                      <img
+                        src={c.providerLogo}
+                        alt={`${c.provider} logo`}
+                        class="max-h-full max-w-full object-contain scale-125"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div class="min-w-0">
+                      <p class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white truncate">
+                        {c.provider}
+                      </p>
+                      <p class="text-base text-gray-500 dark:text-gray-400">
+                        {c.dateLabel}
+                      </p>
+                    </div>
                   </div>
 
-                  <div class="min-w-0">
-                    <p class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white truncate">
-                      {c.provider}
-                    </p>
-                    <p class="text-base text-gray-500 dark:text-gray-400">
-                      {c.dateLabel}
-                    </p>
-                  </div>
+                  <span
+                    class="shrink-0 inline-flex items-center rounded-full px-3 py-1.5
+                       text-sm font-medium
+                       border border-emerald-500/25
+                       bg-emerald-500/10 text-emerald-500"
+                  >
+                    Certification
+                  </span>
                 </div>
 
-                <span
-                  class="shrink-0 inline-flex items-center rounded-full px-3 py-1.5
-           text-sm font-medium
-           border border-emerald-500/25
-           bg-emerald-500/10 text-emerald-500"
-                >
-                  Certification
-                </span>
-              </div>
+                {/* Title */}
+                <h3 class="mt-5 text-xl md:text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                  {c.title}
+                </h3>
 
-              {/* Title */}
-              <h3 class="mt-5 text-xl md:text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                {c.title}
-              </h3>
+                {/* Description */}
+                <p class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                  {c.description}
+                </p>
 
-              {/* Description */}
-              <p class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
-                {c.description}
-              </p>
+                {/* Skills */}
+                <div class="mt-6 flex flex-wrap gap-2">
+                  {c.skills.map((s) => (
+                    <span
+                      class="inline-flex items-center rounded-full px-3 py-1.5
+                         text-sm font-medium
+                         border border-emerald-500/25
+                         bg-white/60 dark:bg-white/5
+                         text-gray-700 dark:text-gray-200"
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
 
-              {/* Skills */}
-              <div class="mt-6 flex flex-wrap gap-2">
-                {c.skills.map((s) => (
-                  <span
-                    class="inline-flex items-center rounded-full px-3 py-1.5
-                   text-sm font-medium
-                   border border-emerald-500/25
-                   bg-white/60 dark:bg-white/5
-                   text-gray-700 dark:text-gray-200"
+                {/* CTA */}
+                <div class="mt-7 flex">
+                  <a
+                    href={c.certificateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2
+                       rounded-lg px-5 py-2.5
+                       text-base font-semibold
+                       text-emerald-400
+                       border border-emerald-500/40
+                       transition-all duration-300
+                       hover:bg-emerald-500/10 hover:-translate-y-0.5
+                       hover:border-emerald-400"
                   >
-                    {s}
-                  </span>
-                ))}
-              </div>
-
-              {/* CTA */}
-              <div class="mt-7 flex">
-                <a
-                  href={c.certificateUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center justify-center gap-2
-                 rounded-lg px-5 py-2.5
-                 text-base font-semibold
-                 text-emerald-400
-                 border border-emerald-500/40
-                 transition-all duration-300
-                 hover:bg-emerald-500/10 hover:-translate-y-0.5
-                 hover:border-emerald-400"
-                >
-                  View certificate
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </article>
+                    View certificate
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+            </Reveal>
           ))
         }
       </div>

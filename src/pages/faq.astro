@@ -1,143 +1,181 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Reveal from "../components/Reveal.astro";
 ---
 
 <Layout>
   <section class="max-w-5xl mx-auto px-4 py-20 space-y-8">
     <!-- FAQ Title -->
-    <header class="mb-12 max-w-3xl mx-auto text-center">
+    <Reveal as="header" delay={0} class="mb-12 max-w-3xl mx-auto text-center">
       <h1
         class="text-4xl md:text-5xl font-bold tracking-tight
-           bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500
-           bg-clip-text text-transparent"
+      bg-linear-to-r from-emerald-400 via-teal-400 to-green-500
+      bg-clip-text text-transparent"
       >
         FAQ
       </h1>
 
       <p
         class="mt-5 text-lg md:text-xl leading-relaxed
-           text-gray-600 dark:text-gray-300"
+      text-gray-600 dark:text-gray-300"
       >
         Answers to the most common questions about my profile, experience, and
         availability.
       </p>
-    </header>
+    </Reveal>
 
-    <details class="rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-      <summary class="cursor-pointer text-lg md:text-xl font-medium">
-        What roles am I currently looking for?
-      </summary>
-      <p
-        class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+    <Reveal delay={120}>
+      <details
+        class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
-        Junior roles related to Data Analysis, Business Intelligence, and
-        data-oriented software development, where data is used to support
-        decision-making and create real business value.
-      </p>
-    </details>
+        <summary class="cursor-pointer text-lg md:text-xl font-medium">
+          What roles am I currently looking for?
+        </summary>
+        <p
+          class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+        >
+          Junior roles related to Data Analysis, Business Intelligence, and
+          data-oriented software development, where data is used to support
+          decision-making and create real business value.
+        </p>
+      </details>
+    </Reveal>
 
-    <details class="rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-      <summary class="cursor-pointer text-lg md:text-xl font-medium">
-        What type of position am I looking for?
-      </summary>
-      <p
-        class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+    <Reveal delay={180}>
+      <details
+        class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
-        I am looking for a full-time junior position. I am not interested in
-        internships, training contracts, master’s programs, or doctoral studies,
-        as my priority is professional growth within a company.
-      </p>
-    </details>
+        <summary class="cursor-pointer text-lg md:text-xl font-medium">
+          What type of position am I looking for?
+        </summary>
+        <p
+          class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+        >
+          I am looking for a full-time junior position. I am not interested in
+          internships, training contracts, master’s programs, or doctoral
+          studies, as my priority is professional growth within a company.
+        </p>
+      </details>
+    </Reveal>
 
-    <details class="rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-      <summary class="cursor-pointer text-lg md:text-xl font-medium">
-        What work arrangement do I prefer?
-      </summary>
-      <p
-        class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+    <Reveal delay={240}>
+      <details
+        class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
-        Preferably remote work, as it allows better time management and focus.
-        However, I am open to hybrid arrangements depending on the team and
-        project context.
-      </p>
-    </details>
+        <summary class="cursor-pointer text-lg md:text-xl font-medium">
+          What work arrangement do I prefer?
+        </summary>
+        <p
+          class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+        >
+          Preferably remote work, as it allows better time management and focus.
+          However, I am open to hybrid arrangements depending on the team and
+          project context.
+        </p>
+      </details>
+    </Reveal>
 
-    <details class="rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-      <summary class="cursor-pointer text-lg md:text-xl font-medium">
-        What technologies do I work with?
-      </summary>
-      <p
-        class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+    <Reveal delay={300}>
+      <details
+        class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
-        I mainly work with Python, SQL, Apache Spark, Power BI, Tableau, and
-        cloud environments such as Microsoft Azure, applying them to data
-        processing, analysis, and visualization.
-      </p>
-    </details>
+        <summary class="cursor-pointer text-lg md:text-xl font-medium">
+          What technologies do I work with?
+        </summary>
+        <p
+          class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+        >
+          I mainly work with Python, SQL, Apache Spark, Power BI, Tableau, and
+          cloud environments such as Microsoft Azure, applying them to data
+          processing, analysis, and visualization.
+        </p>
+      </details>
+    </Reveal>
 
-    <details class="rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-      <summary class="cursor-pointer text-lg md:text-xl font-medium">
-        Do I have professional experience?
-      </summary>
-      <p
-        class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+    <Reveal delay={360}>
+      <details
+        class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
-        Yes. I have hands-on experience working in a real production environment
-        during my internship at DEKRA Digital & Product Solutions, where I
-        contributed to full-stack and data-related features using modern tools
-        and agile methodologies.
-      </p>
-    </details>
+        <summary class="cursor-pointer text-lg md:text-xl font-medium">
+          Do I have professional experience?
+        </summary>
+        <p
+          class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+        >
+          Yes. I have hands-on experience working in a real production
+          environment during my internship at DEKRA Digital & Product Solutions,
+          where I contributed to full-stack and data-related features using
+          modern tools and agile methodologies.
+        </p>
+      </details>
+    </Reveal>
 
-    <details class="rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-      <summary class="cursor-pointer text-lg md:text-xl font-medium">
-        What is my most relevant project?
-      </summary>
-      <p
-        class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+    <Reveal delay={420}>
+      <details
+        class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
-        My Final Degree Project, focused on the design and development of a
-        browser-based data analysis tool for extracting, processing, and
-        visualizing academic data from Moodle, with exportable analytical
-        reports and dashboards.
-      </p>
-    </details>
+        <summary class="cursor-pointer text-lg md:text-xl font-medium">
+          What is my most relevant project?
+        </summary>
+        <p
+          class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+        >
+          My Final Degree Project, focused on the design and development of a
+          browser-based data analysis tool for extracting, processing, and
+          visualizing academic data from Moodle, with exportable analytical
+          reports and dashboards.
+        </p>
+      </details>
+    </Reveal>
 
-    <details class="rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-      <summary class="cursor-pointer text-lg md:text-xl font-medium">
-        How do I approach communication and teamwork?
-      </summary>
-      <p
-        class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+    <Reveal delay={480}>
+      <details
+        class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
-        I focus on clear, structured communication, translating technical
-        analyses into meaningful insights for both technical and non-technical
-        stakeholders. I enjoy working in collaborative, multidisciplinary teams.
-      </p>
-    </details>
+        <summary class="cursor-pointer text-lg md:text-xl font-medium">
+          How do I approach communication and teamwork?
+        </summary>
+        <p
+          class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+        >
+          I focus on clear, structured communication, translating technical
+          analyses into meaningful insights for both technical and non-technical
+          stakeholders. I enjoy working in collaborative, multidisciplinary
+          teams.
+        </p>
+      </details>
+    </Reveal>
 
-    <details class="rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-      <summary class="cursor-pointer text-lg md:text-xl font-medium">
-        What is my English level?
-      </summary>
-      <p
-        class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+    <Reveal delay={540}>
+      <details
+        class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
-        I have a B2 level of English (Cambridge B2 First certification) and I am
-        comfortable working with technical documentation and international
-        teams.
-      </p>
-    </details>
+        <summary class="cursor-pointer text-lg md:text-xl font-medium">
+          What is my English level?
+        </summary>
+        <p
+          class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+        >
+          I have a B2 level of English (Cambridge B2 First certification) and I
+          am comfortable working with technical documentation and international
+          teams.
+        </p>
+      </details>
+    </Reveal>
 
-    <details class="rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-      <summary class="cursor-pointer text-lg md:text-xl font-medium">
-        How quickly can I respond?
-      </summary>
-      <p
-        class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+    <Reveal delay={600}>
+      <details
+        class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
-        I usually respond within 24–48 hours via email or LinkedIn.
-      </p>
-    </details>
+        <summary class="cursor-pointer text-lg md:text-xl font-medium">
+          How quickly can I respond?
+        </summary>
+        <p
+          class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+        >
+          I usually respond within 24–48 hours via email or LinkedIn.
+        </p>
+      </details>
+    </Reveal>
   </section>
 </Layout>
