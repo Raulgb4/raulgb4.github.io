@@ -43,7 +43,8 @@ import Reveal from "../components/Reveal.astro";
             class="h-[2px] w-16
                bg-gradient-to-r from-emerald-400 to-teal-400
                rounded-full"
-          ></div>
+          >
+          </div>
         </Reveal>
       </Reveal>
 
@@ -55,92 +56,130 @@ import Reveal from "../components/Reveal.astro";
            w-px md:-translate-x-1/2
            bg-gradient-to-b from-emerald-500/10 via-emerald-400/40 to-green-500/10"
           aria-hidden="true"
-        ></div>
+        >
+        </div>
 
         <div class="space-y-10">
-          {[
-            {
-              side: "left",
-              title: "Research Paper (In Progress)",
-              subtitle: "Scientific article based on my Final Degree Project",
-              period: "October 2025 – Present",
-              grade: "In progress",
-              logo: "/assets/images/projects/moodle.png", // cambia por el icono/imagen que quieras
-              desc:
-                "Currently collaborating on the preparation of a scientific article based on my Final Degree Project, with the goal of submitting it to a journal or conference focused on educational technology and data analysis. The paper builds on the project’s methodology and findings to strengthen its academic contribution and practical impact in educational analytics.",
-              tags: ["Research", "Scientific Writing", "Educational Analytics", "Data Analysis", "Visualization"],
-              // Opcional: si tienes preprint/Overleaf o repo privado, lo añades aquí
-              // repoUrl: "https://...",
-            },
+          {
+            [
+              {
+                side: "left",
+                title: "Research Paper (In Progress)",
+                subtitle: "Scientific article based on my Final Degree Project",
+                period: "October 2025 – Present",
+                grade: "In progress",
+                logo: "/assets/images/projects/moodle.png", // cambia por el icono/imagen que quieras
+                desc: "Currently collaborating on the preparation of a scientific article based on my Final Degree Project, with the goal of submitting it to a journal or conference focused on educational technology and data analysis. The paper builds on the project’s methodology and findings to strengthen its academic contribution and practical impact in educational analytics.",
+                tags: [
+                  "Research",
+                  "Scientific Writing",
+                  "Educational Analytics",
+                  "Data Analysis",
+                  "Visualization",
+                ],
+                // Opcional: si tienes preprint/Overleaf o repo privado, lo añades aquí
+                // repoUrl: "https://...",
+              },
 
-            {
-              side: "right",
-              title: "Moodle Data Analyzer",
-              subtitle: "University of Málaga · Final Degree Project",
-              period: "January 2025 – September 2025",
-              grade: "9.8/10",
-              logo: "/assets/images/projects/moodle.png",
-              desc:
-                "Design and development of a browser-based data analysis tool for extracting, processing, and visualizing Moodle academic data to support data-driven decision-making. Built interactive dashboards with strong focus on data storytelling, and generated exportable analytical reports (PDF, CSV, DOCX). Scientific article currently in progress to reinforce the analytical relevance and practical impact of the solution in educational analytics.",
-              tags: ["React", "TypeScript", "Webpack", "Chart.js", "TailwindCSS", "Docker", "Agile"],
-              repoUrl: "https://github.com/Raulgb4/BrowserExtension-MoodleDataAnalysis/tree/develop",
-            },
-            {
-              side: "left",
-              title: "DEKRA Digital & Product Solutions",
-              subtitle: "Internship",
-              period: "March 2025 – May 2025",
-              grade: "10/10",
-              logo: "/assets/images/LogoDEKRA.png",
-              desc:
-                "Developed and maintained full-stack web features for a cybersecurity platform, working with Django, Angular, and PostgreSQL in a production environment. Implemented backend logic and integrated frontend components, improving the consistency and functionality of multiple application modules. Participated in deployment and environment management using Docker, enabling a more stable and reproducible development process. Collaborated in an agile working environment, using Jira for task planning and GitLab for version control and code integration. Actively contributed to production code, gaining hands-on professional experience and strengthening teamwork skills.",
-              tags: ["Python", "Django", "Angular", "APIs", "Git", "Jira", "PostgreSQL", "Docker"],
-            },
+              {
+                side: "right",
+                title: "Moodle Data Analyzer",
+                subtitle: "University of Málaga · Final Degree Project",
+                period: "January 2025 – September 2025",
+                grade: "9.8/10",
+                logo: "/assets/images/projects/moodle.png",
+                desc: "Design and development of a browser-based data analysis tool for extracting, processing, and visualizing Moodle academic data to support data-driven decision-making. Built interactive dashboards with strong focus on data storytelling, and generated exportable analytical reports (PDF, CSV, DOCX). Scientific article currently in progress to reinforce the analytical relevance and practical impact of the solution in educational analytics.",
+                tags: [
+                  "React",
+                  "TypeScript",
+                  "Webpack",
+                  "Chart.js",
+                  "TailwindCSS",
+                  "Docker",
+                  "Agile",
+                ],
+                repoUrl:
+                  "https://github.com/Raulgb4/BrowserExtension-MoodleDataAnalysis/tree/develop",
+              },
+              {
+                side: "left",
+                title: "DEKRA Digital & Product Solutions",
+                subtitle: "Internship",
+                period: "March 2025 – May 2025",
+                grade: "10/10",
+                logo: "/assets/images/LogoDEKRA.png",
+                desc: "Developed and maintained full-stack web features for a cybersecurity platform, working with Django, Angular, and PostgreSQL in a production environment. Implemented backend logic and integrated frontend components, improving the consistency and functionality of multiple application modules. Participated in deployment and environment management using Docker, enabling a more stable and reproducible development process. Collaborated in an agile working environment, using Jira for task planning and GitLab for version control and code integration. Actively contributed to production code, gaining hands-on professional experience and strengthening teamwork skills.",
+                tags: [
+                  "Python",
+                  "Django",
+                  "Angular",
+                  "APIs",
+                  "Git",
+                  "Jira",
+                  "PostgreSQL",
+                  "Docker",
+                ],
+              },
 
-            {
-              side: "right",
-              title: "Bachelor’s Degree in Computer Science Engineering",
-              subtitle: "University of Málaga · Specialization in Information Systems",
-              period: "2020 – 2025",
-              grade: "7.4/10",
-              logo: "/assets/images/LogoUMA.png",
-              desc:
-                "Bachelor’s Degree in Computer Engineering from the University of Málaga, with a specialization in Information Systems and an education focused on data analysis and information management to support decision-making. Acquired a solid foundation in programming, databases, mathematics, and statistics, as well as in the design and analysis of information systems, developing a structured view of the data lifecycle. Progressive specialization in data analysis and Business Intelligence, working with Python, SQL, Power BI, and cloud environments. Applied these skills in academic projects and industry internships, strengthening teamwork and technical communication.",
-              tags: ["Programming", "Databases", "Math", "Statistics", "Python", "SQL", "Power BI", "Cloud"],
-            },
-            {
-              side: "left",
-              title: "Technological Baccalaureate",
-              subtitle: "IES Torre Almirante",
-              period: "September 2018 – June 2020",
-              grade: "8/10",
-              logo: "/assets/images/LogoTorreAlmirante.png",
-              desc:
-                "Technological Baccalaureate focused on logical thinking, academic mathematics, and structured problem solving, serving as the foundation of my subsequent technical education. This stage strengthened analytical reasoning skills and provided a solid base for further studies in computer engineering and data-oriented disciplines.",
-              tags: ["Logical Thinking", "Mathematics", "Problem Solving", "Foundations"],
-            },
-          ].map((item, idx) => (
-            <Reveal delay={80 + idx * 60}>
-              <div class="relative grid md:grid-cols-2 md:gap-10">
-                {/* Marker */}
-                <div
-                  class="absolute left-4 md:left-1/2 top-7
+              {
+                side: "right",
+                title: "Bachelor’s Degree in Computer Science Engineering",
+                subtitle:
+                  "University of Málaga · Specialization in Information Systems",
+                period: "2020 – 2025",
+                grade: "7.4/10",
+                logo: "/assets/images/LogoUMA.png",
+                desc: "Bachelor’s Degree in Computer Engineering from the University of Málaga, with a specialization in Information Systems and an education focused on data analysis and information management to support decision-making. Acquired a solid foundation in programming, databases, mathematics, and statistics, as well as in the design and analysis of information systems, developing a structured view of the data lifecycle. Progressive specialization in data analysis and Business Intelligence, working with Python, SQL, Power BI, and cloud environments. Applied these skills in academic projects and industry internships, strengthening teamwork and technical communication.",
+                tags: [
+                  "Programming",
+                  "Databases",
+                  "Math",
+                  "Statistics",
+                  "Python",
+                  "SQL",
+                  "Power BI",
+                  "Cloud",
+                ],
+              },
+              {
+                side: "left",
+                title: "Technological Baccalaureate",
+                subtitle: "IES Torre Almirante",
+                period: "September 2018 – June 2020",
+                grade: "8/10",
+                logo: "/assets/images/LogoTorreAlmirante.png",
+                desc: "Technological Baccalaureate focused on logical thinking, academic mathematics, and structured problem solving, serving as the foundation of my subsequent technical education. This stage strengthened analytical reasoning skills and provided a solid base for further studies in computer engineering and data-oriented disciplines.",
+                tags: [
+                  "Logical Thinking",
+                  "Mathematics",
+                  "Problem Solving",
+                  "Foundations",
+                ],
+              },
+            ].map((item, idx) => (
+              <Reveal delay={80 + idx * 60}>
+                <div class="relative grid md:grid-cols-2 md:gap-10">
+                  {/* Marker */}
+                  <div
+                    class="absolute left-4 md:left-1/2 top-7
                      h-3 w-3 rounded-full
                      bg-emerald-400/80
                      ring-4 ring-emerald-400/15
                      md:-translate-x-1/2"
-                  aria-hidden="true"
-                ></div>
+                    aria-hidden="true"
+                  />
 
-                {/* Left column */}
-                <div
-                  class={`${item.side === "left"
-                    ? "md:pr-10"
-                    : "md:pr-10 md:col-start-1 md:opacity-0 md:pointer-events-none"}`}
-                >
-                  {item.side === "left" && (
-                    <article
-                      class="ml-10 md:ml-0 md:justify-self-end
+                  {/* Left column */}
+                  <div
+                    class={`${
+                      item.side === "left"
+                        ? "md:pr-10"
+                        : "md:pr-10 md:col-start-1 md:opacity-0 md:pointer-events-none"
+                    }`}
+                  >
+                    {item.side === "left" && (
+                      <article
+                        class="ml-10 md:ml-0 md:justify-self-end
                          w-full max-w-xl
                          rounded-2xl border border-emerald-500/25
                          bg-white/60 dark:bg-white/5 backdrop-blur
@@ -148,72 +187,74 @@ import Reveal from "../components/Reveal.astro";
                          transition-all duration-300
                          hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20
                          hover:border-emerald-400/60"
-                    >
-                      <div class="flex items-start justify-between gap-4">
-                        <div class="flex items-start gap-4">
-                          {item.logo && (
-                            <img
-                              src={item.logo}
-                              alt={`${item.title} logo`}
-                              class="h-12 w-12 md:h-14 md:w-14
+                      >
+                        <div class="flex items-start justify-between gap-4">
+                          <div class="flex items-start gap-4">
+                            {item.logo && (
+                              <img
+                                src={item.logo}
+                                alt={`${item.title} logo`}
+                                class="h-12 w-12 md:h-14 md:w-14
                                  rounded-lg object-contain
                                  border border-emerald-500/20
                                  bg-white/80 dark:bg-white/10
                                  p-1.5"
-                              loading="lazy"
-                            />
-                          )}
+                                loading="lazy"
+                              />
+                            )}
 
-                          <div class="min-w-0">
-                            <h3 class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
-                              {item.title}
-                            </h3>
-                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">
-                              {item.subtitle}
+                            <div class="min-w-0">
+                              <h3 class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
+                                {item.title}
+                              </h3>
+                              <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">
+                                {item.subtitle}
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="shrink-0 text-right">
+                            <p class="text-sm text-gray-500 dark:text-gray-400">
+                              {item.period}
+                            </p>
+                            <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                              Grade:{" "}
+                              <span class="font-medium text-gray-700 dark:text-gray-200">
+                                {item.grade}
+                              </span>
                             </p>
                           </div>
                         </div>
 
-                        <div class="shrink-0 text-right">
-                          <p class="text-sm text-gray-500 dark:text-gray-400">
-                            {item.period}
-                          </p>
-                          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
-                            Grade:{" "}
-                            <span class="font-medium text-gray-700 dark:text-gray-200">
-                          {item.grade}
-                        </span>
-                          </p>
-                        </div>
-                      </div>
+                        <p class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                          {item.desc}
+                        </p>
 
-                      <p class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
-                        {item.desc}
-                      </p>
-
-                      <div class="mt-4 flex flex-wrap gap-2">
-                        {item.tags.map((t) => (
-                          <span
-                            class="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium
+                        <div class="mt-4 flex flex-wrap gap-2">
+                          {item.tags.map((t) => (
+                            <span
+                              class="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium
                                border border-emerald-500/25 bg-emerald-500/10 text-emerald-400"
-                          >
-                        {t}
-                      </span>
-                        ))}
-                      </div>
-                    </article>
-                  )}
-                </div>
+                            >
+                              {t}
+                            </span>
+                          ))}
+                        </div>
+                      </article>
+                    )}
+                  </div>
 
-                {/* Right column */}
-                <div
-                  class={`${item.side === "right"
-                    ? "md:pl-10"
-                    : "md:pl-10 md:opacity-0 md:pointer-events-none"}`}
-                >
-                  {item.side === "right" && (
-                    <article
-                      class="ml-10 md:ml-0
+                  {/* Right column */}
+                  <div
+                    class={`${
+                      item.side === "right"
+                        ? "md:pl-10"
+                        : "md:pl-10 md:opacity-0 md:pointer-events-none"
+                    }`}
+                  >
+                    {item.side === "right" && (
+                      <article
+                        class="ml-10 md:ml-0
                          w-full max-w-xl
                          rounded-2xl border border-emerald-500/25
                          bg-white/60 dark:bg-white/5 backdrop-blur
@@ -221,65 +262,66 @@ import Reveal from "../components/Reveal.astro";
                          transition-all duration-300
                          hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20
                          hover:border-emerald-400/60"
-                    >
-                      <div class="flex items-start justify-between gap-4">
-                        <div class="flex items-start gap-4">
-                          {item.logo && (
-                            <img
-                              src={item.logo}
-                              alt={`${item.title} logo`}
-                              class="h-12 w-12 md:h-14 md:w-14
+                      >
+                        <div class="flex items-start justify-between gap-4">
+                          <div class="flex items-start gap-4">
+                            {item.logo && (
+                              <img
+                                src={item.logo}
+                                alt={`${item.title} logo`}
+                                class="h-12 w-12 md:h-14 md:w-14
                                  rounded-lg object-contain
                                  border border-emerald-500/20
                                  bg-white/80 dark:bg-white/10
                                  p-1.5"
-                              loading="lazy"
-                            />
-                          )}
+                                loading="lazy"
+                              />
+                            )}
 
-                          <div class="min-w-0">
-                            <h3 class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
-                              {item.title}
-                            </h3>
-                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">
-                              {item.subtitle}
+                            <div class="min-w-0">
+                              <h3 class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
+                                {item.title}
+                              </h3>
+                              <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">
+                                {item.subtitle}
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="shrink-0 text-right">
+                            <p class="text-sm text-gray-500 dark:text-gray-400">
+                              {item.period}
+                            </p>
+                            <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                              Grade:{" "}
+                              <span class="font-medium text-gray-700 dark:text-gray-200">
+                                {item.grade}
+                              </span>
                             </p>
                           </div>
                         </div>
 
-                        <div class="shrink-0 text-right">
-                          <p class="text-sm text-gray-500 dark:text-gray-400">
-                            {item.period}
-                          </p>
-                          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
-                            Grade:{" "}
-                            <span class="font-medium text-gray-700 dark:text-gray-200">
-                          {item.grade}
-                        </span>
-                          </p>
-                        </div>
-                      </div>
+                        <p class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                          {item.desc}
+                        </p>
 
-                      <p class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
-                        {item.desc}
-                      </p>
-
-                      <div class="mt-4 flex flex-wrap gap-2">
-                        {item.tags.map((t) => (
-                          <span
-                            class="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium
+                        <div class="mt-4 flex flex-wrap gap-2">
+                          {item.tags.map((t) => (
+                            <span
+                              class="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium
                                border border-emerald-500/25 bg-emerald-500/10 text-emerald-400"
-                          >
-                        {t}
-                      </span>
-                        ))}
-                      </div>
-                    </article>
-                  )}
+                            >
+                              {t}
+                            </span>
+                          ))}
+                        </div>
+                      </article>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            ))
+          }
         </div>
       </div>
     </section>
@@ -300,7 +342,8 @@ import Reveal from "../components/Reveal.astro";
             class="h-[2px] w-16
                bg-gradient-to-r from-emerald-400 to-teal-400
                rounded-full"
-          ></div>
+          >
+          </div>
         </Reveal>
       </Reveal>
 
@@ -309,9 +352,9 @@ import Reveal from "../components/Reveal.astro";
         <div class="rounded-lg border border-gray-200 dark:border-gray-700 p-6">
           <p class="text-gray-600 dark:text-gray-300">
             I am currently collaborating on the preparation of a scientific
-            article based on my Final Degree Project, with the goal of submitting
-            it to a journal or conference focused on educational technology and
-            data analysis.
+            article based on my Final Degree Project, with the goal of
+            submitting it to a journal or conference focused on educational
+            technology and data analysis.
           </p>
         </div>
       </Reveal>
@@ -321,25 +364,30 @@ import Reveal from "../components/Reveal.astro";
     <section class="space-y-6">
       <!-- Section header (mismo estilo que Research) -->
       <Reveal as="header" class="space-y-3" delay={0}>
-        <h2 class="text-2xl md:text-3xl font-semibold text-emerald-500 tracking-tight">
+        <h2
+          class="text-2xl md:text-3xl font-semibold text-emerald-500 tracking-tight"
+        >
           Featured Projects
         </h2>
 
         <Reveal delay={80}>
-          <div class="h-[2px] w-16 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full"></div>
+          <div
+            class="h-[2px] w-16 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full"
+          >
+          </div>
         </Reveal>
 
         <Reveal delay={140}>
           <p class="text-gray-600 dark:text-gray-300 max-w-3xl">
-            A selection of projects where I applied data, engineering, and visualization
-            to solve real problems.
+            A selection of projects where I applied data, engineering, and
+            visualization to solve real problems.
           </p>
         </Reveal>
       </Reveal>
 
       <!-- Cards grid -->
       <Reveal delay={200}>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start">
+        <div class="grid gap-6 items-start">
           {
             [
               {
@@ -347,23 +395,34 @@ import Reveal from "../components/Reveal.astro";
                 badge: "Public",
 
                 // Contexto académico
-            institution: "University of Málaga",
+                institution: "University of Málaga",
                 type: "Final Degree Project",
                 grade: "9.8/10",
 
                 // Descripción corta (para cards)
-            description:
+                description:
                   "Browser-based data analysis tool that extracts, processes, and visualizes academic data from Moodle, transforming raw data into actionable insights and analytical dashboards.",
 
                 // Descripción larga (para vista detallada / sección Experience)
-            longDescription:
+                longDescription:
                   "Design and development of a browser-based data analysis tool for the extraction, processing, and visualization of academic data from Moodle, aimed at supporting data-driven decision-making in educational contexts. Application of data extraction techniques, analytical processing, and analysis workflows to transform raw data into structured information and interactive dashboards. Generation of exportable analytical reports in PDF, CSV, and DOCX formats, enabling clear interpretation and practical use of results. Strong focus on data visualization and storytelling to clearly communicate usage patterns, participation, and academic performance. Use of React, Webpack, Chart.js, TailwindCSS, Docker, and agile methodologies in the development of the solution. Preparation of a scientific article currently in progress, reinforcing the analytical relevance and practical impact of the project in the field of educational analytics.",
 
                 // Assets
-            cover: "/assets/images/projects/moodle.png",
+                covers: [
+                  "/assets/images/projects/moodle.png",
+                  "/assets/images/projects/moodle-1.png",
+                  "/assets/images/projects/moodle-2.png",
+                  "/assets/images/projects/moodle-3.png",
+                  "/assets/images/projects/moodle-4.png",
+                  "/assets/images/projects/moodle-5.png",
+                  "/assets/images/projects/moodle-6.png",
+                  "/assets/images/projects/moodle-7.png",
+                  "/assets/images/projects/moodle-8.png",
+                  "/assets/images/projects/moodle-9.png",
+                ],
 
                 // Stack (short + detailed)
-            tech: "TypeScript · React · Tailwind",
+                tech: "TypeScript · React · Tailwind",
                 technologies: [
                   "React",
                   "Webpack",
@@ -374,7 +433,7 @@ import Reveal from "../components/Reveal.astro";
                 ],
 
                 // Links
-            repoUrl:
+                repoUrl:
                   "https://github.com/Raulgb4/BrowserExtension-MoodleDataAnalysis/tree/develop",
               },
 
@@ -405,121 +464,166 @@ import Reveal from "../components/Reveal.astro";
                 <Reveal delay={260 + idx * 90}>
                   <article
                     class="group relative overflow-hidden rounded-2xl
-                       border border-emerald-500/25
-                       bg-white/60 dark:bg-white/5 backdrop-blur
-                       shadow-sm transition-all duration-300
-                       hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20
-                       hover:border-emerald-400/60"
+           border border-emerald-500/25
+           bg-white/60 dark:bg-white/5 backdrop-blur
+           shadow-sm transition-all duration-300
+           hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20
+           hover:border-emerald-400/60"
                   >
-                    <!-- Glow -->
                     <div
                       class="pointer-events-none absolute -top-24 -left-24 h-64 w-64 rounded-full
-                         bg-emerald-500/15 blur-3xl opacity-0 transition-opacity duration-500
-                         group-hover:opacity-100"
+             bg-emerald-500/15 blur-3xl opacity-0 transition-opacity duration-500
+             group-hover:opacity-100"
                       aria-hidden="true"
-                    ></div>
+                    />
 
-                    <!-- Cover -->
-                    <div class="relative">
-                      <img
-                        src={p.cover}
-                        alt={`${p.title} cover`}
-                        class="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                        loading="lazy"
-                      />
+                    <div class="grid md:grid-cols-[420px_1fr]">
+                      <div class="relative overflow-hidden" data-carousel>
+                        {/* Track */}
+                        <div class="relative h-56 md:h-full md:min-h-[260px]">
+                          <div
+                            class="flex h-full w-full transition-transform duration-500 ease-out"
+                            data-carousel-track
+                            style="transform: translateX(0%)"
+                          >
+                            {(p.covers ?? [p.cover]).map((src, i) => (
+                              <div class="h-full w-full shrink-0">
+                                <img
+                                  src={src}
+                                  alt={`${p.title} screenshot ${i + 1}`}
+                                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                  loading="lazy"
+                                />
+                              </div>
+                            ))}
+                          </div>
 
-                      <!-- subtle overlay -->
-                      <div
-                        class="pointer-events-none absolute inset-0
-                           bg-gradient-to-t from-black/35 via-black/10 to-transparent"
-                        aria-hidden="true"
-                      ></div>
-                    </div>
-
-                    <!-- Content -->
-                    <div class="relative p-6">
-                      <div class="flex items-start justify-between gap-4">
-                        <div class="min-w-0">
-                          <h3 class="text-xl md:text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                            {p.title}
-                          </h3>
-
-                          {/* Extra meta (solo si existe) */}
-                          {(p.institution || p.type) && (
-                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">
-                              <span class="font-medium">{p.institution}</span>
-                              {p.type && (
-                                <span class="text-gray-500 dark:text-gray-400">
-                              {" "}
-                                  · {p.type}
-                            </span>
-                              )}
-                            </p>
-                          )}
+                          {/* Overlay (mantienes tu look) */}
+                          <div
+                            class="pointer-events-none absolute inset-0
+             bg-gradient-to-t from-black/35 via-black/10 to-transparent
+             md:bg-gradient-to-r md:from-black/25 md:via-black/10 md:to-transparent"
+                            aria-hidden="true"
+                          />
                         </div>
 
-                        <div class="shrink-0 flex flex-col items-end gap-2">
-                      <span
-                        class="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium
-                               border border-emerald-500/25
-                               bg-emerald-500/10 text-emerald-500"
-                      >
-                        {p.badge}
-                      </span>
-
-                          {/* Period + grade (solo si existe) */}
-                          {(p.period || p.grade) && (
-                            <div class="text-xs text-gray-500 dark:text-gray-400 text-right leading-snug">
-                              {p.period && <div>{p.period}</div>}
-                              {p.grade && (
-                                <div class="mt-1">
-                                  Grade:{" "}
-                                  <span class="font-medium text-gray-700 dark:text-gray-200">
-                                {p.grade}
-                              </span>
-                                </div>
-                              )}
-                            </div>
-                          )}
-                        </div>
-                      </div>
-
-                      <p class="mt-3 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
-                        {p.description}
-                      </p>
-
-                      <!-- Meta row -->
-                      <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-600 dark:text-gray-300">
-                    <span class="inline-flex items-center gap-2">
-                      <span class="h-2.5 w-2.5 rounded-full bg-emerald-400/80"></span>
-
-                      {/* Si hay array de technologies, lo convertimos a string corto */}
-                      <span class="font-medium">
-                        {Array.isArray(p.technologies)
-                          ? p.technologies.slice(0, 4).join(" · ")
-                          : p.tech}
-                      </span>
-                    </span>
-                      </div>
-
-                      <!-- Links -->
-                      <div class="mt-6 flex">
-                        <a
-                          href={p.repoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          class="inline-flex items-center justify-center gap-2
-                             rounded-lg px-4 py-2
-                             text-sm font-semibold
-                             text-emerald-400
-                             border border-emerald-500/40
-                             transition-all duration-300
-                             hover:bg-emerald-500/10 hover:-translate-y-0.5
-                             hover:border-emerald-400"
+                        {/* Controls */}
+                        <button
+                          type="button"
+                          class="absolute left-3 top-1/2 -translate-y-1/2
+           inline-flex h-9 w-9 items-center justify-center rounded-full
+           bg-black/35 text-white border border-white/20
+           opacity-0 transition-opacity duration-200
+           group-hover:opacity-100 focus:opacity-100"
+                          aria-label="Previous image"
+                          data-carousel-prev
                         >
-                          Repository
-                          <span aria-hidden="true">↗</span>
-                        </a>
+                          ‹
+                        </button>
+
+                        <button
+                          type="button"
+                          class="absolute right-3 top-1/2 -translate-y-1/2
+           inline-flex h-9 w-9 items-center justify-center rounded-full
+           bg-black/35 text-white border border-white/20
+           opacity-0 transition-opacity duration-200
+           group-hover:opacity-100 focus:opacity-100"
+                          aria-label="Next image"
+                          data-carousel-next
+                        >
+                          ›
+                        </button>
+
+                        {/* Dots */}
+                        <div
+                          class="absolute bottom-3 left-1/2 -translate-x-1/2
+           flex items-center gap-2 rounded-full
+           bg-black/25 border border-white/15 px-3 py-1.5
+           opacity-0 transition-opacity duration-200
+           group-hover:opacity-100 focus-within:opacity-100"
+                          data-carousel-dots
+                          aria-label="Carousel pagination"
+                        />
+                      </div>
+
+                      <div class="relative p-6 md:p-7">
+                        <div class="flex items-start justify-between gap-4">
+                          <div class="min-w-0">
+                            <h3 class="text-xl md:text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                              {p.title}
+                            </h3>
+
+                            {(p.institution || p.type) && (
+                              <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">
+                                <span class="font-medium">{p.institution}</span>
+                                {p.type && (
+                                  <span class="text-gray-500 dark:text-gray-400">
+                                    {" "}
+                                    · {p.type}
+                                  </span>
+                                )}
+                              </p>
+                            )}
+                          </div>
+
+                          <div class="shrink-0 flex flex-col items-end gap-2">
+                            <span
+                              class="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium
+                     border border-emerald-500/25
+                     bg-emerald-500/10 text-emerald-500"
+                            >
+                              {p.badge}
+                            </span>
+
+                            {(p.period || p.grade) && (
+                              <div class="text-xs text-gray-500 dark:text-gray-400 text-right leading-snug">
+                                {p.period && <div>{p.period}</div>}
+                                {p.grade && (
+                                  <div class="mt-1">
+                                    Grade:{" "}
+                                    <span class="font-medium text-gray-700 dark:text-gray-200">
+                                      {p.grade}
+                                    </span>
+                                  </div>
+                                )}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+
+                        <p class="mt-3 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                          {p.description}
+                        </p>
+
+                        <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-600 dark:text-gray-300">
+                          <span class="inline-flex items-center gap-2">
+                            <span class="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
+                            <span class="font-medium">
+                              {Array.isArray(p.technologies)
+                                ? p.technologies.slice(0, 6).join(" · ")
+                                : p.tech}
+                            </span>
+                          </span>
+                        </div>
+
+                        <div class="mt-6 flex">
+                          <a
+                            href={p.repoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center justify-center gap-2
+                   rounded-lg px-4 py-2
+                   text-sm font-semibold
+                   text-emerald-400
+                   border border-emerald-500/40
+                   transition-all duration-300
+                   hover:bg-emerald-500/10 hover:-translate-y-0.5
+                   hover:border-emerald-400"
+                          >
+                            Repository
+                            <span aria-hidden="true">↗</span>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </article>
@@ -529,6 +633,70 @@ import Reveal from "../components/Reveal.astro";
         </div>
       </Reveal>
     </section>
-
   </section>
+
+  <script is:inline>
+    const carousels = document.querySelectorAll("[data-carousel]");
+
+    carousels.forEach((root) => {
+      const track = root.querySelector("[data-carousel-track]");
+      const slides = track ? track.children.length : 0;
+
+      if (!track || slides <= 1) {
+        // Si solo hay 1 imagen, ocultamos controles/dots (opcional)
+        root.querySelector("[data-carousel-prev]")?.classList.add("hidden");
+        root.querySelector("[data-carousel-next]")?.classList.add("hidden");
+        root.querySelector("[data-carousel-dots]")?.classList.add("hidden");
+        return;
+      }
+
+      const btnPrev = root.querySelector("[data-carousel-prev]");
+      const btnNext = root.querySelector("[data-carousel-next]");
+      const dotsWrap = root.querySelector("[data-carousel-dots]");
+
+      let index = 0;
+
+      // Dots
+      const dots = [];
+      for (let i = 0; i < slides; i++) {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("aria-label", `Go to image ${i + 1}`);
+        b.className =
+          "h-2 w-2 rounded-full border border-white/20 transition-all duration-200";
+        b.addEventListener("click", () => goTo(i));
+        dotsWrap.appendChild(b);
+        dots.push(b);
+      }
+
+      const setActive = () => {
+        dots.forEach((d, i) => {
+          d.classList.toggle("bg-white/80", i === index);
+          d.classList.toggle("bg-white/25", i !== index);
+          d.classList.toggle("w-5", i === index);
+          d.classList.toggle("w-2", i !== index);
+        });
+      };
+
+      const goTo = (i) => {
+        index = (i + slides) % slides;
+        track.style.transform = `translateX(-${index * 100}%)`;
+        setActive();
+      };
+
+      btnPrev?.addEventListener("click", () => goTo(index - 1));
+      btnNext?.addEventListener("click", () => goTo(index + 1));
+
+      // Keyboard (cuando el ratón está encima o hay foco)
+      root.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") goTo(index - 1);
+        if (e.key === "ArrowRight") goTo(index + 1);
+      });
+
+      // Hacer el root focusable para flechas si quieres
+      root.setAttribute("tabindex", "0");
+
+      setActive();
+    });
+  </script>
 </Layout>

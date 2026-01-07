@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Reveal from "../components/Reveal.astro";
 ---
 
 <Layout>
@@ -7,802 +8,1197 @@ import Layout from "../layouts/Layout.astro";
   <section class="max-w-6xl mx-auto px-4 pt-24 pb-16">
     <div class="grid items-center gap-10 md:grid-cols-2">
       <!-- Left: text -->
-      <div>
-        <h1 class="mt-3 text-4xl md:text-5xl font-bold tracking-tight">
-          I’m
-          <span
-            class="bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500
+      <Reveal delay={0} class="will-change-transform">
+        <div>
+          <h1 class="mt-3 text-4xl md:text-5xl font-bold tracking-tight">
+            I’m
+            <span
+              class="bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500
                  bg-clip-text text-transparent"
-          >
-            Raúl García Balongo
-          </span>
-        </h1>
+            >
+              Raúl García Balongo
+            </span>
+          </h1>
 
-        <h2 class="mt-3 text-xl md:text-2xl text-gray-700 dark:text-gray-200">
-          Computer Science Engineer ·
-          <span class="text-emerald-500 font-semibold">Data & Analytics</span>
-        </h2>
-      </div>
+          <h2 class="mt-3 text-xl md:text-2xl text-gray-700 dark:text-gray-200">
+            Computer Science Engineer
+          </h2>
+        </div>
+      </Reveal>
 
       <!-- Right: image -->
-      <div class="flex justify-center md:justify-end">
-        <div
-          class="relative w-[290px] sm:w-[340px] md:w-[380px]
-               rounded-2xl border border-emerald-500/30
-               bg-white/60 dark:bg-white/5 backdrop-blur
-               shadow-lg shadow-emerald-500/10"
-        >
+      <Reveal delay={120} class="will-change-transform">
+        <div class="flex justify-center md:justify-end">
           <div
-            class="pointer-events-none absolute -top-10 -right-10 h-40 w-40 rounded-full
-                 bg-emerald-500/20 blur-3xl"
-            aria-hidden="true"
+            class="group relative w-[290px] sm:w-[340px] md:w-[380px]
+            rounded-2xl border border-emerald-500/30
+            bg-white/60 dark:bg-white/5 backdrop-blur
+            shadow-lg shadow-emerald-500/10
+            transition-all duration-500 ease-out
+            hover:-translate-y-1 hover:shadow-emerald-500/20"
           >
-          </div>
-
-          <div class="p-3">
+            <!-- Glow decorativo -->
             <div
-              class="overflow-hidden rounded-xl border border-gray-200/70 dark:border-white/10 bg-white"
+              class="pointer-events-none absolute -top-10 -right-10 h-40 w-40 rounded-full
+              bg-emerald-500/20 blur-3xl
+              transition-opacity duration-500
+              opacity-70 group-hover:opacity-100"
+              aria-hidden="true"
             >
-              <img
-                src="/assets/images/Perfil.jpg"
-                alt="Raúl García Balongo"
-                class="h-[320px] w-full object-cover"
-                loading="eager"
-              />
+            </div>
+
+            <div class="p-3">
+              <div
+                class="relative overflow-hidden rounded-xl
+                border border-gray-200/70 dark:border-white/10
+                bg-white"
+              >
+                <img
+                  src="/assets/images/Perfil.jpg"
+                  alt="Raúl García Balongo"
+                  loading="eager"
+                  class="h-[320px] w-full object-cover
+                  transition-transform duration-700 ease-out
+                  group-hover:scale-[1.05]"
+                />
+
+                <!-- Overlay sutil al hover -->
+                <div
+                  class="pointer-events-none absolute inset-0
+                  bg-gradient-to-tr from-emerald-500/10 via-transparent to-transparent
+                  opacity-0 transition-opacity duration-500
+                  group-hover:opacity-100"
+                  aria-hidden="true"
+                >
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Reveal>
     </div>
   </section>
-
-  <!-- Divider (optional but looks clean) -->
-  <div class="max-w-6xl mx-auto px-4">
-    <div
-      class="h-px w-full bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent"
-    >
-    </div>
-  </div>
 
   <!-- ABOUT CONTENT -->
   <section class="max-w-4xl mx-auto px-4 pt-16 pb-24 space-y-16">
     <!-- ABOUT ME -->
     <section
-      class="rounded-2xl border border-gray-200/70 dark:border-gray-700/70 bg-white/60 dark:bg-gray-900/30 backdrop-blur p-6 md:p-8"
+      class="relative overflow-hidden rounded-3xl border border-gray-200/70 dark:border-white/10
+         bg-white/60 dark:bg-white/5 backdrop-blur p-6 md:p-10"
     >
-      <!-- Header -->
-      <div class="mb-6">
-        <h1 class="text-3xl font-bold">About Me</h1>
-        <p class="mt-2 text-gray-600 dark:text-gray-300 max-w-3xl">
-          A concise overview of my background, mindset, and professional focus.
-        </p>
+      <!-- Decorative glow -->
+      <div
+        class="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full
+           bg-emerald-500/20 blur-3xl"
+        aria-hidden="true"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full
+           bg-teal-500/10 blur-3xl"
+        aria-hidden="true"
+      >
       </div>
 
-      <!-- Main description -->
-      <div class="space-y-4 max-w-4xl">
-        <p class="text-gray-700 dark:text-gray-200 leading-relaxed">
-          I am a <span class="font-semibold">Computer Science Engineer</span>,
-          specialized in <span class="font-semibold">Information Systems</span> at
-          the University of Málaga, with a strong focus on
-          <span class="font-semibold">data analysis</span> and the transformation
-          of information into <span class="font-semibold"
-            >actionable knowledge</span
-          >
-          to support decision-making.
-        </p>
+      <div class="grid gap-10 lg:grid-cols-12">
+        <!-- LEFT -->
+        <Reveal delay={0} class="lg:col-span-7">
+          <header class="mb-6">
+            <h2 class="mt-4 text-3xl md:text-4xl font-bold tracking-tight">
+              Turning data into <span
+                class="bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500 bg-clip-text text-transparent"
+                >decisions</span
+              >, and ideas into <span
+                class="bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500 bg-clip-text text-transparent"
+                >products</span
+              >.
+            </h2>
 
-        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-          I work with data analysis tools and technologies such as
-          <span class="font-medium">Python, SQL, Spark, Power BI, Tableau</span
-          >, and cloud environments like <span class="font-medium">Azure</span>,
-          applying them to data processing, analysis, and visualization. My
-          engineering background provides a solid foundation in
-          <span class="font-medium"
-            >mathematics, statistics, and logical reasoning</span
-          >, allowing me to approach complex problems in a structured and
-          analytical way.
-        </p>
-      </div>
+            <p
+              class="mt-4 text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl"
+            >
+              Computer Science Engineer (Information Systems) from the
+              University of Málaga. I focus on building practical, data-driven
+              solutions with clean engineering.
+            </p>
+          </header>
 
-      <!-- Key traits -->
-      <div class="mt-6 grid gap-4 md:grid-cols-3">
-        <!-- Curiosity -->
-        <div
-          class="rounded-xl border border-gray-200 dark:border-gray-700 p-5 bg-white/70 dark:bg-gray-900/20"
-        >
-          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">
-            Curiosity & Understanding
-          </h3>
-          <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-            I am driven by curiosity to understand the
-            <span class="font-medium">why behind the data</span>, not just the
-            results.
-          </p>
+          <!-- Bullets (less wall of text) -->
+          <ul class="space-y-3 text-gray-700 dark:text-gray-200">
+            <li class="flex gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400/90"></span>
+              <span>
+                Strong foundation in <span class="font-semibold"
+                  >stats, reasoning, and system thinking</span
+                >.
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400/90"></span>
+              <span>
+                I like connecting <span class="font-semibold"
+                  >analysis + visualization</span
+                > to real business value.
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400/90"></span>
+              <span>
+                Comfortable shipping in teams with <span class="font-semibold"
+                  >agile workflows</span
+                > and clean code.
+              </span>
+            </li>
+          </ul>
+
+          <!-- Tech chips -->
+          <div class="mt-6 flex flex-wrap gap-2">
+            {
+              ["Python", "SQL", "Spark", "Power BI", "Tableau", "Azure"].map(
+                (t) => (
+                  <span
+                    class="rounded-full border border-emerald-500/20 bg-white/60 dark:bg-white/5
+                   px-3 py-1 text-sm text-gray-700 dark:text-gray-200
+                   hover:border-emerald-500/40 hover:bg-emerald-500/10 transition"
+                  >
+                    {t}
+                  </span>
+                ),
+              )
+            }
+          </div>
+        </Reveal>
+
+        <!-- RIGHT -->
+        <div class="lg:col-span-5 space-y-4">
+          <!-- Mini highlights (adds color + structure) -->
+          <Reveal delay={120}>
+            <div class="grid grid-cols-2 gap-3 w-full">
+              <div
+                class="min-w-0 rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-4"
+              >
+                <p class="text-xs text-emerald-700 dark:text-emerald-300">
+                  Focus
+                </p>
+                <p
+                  class="mt-1 font-semibold text-gray-900 dark:text-gray-100 leading-tight break-words"
+                >
+                  Data + Product
+                </p>
+              </div>
+
+              <div
+                class="min-w-0 rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-4"
+              >
+                <p class="text-xs text-emerald-700 dark:text-emerald-300">
+                  Style
+                </p>
+                <p
+                  class="mt-1 font-semibold text-gray-900 dark:text-gray-100 leading-tight break-words"
+                >
+                  Clean & Practical
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          <!-- Trait cards with hover + more “alive” -->
+          <Reveal delay={180}>
+            <div
+              class="group rounded-2xl border border-gray-200/70 dark:border-white/10
+                 bg-white/70 dark:bg-white/5 p-5
+                 hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
+            >
+              <div class="flex items-start gap-3">
+                <div
+                  class="h-10 w-10 rounded-xl bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center"
+                >
+                  <span class="text-emerald-600 dark:text-emerald-300">✦</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 dark:text-gray-100">
+                    Curiosity
+                  </h3>
+                  <p class="mt-1 text-gray-600 dark:text-gray-300">
+                    I care about the <span class="font-medium"
+                      >“why” behind the numbers</span
+                    >.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={240}>
+            <div
+              class="group rounded-2xl border border-gray-200/70 dark:border-white/10
+                 bg-white/70 dark:bg-white/5 p-5
+                 hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
+            >
+              <div class="flex items-start gap-3">
+                <div
+                  class="h-10 w-10 rounded-xl bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center"
+                >
+                  <span class="text-emerald-600 dark:text-emerald-300">⌁</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 dark:text-gray-100">
+                    Critical thinking
+                  </h3>
+                  <p class="mt-1 text-gray-600 dark:text-gray-300">
+                    I validate assumptions and aim for <span class="font-medium"
+                      >robust insights</span
+                    >.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={300}>
+            <div
+              class="group rounded-2xl border border-gray-200/70 dark:border-white/10
+                 bg-white/70 dark:bg-white/5 p-5
+                 hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
+            >
+              <div class="flex items-start gap-3">
+                <div
+                  class="h-10 w-10 rounded-xl bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center"
+                >
+                  <span class="text-emerald-600 dark:text-emerald-300">↗</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 dark:text-gray-100">
+                    Communication
+                  </h3>
+                  <p class="mt-1 text-gray-600 dark:text-gray-300">
+                    I turn analysis into <span class="font-medium"
+                      >clear decisions</span
+                    > and next steps.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
         </div>
-
-        <!-- Critical thinking -->
-        <div
-          class="rounded-xl border border-gray-200 dark:border-gray-700 p-5 bg-white/70 dark:bg-gray-900/20"
-        >
-          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">
-            Critical Thinking
-          </h3>
-          <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-            I question assumptions, validate conclusions, and seek
-            <span class="font-medium">robust and well-founded insights</span>.
-          </p>
-        </div>
-
-        <!-- Communication -->
-        <div
-          class="rounded-xl border border-gray-200 dark:border-gray-700 p-5 bg-white/70 dark:bg-gray-900/20"
-        >
-          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">
-            Communication & Impact
-          </h3>
-          <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-            I translate technical analyses into
-            <span class="font-medium">clear, meaningful stories</span> focused on
-            value.
-          </p>
-        </div>
-      </div>
-
-      <!-- Closing -->
-      <div class="mt-6 max-w-4xl">
-        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-          I enjoy working in <span class="font-medium"
-            >collaborative team environments</span
-          >
-          and with diverse profiles, maintaining a constant attitude of learning,
-          perseverance, and professional growth in
-          <span class="font-medium">real-world, data-oriented projects</span>.
-        </p>
       </div>
     </section>
 
     <!-- OBJECTIVES -->
     <section
-      class="rounded-2xl border border-gray-200/70 dark:border-gray-700/70 bg-white/60 dark:bg-gray-900/30 backdrop-blur p-6 md:p-8"
+      class="relative overflow-hidden rounded-3xl border border-gray-200/70 dark:border-white/10
+         bg-white/60 dark:bg-white/5 backdrop-blur p-6 md:p-8"
     >
-      <!-- Header -->
-      <div class="flex items-start justify-between gap-6">
-        <h2 class="text-2xl font-semibold">Objectives</h2>
+      <!-- Decorative glow -->
+      <div
+        class="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full
+           bg-emerald-500/15 blur-3xl"
+        aria-hidden="true"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full
+           bg-teal-500/10 blur-3xl"
+        aria-hidden="true"
+      >
       </div>
 
+      <!-- Header -->
+      <Reveal delay={0}>
+        <div class="flex items-start justify-between gap-6">
+          <div>
+            <h2
+              class="mt-3 text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100"
+            >
+              Where I’m heading next
+            </h2>
+          </div>
+        </div>
+      </Reveal>
+
       <!-- Main highlight -->
-      <div
-        class="mt-6 rounded-xl border border-emerald-200/70 dark:border-emerald-500/20 bg-emerald-50/60 dark:bg-emerald-500/10 p-5"
-      >
-        <p class="text-gray-800 dark:text-gray-100 leading-relaxed">
-          My goal is to join a team as a <span class="font-semibold"
-            >junior profile</span
-          >, contributing from day one to real-world projects while building a
-          solid career in
-          <span class="font-semibold">Data Analysis</span>, <span
-            class="font-semibold">Business Intelligence</span
-          >, and <span class="font-semibold">data-oriented development</span>.
-        </p>
-      </div>
+      <Reveal delay={120}>
+        <div
+          class="mt-6 relative rounded-2xl border border-emerald-200/70 dark:border-emerald-500/20
+             bg-emerald-50/60 dark:bg-emerald-500/10 p-5 md:p-6"
+        >
+          <div
+            class="pointer-events-none absolute inset-0 rounded-2xl
+               bg-gradient-to-r from-emerald-500/10 via-transparent to-transparent"
+            aria-hidden="true"
+          >
+          </div>
+
+          <p class="relative text-gray-800 dark:text-gray-100 leading-relaxed">
+            My goal is to join a team as a <span class="font-semibold"
+              >junior profile</span
+            >, contributing from day one to real-world projects while building a
+            solid career in
+            <span class="font-semibold">Data Analysis</span>, <span
+              class="font-semibold">Business Intelligence</span
+            >, and <span class="font-semibold">data-oriented development</span>.
+          </p>
+        </div>
+      </Reveal>
 
       <!-- Cards -->
       <div class="mt-6 grid gap-4 md:grid-cols-3">
         <!-- What I'm looking for -->
-        <div
-          class="rounded-xl border border-gray-200 dark:border-gray-700 p-5 bg-white/70 dark:bg-gray-900/20"
-        >
-          <div class="flex items-center gap-2">
-            <span
-              class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-300 border border-emerald-500/20"
-            >
-              <!-- icon: target -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
+        <Reveal delay={200}>
+          <div
+            class="group rounded-2xl border border-gray-200/70 dark:border-white/10
+               bg-white/70 dark:bg-white/5 p-5
+               hover:-translate-y-1 hover:border-emerald-500/30
+               hover:shadow-lg hover:shadow-emerald-500/10
+               transition-all duration-300"
+          >
+            <div class="flex items-center gap-2">
+              <span
+                class="inline-flex h-9 w-9 items-center justify-center rounded-xl
+                   bg-emerald-500/10 text-emerald-600 dark:text-emerald-300
+                   border border-emerald-500/20
+                   group-hover:bg-emerald-500/15 transition"
               >
-                <circle cx="12" cy="12" r="9"></circle>
-                <circle cx="12" cy="12" r="5"></circle>
-                <path d="M12 7v5l3 3"></path>
-              </svg>
-            </span>
-            <h3 class="font-semibold text-gray-900 dark:text-gray-100">
-              What I’m looking for
-            </h3>
-          </div>
+                <!-- icon: target -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <path d="M12 7v5l3 3"></path>
+                </svg>
+              </span>
+              <h3 class="font-semibold text-gray-900 dark:text-gray-100">
+                What I’m looking for
+              </h3>
+            </div>
 
-          <p class="mt-3 text-gray-600 dark:text-gray-300 leading-relaxed">
-            A <span class="font-medium">stable full-time</span> role with responsibility,
-            continuous learning, and real production impact.
-          </p>
-        </div>
+            <p class="mt-3 text-gray-600 dark:text-gray-300 leading-relaxed">
+              A <span class="font-medium">stable full-time</span> role with responsibility,
+              continuous learning, and real production impact.
+            </p>
+          </div>
+        </Reveal>
 
         <!-- What I’m not pursuing -->
-        <div
-          class="rounded-xl border border-gray-200 dark:border-gray-700 p-5 bg-white/70 dark:bg-gray-900/20"
-        >
-          <div class="flex items-center gap-2">
-            <span
-              class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gray-500/10 text-gray-700 dark:text-gray-200 border border-gray-500/20"
-            >
-              <!-- icon: ban -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
+        <Reveal delay={260}>
+          <div
+            class="group rounded-2xl border border-gray-200/70 dark:border-white/10
+               bg-white/70 dark:bg-white/5 p-5
+               hover:-translate-y-1 hover:border-gray-400/40
+               hover:shadow-lg hover:shadow-black/5
+               transition-all duration-300"
+          >
+            <div class="flex items-center gap-2">
+              <span
+                class="inline-flex h-9 w-9 items-center justify-center rounded-xl
+                   bg-gray-500/10 text-gray-700 dark:text-gray-200
+                   border border-gray-500/20"
               >
-                <circle cx="12" cy="12" r="9"></circle>
-                <path d="M5.5 5.5l13 13"></path>
-              </svg>
-            </span>
-            <h3 class="font-semibold text-gray-900 dark:text-gray-100">
-              Not my focus now
-            </h3>
+                <!-- icon: ban -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M5.5 5.5l13 13"></path>
+                </svg>
+              </span>
+              <h3 class="font-semibold text-gray-900 dark:text-gray-100">
+                Not my focus now
+              </h3>
+            </div>
+
+            <ul class="mt-3 space-y-2 text-gray-600 dark:text-gray-300">
+              <li class="flex items-baseline gap-2">
+                <span class="inline-block h-1.5 w-1.5 rounded-full bg-gray-400"
+                ></span>
+                <span>Training programs</span>
+              </li>
+              <li class="flex items-baseline gap-2">
+                <span class="inline-block h-1.5 w-1.5 rounded-full bg-gray-400"
+                ></span>
+                <span>Master’s / PhD programs</span>
+              </li>
+              <li class="flex items-baseline gap-2">
+                <span class="inline-block h-1.5 w-1.5 rounded-full bg-gray-400"
+                ></span>
+                <span>Purely academic paths</span>
+              </li>
+            </ul>
           </div>
+        </Reveal>
 
-          <ul class="mt-3 space-y-2 text-gray-600 dark:text-gray-300">
-            <li class="flex items-baseline gap-2">
-              <span class="inline-block h-1.5 w-1.5 rounded-full bg-gray-400"
-              ></span>
-              <span>Training programs</span>
-            </li>
-            <li class="flex items-baseline gap-2">
-              <span class="inline-block h-1.5 w-1.5 rounded-full bg-gray-400"
-              ></span>
-              <span>Master’s / PhD programs</span>
-            </li>
-            <li class="flex items-baseline gap-2">
-              <span class="inline-block h-1.5 w-1.5 rounded-full bg-gray-400"
-              ></span>
-              <span>Purely academic paths</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- What motivates me -->
-        <div
-          class="rounded-xl border border-gray-200 dark:border-gray-700 p-5 bg-white/70 dark:bg-gray-900/20"
-        >
-          <div class="flex items-center gap-2">
-            <span
-              class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-300 border border-emerald-500/20"
-            >
-              <!-- icon: spark -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
+        <!-- Motivation -->
+        <Reveal delay={320}>
+          <div
+            class="group rounded-2xl border border-gray-200/70 dark:border-white/10
+               bg-white/70 dark:bg-white/5 p-5
+               hover:-translate-y-1 hover:border-emerald-500/30
+               hover:shadow-lg hover:shadow-emerald-500/10
+               transition-all duration-300"
+          >
+            <div class="flex items-center gap-2">
+              <span
+                class="inline-flex h-9 w-9 items-center justify-center rounded-xl
+                   bg-emerald-500/10 text-emerald-600 dark:text-emerald-300
+                   border border-emerald-500/20
+                   group-hover:bg-emerald-500/15 transition"
               >
-                <path
-                  d="M12 2l1.5 6L20 10l-6.5 2L12 22l-1.5-10L4 10l6.5-2L12 2z"
-                ></path>
-              </svg>
-            </span>
-            <h3 class="font-semibold text-gray-900 dark:text-gray-100">
-              Motivation
-            </h3>
-          </div>
+                <!-- icon: spark -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M12 2l1.5 6L20 10l-6.5 2L12 22l-1.5-10L4 10l6.5-2L12 2z"
+                  ></path>
+                </svg>
+              </span>
+              <h3 class="font-semibold text-gray-900 dark:text-gray-100">
+                Motivation
+              </h3>
+            </div>
 
-          <p class="mt-3 text-gray-600 dark:text-gray-300 leading-relaxed">
-            Roles that combine <span class="font-medium">analysis</span>,
-            <span class="font-medium">visualization</span>, and
-            <span class="font-medium">communication</span> — where data supports decisions
-            and improves products, processes, or services.
-          </p>
-        </div>
+            <p class="mt-3 text-gray-600 dark:text-gray-300 leading-relaxed">
+              Roles that combine <span class="font-medium">analysis</span>,
+              <span class="font-medium">visualization</span>, and
+              <span class="font-medium">communication</span> — where data supports
+              decisions and improves products, processes, or services.
+            </p>
+          </div>
+        </Reveal>
       </div>
     </section>
 
     <!-- SOFT SKILLS -->
-    <section>
-      <h2 class="text-2xl font-semibold mb-6">Soft Skills</h2>
+    <section
+      class="relative overflow-hidden rounded-3xl border border-gray-200/70 dark:border-white/10
+         bg-white/60 dark:bg-white/5 backdrop-blur p-6 md:p-8"
+    >
+      <!-- Decorative glow -->
+      <div
+        class="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full
+           bg-emerald-500/15 blur-3xl"
+        aria-hidden="true"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full
+           bg-teal-500/10 blur-3xl"
+        aria-hidden="true"
+      >
+      </div>
+
+      <!-- Header -->
+      <Reveal delay={0}>
+        <header class="mb-6">
+          <h2
+            class="mt-3 text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100"
+          >
+            How I work with teams and challenges
+          </h2>
+
+          <p
+            class="mt-3 text-gray-600 dark:text-gray-300 max-w-3xl leading-relaxed"
+          >
+            A practical mindset focused on clarity, consistency, and impact —
+            especially in real-world projects.
+          </p>
+        </header>
+      </Reveal>
 
       <!-- Skill cards -->
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <!-- Analytical & structured -->
-        <article
-          class="group relative overflow-hidden rounded-2xl
-             border border-gray-200/70 dark:border-white/10
-             bg-white/70 dark:bg-white/5 backdrop-blur p-6
-             shadow-sm transition-all duration-300
-             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-             hover:border-emerald-500/40"
-        >
-          <div
-            class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
-               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-               group-hover:opacity-100"
-            aria-hidden="true"
+        <Reveal delay={120}>
+          <article
+            class="group relative overflow-hidden rounded-2xl
+               border border-gray-200/70 dark:border-white/10
+               bg-white/70 dark:bg-white/5 backdrop-blur p-6
+               shadow-sm transition-all duration-300
+               hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+               hover:border-emerald-500/40"
           >
-          </div>
-
-          <div
-            class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
-               bg-emerald-500/12 text-emerald-600 dark:text-emerald-400"
-            aria-hidden="true"
-          >
-            <!-- Chart icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              class="h-6 w-6"
+            <div
+              class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
+                 bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+                 group-hover:opacity-100"
+              aria-hidden="true"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3 3v18h18"></path>
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M7 14l3-3 3 2 4-6"></path>
-            </svg>
-          </div>
+            </div>
 
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-            Analytical & structured thinking
-          </h3>
-          <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
-            I break complex problems into clear steps and deliver solutions with
-            a results-oriented mindset.
-          </p>
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
+                 bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
+                 border border-emerald-500/15
+                 transition-transform duration-300 group-hover:scale-[1.05]"
+              aria-hidden="true"
+            >
+              <!-- Chart icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 3v18h18"></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M7 14l3-3 3 2 4-6"></path>
+              </svg>
+            </div>
 
-          <div
-            class="mt-4 h-px w-full bg-gradient-to-r from-transparent via-emerald-500/25 to-transparent
-               opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            aria-hidden="true"
-          >
-          </div>
-        </article>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Analytical & structured thinking
+            </h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
+              I break complex problems into clear steps and deliver solutions
+              with a results-oriented mindset.
+            </p>
+
+            <div
+              class="mt-4 h-px w-full bg-gradient-to-r from-transparent via-emerald-500/25 to-transparent
+                 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              aria-hidden="true"
+            >
+            </div>
+          </article>
+        </Reveal>
 
         <!-- Consistency -->
-        <article
-          class="group relative overflow-hidden rounded-2xl
-             border border-gray-200/70 dark:border-white/10
-             bg-white/70 dark:bg-white/5 backdrop-blur p-6
-             shadow-sm transition-all duration-300
-             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-             hover:border-emerald-500/40"
-        >
-          <div
-            class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
-               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-               group-hover:opacity-100"
-            aria-hidden="true"
+        <Reveal delay={170}>
+          <article
+            class="group relative overflow-hidden rounded-2xl
+               border border-gray-200/70 dark:border-white/10
+               bg-white/70 dark:bg-white/5 backdrop-blur p-6
+               shadow-sm transition-all duration-300
+               hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+               hover:border-emerald-500/40"
           >
-          </div>
-
-          <div
-            class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
-               bg-emerald-500/12 text-emerald-600 dark:text-emerald-400"
-            aria-hidden="true"
-          >
-            <!-- Bolt icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              class="h-6 w-6"
+            <div
+              class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
+                 bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+                 group-hover:opacity-100"
+              aria-hidden="true"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"></path>
-            </svg>
-          </div>
+            </div>
 
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-            Consistency & perseverance
-          </h3>
-          <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
-            I stay focused under pressure and keep pushing until the solution is
-            solid and production-ready.
-          </p>
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
+                 bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
+                 border border-emerald-500/15
+                 transition-transform duration-300 group-hover:scale-[1.05]"
+              aria-hidden="true"
+            >
+              <!-- Bolt icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"></path>
+              </svg>
+            </div>
 
-          <div
-            class="mt-4 h-px w-full bg-gradient-to-r from-transparent via-emerald-500/25 to-transparent
-               opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            aria-hidden="true"
-          >
-          </div>
-        </article>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Consistency & perseverance
+            </h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
+              I stay focused under pressure and keep pushing until the solution
+              is solid and production-ready.
+            </p>
+
+            <div
+              class="mt-4 h-px w-full bg-gradient-to-r from-transparent via-emerald-500/25 to-transparent
+                 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              aria-hidden="true"
+            >
+            </div>
+          </article>
+        </Reveal>
 
         <!-- Communication -->
-        <article
-          class="group relative overflow-hidden rounded-2xl
-             border border-gray-200/70 dark:border-white/10
-             bg-white/70 dark:bg-white/5 backdrop-blur p-6
-             shadow-sm transition-all duration-300
-             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-             hover:border-emerald-500/40"
-        >
-          <div
-            class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
-               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-               group-hover:opacity-100"
-            aria-hidden="true"
+        <Reveal delay={220}>
+          <article
+            class="group relative overflow-hidden rounded-2xl
+               border border-gray-200/70 dark:border-white/10
+               bg-white/70 dark:bg-white/5 backdrop-blur p-6
+               shadow-sm transition-all duration-300
+               hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+               hover:border-emerald-500/40"
           >
-          </div>
-
-          <div
-            class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
-               bg-emerald-500/12 text-emerald-600 dark:text-emerald-400"
-            aria-hidden="true"
-          >
-            <!-- Chat icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              class="h-6 w-6"
+            <div
+              class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
+                 bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+                 group-hover:opacity-100"
+              aria-hidden="true"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M7.5 8.25h9m-9 3h6m-7.5 9l3.2-2.4c.4-.3.9-.5 1.4-.5H19.5A2.25 2.25 0 0021.75 15V6.75A2.25 2.25 0 0019.5 4.5H4.5A2.25 2.25 0 002.25 6.75v9A2.25 2.25 0 004.5 18h.75c.8 0 1.5.7 1.5 1.5v1.75z"
-              ></path>
-            </svg>
-          </div>
+            </div>
 
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-            Communication & collaboration
-          </h3>
-          <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
-            I communicate clearly and align solutions with both technical and
-            business needs.
-          </p>
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
+                 bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
+                 border border-emerald-500/15
+                 transition-transform duration-300 group-hover:scale-[1.05]"
+              aria-hidden="true"
+            >
+              <!-- Chat icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M7.5 8.25h9m-9 3h6m-7.5 9l3.2-2.4c.4-.3.9-.5 1.4-.5H19.5A2.25 2.25 0 0021.75 15V6.75A2.25 2.25 0 0019.5 4.5H4.5A2.25 2.25 0 002.25 6.75v9A2.25 2.25 0 004.5 18h.75c.8 0 1.5.7 1.5 1.5v1.75z"
+                ></path>
+              </svg>
+            </div>
 
-          <div
-            class="mt-4 h-px w-full bg-gradient-to-r from-transparent via-emerald-500/25 to-transparent
-               opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            aria-hidden="true"
-          >
-          </div>
-        </article>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Communication & collaboration
+            </h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
+              I communicate clearly and align solutions with both technical and
+              business needs.
+            </p>
+
+            <div
+              class="mt-4 h-px w-full bg-gradient-to-r from-transparent via-emerald-500/25 to-transparent
+                 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              aria-hidden="true"
+            >
+            </div>
+          </article>
+        </Reveal>
 
         <!-- Planning -->
-        <article
-          class="group relative overflow-hidden rounded-2xl
-             border border-gray-200/70 dark:border-white/10
-             bg-white/70 dark:bg-white/5 backdrop-blur p-6
-             shadow-sm transition-all duration-300
-             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-             hover:border-emerald-500/40"
-        >
-          <div
-            class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
-               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-               group-hover:opacity-100"
-            aria-hidden="true"
+        <Reveal delay={270}>
+          <article
+            class="group relative overflow-hidden rounded-2xl
+               border border-gray-200/70 dark:border-white/10
+               bg-white/70 dark:bg-white/5 backdrop-blur p-6
+               shadow-sm transition-all duration-300
+               hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+               hover:border-emerald-500/40"
           >
-          </div>
-
-          <div
-            class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
-               bg-emerald-500/12 text-emerald-600 dark:text-emerald-400"
-            aria-hidden="true"
-          >
-            <!-- Calendar icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              class="h-6 w-6"
+            <div
+              class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
+                 bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+                 group-hover:opacity-100"
+              aria-hidden="true"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M8 2v3m8-3v3M3.75 9h16.5M4.5 5.25h15A2.25 2.25 0 0121.75 7.5v12A2.25 2.25 0 0119.5 21.75h-15A2.25 2.25 0 012.25 19.5v-12A2.25 2.25 0 014.5 5.25z"
-              ></path>
-            </svg>
-          </div>
+            </div>
 
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-            Planning & time management
-          </h3>
-          <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
-            I prioritize well, manage deadlines, and keep projects moving with
-            consistent progress.
-          </p>
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
+                 bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
+                 border border-emerald-500/15
+                 transition-transform duration-300 group-hover:scale-[1.05]"
+              aria-hidden="true"
+            >
+              <!-- Calendar icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8 2v3m8-3v3M3.75 9h16.5M4.5 5.25h15A2.25 2.25 0 0121.75 7.5v12A2.25 2.25 0 0119.5 21.75h-15A2.25 2.25 0 012.25 19.5v-12A2.25 2.25 0 014.5 5.25z"
+                ></path>
+              </svg>
+            </div>
 
-          <div
-            class="mt-4 h-px w-full bg-gradient-to-r from-transparent via-emerald-500/25 to-transparent
-               opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            aria-hidden="true"
-          >
-          </div>
-        </article>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Planning & time management
+            </h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
+              I prioritize well, manage deadlines, and keep projects moving with
+              consistent progress.
+            </p>
+
+            <div
+              class="mt-4 h-px w-full bg-gradient-to-r from-transparent via-emerald-500/25 to-transparent
+                 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              aria-hidden="true"
+            >
+            </div>
+          </article>
+        </Reveal>
 
         <!-- Adaptability -->
-        <article
-          class="group relative overflow-hidden rounded-2xl
-             border border-gray-200/70 dark:border-white/10
-             bg-white/70 dark:bg-white/5 backdrop-blur p-6
-             shadow-sm transition-all duration-300
-             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-             hover:border-emerald-500/40"
-        >
-          <div
-            class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
-               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-               group-hover:opacity-100"
-            aria-hidden="true"
+        <Reveal delay={320}>
+          <article
+            class="group relative overflow-hidden rounded-2xl
+               border border-gray-200/70 dark:border-white/10
+               bg-white/70 dark:bg-white/5 backdrop-blur p-6
+               shadow-sm transition-all duration-300
+               hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+               hover:border-emerald-500/40"
           >
-          </div>
-
-          <div
-            class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
-               bg-emerald-500/12 text-emerald-600 dark:text-emerald-400"
-            aria-hidden="true"
-          >
-            <!-- Arrows icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              class="h-6 w-6"
+            <div
+              class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
+                 bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+                 group-hover:opacity-100"
+              aria-hidden="true"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M7 7h10M7 7l3-3M7 7l3 3M17 17H7m10 0l-3-3m3 3l-3 3"></path>
-            </svg>
-          </div>
+            </div>
 
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-            Adaptability & learning
-          </h3>
-          <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
-            I adapt quickly to new tools and environments and enjoy continuous
-            learning in real projects.
-          </p>
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
+                 bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
+                 border border-emerald-500/15
+                 transition-transform duration-300 group-hover:scale-[1.05]"
+              aria-hidden="true"
+            >
+              <!-- Arrows icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M7 7h10M7 7l3-3M7 7l3 3M17 17H7m10 0l-3-3m3 3l-3 3"></path>
+              </svg>
+            </div>
 
-          <div
-            class="mt-4 h-px w-full bg-gradient-to-r from-transparent via-emerald-500/25 to-transparent
-               opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            aria-hidden="true"
-          >
-          </div>
-        </article>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Adaptability & learning
+            </h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
+              I adapt quickly to new tools and environments and enjoy continuous
+              learning in real projects.
+            </p>
+
+            <div
+              class="mt-4 h-px w-full bg-gradient-to-r from-transparent via-emerald-500/25 to-transparent
+                 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              aria-hidden="true"
+            >
+            </div>
+          </article>
+        </Reveal>
       </div>
     </section>
 
     <!-- WORK ARRANGEMENT -->
-    <section>
-      <h2 class="text-2xl font-semibold mb-6">Work Arrangement</h2>
+    <section
+      class="relative overflow-hidden rounded-3xl border border-gray-200/70 dark:border-white/10
+         bg-white/60 dark:bg-white/5 backdrop-blur p-6 md:p-8"
+    >
+      <!-- Decorative glow -->
+      <div
+        class="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full
+           bg-emerald-500/15 blur-3xl"
+        aria-hidden="true"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full
+           bg-teal-500/10 blur-3xl"
+        aria-hidden="true"
+      >
+      </div>
+
+      <!-- Header -->
+      <Reveal delay={0}>
+        <header class="mb-6">
+          <h2
+            class="mt-3 text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100"
+          >
+            How I prefer to collaborate
+          </h2>
+
+          <p
+            class="mt-3 text-gray-600 dark:text-gray-300 max-w-3xl leading-relaxed"
+          >
+            I’m most effective with focused, async-friendly workflows — while
+            staying flexible depending on the team and project.
+          </p>
+        </header>
+      </Reveal>
 
       <div class="grid gap-6 sm:grid-cols-2">
         <!-- Remote -->
-        <article
-          class="group relative overflow-hidden rounded-2xl
-             border border-emerald-500/40
-             bg-white/70 dark:bg-white/5 backdrop-blur p-6
-             shadow-sm transition-all duration-300
-             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/15"
-        >
-          <!-- Glow -->
-          <div
-            class="pointer-events-none absolute -top-20 -right-20 h-48 w-48
-               rounded-full bg-emerald-500/25 blur-3xl opacity-0
-               transition-opacity duration-300 group-hover:opacity-100"
-            aria-hidden="true"
+        <Reveal delay={120}>
+          <article
+            class="group relative overflow-hidden rounded-2xl
+               border border-emerald-500/35
+               bg-white/70 dark:bg-white/5 backdrop-blur p-6
+               shadow-sm transition-all duration-300
+               hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/15
+               hover:border-emerald-500/50"
           >
-          </div>
-
-          <div class="flex items-start gap-4">
-            <!-- Icon -->
+            <!-- Glow -->
             <div
-              class="flex h-12 w-12 items-center justify-center rounded-xl
-                 bg-emerald-500/15 text-emerald-600 dark:text-emerald-400"
+              class="pointer-events-none absolute -top-20 -right-20 h-48 w-48
+                 rounded-full bg-emerald-500/25 blur-3xl opacity-0
+                 transition-opacity duration-300 group-hover:opacity-100"
+              aria-hidden="true"
             >
-              <!-- WiFi / Remote icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                class="h-6 w-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M8.53 16.11a6 6 0 016.94 0M5.1 12.68a10 10 0 0113.8 0M1.67 9.25a14 14 0 0118.66 0"
-                ></path>
-                <circle cx="12" cy="19" r="1"></circle>
-              </svg>
             </div>
 
-            <div>
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                Remote
-              </h3>
-              <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
-                My preferred option. Remote work allows better focus, optimized
-                time management, and cost efficiency related to housing and
-                commuting.
-              </p>
-
-              <span
-                class="inline-block mt-4 rounded-full px-4 py-1.5 text-sm font-medium
-                 bg-emerald-500/10 text-emerald-600
-                 ring-1 ring-emerald-500/25"
+            <div class="flex items-start gap-4">
+              <!-- Icon -->
+              <div
+                class="flex h-12 w-12 items-center justify-center rounded-xl
+                   bg-emerald-500/15 text-emerald-600 dark:text-emerald-400
+                   border border-emerald-500/15
+                   transition-transform duration-300 group-hover:scale-[1.05]"
+                aria-hidden="true"
               >
-                Preferred
-              </span>
+                <!-- WiFi / Remote icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  class="h-6 w-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.53 16.11a6 6 0 016.94 0M5.1 12.68a10 10 0 0113.8 0M1.67 9.25a14 14 0 0118.66 0"
+                  ></path>
+                  <circle cx="12" cy="19" r="1"></circle>
+                </svg>
+              </div>
+
+              <div class="min-w-0">
+                <div class="flex items-center justify-between gap-3">
+                  <h3
+                    class="text-lg font-semibold text-gray-900 dark:text-white"
+                  >
+                    Remote
+                  </h3>
+
+                  <span
+                    class="shrink-0 rounded-full px-3 py-1 text-xs font-semibold
+                       bg-emerald-500/10 text-emerald-700 dark:text-emerald-300
+                       ring-1 ring-emerald-500/25"
+                  >
+                    Preferred
+                  </span>
+                </div>
+
+                <p
+                  class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed"
+                >
+                  My preferred option. Remote work allows better focus,
+                  optimized time management, and cost efficiency related to
+                  housing and commuting.
+                </p>
+
+                <div
+                  class="mt-4 h-px w-full bg-gradient-to-r from-transparent via-emerald-500/25 to-transparent
+                     opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  aria-hidden="true"
+                >
+                </div>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </Reveal>
 
         <!-- Hybrid -->
-        <article
-          class="group relative overflow-hidden rounded-2xl
-             border border-gray-200/70 dark:border-white/10
-             bg-white/70 dark:bg-white/5 backdrop-blur p-6
-             shadow-sm transition-all duration-300
-             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-             hover:border-emerald-500/40"
-        >
-          <div class="flex items-start gap-4">
-            <!-- Icon -->
+        <Reveal delay={180}>
+          <article
+            class="group relative overflow-hidden rounded-2xl
+               border border-gray-200/70 dark:border-white/10
+               bg-white/70 dark:bg-white/5 backdrop-blur p-6
+               shadow-sm transition-all duration-300
+               hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+               hover:border-emerald-500/40"
+          >
+            <!-- Glow -->
             <div
-              class="flex h-12 w-12 items-center justify-center rounded-xl
-                 bg-emerald-500/10 text-emerald-500"
+              class="pointer-events-none absolute -top-20 -right-20 h-48 w-48
+                 rounded-full bg-emerald-500/20 blur-3xl opacity-0
+                 transition-opacity duration-300 group-hover:opacity-100"
+              aria-hidden="true"
             >
-              <!-- Office / Hybrid icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                class="h-6 w-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3 21h18M6 21V5a2 2 0 012-2h8a2 2 0 012 2v16"></path>
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9 21V9h6v12"></path>
-              </svg>
             </div>
 
-            <div>
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                Hybrid
-              </h3>
-              <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
-                I’m open to hybrid arrangements depending on the team, project
-                context, and professional stage.
-              </p>
-
-              <span
-                class="inline-block mt-4 rounded-full px-4 py-1.5 text-sm font-medium
-                 bg-gray-200/70 text-gray-700
-                 dark:bg-white/10 dark:text-gray-300"
+            <div class="flex items-start gap-4">
+              <!-- Icon -->
+              <div
+                class="flex h-12 w-12 items-center justify-center rounded-xl
+                   bg-emerald-500/10 text-emerald-600 dark:text-emerald-400
+                   border border-emerald-500/15
+                   transition-transform duration-300 group-hover:scale-[1.05]"
+                aria-hidden="true"
               >
-                Open to discuss
-              </span>
+                <!-- Office / Hybrid icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  class="h-6 w-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 21h18M6 21V5a2 2 0 012-2h8a2 2 0 012 2v16"></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 21V9h6v12"></path>
+                </svg>
+              </div>
+
+              <div class="min-w-0">
+                <div class="flex items-center justify-between gap-3">
+                  <h3
+                    class="text-lg font-semibold text-gray-900 dark:text-white"
+                  >
+                    Hybrid
+                  </h3>
+
+                  <span
+                    class="shrink-0 rounded-full px-3 py-1 text-xs font-semibold
+                       bg-gray-200/70 text-gray-700
+                       dark:bg-white/10 dark:text-gray-300"
+                  >
+                    Open
+                  </span>
+                </div>
+
+                <p
+                  class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed"
+                >
+                  I’m open to hybrid arrangements depending on the team, project
+                  context, and professional stage.
+                </p>
+
+                <div
+                  class="mt-4 h-px w-full bg-gradient-to-r from-transparent via-emerald-500/25 to-transparent
+                     opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  aria-hidden="true"
+                >
+                </div>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </Reveal>
       </div>
     </section>
 
     <!-- LANGUAGES -->
-    <section>
-      <h2 class="text-2xl font-semibold mb-6">Languages</h2>
+    <section
+      class="relative overflow-hidden rounded-3xl border border-gray-200/70 dark:border-white/10
+         bg-white/60 dark:bg-white/5 backdrop-blur p-6 md:p-8"
+    >
+      <!-- Decorative glow -->
+      <div
+        class="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full
+           bg-emerald-500/15 blur-3xl"
+        aria-hidden="true"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full
+           bg-teal-500/10 blur-3xl"
+        aria-hidden="true"
+      >
+      </div>
+
+      <!-- Header -->
+      <Reveal delay={0}>
+        <header class="mb-6">
+          <h2
+            class="mt-3 text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100"
+          >
+            Communication level
+          </h2>
+
+          <p
+            class="mt-3 text-gray-600 dark:text-gray-300 max-w-3xl leading-relaxed"
+          >
+            Comfortable communicating in technical and collaborative
+            environments.
+          </p>
+        </header>
+      </Reveal>
 
       <div class="grid gap-6 sm:grid-cols-2">
         <!-- English -->
-        <article
-          class="group rounded-2xl border border-gray-200/70 dark:border-white/10
-             bg-white/70 dark:bg-white/5 backdrop-blur p-6
-             shadow-sm transition-all duration-300
-             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-             hover:border-emerald-500/40"
-        >
-          <div class="flex items-center justify-between gap-6">
-            <div>
-              <div class="text-lg font-semibold text-gray-900 dark:text-white">
-                English
-              </div>
-              <div
-                class="mt-1 text-sm font-medium text-emerald-600 dark:text-emerald-300"
-              >
-                Advanced
-              </div>
-            </div>
-
-            <!-- Level bars (4/5) -->
-            <div
-              class="flex items-end gap-2"
-              aria-label="English level: Advanced"
-            >
-              <span class="h-2 w-10 rounded-sm bg-emerald-500/80"></span>
-              <span class="h-3 w-10 rounded-sm bg-emerald-500/70"></span>
-              <span class="h-4 w-10 rounded-sm bg-emerald-500/55"></span>
-              <span class="h-5 w-10 rounded-sm bg-emerald-500/35"></span>
-              <span class="h-6 w-10 rounded-sm bg-gray-200/80 dark:bg-white/10"
-              ></span>
-            </div>
-          </div>
-
-          <!-- subtle glow -->
-          <div
-            class="pointer-events-none mt-5 h-px w-full bg-gradient-to-r
-               from-transparent via-emerald-500/25 to-transparent
-               opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            aria-hidden="true"
+        <Reveal delay={120}>
+          <article
+            class="group relative overflow-hidden rounded-2xl
+           border border-gray-200/70 dark:border-white/10
+           bg-white/70 dark:bg-white/5 backdrop-blur p-6
+           shadow-sm transition-all duration-300
+           hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+           hover:border-emerald-500/40"
           >
-          </div>
-        </article>
+            <!-- Glow -->
+            <div
+              class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
+             bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+             group-hover:opacity-100"
+              aria-hidden="true"
+            >
+            </div>
+
+            <!-- Top row: title + bars -->
+            <div class="flex items-start justify-between gap-4">
+              <div class="min-w-0">
+                <div
+                  class="text-lg font-semibold text-gray-900 dark:text-white"
+                >
+                  English
+                </div>
+
+                <div class="mt-1 flex flex-wrap items-center gap-2">
+                  <span
+                    class="text-sm font-medium text-emerald-600 dark:text-emerald-300"
+                  >
+                    B2 · Upper-Intermediate
+                  </span>
+                </div>
+              </div>
+
+              <!-- Level bars (4/5) -->
+              <div
+                class="shrink-0 flex items-end gap-2 pt-1"
+                aria-label="English level: B2"
+              >
+                <span class="h-2 w-10 rounded-sm bg-emerald-500/80"></span>
+                <span class="h-3 w-10 rounded-sm bg-emerald-500/70"></span>
+                <span class="h-4 w-10 rounded-sm bg-emerald-500/55"></span>
+                <span class="h-5 w-10 rounded-sm bg-emerald-500/35"></span>
+                <span
+                  class="h-6 w-10 rounded-sm bg-gray-200/80 dark:bg-white/10"
+                ></span>
+              </div>
+            </div>
+
+            <!-- Compact certificate row -->
+            <div
+              class="mt-3 flex items-center gap-2 min-w-0 text-sm text-gray-600 dark:text-gray-300"
+            >
+              <span
+                class="inline-flex h-8 w-8 items-center justify-center rounded-xl
+               bg-emerald-500/10 text-emerald-600 dark:text-emerald-300
+               border border-emerald-500/20"
+                aria-hidden="true"
+              >
+                ✓
+              </span>
+
+              <p class="min-w-0 truncate">Cambridge English Level 1 (B2)</p>
+            </div>
+
+            <div
+              class="pointer-events-none mt-4 h-px w-full bg-gradient-to-r
+             from-transparent via-emerald-500/25 to-transparent
+             opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              aria-hidden="true"
+            >
+            </div>
+          </article>
+        </Reveal>
 
         <!-- Spanish -->
-        <article
-          class="group rounded-2xl border border-gray-200/70 dark:border-white/10
-             bg-white/70 dark:bg-white/5 backdrop-blur p-6
-             shadow-sm transition-all duration-300
-             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-             hover:border-emerald-500/40"
-        >
-          <div class="flex items-center justify-between gap-6">
-            <div>
-              <div class="text-lg font-semibold text-gray-900 dark:text-white">
-                Spanish
-              </div>
-              <div
-                class="mt-1 text-sm font-medium text-emerald-600 dark:text-emerald-300"
-              >
-                Native
-              </div>
-            </div>
-
-            <!-- Level bars (5/5) -->
-            <div
-              class="flex items-end gap-2"
-              aria-label="Spanish level: Native"
-            >
-              <span class="h-2 w-10 rounded-sm bg-emerald-500/80"></span>
-              <span class="h-3 w-10 rounded-sm bg-emerald-500/70"></span>
-              <span class="h-4 w-10 rounded-sm bg-emerald-500/55"></span>
-              <span class="h-5 w-10 rounded-sm bg-emerald-500/45"></span>
-              <span class="h-6 w-10 rounded-sm bg-emerald-500/35"></span>
-            </div>
-          </div>
-
-          <div
-            class="pointer-events-none mt-5 h-px w-full bg-gradient-to-r
-               from-transparent via-emerald-500/25 to-transparent
-               opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            aria-hidden="true"
+        <Reveal delay={180}>
+          <article
+            class="group relative overflow-hidden rounded-2xl
+           border border-gray-200/70 dark:border-white/10
+           bg-white/70 dark:bg-white/5 backdrop-blur p-6
+           shadow-sm transition-all duration-300
+           hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+           hover:border-emerald-500/40"
           >
-          </div>
-        </article>
+            <div
+              class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
+             bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+             group-hover:opacity-100"
+              aria-hidden="true"
+            >
+            </div>
+
+            <div class="flex items-start justify-between gap-4">
+              <div class="min-w-0">
+                <div
+                  class="text-lg font-semibold text-gray-900 dark:text-white"
+                >
+                  Spanish
+                </div>
+                <div
+                  class="mt-1 text-sm font-medium text-emerald-600 dark:text-emerald-300"
+                >
+                  Native
+                </div>
+              </div>
+
+              <!-- Level bars (5/5) -->
+              <div
+                class="shrink-0 flex items-end gap-2 pt-1"
+                aria-label="Spanish level: Native"
+              >
+                <span class="h-2 w-10 rounded-sm bg-emerald-500/80"></span>
+                <span class="h-3 w-10 rounded-sm bg-emerald-500/70"></span>
+                <span class="h-4 w-10 rounded-sm bg-emerald-500/55"></span>
+                <span class="h-5 w-10 rounded-sm bg-emerald-500/45"></span>
+                <span class="h-6 w-10 rounded-sm bg-emerald-500/35"></span>
+              </div>
+            </div>
+
+            <div
+              class="pointer-events-none mt-4 h-px w-full bg-gradient-to-r
+             from-transparent via-emerald-500/25 to-transparent
+             opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              aria-hidden="true"
+            >
+            </div>
+          </article>
+        </Reveal>
       </div>
     </section>
   </section>
