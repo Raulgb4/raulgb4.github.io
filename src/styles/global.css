@@ -4,31 +4,52 @@
    TECH MARQUEE
    =========================== */
 
+/* Wrapper: recorta y fija el ancho al contenedor */
 .tech-marquee {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Track: el elemento que se anima */
+.tech-marquee__track {
     display: flex;
     width: max-content;
     animation: marquee 40s linear infinite;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
 }
 
+/* Cada grupo (duplicado) */
 .tech-marquee__group {
     display: flex;
     align-items: center;
-    gap: 3rem;
-    padding-right: 3.5rem;
+    gap: 1rem;
+    width: max-content;
+    flex: 0 0 auto;
 }
 
-.tech-marquee:hover {
+/* Pausa al hover */
+.tech-marquee:hover .tech-marquee__track {
     animation-play-state: paused;
 }
 
+/* Animación suave y continua */
 @keyframes marquee {
     from {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
     to {
-        transform: translateX(-50%);
+        transform: translate3d(-50%, 0, 0);
     }
 }
+
+/* Respeta accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .tech-marquee__track {
+        animation: none;
+    }
+}
+
 
 /* ===========================
    TECH ICON NORMALIZATION
@@ -91,6 +112,7 @@
 
     gap: 1rem;          /* antes ~0.75 → ahora respira */
     white-space: nowrap;
+    flex: 0 0 auto;       /* clave para que no “apriete” raro */
 }
 
 .tech-label {

@@ -11,6 +11,58 @@ const linkClass = (path: string) =>
   }`;
 ---
 
+<!-- Mobile dropdown -->
+<div
+  id="mobile-nav"
+  class="lg:hidden hidden mt-3 rounded-2xl border border-gray-200/70 dark:border-white/10
+         bg-white/80 dark:bg-slate-900/40 backdrop-blur p-3
+         shadow-lg shadow-emerald-500/10"
+  data-mobile-menu
+>
+  <nav class="flex flex-col gap-1 text-base">
+    <a
+      href="/"
+      class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
+      >Home</a
+    >
+    <a
+      href="/about"
+      class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
+      >About</a
+    >
+    <a
+      href="/help"
+      class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
+      >How I Can Help</a
+    >
+    <a
+      href="/experience"
+      class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
+      >Experience</a
+    >
+    <a
+      href="/certifications"
+      class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
+      >Certifications</a
+    >
+    <a
+      href="/faq"
+      class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
+      >FAQ</a
+    >
+
+    <a
+      href="/contact"
+      class="mt-2 inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold
+             bg-emerald-500 text-white hover:bg-emerald-600 transition"
+    >
+      Contact <span
+        class="ml-2 inline-block h-2 w-2 rounded-full bg-white/90"
+        aria-hidden="true"></span>
+    </a>
+  </nav>
+</div>
+
 <nav class="w-full border-b border-gray-200 dark:border-gray-700">
   <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
     <!-- Left: Name + Mini Avatar -->
@@ -67,7 +119,7 @@ const linkClass = (path: string) =>
     </div>
 
     <!-- Center: Navigation links -->
-    <ul class="hidden md:flex items-center gap-6 text-lg">
+    <ul class="hidden lg:flex items-center gap-6 text-lg">
       <li>
         <a href="/" class={linkClass("/")}>
           Home
@@ -222,5 +274,63 @@ const linkClass = (path: string) =>
         </svg>
       </button>
     </div>
+
+    <!-- Mobile menu button -->
+    <button
+      type="button"
+      class="lg:hidden inline-flex items-center justify-center rounded-xl
+         border border-emerald-500/25 bg-emerald-500/10
+         px-3 py-2 text-emerald-600 dark:text-emerald-300
+         hover:bg-emerald-500/15 hover:border-emerald-500/40
+         transition"
+      aria-label="Open menu"
+      aria-controls="mobile-nav"
+      aria-expanded="false"
+      data-mobile-menu-button
+    >
+      <!-- icon -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        class="h-5 w-5"
+      >
+        <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
   </div>
 </nav>
+
+<script is:inline>
+  const btn = document.querySelector("[data-mobile-menu-button]");
+  const menu = document.querySelector("[data-mobile-menu]");
+
+  if (btn && menu) {
+    const setOpen = (open) => {
+      menu.classList.toggle("hidden", !open);
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+
+    btn.addEventListener("click", () => {
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+      setOpen(!isOpen);
+    });
+
+    // Close on outside click
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && !btn.contains(e.target)) setOpen(false);
+    });
+
+    // Close on ESC
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setOpen(false);
+    });
+
+    // Close after clicking a link
+    menu
+      .querySelectorAll("a")
+      .forEach((a) => a.addEventListener("click", () => setOpen(false)));
+  }
+</script>
