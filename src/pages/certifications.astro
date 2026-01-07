@@ -1,5 +1,357 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const certifications = [
+  {
+    title:
+      "Conceptualizing the Processing Model for Apache Spark Structured Streaming",
+    provider: "Pluralsight",
+    providerLogo: "/assets/images/LogoPluralsight.png",
+    dateLabel: "December 2025",
+    certificateUrl: "/assets/certifications/C_Conceptualizing_Spark.pdf",
+    description:
+      "Course focused on understanding Apache Spark Structured Streaming as a unified model for both batch and stream processing. Covered streaming DataFrames, Spark SQL queries on data streams, output modes (append, update, complete), checkpointing, and execution models. Also addressed architectural concepts such as drivers, executors, micro-batch processing, and core Spark optimizations.",
+    skills: ["Apache Spark"],
+  },
+  {
+    title: "Certification in Data Science Methodology",
+    provider: "IBM",
+    providerLogo: "/assets/images/LogoIBM.png",
+    dateLabel: "December 2025",
+    certificateUrl:
+      "https://www.coursera.org/account/accomplishments/verify/V2ORMJ9Y2RAO",
+    description:
+      "Course focused on understanding and applying data science methodologies, with special emphasis on the CRISP-DM framework and its six stages through practical case studies. Covered the evaluation of different analytical approaches such as descriptive, predictive, and classification models, as well as identifying appropriate data sources to support structured and effective data analysis workflows.",
+    skills: [
+      "Jupyter",
+      "ETL",
+      "Business Analysis",
+      "Data Mining",
+      "Data-Driven Decision Making",
+    ],
+  },
+  {
+    title:
+      "Certification in Data Scientist Career Guide and Interview Preparation",
+    provider: "IBM",
+    providerLogo: "/assets/images/LogoIBM.png",
+    dateLabel: "December 2025",
+    certificateUrl: "https://coursera.org/verify/7JDR9JO05CCN",
+    description:
+      "Course focused on professional development for data science careers. Covered the role of the data scientist, career paths, and job market opportunities. Included guidance on job search strategies, resume and portfolio preparation, and understanding interview processes. The course also addressed interview techniques, communication skills, and professional presentation for technical roles.",
+    skills: [
+      "Interview Preparation",
+      "Recruitment",
+      "Company Knowledge",
+      "Product and Service Knowledge",
+      "Communication",
+      "Professional Development",
+    ],
+  },
+  {
+    title: "Certification in Databases and SQL for Data Science with Python",
+    provider: "IBM",
+    providerLogo: "/assets/images/LogoIBM.png",
+    dateLabel: "December 2025",
+    certificateUrl: "https://coursera.org/verify/LN8TE88FDW0B",
+    description:
+      "Course focused on using SQL and Python to analyze data stored in relational databases. Covered database creation using DDL, data manipulation with DML, and querying across multiple tables. Included advanced SQL concepts such as joins, views, transactions, and stored procedures to support more complex analytical queries and data workflows.",
+    skills: [
+      "SQL",
+      "Relational Databases",
+      "Python (Pandas)",
+      "Data Manipulation",
+      "Transaction Processing",
+    ],
+  },
+  {
+    title:
+      "Certification in Introduction to Microsoft Azure Cloud Services (AZ-900)",
+    provider: "Microsoft",
+    providerLogo: "/assets/images/LogoMicrosoft.png",
+    dateLabel: "December 2025",
+    certificateUrl: "https://coursera.org/verify/PNJGD070TM89",
+    description:
+      "Introductory course covering the fundamentals of cloud computing with Microsoft Azure. Explored core cloud concepts, the benefits of cloud-based solutions, and key Azure services. Included an overview of Azure architectural components and how they integrate to support scalable, secure, and reliable cloud environments.",
+    skills: [
+      "Microsoft Azure",
+      "Cloud Computing",
+      "Cloud Services",
+      "Infrastructure as a Service (IaaS)",
+      "Azure Virtual Machines",
+      "Virtual Networking",
+    ],
+  },
+  {
+    title: "Certification in Tools for Data Science",
+    provider: "IBM",
+    providerLogo: "/assets/images/LogoIBM.png",
+    dateLabel: "December 2025",
+    certificateUrl: "https://coursera.org/verify/2GSRMS2A8BEI",
+    description:
+      "Course covering the core tools and environments commonly used in data science workflows. Explored data science libraries, datasets, machine learning models, and big data technologies. Worked with Python, R, and SQL, and used development environments such as Jupyter Notebooks and RStudio. The course also introduced version control practices using Git and GitHub for managing data science projects.",
+    skills: [
+      "Python",
+      "R",
+      "SQL",
+      "Jupyter Notebooks",
+      "Machine Learning",
+      "Big Data",
+      "Git",
+      "GitHub",
+    ],
+  },
+  {
+    title: "Certification in What Is Data Science?",
+    provider: "IBM",
+    providerLogo: "/assets/images/LogoIBM.png",
+    dateLabel: "December 2025",
+    certificateUrl: "https://coursera.org/verify/YCRBRS69TL6E",
+    description:
+      "Introductory course covering the fundamentals of data science and its role in today’s data-driven world. Explored the definition of data science, common career paths in the field, and practical insights from experienced professionals. Provided context on why data science is one of the most in-demand roles, emphasizing required skills, professional mindset, and real-world impact.",
+    skills: [
+      "Data Science",
+      "Analytical Thinking",
+      "Problem Solving",
+      "Data-Driven Mindset",
+    ],
+  },
+  {
+    title: "Specialization in Introduction to Data Science",
+    provider: "IBM",
+    providerLogo: "/assets/images/LogoIBM.png",
+    dateLabel: "December 2025",
+    certificateUrl: "https://coursera.org/verify/specialization/O2JLYAFJNYJO",
+    description:
+      "Specialization providing a solid foundation in data science concepts and workflows. Covered the role of the data scientist, core methodologies, and the use of open-source tools such as Jupyter Notebooks. Included relational database concepts, the use of SQL for data querying, and hands-on labs and projects to apply data analysis skills in real-world scenarios.",
+    skills: [
+      "Data Science Foundations",
+      "CRISP-DM",
+      "Jupyter Notebooks",
+      "SQL",
+      "Relational Databases",
+      "Data Analysis Workflows",
+    ],
+  },
+  {
+    title:
+      "Certification in Handling Batch Data with Apache Spark on Databricks",
+    provider: "Pluralsight",
+    providerLogo: "/assets/images/LogoPluralsight.png",
+    dateLabel: "December 2025",
+    certificateUrl: "/assets/certifications//C_Handling_Spark_Databricks.pdf",
+    description:
+      "Course focused on batch data processing with Apache Spark on Azure Databricks. Covered DataFrame transformations and aggregations, including filtering, grouping, ordering, joins, unions, and window functions. Explored performance concepts such as narrow vs. wide transformations, repartitioning strategies, and the use of SQL queries. Included hands-on work with user-defined functions (UDFs and vectorized UDFs) and data ingestion from sources such as Azure Cosmos DB.",
+    skills: [
+      "Apache Spark",
+      "Azure Databricks",
+      "Batch Data Processing",
+      "DataFrame APIs",
+      "SQL on Spark",
+      "Performance Optimization",
+    ],
+  },
+  {
+    title: "Certification in Implementing an Event Log with Kafka",
+    provider: "Pluralsight",
+    providerLogo: "/assets/images/LogoPluralsight.png",
+    dateLabel: "December 2025",
+    certificateUrl: "/assets/certifications/C_Event_Kafka.pdf",
+    description:
+      "Course focused on the use of Apache Kafka as an immutable event log for event-driven architectures. Covered Kafka fundamentals, challenges in microservices-based systems, and core architectural patterns for handling events and data streams. Provided a solid conceptual and practical foundation for working with Kafka in distributed, event-based applications.",
+    skills: [
+      "Apache Kafka",
+      "Event-Driven Architecture",
+      "Distributed Systems",
+      "Streaming Concepts",
+      "Microservices Architecture",
+    ],
+  },
+  {
+    title:
+      "Certification in SnowPro Core: Snowflake Cloud Data Platform Features and Architecture",
+    provider: "Pluralsight",
+    providerLogo: "/assets/images/LogoPluralsight.png",
+    dateLabel: "December 2025",
+    certificateUrl: "/assets/certifications/C_SnowProCore.pdf",
+    description:
+      "Course focused on the core features and architecture of the Snowflake Cloud Data Platform. Covered platform components, user interfaces, and key storage concepts such as micro-partitions and clustering. Provided an understanding of how Snowflake manages data storage, performance, and scalability to support efficient analytical workloads in cloud environments.",
+    skills: [
+      "Snowflake",
+      "Cloud Data Platforms",
+      "Data Warehousing",
+      "Analytical Workloads",
+      "Performance Optimization",
+    ],
+  },
+  {
+    title: "Certification in Snowflake Cloud Data Platform: Getting Started",
+    provider: "Pluralsight",
+    providerLogo: "/assets/images/LogoPluralsight.png",
+    dateLabel: "December 2025",
+    certificateUrl: "/assets/certifications/C_SnowFlakeData.pdf",
+    description:
+      "Introductory course on the Snowflake Cloud Data Platform, covering its cloud-first architecture and service model. Included schema design, data loading, query execution and monitoring, and virtual warehouse management. Provided a foundation for working with cloud data warehousing and scalable analytical workloads across multi-cloud environments.",
+    skills: [
+      "Snowflake",
+      "Cloud Data Warehousing",
+      "Schema Design",
+      "Data Loading",
+      "Query Execution",
+      "Virtual Warehouses",
+    ],
+  },
+  {
+    title: "Certification in Up and Running with Databricks",
+    provider: "Pluralsight",
+    providerLogo: "/assets/images/LogoPluralsight.png",
+    dateLabel: "December 2025",
+    certificateUrl: "/assets/certifications/C_UpDatabricks.pdf",
+    description:
+      "Introductory course on the Databricks platform, covering its core components such as workspaces, clusters, notebooks, and SQL warehouses. Included hands-on environment setup, role and permission management, library configuration, data ingestion, and collaborative notebook workflows. Provided a practical foundation for data analysis and Spark-based processing in Databricks.",
+    skills: [
+      "Databricks",
+      "Azure Databricks",
+      "Apache Spark",
+      "Data Ingestion",
+      "Notebook Workflows",
+      "Cluster Management",
+    ],
+  },
+  {
+    title: "Certification in Getting Started with Apache Spark on Databricks",
+    provider: "Pluralsight",
+    providerLogo: "/assets/images/LogoPluralsight.png",
+    dateLabel: "December 2025",
+    certificateUrl: "/assets/certifications/C_StartedSparkDatabricks.pdf",
+    description:
+      "Introductory course on Apache Spark using Azure Databricks. Covered Spark architecture, RDDs, DataFrames, and the distinction between transformations and actions. Included hands-on practice reading data from Azure Storage, applying filtering, projection, aggregation, and basic visualization using Databricks display(). Provided a foundation for batch and streaming processing and core cloud data workflows.",
+    skills: [
+      "Apache Spark",
+      "Azure Databricks",
+      "Spark Architecture",
+      "RDDs",
+      "DataFrames",
+      "Batch Processing",
+      "Streaming Fundamentals",
+    ],
+  },
+  {
+    title: "Certification in Up and Running with MongoDB for Data Analysts",
+    provider: "Pluralsight",
+    providerLogo: "/assets/images/LogoPluralsight.png",
+    dateLabel: "November 2025",
+    certificateUrl: "/assets/certifications/C_UpMongoDB.pdf",
+    description:
+      "Introductory course on using MongoDB for data analysis with semi-structured data. Covered core concepts such as databases, collections, documents, and BSON, as well as data exploration using MongoDB Compass and mongosh. Included schema analysis and basic querying through both graphical tools and the command line, providing a foundation for analyzing NoSQL data sources.",
+    skills: [
+      "MongoDB",
+      "NoSQL Databases",
+      "Semi-Structured Data",
+      "Schema Analysis",
+      "MongoDB Compass",
+      "Basic Querying",
+    ],
+  },
+  {
+    title: "Certification in Power BI",
+    provider: "Santander Open Academy",
+    providerLogo: "/assets/images/LogoSantanderAcademy.png",
+    dateLabel: "November 2025",
+    certificateUrl: "/assets/certifications/C_Power_BI.pdf",
+    description:
+      "Practical Power BI course focused on building interactive dashboards, transforming data using Power Query, and effectively visualizing insights. The program developed core business intelligence skills to support data-driven decision-making through clear and impactful reporting.",
+    skills: [
+      "Microsoft Power BI",
+      "Data Visualization",
+      "Power Query",
+      "Business Intelligence",
+      "Dashboard Design",
+    ],
+  },
+  {
+    title: "Certification in Introduction to Data Science",
+    provider: "Santander Open Academy",
+    providerLogo: "/assets/images/LogoSantanderAcademy.png",
+    dateLabel: "November 2025",
+    certificateUrl: "/assets/certifications/C_Introduccion_ciencia_datos.pdf",
+    description:
+      "Introductory data science course covering the fundamentals of data analysis, basic statistical concepts, data preparation, and an introduction to machine learning techniques. The program provides a solid foundation for understanding how data is collected, processed, and transformed into valuable insights for decision-making.",
+    skills: [
+      "Data Analysis",
+      "Data Science Foundations",
+      "Statistical Concepts",
+      "Data Preparation",
+      "Big Data Analysis",
+    ],
+  },
+  {
+    title: "Certification in Negotiation",
+    provider: "Santander Open Academy",
+    providerLogo: "/assets/images/LogoSantanderAcademy.png",
+    dateLabel: "November 2025",
+    certificateUrl: "/assets/certifications/C_Negociacion.pdf",
+    description:
+      "Course focused on developing effective negotiation skills by identifying interests, managing conflicts, and achieving mutually beneficial agreements in diverse professional contexts. Emphasized communication strategies, problem-solving, and collaborative decision-making.",
+    skills: [
+      "Negotiation",
+      "Conflict Management",
+      "Communication Skills",
+      "Problem Solving",
+      "Decision Making",
+    ],
+  },
+  {
+    title:
+      "Certification in Responsible Prompting: Maximize AI in Your Business",
+    provider: "Santander Open Academy",
+    providerLogo: "/assets/images/LogoSantanderAcademy.png",
+    dateLabel: "November 2025",
+    certificateUrl:
+      "/assets/certifications/C_Prompting_responsable_maximiza_la_IA_en_tu_negocio.pdf",
+    description:
+      "Training focused on responsible and effective prompt design to obtain accurate, secure, and reliable responses from artificial intelligence systems. Covered ethical considerations, best practices for prompt formulation, and practical strategies to maximize the application of AI in professional and business environments.",
+    skills: [
+      "AI Prompting",
+      "Responsible AI",
+      "AI for Business",
+      "Prompt Engineering",
+      "Ethical AI Use",
+    ],
+  },
+  {
+    title: "Certification in Critical Thinking and Problem Solving",
+    provider: "Santander Open Academy",
+    providerLogo: "/assets/images/LogoSantanderAcademy.png",
+    dateLabel: "October 2025",
+    certificateUrl:
+      "/assets/certifications/C_Pensamiento_crítico_y_resolución_problemas.pdf",
+    description:
+      "Training focused on developing analytical and reasoning skills to identify, evaluate, and solve problems logically, creatively, and based on evidence. Emphasized structured thinking, decision-making, and practical problem-solving strategies applicable to professional contexts.",
+    skills: [
+      "Critical Thinking",
+      "Problem Solving",
+      "Analytical Reasoning",
+      "Decision Making",
+    ],
+  },
+  {
+    title: "Cambridge English Level 1 (B2) Certificate in ESOL International",
+    provider: "Cambridge University Press & Assessment",
+    providerLogo: "/assets/images/LogoCambridge.png",
+    dateLabel: "June 2019",
+    certificateUrl: "/assets/certifications/C_B2.pdf",
+    description:
+      "Official Cambridge English qualification certifying a B2 level of proficiency in English. Achieved a score of 171 on the B2 First exam, demonstrating the ability to communicate effectively in professional and academic contexts, with solid skills in reading, writing, listening, and speaking.",
+    skills: [
+      "English (B2)",
+      "Professional Communication",
+      "Academic English",
+      "Written Communication",
+      "Oral Communication",
+    ],
+  },
+];
 ---
 
 <Layout>
@@ -8,96 +360,122 @@ import Layout from "../layouts/Layout.astro";
     <header class="max-w-3xl mx-auto text-center">
       <h1
         class="text-4xl md:text-5xl font-bold tracking-tight
-             leading-[1.15] pb-1
-             bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500
-             bg-clip-text text-transparent"
+               leading-[1.15] pb-1
+               bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500
+               bg-clip-text text-transparent"
       >
         Certifications
       </h1>
 
       <p
-        class="mt-5 text-lg md:text-xl leading-relaxed
-             text-gray-600 dark:text-gray-300"
+        class="mt-5 text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300"
       >
-        Bla bla bla
+        A curated selection of certifications that reflect my hands-on learning
+        path in data, cloud, and engineering.
       </p>
     </header>
 
     <!-- CERTIFICATIONS -->
     <section class="space-y-6">
-      <header class="space-y-3">
-        <h2
-          class="text-2xl md:text-3xl font-semibold
-           text-emerald-500 tracking-tight"
-        >
-          Certifications
-        </h2>
+      <!-- Grid -->
+      <div class="grid gap-6">
+        {
+          certifications.map((c) => (
+            <article
+              class="group relative overflow-hidden rounded-2xl
+             border border-emerald-500/25
+             bg-white/60 dark:bg-white/5 backdrop-blur
+             p-7 shadow-sm transition-all duration-300
+             hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20
+             hover:border-emerald-400/60"
+            >
+              {/* Top row: provider + date */}
+              <div class="flex items-start justify-between gap-4">
+                <div class="flex items-center gap-4 min-w-0">
+                  <div
+                    class="h-14 w-14 md:h-16 md:w-16
+             shrink-0 rounded-xl
+             border border-emerald-500/20
+             bg-white/90 dark:bg-white/10
+             flex items-center justify-center
+             p-1.5 md:p-1"
+                  >
+                    <img
+                      src={c.providerLogo}
+                      alt={`${c.provider} logo`}
+                      class="max-h-full max-w-full object-contain scale-125"
+                      loading="lazy"
+                    />
+                  </div>
 
-        <div
-          class="h-[2px] w-16
-           bg-gradient-to-r from-emerald-400 to-teal-400
-           rounded-full"
-        >
-        </div>
-      </header>
-      <p class="text-gray-600 dark:text-gray-300">
-        Selected certifications (full list available in the PDF section of the
-        site assets).
-      </p>
+                  <div class="min-w-0">
+                    <p class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white truncate">
+                      {c.provider}
+                    </p>
+                    <p class="text-base text-gray-500 dark:text-gray-400">
+                      {c.dateLabel}
+                    </p>
+                  </div>
+                </div>
 
-      <div class="grid gap-4 md:grid-cols-2">
-        <!-- You can keep expanding this list incrementally -->
-        <div class="rounded-lg border border-gray-200 dark:border-gray-700 p-5">
-          <p class="font-medium">Power BI</p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">
-            Santander Open Academy · Nov 2025
-          </p>
-          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
-            Credential ID: OA-2025-1113001958369
-          </p>
-        </div>
+                <span
+                  class="shrink-0 inline-flex items-center rounded-full px-3 py-1.5
+           text-sm font-medium
+           border border-emerald-500/25
+           bg-emerald-500/10 text-emerald-500"
+                >
+                  Certification
+                </span>
+              </div>
 
-        <div class="rounded-lg border border-gray-200 dark:border-gray-700 p-5">
-          <p class="font-medium">
-            Introduction to Microsoft Azure Cloud Services (AZ-900)
-          </p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">
-            Microsoft · Dec 2025
-          </p>
-          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
-            Credential ID: PNJGD070TM89
-          </p>
-        </div>
+              {/* Title */}
+              <h3 class="mt-5 text-xl md:text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                {c.title}
+              </h3>
 
-        <div class="rounded-lg border border-gray-200 dark:border-gray-700 p-5">
-          <p class="font-medium">
-            Databases and SQL for Data Science with Python
-          </p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">IBM · Dec 2025</p>
-          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
-            Credential ID: LN8TE88FDW0B
-          </p>
-        </div>
+              {/* Description */}
+              <p class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                {c.description}
+              </p>
 
-        <div class="rounded-lg border border-gray-200 dark:border-gray-700 p-5">
-          <p class="font-medium">
-            SnowPro Core: Snowflake Cloud Data Platform Features and
-            Architecture
-          </p>
-          <p class="text-sm text-gray-600 dark:text-gray-300">
-            Pluralsight · Dec 2025
-          </p>
-          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
-            Skills: Snowflake
-          </p>
-        </div>
+              {/* Skills */}
+              <div class="mt-6 flex flex-wrap gap-2">
+                {c.skills.map((s) => (
+                  <span
+                    class="inline-flex items-center rounded-full px-3 py-1.5
+                   text-sm font-medium
+                   border border-emerald-500/25
+                   bg-white/60 dark:bg-white/5
+                   text-gray-700 dark:text-gray-200"
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <div class="mt-7 flex">
+                <a
+                  href={c.certificateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-2
+                 rounded-lg px-5 py-2.5
+                 text-base font-semibold
+                 text-emerald-400
+                 border border-emerald-500/40
+                 transition-all duration-300
+                 hover:bg-emerald-500/10 hover:-translate-y-0.5
+                 hover:border-emerald-400"
+                >
+                  View certificate
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
+          ))
+        }
       </div>
-
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        Note: we can later add a dedicated Certifications page with filters by
-        provider (IBM, Microsoft, Pluralsight, Santander) and direct links to
-        PDF credentials.
-      </p>
     </section>
   </section>
 </Layout>
