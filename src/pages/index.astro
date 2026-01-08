@@ -23,7 +23,7 @@ const dataIcons: TechIcon[] = [
   },
   {
     name: "Apache Spark",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachespark/apachespark-original-wordmark.svg",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachespark/apachespark-original.svg",
     wordmark: true,
   },
   {
@@ -34,6 +34,56 @@ const dataIcons: TechIcon[] = [
   {
     name: "Tableau",
     src: "/assets/images/LogoTableau.png",
+    local: true,
+  },
+  {
+    name: "PostgreSQL",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+    local: true,
+  },
+  {
+    name: "Chart.js",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/chartjs/chartjs-original.svg",
+    local: true,
+  },
+  {
+    name: "Jupyter",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg",
+    local: true,
+  },
+  {
+    name: "Pandas",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg",
+    local: true,
+  },
+  {
+    name: "R",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg",
+    local: true,
+  },
+  {
+    name: "Databricks",
+    src: "/assets/images/LogoDatabricks.png",
+    local: true,
+  },
+  {
+    name: "Apache Kafka",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg",
+    local: true,
+  },
+  {
+    name: "Snowflake",
+    src: "/assets/images/LogoSnowflake.png",
+    local: true,
+  },
+  {
+    name: "MongoDB",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+    local: true,
+  },
+  {
+    name: "NumPy",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg",
     local: true,
   },
 ];
@@ -67,6 +117,51 @@ const devIcons: TechIcon[] = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg",
     wordmark: true,
   },
+  {
+    name: "Django",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
+    wordmark: true,
+  },
+  {
+    name: "Angular",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg",
+    wordmark: true,
+  },
+  {
+    name: "Jira",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg",
+    wordmark: true,
+  },
+  {
+    name: "React",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+    wordmark: true,
+  },
+  {
+    name: "Webpack",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webpack/webpack-original.svg",
+    wordmark: true,
+  },
+  {
+    name: "Jetbrains IDEs",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetbrains/jetbrains-original.svg",
+    wordmark: true,
+  },
+  {
+    name: "Linux",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+    wordmark: true,
+  },
+  {
+    name: "Postman",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+    wordmark: true,
+  },
+  {
+    name: "DBeaver",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dbeaver/dbeaver-original.svg",
+    wordmark: true,
+  },
 ];
 
 const techStack: TechIcon[] = [...dataIcons, ...devIcons];
@@ -74,7 +169,7 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
 
 <Layout>
   <!-- HERO -->
-  <section class="max-w-7xl mx-auto px-4 py-20">
+  <section class="max-w-7xl mx-auto px-4 pt-10 pb-10 md:pt-14 md:pb-14">
     <div class="grid items-center gap-12 md:grid-cols-2">
       <!-- Left: Text -->
       <div>
@@ -95,8 +190,8 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
           <p
             class="mt-6 max-w-2xl text-xl md:text-2xl leading-relaxed text-gray-600 dark:text-gray-300"
           >
-            I design and build data-driven solutions, turning raw information
-            into actionable insights for real-world decision making.
+            I design and build practical software solutions, transforming ideas
+            and requirements into reliable tools that create real-world value.
           </p>
         </Reveal>
       </div>
@@ -142,27 +237,43 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
   </section>
 
   <!-- HIGHLIGHTS -->
-  <section class="max-w-7xl mx-auto px-4 pb-20 grid gap-6 md:grid-cols-4">
+  <section class="max-w-7xl mx-auto px-4 pb-20 grid gap-6 md:grid-cols-2">
     <!-- Left card -->
     <Reveal
       as="div"
       delay={0}
-      class="min-w-0 rounded-lg border border-gray-200 dark:border-gray-700 p-5 sm:p-6 md:col-span-1"
+      class="min-w-0 rounded-lg border border-gray-200 dark:border-gray-700 p-5 sm:p-6"
     >
-      <h3 class="font-semibold text-xl text-center">Years of training</h3>
+      <h3 class="font-semibold text-xl text-center">Continuous growth</h3>
 
       <p
         class="mt-3 text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
       >
-        Strong academic background in Computer Engineering with a continuous
-        learning mindset focused on data and cloud technologies.
+        Strong technical background combined with a constant drive to learn,
+        improve, and adapt to new technologies in real project environments.
+      </p>
+    </Reveal>
+
+    <!-- Right card -->
+    <Reveal
+      as="div"
+      delay={140}
+      class="min-w-0 rounded-lg border border-gray-200 dark:border-gray-700 p-5 sm:p-6"
+    >
+      <h3 class="font-semibold text-xl text-center">What I enjoy building</h3>
+
+      <p
+        class="mt-3 text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+      >
+        Software solutions that combine development, data, and clear
+        communication to support decision-making and improve real products.
       </p>
     </Reveal>
 
     <!-- Center card (Tech stack) -->
     <Reveal
       as="div"
-      delay={140}
+      delay={280}
       class="min-w-0 rounded-lg border border-gray-200 dark:border-gray-700 p-5 sm:p-6 md:col-span-2"
     >
       <h3 class="font-semibold text-xl text-center mb-6">Tech Stack</h3>
@@ -198,32 +309,15 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
         </div>
       </div>
     </Reveal>
-
-    <!-- Right card -->
-    <Reveal
-      as="div"
-      delay={280}
-      class="min-w-0 rounded-lg border border-gray-200 dark:border-gray-700 p-5 sm:p-6 md:col-span-1"
-    >
-      <h3 class="font-semibold text-xl text-center">Main interest</h3>
-
-      <p
-        class="mt-3 text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
-      >
-        Data engineering, analytics, and visualization applied to real-world
-        problems and decision making.
-      </p>
-    </Reveal>
   </section>
 
   <!-- METRICS / HIGHLIGHTS -->
   <section class="max-w-7xl mx-auto px-4 pb-24">
-    <!-- Title + subtitle (mismo estilo que el resto) -->
     <Reveal as="header" class="mb-10 max-w-3xl mx-auto text-center" delay={0}>
       <h3
         class="mt-4 text-4xl md:text-5xl font-bold tracking-tight leading-snug
-             bg-linear-to-r from-emerald-400 via-teal-400 to-green-500
-             bg-clip-text text-transparent"
+           bg-linear-to-r from-emerald-400 via-teal-400 to-green-500
+           bg-clip-text text-transparent"
       >
         Highlights
       </h3>
@@ -231,7 +325,8 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
       <p
         class="mt-5 text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300"
       >
-        A quick snapshot of my learning journey and hands-on work so far.
+        Key highlights of my junior profile, technical background, and hands-on
+        project experience.
       </p>
     </Reveal>
 
@@ -240,24 +335,24 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
       <Reveal delay={160} class="w-full max-w-5xl">
         <div
           class="group relative overflow-hidden rounded-2xl
-               border border-emerald-500/25
-               bg-linear-to-r from-emerald-700/30 via-teal-700/25 to-green-700/30
-               dark:bg-white/5 backdrop-blur
-               p-8 md:p-10
-               shadow-lg shadow-emerald-500/15
-               transition-all duration-500
-               hover:-translate-y-1 hover:shadow-emerald-500/30"
+             border border-emerald-500/25
+             bg-linear-to-r from-emerald-700/30 via-teal-700/25 to-green-700/30
+             dark:bg-white/5 backdrop-blur
+             p-8 md:p-10
+             shadow-lg shadow-emerald-500/15
+             transition-all duration-500
+             hover:-translate-y-1 hover:shadow-emerald-500/30"
         >
           <!-- Glow -->
           <div
             class="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full
-                 bg-emerald-500/25 blur-3xl opacity-80"
+               bg-emerald-500/25 blur-3xl opacity-80"
             aria-hidden="true"
           >
           </div>
           <div
             class="pointer-events-none absolute -bottom-28 -right-24 h-80 w-80 rounded-full
-                 bg-teal-400/15 blur-3xl opacity-70"
+               bg-teal-400/15 blur-3xl opacity-70"
             aria-hidden="true"
           >
           </div>
@@ -265,43 +360,46 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
           <!-- Items -->
           <div
             class="relative grid grid-cols-2 md:grid-cols-4
-         items-stretch
-         gap-y-10 gap-x-6 text-center"
+               items-stretch
+               gap-y-10 gap-x-6 text-center"
           >
             {
               [
-                // Este lo dejamos como texto (porque mezcla "1+ year")
+                // Junior ready (texto)
                 {
                   kind: "text",
-                  value: "1+ year",
-                  label: "Focused training in Data & Analytics",
+                  value: "Junior",
+                  label: "Ready to contribute and keep growing",
                 },
 
-                // Estos cuentan
+                // 1 internship
                 {
                   kind: "count",
-                  to: 10,
+                  to: 20,
                   suffix: "+",
-                  label: "Completed in data, BI & cloud",
+                  label: "Certifications",
                 },
+
+                // 10+ technologies
                 {
                   kind: "count",
-                  to: 6,
+                  to: 25,
                   suffix: "+",
-                  label: "Hands-on data solutions built",
+                  label: "Technologies used across projects",
                 },
+                // 3+ projects
                 {
                   kind: "count",
-                  to: 100,
-                  suffix: "%",
-                  label: "Project-driven learning mindset",
+                  to: 3,
+                  suffix: "",
+                  label: "End-to-end projects built",
                 },
               ].map((m, idx) => (
                 <Reveal delay={220 + idx * 90}>
                   <div class="flex h-full flex-col items-center justify-center">
                     <div
                       class="text-4xl md:text-5xl font-extrabold tracking-tight text-white
-                   drop-shadow-[0_8px_18px_rgba(16,185,129,0.25)] tabular-nums"
+                         drop-shadow-[0_8px_18px_rgba(16,185,129,0.25)] tabular-nums"
                     >
                       {m.kind === "count" ? (
                         <CountUp
@@ -315,7 +413,7 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
                       )}
                     </div>
 
-                    <div class="mt-3 text-sm md:text-base text-white/85 leading-snug max-w-[18ch]">
+                    <div class="mt-3 text-sm md:text-base text-white/85 leading-snug max-w-[20ch]">
                       {m.label}
                     </div>
                   </div>
@@ -350,42 +448,89 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
       {
         [
           {
-            title: "Data Engineering",
-            text: "Building reliable pipelines, modeling data, and enabling analytics at scale.",
+            title: "Data Analysis & Dashboards",
+            text: "Analyzing data and designing clear dashboards and visual tools to support understanding and decision-making.",
+            icon: "chart",
           },
+
           {
-            title: "Analytics & BI",
-            text: "Turning data into clear dashboards and actionable insights for decision-making.",
+            title: "Web Development",
+            text: "Building user-facing interfaces and interactive features with a focus on clarity and usability.",
+            icon: "code",
           },
           {
             title: "Cloud & Automation",
-            text: "Automating workflows and deploying data solutions in cloud environments (Azure).",
+            text: "Working with cloud environments and basic automation to deploy and support modern applications.",
+            icon: "cloud",
           },
         ].map((card, idx) => (
           <Reveal delay={120 + idx * 120}>
             <div
-              class="group relative overflow-hidden rounded-2xl border border-gray-200/70 dark:border-white/10
-                 bg-white/70 dark:bg-white/5 backdrop-blur p-7
-                 shadow-sm transition-all duration-300
-                 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-                 hover:border-emerald-500/40"
+              class="group relative overflow-hidden rounded-2xl
+             border border-gray-200/70 dark:border-white/10
+             bg-white/70 dark:bg-white/5 backdrop-blur p-7
+             shadow-sm transition-all duration-300
+             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+             hover:border-emerald-500/40"
             >
+              <!-- Glow -->
               <div
                 class="pointer-events-none absolute -top-20 -right-24 h-56 w-56 rounded-full
-                   bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-                   group-hover:opacity-100"
+               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+               group-hover:opacity-100"
                 aria-hidden="true"
               />
 
-              <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
+              <!-- Icon -->
+              <div class="flex justify-center mb-4">
+                <div
+                  class="flex h-11 w-11 items-center justify-center rounded-xl
+                 bg-emerald-500/10 text-emerald-500
+                 transition group-hover:scale-110"
+                >
+                  {card.icon === "chart" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 3v18h18M9 17V9m4 8v-5m4 5V7" />
+                    </svg>
+                  )}
+
+                  {card.icon === "code" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+                    </svg>
+                  )}
+
+                  {card.icon === "cloud" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 15a4 4 0 004 4h10a4 4 0 000-8 5 5 0 00-9-3A4 4 0 003 15z" />
+                    </svg>
+                  )}
+                </div>
+              </div>
+
+              <!-- Title -->
+              <h4
+                class="text-center text-xl font-semibold
+               text-gray-900 dark:text-white
+               tracking-tight"
+              >
                 {card.title}
               </h4>
-              <p class="mt-3 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+
+              <!-- Text -->
+              <p class="mt-3 text-center text-lg leading-relaxed text-gray-600 dark:text-gray-300">
                 {card.text}
               </p>
             </div>
           </Reveal>
         ))
+
       }
     </div>
   </section>
@@ -413,109 +558,235 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
       <!-- Card: Data -->
       <Reveal delay={120}>
         <div
-          class="group relative overflow-hidden rounded-2xl border border-gray-200/70 dark:border-white/10
-               bg-white/70 dark:bg-white/5 backdrop-blur p-7
-               shadow-sm transition-all duration-300
-               hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-               hover:border-emerald-500/40"
+          class="group relative overflow-hidden rounded-2xl
+             border border-gray-200/70 dark:border-white/10
+             bg-white/70 dark:bg-white/5 backdrop-blur
+             p-7 shadow-sm transition-all duration-300
+             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+             hover:border-emerald-500/40"
         >
+          <!-- subtle top accent -->
+          <div
+            class="pointer-events-none absolute inset-x-0 top-0 h-0.75
+               bg-linear-to-r from-emerald-400/50 via-teal-400/40 to-green-400/50"
+            aria-hidden="true"
+          ></div>
+
           <div
             class="pointer-events-none absolute -top-20 -right-24 h-56 w-56 rounded-full
-                 bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-                 group-hover:opacity-100"
+               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+               group-hover:opacity-100"
             aria-hidden="true"
-          >
+          ></div>
+
+          <!-- header row -->
+          <div class="flex items-start justify-between gap-4">
+            <div class="min-w-0">
+              <div class="flex items-center gap-2">
+                <div
+                  class="flex h-9 w-9 items-center justify-center rounded-xl
+                     bg-emerald-500/10 text-emerald-500 ring-1 ring-emerald-500/20"
+                  aria-hidden="true"
+                >
+                  <!-- chart icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18M9 17V9m4 8v-5m4 5V7" />
+                  </svg>
+                </div>
+
+                <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
+                  Data & Analytics
+                </h4>
+              </div>
+
+              <p class="mt-2 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                Exploring data, building dashboards, and turning information into clear, practical insights.
+              </p>
+            </div>
+
+
           </div>
 
-          <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
-            Data & Analytics
-          </h4>
-          <p
-            class="mt-2 text-lg leading-relaxed text-gray-600 dark:text-gray-300"
-          >
-            Data extraction, processing, analysis and reporting.
-          </p>
-
-          <!-- Logos + names -->
-          <div
-            class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-10 items-start"
-          >
-            {
-              dataIcons.map((i, idx) => (
-                <Reveal delay={220 + idx * 60}>
-                  <div class="tech-item tech-item--grid">
-                    <div
-                      class={`tech-icon-box tech-icon-box--grid ${i.wordmark ? "tech-icon-box--grid-wordmark" : ""}`}
-                    >
-                      <img
-                        src={i.src}
-                        alt={i.name}
-                        loading="lazy"
-                        class={`tech-icon tech-icon--grid ${i.local ? "tech-icon--grid-local" : ""}`}
-                      />
+          <!-- Core (featured + emphasis) -->
+          <div class="mt-8">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-10 items-start">
+              {
+                dataIcons.slice(0, 5).map((i, idx) => (
+                  <Reveal delay={220 + idx * 60}>
+                    <div class="tech-item tech-item--grid">
+                      <div
+                        class={`tech-icon-box tech-icon-box--grid ${
+                          i.wordmark ? "tech-icon-box--grid-wordmark" : ""
+                        }`}
+                      >
+                        <img
+                          src={i.src}
+                          alt={i.name}
+                          loading="lazy"
+                          class={`tech-icon tech-icon--grid ${i.local ? "tech-icon--grid-local" : ""}`}
+                        />
+                      </div>
+                      <span class="tech-label font-semibold">{i.name}</span>
                     </div>
-                    <span class="tech-label">{i.name}</span>
-                  </div>
-                </Reveal>
-              ))
-            }
+                  </Reveal>
+                ))
+              }
+            </div>
           </div>
+
+          <!-- Divider -->
+          {dataIcons.length > 5 && (
+            <div class="mt-10">
+              <div class="h-px w-full bg-gray-200/70 dark:bg-white/10"></div>
+              <div class="mt-4 text-sm font-semibold tracking-wide text-gray-500 dark:text-gray-400 text-center">
+                Additional tools
+              </div>
+            </div>
+          )}
+
+          <!-- Support (slightly lighter) -->
+          {dataIcons.length > 5 && (
+            <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-10 items-start">
+              {
+                dataIcons.slice(5).map((i, idx) => (
+                  <Reveal delay={560 + idx * 45}>
+                    <div class="tech-item tech-item--grid opacity-90 group-hover:opacity-100 transition">
+                      <div
+                        class={`tech-icon-box tech-icon-box--grid ${i.wordmark ? "tech-icon-box--grid-wordmark" : ""} opacity-90`}
+                      >
+                        <img
+                          src={i.src}
+                          alt={i.name}
+                          loading="lazy"
+                          class={`tech-icon tech-icon--grid ${i.local ? "tech-icon--grid-local" : ""}`}
+                        />
+                      </div>
+                      <span class="tech-label opacity-90">{i.name}</span>
+                    </div>
+                  </Reveal>
+                ))
+              }
+            </div>
+          )}
         </div>
       </Reveal>
 
       <!-- Card: Web / Tooling -->
       <Reveal delay={220}>
         <div
-          class="group relative overflow-hidden rounded-2xl border border-gray-200/70 dark:border-white/10
-               bg-white/70 dark:bg-white/5 backdrop-blur p-7
-               shadow-sm transition-all duration-300
-               hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-               hover:border-emerald-500/40"
+          class="group relative overflow-hidden rounded-2xl
+             border border-gray-200/70 dark:border-white/10
+             bg-white/70 dark:bg-white/5 backdrop-blur
+             p-7 shadow-sm transition-all duration-300
+             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+             hover:border-emerald-500/40"
         >
+          <!-- subtle top accent -->
+          <div
+            class="pointer-events-none absolute inset-x-0 top-0 h-0.75
+               bg-linear-to-r from-emerald-400/40 via-teal-400/35 to-green-400/40"
+            aria-hidden="true"
+          ></div>
+
           <div
             class="pointer-events-none absolute -top-20 -right-24 h-56 w-56 rounded-full
-                 bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-                 group-hover:opacity-100"
+               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+               group-hover:opacity-100"
             aria-hidden="true"
-          >
+          ></div>
+
+          <!-- header row -->
+          <div class="flex items-start justify-between gap-4">
+            <div class="min-w-0">
+              <div class="flex items-center gap-2">
+                <div
+                  class="flex h-9 w-9 items-center justify-center rounded-xl
+                     bg-emerald-500/10 text-emerald-500 ring-1 ring-emerald-500/20"
+                  aria-hidden="true"
+                >
+                  <!-- code icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+                  </svg>
+                </div>
+
+                <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
+                  Development & Tooling
+                </h4>
+              </div>
+
+              <p class="mt-2 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                Building web interfaces and reliable apps with modern tools, version control, and cloud-ready workflows.
+              </p>
+            </div>
+
           </div>
 
-          <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
-            Development & Tooling
-          </h4>
-          <p
-            class="mt-2 text-lg leading-relaxed text-gray-600 dark:text-gray-300"
-          >
-            Modern web stack + version control and containerization.
-          </p>
-
-          <!-- Logos + names -->
-          <div
-            class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-10 items-start"
-          >
-            {
-              devIcons.map((i, idx) => (
-                <Reveal delay={320 + idx * 60}>
-                  <div class="tech-item tech-item--grid">
-                    <div
-                      class={`tech-icon-box tech-icon-box--grid ${i.wordmark ? "tech-icon-box--grid-wordmark" : ""}`}
-                    >
-                      <img
-                        src={i.src}
-                        alt={i.name}
-                        loading="lazy"
-                        class={`tech-icon tech-icon--grid ${i.local ? "tech-icon--grid-local" : ""}`}
-                      />
+          <!-- Core -->
+          <div class="mt-8">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-10 items-start">
+              {
+                devIcons.slice(0, 5).map((i, idx) => (
+                  <Reveal delay={320 + idx * 60}>
+                    <div class="tech-item tech-item--grid">
+                      <div
+                        class={`tech-icon-box tech-icon-box--grid ${
+                          i.wordmark ? "tech-icon-box--grid-wordmark" : ""
+                        }`}
+                      >
+                        <img
+                          src={i.src}
+                          alt={i.name}
+                          loading="lazy"
+                          class={`tech-icon tech-icon--grid ${i.local ? "tech-icon--grid-local" : ""}`}
+                        />
+                      </div>
+                      <span class="tech-label font-semibold">{i.name}</span>
                     </div>
-                    <span class="tech-label">{i.name}</span>
-                  </div>
-                </Reveal>
-              ))
-            }
+                  </Reveal>
+                ))
+              }
+            </div>
           </div>
+
+          <!-- Divider -->
+          {devIcons.length > 5 && (
+            <div class="mt-10">
+              <div class="h-px w-full bg-gray-200/70 dark:bg-white/10"></div>
+              <div class="mt-4 text-sm font-semibold tracking-wide text-gray-500 dark:text-gray-400 text-center">
+                Additional tools
+              </div>
+            </div>
+          )}
+
+          <!-- Support -->
+          {devIcons.length > 5 && (
+            <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-10 items-start">
+              {
+                devIcons.slice(5).map((i, idx) => (
+                  <Reveal delay={660 + idx * 45}>
+                    <div class="tech-item tech-item--grid opacity-90 group-hover:opacity-100 transition">
+                      <div
+                        class={`tech-icon-box tech-icon-box--grid ${i.wordmark ? "tech-icon-box--grid-wordmark" : ""} opacity-90`}
+                      >
+                        <img
+                          src={i.src}
+                          alt={i.name}
+                          loading="lazy"
+                          class={`tech-icon tech-icon--grid ${i.local ? "tech-icon--grid-local" : ""}`}
+                        />
+                      </div>
+                      <span class="tech-label opacity-90">{i.name}</span>
+                    </div>
+                  </Reveal>
+                ))
+              }
+            </div>
+          )}
         </div>
       </Reveal>
     </div>
+
   </section>
 
   <!-- REVIEWS -->

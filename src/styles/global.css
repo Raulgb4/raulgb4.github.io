@@ -55,10 +55,10 @@
    TECH ICON NORMALIZATION
    =========================== */
 
-/* Caja fija MÁS GRANDE */
+/* Caja fija */
 .tech-icon-box {
-    width: 8rem; /* ↓ antes 10.5rem */
-    height: 5.5rem; /* ↓ antes 7rem */
+    width: 6.75rem;     /* ↓ antes 7.5rem */
+    height: 4.5rem;     /* ↓ antes 5rem */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,8 +66,8 @@
 
 /* Wordmarks: más ancho, un poco menos alto */
 .tech-icon-box--wordmark {
-    width: 9.5rem; /* ↓ antes 12.5rem */
-    height: 5.2rem; /* ↓ antes 6.5rem */
+    width: 8.25rem;     /* ↓ antes 9rem */
+    height: 4.35rem;    /* ↓ antes 4.9rem */
 }
 
 /* El img ocupa la caja */
@@ -77,7 +77,7 @@
     object-fit: contain;
 
     opacity: 0.95;
-    transform: translateZ(0) scale(1.06); /* 👈 “boost” base para que se vean más grandes */
+    transform: translateZ(0) scale(0.82); /* ↓ antes 0.88 */
     filter: saturate(1);
 
     transition: transform 260ms ease,
@@ -91,10 +91,10 @@
     height: 95%;
 }
 
-/* Hover elegante */
+/* Hover elegante (contenido) */
 .tech-icon-box:hover .tech-icon {
     opacity: 1;
-    transform: translateZ(0) scale(1.18);
+    transform: translateZ(0) scale(0.92); /* ↓ antes 0.98 */
     filter: drop-shadow(0 12px 22px rgba(16, 185, 129, 0.28));
 }
 
@@ -109,18 +109,20 @@
     align-items: center;
     text-align: center;
 
-    gap: 1rem; /* antes ~0.75 → ahora respira */
+    gap: 0.9rem; /* ↓ un pelín menos */
     white-space: nowrap;
-    flex: 0 0 auto; /* clave para que no “apriete” raro */
+    flex: 0 0 auto;
 }
 
 .tech-label {
-    font-size: 0.95rem;
-    line-height: 1.2; /* antes muy justo */
+    font-size: 0.9rem;  /* ↓ antes 0.95rem */
+    line-height: 1.2;
     margin-top: 0.1rem;
     font-weight: 600;
     opacity: 0.9;
 }
+
+
 
 /* ===========================
    ACCESIBILIDAD
