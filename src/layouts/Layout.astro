@@ -38,7 +38,7 @@ import BackToTop from "../components/BackToTop.astro";
             if (once) io.unobserve(el);
           }
         },
-        { threshold: 0.15, rootMargin: "0px 0px -10% 0px" },
+        { threshold: 0.08, rootMargin: "0px 0px -15% 0px" },
       );
 
       els.forEach((el) => io.observe(el));

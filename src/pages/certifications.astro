@@ -386,7 +386,7 @@ const certifications = [
       <div class="grid gap-6">
         {
           certifications.map((c, idx) => (
-            <Reveal delay={idx * 120}>
+            <Reveal delay={Math.min(idx * 50, 300)}>
               <article
                 class="group relative overflow-hidden rounded-2xl
                    border border-emerald-500/25
