@@ -1,16 +1,23 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro";
+import Reveal from "../../components/Reveal.astro";
+import { LANGS, type Lang, t } from "../../i18n";
 
 import {
   ChartBarIcon,
   CubeTransparentIcon,
   ChatBubbleLeftRightIcon,
 } from "@heroicons/react/24/outline";
-import Reveal from "../components/Reveal.astro";
 import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
+
+export async function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
 ---
 
-<Layout>
+<Layout lang={lang}>
   <section class="max-w-7xl mx-auto px-4 py-20">
     <!-- Title -->
     <Reveal as="header" class="mb-12 max-w-3xl mx-auto text-center" delay={0}>
@@ -20,7 +27,7 @@ import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
            bg-linear-to-r from-emerald-400 via-teal-400 to-green-500
            bg-clip-text text-transparent"
       >
-        Turning Data Into Impact
+        {t(lang, "help.title")}
       </h1>
 
       <Reveal delay={120}>
@@ -28,8 +35,7 @@ import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
           class="mt-5 text-lg md:text-xl leading-relaxed
              text-gray-600 dark:text-gray-300"
         >
-          A practical, structured approach to building data-driven solutions
-          that deliver real value.
+          {t(lang, "help.subtitle")}
         </p>
       </Reveal>
     </Reveal>
@@ -53,13 +59,14 @@ import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
             />
           </div>
 
-          <h2 class="text-xl font-semibold mb-3">Data Analysis & BI</h2>
+          <h2 class="text-xl font-semibold mb-3">
+            {t(lang, "help.cards.analysis.title")}
+          </h2>
 
           <p
             class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
           >
-            I work with data to explore patterns, build visualizations, and
-            support decision-making through clear and well-structured analysis.
+            {t(lang, "help.cards.analysis.desc")}
           </p>
         </article>
       </Reveal>
@@ -82,15 +89,13 @@ import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
           </div>
 
           <h2 class="text-xl font-semibold mb-3">
-            Web & Data-Oriented Development
+            {t(lang, "help.cards.web.title")}
           </h2>
 
           <p
             class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
           >
-            I develop web-based solutions where data plays a central role,
-            working across backend and frontend components to build functional
-            and maintainable features.
+            {t(lang, "help.cards.web.desc")}
           </p>
         </article>
       </Reveal>
@@ -113,15 +118,13 @@ import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
           </div>
 
           <h2 class="text-xl font-semibold mb-3">
-            Cloud & Infrastructure Fundamentals
+            {t(lang, "help.cards.cloud.title")}
           </h2>
 
           <p
             class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
           >
-            I work with cloud fundamentals to understand deployment,
-            environments, and scalable infrastructure, supporting real projects
-            with a practical and learning-oriented approach.
+            {t(lang, "help.cards.cloud.desc")}
           </p>
         </article>
       </Reveal>
@@ -144,15 +147,13 @@ import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
           </div>
 
           <h2 class="text-xl font-semibold mb-3">
-            Communication & Problem Solving
+            {t(lang, "help.cards.comm.title")}
           </h2>
 
           <p
             class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
           >
-            I communicate ideas clearly, collaborate effectively in technical
-            teams, and approach problems in a structured and results-oriented
-            way.
+            {t(lang, "help.cards.comm.desc")}
           </p>
         </article>
       </Reveal>
@@ -163,20 +164,19 @@ import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
       <Reveal as="header" class="mb-12 max-w-3xl mx-auto text-center" delay={0}>
         <h2
           class="text-4xl md:text-5xl font-bold tracking-tight
-             leading-[1.15] pb-1
-             bg-linear-to-r from-emerald-400 via-teal-400 to-green-500
-             bg-clip-text text-transparent"
+           leading-[1.15] pb-1
+           bg-linear-to-r from-emerald-400 via-teal-400 to-green-500
+           bg-clip-text text-transparent"
         >
-          My Approach
+          {t(lang, "approach.title")}
         </h2>
 
         <Reveal delay={120}>
           <p
             class="mt-5 text-lg md:text-xl leading-relaxed
-               text-gray-600 dark:text-gray-300"
+             text-gray-600 dark:text-gray-300"
           >
-            A simple, structured workflow I use to learn, align goals, and
-            deliver value.
+            {t(lang, "approach.subtitle")}
           </p>
         </Reveal>
       </Reveal>
@@ -188,22 +188,22 @@ import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
           <Reveal delay={260}>
             <div
               class="group relative z-10 rounded-2xl border border-emerald-500/25
-               bg-white/60 dark:bg-white/5 backdrop-blur
-               p-6 text-center shadow-sm
-               transition-all duration-300 ease-out
-               hover:-translate-y-1 hover:shadow-lg
-               hover:shadow-emerald-500/25
-               hover:border-emerald-400/60
-               lg:after:content-[''] lg:after:block
-               lg:after:absolute lg:after:top-1/2 lg:after:-translate-y-1/2
-               lg:after:-right-6 lg:after:w-6 lg:after:h-px
-               lg:after:bg-linear-to-r lg:after:from-emerald-400/40 lg:after:to-emerald-400/40
-               lg:after:z-0"
+           bg-white/60 dark:bg-white/5 backdrop-blur
+           p-6 text-center shadow-sm
+           transition-all duration-300 ease-out
+           hover:-translate-y-1 hover:shadow-lg
+           hover:shadow-emerald-500/25
+           hover:border-emerald-400/60
+           lg:after:content-[''] lg:after:block
+           lg:after:absolute lg:after:top-1/2 lg:after:-translate-y-1/2
+           lg:after:-right-6 lg:after:w-6 lg:after:h-px
+           lg:after:bg-linear-to-r lg:after:from-emerald-400/40 lg:after:to-emerald-400/40
+           lg:after:z-0"
             >
               <div
                 class="relative z-20 mx-auto mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full
-                 bg-emerald-500/15 text-emerald-500 text-lg font-semibold
-                 transition-transform duration-300 group-hover:scale-110"
+             bg-emerald-500/15 text-emerald-500 text-lg font-semibold
+             transition-transform duration-300 group-hover:scale-110"
               >
                 1
               </div>
@@ -211,24 +211,23 @@ import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
               <h3
                 class="text-lg md:text-xl font-semibold text-emerald-500 transition-colors duration-300 group-hover:text-emerald-400"
               >
-                Understand
+                {t(lang, "approach.steps.1.title")}
               </h3>
 
               <p
                 class="mt-2 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
               >
-                Clarify goals, context, constraints, and what “success” looks
-                like.
+                {t(lang, "approach.steps.1.desc")}
               </p>
 
               <span
                 class="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 h-2.5 w-2.5 rounded-full
-                 bg-emerald-400/60 shadow-[0_0_18px_rgba(16,185,129,0.25)]"
+             bg-emerald-400/60 shadow-[0_0_18px_rgba(16,185,129,0.25)]"
               ></span>
 
               <span
                 class="pointer-events-none absolute inset-0 rounded-2xl bg-emerald-400/5 opacity-0
-                 transition-opacity duration-300 group-hover:opacity-100"
+             transition-opacity duration-300 group-hover:opacity-100"
                 aria-hidden="true"></span>
             </div>
           </Reveal>
@@ -237,17 +236,17 @@ import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
           <Reveal delay={350}>
             <div
               class="group relative z-10 rounded-2xl border border-emerald-500/25
-               bg-white/60 dark:bg-white/5 backdrop-blur
-               p-6 text-center shadow-sm
-               transition-all duration-300 ease-out
-               hover:-translate-y-1 hover:shadow-lg
-               hover:shadow-emerald-500/25
-               hover:border-emerald-400/60
-               lg:after:content-[''] lg:after:block
-               lg:after:absolute lg:after:top-1/2 lg:after:-translate-y-1/2
-               lg:after:-right-6 lg:after:w-6 lg:after:h-px
-               lg:after:bg-linear-to-r lg:after:from-emerald-400/40 lg:after:to-emerald-400/40
-               lg:after:z-0"
+           bg-white/60 dark:bg-white/5 backdrop-blur
+           p-6 text-center shadow-sm
+           transition-all duration-300 ease-out
+           hover:-translate-y-1 hover:shadow-lg
+           hover:shadow-emerald-500/25
+           hover:border-emerald-400/60
+           lg:after:content-[''] lg:after:block
+           lg:after:absolute lg:after:top-1/2 lg:after:-translate-y-1/2
+           lg:after:-right-6 lg:after:w-6 lg:after:h-px
+           lg:after:bg-linear-to-r lg:after:from-emerald-400/40 lg:after:to-emerald-400/40
+           lg:after:z-0"
             >
               <div
                 class="relative z-20 mx-auto mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-500 text-lg font-semibold transition-transform duration-300 group-hover:scale-110"
@@ -258,14 +257,13 @@ import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
               <h3
                 class="text-lg md:text-xl font-semibold text-emerald-500 transition-colors duration-300 group-hover:text-emerald-400"
               >
-                Plan
+                {t(lang, "approach.steps.2.title")}
               </h3>
 
               <p
                 class="mt-2 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
               >
-                Define data sources, metrics, scope, and a realistic delivery
-                path with the team.
+                {t(lang, "approach.steps.2.desc")}
               </p>
 
               <span
@@ -282,20 +280,22 @@ import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
           <Reveal delay={440}>
             <div
               class="group relative z-10 rounded-2xl border border-emerald-500/25
-               bg-white/60 dark:bg-white/5 backdrop-blur
-               p-6 text-center shadow-sm
-               transition-all duration-300 ease-out
-               hover:-translate-y-1 hover:shadow-lg
-               hover:shadow-emerald-500/25
-               hover:border-emerald-400/60
-               lg:after:content-[''] lg:after:block
-               lg:after:absolute lg:after:top-1/2 lg:after:-translate-y-1/2
-               lg:after:-right-6 lg:after:w-6 lg:after:h-px
-               lg:after:bg-linear-to-r lg:after:from-emerald-400/40 lg:after:to-emerald-400/40
-               lg:after:z-0"
+           bg-white/60 dark:bg-white/5 backdrop-blur
+           p-6 text-center shadow-sm
+           transition-all duration-300 ease-out
+           hover:-translate-y-1 hover:shadow-lg
+           hover:shadow-emerald-500/25
+           hover:border-emerald-400/60
+           lg:after:content-[''] lg:after:block
+           lg:after:absolute lg:after:top-1/2 lg:after:-translate-y-1/2
+           lg:after:-right-6 lg:after:w-6 lg:after:h-px
+           lg:after:bg-linear-to-r lg:after:from-emerald-400/40 lg:after:to-emerald-400/40
+           lg:after:z-0"
             >
               <div
-                class="relative z-20 mx-auto mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-500 text-lg font-semibold transition-transform duration-300 group-hover:scale-110"
+                class="relative z-20 mx-auto mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full
+             bg-emerald-500/15 text-emerald-500 text-lg font-semibold
+             transition-transform duration-300 group-hover:scale-110"
               >
                 3
               </div>
@@ -303,22 +303,23 @@ import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
               <h3
                 class="text-lg md:text-xl font-semibold text-emerald-500 transition-colors duration-300 group-hover:text-emerald-400"
               >
-                Build
+                {t(lang, "approach.steps.3.title")}
               </h3>
 
               <p
                 class="mt-2 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
               >
-                Implement analysis, pipelines, dashboards, or features following
-                clean code practices.
+                {t(lang, "approach.steps.3.desc")}
               </p>
 
               <span
-                class="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 h-2.5 w-2.5 rounded-full bg-emerald-400/60 shadow-[0_0_18px_rgba(16,185,129,0.25)]"
+                class="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 h-2.5 w-2.5 rounded-full
+             bg-emerald-400/60 shadow-[0_0_18px_rgba(16,185,129,0.25)]"
               ></span>
 
               <span
-                class="pointer-events-none absolute inset-0 rounded-2xl bg-emerald-400/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                class="pointer-events-none absolute inset-0 rounded-2xl bg-emerald-400/5 opacity-0
+             transition-opacity duration-300 group-hover:opacity-100"
                 aria-hidden="true"></span>
             </div>
           </Reveal>
@@ -327,20 +328,22 @@ import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
           <Reveal delay={530}>
             <div
               class="group relative z-10 rounded-2xl border border-emerald-500/25
-               bg-white/60 dark:bg-white/5 backdrop-blur
-               p-6 text-center shadow-sm
-               transition-all duration-300 ease-out
-               hover:-translate-y-1 hover:shadow-lg
-               hover:shadow-emerald-500/25
-               hover:border-emerald-400/60
-               lg:after:content-[''] lg:after:block
-               lg:after:absolute lg:after:top-1/2 lg:after:-translate-y-1/2
-               lg:after:-right-6 lg:after:w-6 lg:after:h-px
-               lg:after:bg-linear-to-r lg:after:from-emerald-400/40 lg:after:to-emerald-400/40
-               lg:after:z-0"
+           bg-white/60 dark:bg-white/5 backdrop-blur
+           p-6 text-center shadow-sm
+           transition-all duration-300 ease-out
+           hover:-translate-y-1 hover:shadow-lg
+           hover:shadow-emerald-500/25
+           hover:border-emerald-400/60
+           lg:after:content-[''] lg:after:block
+           lg:after:absolute lg:after:top-1/2 lg:after:-translate-y-1/2
+           lg:after:-right-6 lg:after:w-6 lg:after:h-px
+           lg:after:bg-linear-to-r lg:after:from-emerald-400/40 lg:after:to-emerald-400/40
+           lg:after:z-0"
             >
               <div
-                class="relative z-20 mx-auto mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-500 text-lg font-semibold transition-transform duration-300 group-hover:scale-110"
+                class="relative z-20 mx-auto mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full
+             bg-emerald-500/15 text-emerald-500 text-lg font-semibold
+             transition-transform duration-300 group-hover:scale-110"
               >
                 4
               </div>
@@ -348,39 +351,42 @@ import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
               <h3
                 class="text-lg md:text-xl font-semibold text-emerald-500 transition-colors duration-300 group-hover:text-emerald-400"
               >
-                Validate
+                {t(lang, "approach.steps.4.title")}
               </h3>
 
               <p
                 class="mt-2 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
               >
-                Check correctness, edge cases, and performance, incorporating
-                feedback and reviews.
+                {t(lang, "approach.steps.4.desc")}
               </p>
 
               <span
-                class="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 h-2.5 w-2.5 rounded-full bg-emerald-400/60 shadow-[0_0_18px_rgba(16,185,129,0.25)]"
+                class="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 h-2.5 w-2.5 rounded-full
+             bg-emerald-400/60 shadow-[0_0_18px_rgba(16,185,129,0.25)]"
               ></span>
 
               <span
-                class="pointer-events-none absolute inset-0 rounded-2xl bg-emerald-400/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                class="pointer-events-none absolute inset-0 rounded-2xl bg-emerald-400/5 opacity-0
+             transition-opacity duration-300 group-hover:opacity-100"
                 aria-hidden="true"></span>
             </div>
           </Reveal>
 
-          <!-- Step 5 (sin tramo hacia la derecha) -->
+          <!-- Step 5 -->
           <Reveal delay={620}>
             <div
               class="group relative z-10 rounded-2xl border border-emerald-500/25
-               bg-white/60 dark:bg-white/5 backdrop-blur
-               p-6 text-center shadow-sm
-               transition-all duration-300 ease-out
-               hover:-translate-y-1 hover:shadow-lg
-               hover:shadow-emerald-500/25
-               hover:border-emerald-400/60"
+           bg-white/60 dark:bg-white/5 backdrop-blur
+           p-6 text-center shadow-sm
+           transition-all duration-300 ease-out
+           hover:-translate-y-1 hover:shadow-lg
+           hover:shadow-emerald-500/25
+           hover:border-emerald-400/60"
             >
               <div
-                class="relative z-20 mx-auto mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-500 text-lg font-semibold transition-transform duration-300 group-hover:scale-110"
+                class="relative z-20 mx-auto mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full
+             bg-emerald-500/15 text-emerald-500 text-lg font-semibold
+             transition-transform duration-300 group-hover:scale-110"
               >
                 5
               </div>
@@ -388,17 +394,18 @@ import CloudIcon from "@heroicons/react/24/solid/CloudIcon";
               <h3
                 class="text-lg md:text-xl font-semibold text-emerald-500 transition-colors duration-300 group-hover:text-emerald-400"
               >
-                Deliver
+                {t(lang, "approach.steps.5.title")}
               </h3>
 
               <p
                 class="mt-2 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
               >
-                Document work, hand off clearly, and iterate based on feedback.
+                {t(lang, "approach.steps.5.desc")}
               </p>
 
               <span
-                class="pointer-events-none absolute inset-0 rounded-2xl bg-emerald-400/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                class="pointer-events-none absolute inset-0 rounded-2xl bg-emerald-400/5 opacity-0
+             transition-opacity duration-300 group-hover:opacity-100"
                 aria-hidden="true"></span>
             </div>
           </Reveal>

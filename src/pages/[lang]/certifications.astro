@@ -1,6 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Reveal from "../components/Reveal.astro";
+import Layout from "../../layouts/Layout.astro";
+import Reveal from "../../components/Reveal.astro";
+import { LANGS, type Lang, t } from "../../i18n";
+
+export async function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
 
 const certifications = [
   {
@@ -355,7 +362,7 @@ const certifications = [
 ];
 ---
 
-<Layout>
+<Layout lang={lang}>
   <section class="max-w-5xl mx-auto px-4 py-20 space-y-16">
     <!-- PAGE TITLE -->
     <header class="max-w-3xl mx-auto text-center">
@@ -366,7 +373,7 @@ const certifications = [
              bg-linear-to-r from-emerald-400 via-teal-400 to-green-500
              bg-clip-text text-transparent"
         >
-          Certifications
+          {t(lang, "certs.title")}
         </h1>
       </Reveal>
 
@@ -374,8 +381,7 @@ const certifications = [
         <p
           class="mt-5 text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300"
         >
-          A curated selection of certifications that reflect my hands-on
-          learning path in data, cloud, and engineering.
+          {t(lang, "certs.subtitle")}
         </p>
       </Reveal>
     </header>
@@ -389,22 +395,22 @@ const certifications = [
             <Reveal delay={Math.min(idx * 50, 300)}>
               <article
                 class="group relative overflow-hidden rounded-2xl
-                   border border-emerald-500/25
-                   bg-white/60 dark:bg-white/5 backdrop-blur
-                   p-7 shadow-sm transition-all duration-300
-                   hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20
-                   hover:border-emerald-400/60"
+           border border-emerald-500/25
+           bg-white/60 dark:bg-white/5 backdrop-blur
+           p-7 shadow-sm transition-all duration-300
+           hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20
+           hover:border-emerald-400/60"
               >
                 {/* Top row: provider + date */}
                 <div class="flex items-start justify-between gap-4">
                   <div class="flex items-center gap-4 min-w-0">
                     <div
                       class="h-14 w-14 md:h-16 md:w-16
-                         shrink-0 rounded-xl
-                         border border-emerald-500/20
-                         bg-white/90 dark:bg-white/10
-                         flex items-center justify-center
-                         p-1.5 md:p-1"
+                 shrink-0 rounded-xl
+                 border border-emerald-500/20
+                 bg-white/90 dark:bg-white/10
+                 flex items-center justify-center
+                 p-1.5 md:p-1"
                     >
                       <img
                         src={c.providerLogo}
@@ -426,11 +432,11 @@ const certifications = [
 
                   <span
                     class="shrink-0 inline-flex items-center rounded-full px-3 py-1.5
-                       text-sm font-medium
-                       border border-emerald-500/25
-                       bg-emerald-500/10 text-emerald-500"
+               text-sm font-medium
+               border border-emerald-500/25
+               bg-emerald-500/10 text-emerald-500"
                   >
-                    Certification
+                    {t(lang, "certs.badge")}
                   </span>
                 </div>
 
@@ -449,10 +455,10 @@ const certifications = [
                   {c.skills.map((s) => (
                     <span
                       class="inline-flex items-center rounded-full px-3 py-1.5
-                         text-sm font-medium
-                         border border-emerald-500/25
-                         bg-white/60 dark:bg-white/5
-                         text-gray-700 dark:text-gray-200"
+                 text-sm font-medium
+                 border border-emerald-500/25
+                 bg-white/60 dark:bg-white/5
+                 text-gray-700 dark:text-gray-200"
                     >
                       {s}
                     </span>
@@ -466,15 +472,15 @@ const certifications = [
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center justify-center gap-2
-                       rounded-lg px-5 py-2.5
-                       text-base font-semibold
-                       text-emerald-400
-                       border border-emerald-500/40
-                       transition-all duration-300
-                       hover:bg-emerald-500/10 hover:-translate-y-0.5
-                       hover:border-emerald-400"
+               rounded-lg px-5 py-2.5
+               text-base font-semibold
+               text-emerald-400
+               border border-emerald-500/40
+               transition-all duration-300
+               hover:bg-emerald-500/10 hover:-translate-y-0.5
+               hover:border-emerald-400"
                   >
-                    View certificate
+                    {t(lang, "certs.view")}
                     <span aria-hidden="true">↗</span>
                   </a>
                 </div>

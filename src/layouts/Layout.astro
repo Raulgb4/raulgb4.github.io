@@ -3,22 +3,25 @@ import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import BackToTop from "../components/BackToTop.astro";
+
+const { lang = "en" } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>👤 Raúl García Balongo</title>
   </head>
   <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
-    <Navbar />
+    <Navbar lang={lang} />
 
     <main>
       <slot />
     </main>
-    <Footer />
+
+    <Footer lang={lang} />
     <BackToTop />
 
     <script is:inline>

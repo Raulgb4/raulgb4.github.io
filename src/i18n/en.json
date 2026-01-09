@@ -1,0 +1,296 @@
+{
+  "contact.title": "Let’s Talk",
+  "contact.subtitle": "I’m excited to collaborate on innovative projects or discuss your next idea. Reach out via email or LinkedIn.",
+  "contact.infoTitle": "Contact Information",
+  "contact.cta": "Feel free to reach out if you're interested in collaborating. I'm always open to new opportunities and challenges.",
+  "common.email": "Email",
+  "common.location": "Location",
+  "nav.home": "Home",
+  "nav.about": "About",
+  "nav.help": "How I Can Help",
+  "nav.experience": "Experience",
+  "nav.certifications": "Certifications",
+  "nav.faq": "FAQ",
+  "nav.contact": "Contact",
+  "footer.rights": "All rights reserved.",
+  "faq.title": "FAQ",
+  "faq.subtitle": "Answers to common questions about my profile, experience, and availability.",
+
+  "faq.q1.q": "What roles am I currently looking for?",
+  "faq.q1.a": "Junior roles related to Data Analysis, Business Intelligence, and web/data-oriented development, where data supports decision-making and real product or business impact.",
+
+  "faq.q2.q": "What type of position am I looking for?",
+  "faq.q2.a": "Ideally a full-time junior position with responsibility, mentorship, and room to grow. I prefer to focus on professional work in a company rather than purely academic programs.",
+
+  "faq.q3.q": "What is my availability?",
+  "faq.q3.a": "I’m available to start soon. If you need a specific start date, feel free to reach out and we can align.",
+
+  "faq.q4.q": "What work arrangement do I prefer?",
+  "faq.q4.a": "Preferably remote work, as it helps with focus and time management. I’m also open to hybrid arrangements depending on the team and project context.",
+
+  "faq.q5.q": "What technologies do I work with?",
+  "faq.q5.a": "My main stack includes Python and SQL, plus web development with modern tooling. I’m also building hands-on experience with cloud (Azure) and data tools for processing and visualization.",
+
+  "faq.q6.q": "Do I have professional experience?",
+  "faq.q6.a": "Yes. During my internship at DEKRA Digital & Product Solutions, I worked in a production environment, contributing to full-stack features and collaborating in an agile team.",
+
+  "faq.q7.q": "What is my most relevant project?",
+  "faq.q7.a": "My Final Degree Project: a browser-based tool that extracts, processes, and visualizes Moodle course data, generating dashboards and exportable analytical reports.",
+
+  "faq.q8.q": "How do I approach communication and teamwork?",
+  "faq.q8.a": "I prioritize clear, structured communication and proactive collaboration. I like aligning early on goals, asking the right questions, and sharing progress to keep the team moving smoothly.",
+
+  "faq.q9.q": "What is my English level?",
+  "faq.q9.a": "I have a B2 level of English (Cambridge B2 First). I’m comfortable reading technical documentation and communicating in international contexts.",
+
+  "faq.q10.q": "How quickly can I respond?",
+  "faq.q10.a": "I usually respond within 24–48 hours via email or LinkedIn.",
+  "lang.toggle": "Change language",
+  "lang.en": "English (EN)",
+  "lang.es": "Spanish (ES)",
+
+  "help.title": "Turning Data Into Impact",
+  "help.subtitle": "A practical, structured approach to building data-driven solutions that deliver real value.",
+
+  "help.cards.analysis.title": "Data Analysis & BI",
+  "help.cards.analysis.desc": "I work with data to explore patterns, build visualizations, and support decision-making through clear and well-structured analysis.",
+
+  "help.cards.web.title": "Web & Data-Oriented Development",
+  "help.cards.web.desc": "I develop web-based solutions where data plays a central role, working across backend and frontend components to build functional and maintainable features.",
+
+  "help.cards.cloud.title": "Cloud & Infrastructure Fundamentals",
+  "help.cards.cloud.desc": "I work with cloud fundamentals to understand deployment, environments, and scalable infrastructure, supporting real projects with a practical and learning-oriented approach.",
+
+  "help.cards.comm.title": "Communication & Problem Solving",
+  "help.cards.comm.desc": "I communicate ideas clearly, collaborate effectively in technical teams, and approach problems in a structured and results-oriented way.",
+  "approach.title": "My Approach",
+  "approach.subtitle": "A simple, structured workflow I use to learn, align goals, and deliver value.",
+
+  "approach.steps.1.title": "Understand",
+  "approach.steps.1.desc": "Clarify goals, context, constraints, and what “success” looks like.",
+  "approach.steps.2.title": "Plan",
+  "approach.steps.2.desc": "Define data sources, metrics, scope, and a realistic delivery path with the team.",
+
+  "approach.steps.3.title": "Build",
+  "approach.steps.3.desc": "Implement analysis, pipelines, dashboards, or features following clean code practices.",
+
+  "approach.steps.4.title": "Validate",
+  "approach.steps.4.desc": "Check correctness, edge cases, and performance, incorporating feedback and reviews.",
+
+  "approach.steps.5.title": "Deliver",
+  "approach.steps.5.desc": "Document work, hand off clearly, and iterate based on feedback.",
+  "certs.title": "Certifications",
+  "certs.subtitle": "A curated selection of certifications that reflect my hands-on learning path in data, cloud, and engineering.",
+  "certs.badge": "Certification",
+  "certs.view": "View certificate",
+
+  "experience.title": "Experience",
+  "experience.subtitle": "Professional experience, academic projects, education, certifications, and research activities.",
+  "experience.timeline.title": "Experience Timeline",
+
+  "experience.items.paper.title": "Research Paper (In Progress)",
+  "experience.items.paper.subtitle": "Scientific article based on my Final Degree Project",
+  "experience.items.paper.period": "October 2025 – Present",
+  "experience.items.paper.grade": "In progress",
+  "experience.items.paper.desc": "Currently collaborating on the preparation of a scientific article based on my Final Degree Project, with the goal of submitting it to a journal or conference focused on educational technology and data analysis.",
+
+  "experience.items.mda.title": "Moodle Data Analyzer",
+  "experience.items.mda.subtitle": "University of Málaga · Final Degree Project",
+  "experience.items.mda.period": "January 2025 – September 2025",
+  "experience.items.mda.desc": "Design and development of a browser-based data analysis tool for extracting, processing, and visualizing Moodle academic data to support data-driven decision-making. Built interactive dashboards with strong focus on data storytelling, and generated exportable analytical reports (PDF, CSV, DOCX).",
+
+  "experience.items.dekra.title": "DEKRA Digital & Product Solutions",
+  "experience.items.dekra.subtitle": "Internship",
+  "experience.items.dekra.period": "March 2025 – May 2025",
+  "experience.items.dekra.desc": "Developed and maintained full-stack web features for a cybersecurity platform, working with Django, Angular, and PostgreSQL in a production environment. Implemented backend logic and integrated frontend components, improving the consistency and functionality of multiple application modules. Participated in deployment and environment management using Docker, enabling a more stable and reproducible development process. Collaborated in an agile working environment, using Jira for task planning and GitLab for version control and code integration. Actively contributed to production code, gaining hands-on professional experience and strengthening teamwork skills.",
+
+  "experience.items.degree.title": "Bachelor’s Degree in Computer Science Engineering",
+  "experience.items.degree.subtitle": "University of Málaga · Specialization in Information Systems",
+  "experience.items.degree.period": "2020 – 2025",
+  "experience.items.degree.desc": "Bachelor’s Degree in Computer Engineering from the University of Málaga, with a specialization in Information Systems and an education focused on data analysis and information management to support decision-making. Acquired a solid foundation in programming, databases, mathematics, and statistics, as well as in the design and analysis of information systems, developing a structured view of the data lifecycle. Progressive specialization in data analysis and Business Intelligence, working with Python, SQL, Power BI, and cloud environments. Applied these skills in academic projects and industry internships, strengthening teamwork and technical communication.",
+
+  "experience.items.bach.title": "Technological Baccalaureate",
+  "experience.items.bach.subtitle": "IES Torre Almirante",
+  "experience.items.bach.period": "September 2018 – June 2020",
+  "experience.items.bach.desc": "Technological Baccalaureate focused on logical thinking, academic mathematics, and structured problem solving, serving as the foundation of my subsequent technical education. This stage strengthened analytical reasoning skills and provided a solid base for further studies in computer science engineering.",
+  "experience.gradeLabel": "Grade:",
+  "common.logo": "logo",
+  "experience.research.title": "Research Paper",
+  "experience.research.desc": "I am currently collaborating on the preparation of a scientific article based on my Final Degree Project, with the goal of submitting it to a journal or conference focused on educational technology and data analysis.",
+  "projects.badge.public": "Public",
+
+  "projects.moodle.title": "Moodle Data Analyzer",
+  "projects.moodle.institution": "University of Málaga",
+  "projects.moodle.type": "Final Degree Project",
+
+  "projects.moodle.desc.short": "Browser-based data analysis tool that extracts, processes, and visualizes academic data from Moodle, transforming raw data into actionable insights and analytical dashboards.",
+
+  "projects.moodle.desc.long": "Design and development of a browser-based data analysis tool for the extraction, processing, and visualization of academic data from Moodle, aimed at supporting data-driven decision-making in educational contexts. Application of data extraction techniques, analytical processing, and analysis workflows to transform raw data into structured information and interactive dashboards. Generation of exportable analytical reports in PDF, CSV, and DOCX formats, enabling clear interpretation and practical use of results. Strong focus on data visualization and storytelling to clearly communicate usage patterns, participation, and academic performance. Use of React, Webpack, Chart.js, TailwindCSS, Docker, and agile methodologies in the development of the solution. Preparation of a scientific article currently in progress, reinforcing the analytical relevance and practical impact of the project in the field of educational analytics.",
+
+  "projects.tech.agile": "Agile methodologies",
+
+  "projects.portfolio.title": "Personal Portfolio Website",
+  "projects.portfolio.desc": "Personal portfolio website designed to present my professional profile, experience, and projects with a clean, modern interface and a strong focus on clarity, structure, and usability.",
+  "projects.screenshot": "screenshot",
+  "projects.prevImage": "Previous image",
+  "projects.nextImage": "Next image",
+  "projects.carouselPagination": "Carousel pagination",
+  "projects.gradeLabel": "Grade:",
+  "projects.repository": "Repository",
+  "projects.featured.title": "Featured Projects",
+  "projects.featured.subtitle": "A selection of projects where I applied data, engineering, and visualization to solve real problems.",
+  "hero.subtitle": "Computer Science Engineer · Data & Analytics",
+  "hero.description": "I design and build practical software solutions, transforming ideas and requirements into reliable tools that create real-world value.",
+  "highlights.growth.title": "Continuous growth",
+  "highlights.growth.desc": "Strong technical background combined with a constant drive to learn, improve, and adapt to new technologies in real project environments.",
+
+  "highlights.enjoy.title": "What I enjoy building",
+  "highlights.enjoy.desc": "Software solutions that combine development, data, and clear communication to support decision-making and improve real products.",
+
+  "highlights.stack.title": "Tech Stack",
+  "metrics.title": "Highlights",
+  "metrics.subtitle": "Key highlights of my junior profile, technical background, and hands-on project experience.",
+
+  "metrics.junior.value": "Junior",
+  "metrics.junior.label": "Ready to contribute and keep growing",
+
+  "metrics.certs": "Certifications",
+  "metrics.tech": "Technologies used across projects",
+  "metrics.projects": "End-to-end projects built",
+
+  "interests.title": "Interests",
+  "interests.subtitle": "Areas where I’m focused on growing and building real impact.",
+
+  "interests.cards.data.title": "Data Analysis & Dashboards",
+  "interests.cards.data.text": "Analyzing data and designing clear dashboards and visual tools to support understanding and decision-making.",
+
+  "interests.cards.web.title": "Web Development",
+  "interests.cards.web.text": "Building user-facing interfaces and interactive features with a focus on clarity and usability.",
+
+  "interests.cards.cloud.title": "Cloud & Automation",
+  "interests.cards.cloud.text": "Working with cloud environments and basic automation to deploy and support modern applications.",
+  "keyTech.title": "Key Technologies",
+  "keyTech.subtitle": "Tools and technologies I use to build data-driven solutions end to end.",
+
+  "keyTech.data.title": "Data & Analytics",
+  "keyTech.data.description": "Exploring data, building dashboards, and turning information into clear, practical insights.",
+
+  "keyTech.additional": "Additional tools",
+  "keyTech.dev.title": "Development & Tooling",
+  "keyTech.dev.description": "Building web interfaces and reliable apps with modern tools, version control, and cloud-ready workflows.",
+  "reviews.title": "Professional Feedback",
+  "reviews.subtitle": "A couple of words from supervisors and mentors who followed my work in real projects.",
+  "reviews.viewLinkedIn": "View on LinkedIn",
+
+  "reviews.uma.quote": "My sincerest congratulations on such a well-crafted project you’ve developed, achieving an excellent grade you truly deserve. Wishing you all the best in this new stage—and what a great way to start it by turning that work into a strong scientific article.",
+  "reviews.uma.role": "Professor & AI Researcher · University of Málaga",
+
+  "reviews.dekra.quote": "Thank you, Raúl! We were impressed by how quickly you adapted to the project—contributing from day one and delivering top-level features. It was a pleasure having you on the team. You have a professional career full of success ahead.",
+  "reviews.dekra.role": "Full Stack Development · DEKRA Digital Solutions",
+  "cv.title": "Curriculum Vitae",
+  "cv.subtitle": "Download my CV for a detailed overview of my background and experience.",
+  "cv.cardTitle": "CV · Raúl García Balongo",
+  "cv.cardText": "Includes education, projects, technical skills, and experience.",
+  "cv.download": "Download CV",
+  "about.hero.intro": "I’m ",
+  "about.hero.role": "Computer Science Engineer",
+  "home.hero.title.beforeDecisions": "Turning data into",
+  "home.hero.title.decisions": "decisions",
+  "home.hero.title.middle": ", and ideas into reliable",
+  "home.hero.title.products": "products",
+  "home.hero.title.afterProducts": ".",
+  "home.hero.subtitle": "Computer Science Engineer (Information Systems) from the University of Málaga, focused on data analysis and building practical solutions that support decision-making.",
+
+  "home.hero.bullets.1.before": "Strong foundation in",
+  "home.hero.bullets.1.highlight": "mathematics, statistics, and logical reasoning",
+
+  "home.hero.bullets.2.before": "Comfortable with",
+  "home.hero.bullets.2.tech": "Python, SQL, Spark, Power BI, Tableau",
+  "home.hero.bullets.2.middle": "and cloud environments like",
+  "home.hero.bullets.2.cloud": "Azure",
+
+  "home.hero.bullets.3.before": "Experienced working in teams with",
+  "home.hero.bullets.3.highlight": "agile workflows",
+  "home.hero.bullets.3.after": "and clean, maintainable code.",
+
+  "home.traits.curiosity.title": "Curiosity",
+  "home.traits.curiosity.beforeWhy": "I enjoy understanding the ",
+  "home.traits.curiosity.why": "“why” behind the data",
+  "home.traits.curiosity.afterWhy": " and exploring patterns.",
+
+  "home.traits.criticalThinking.title": "Critical thinking",
+  "home.traits.criticalThinking.before": "I question conclusions, validate assumptions, and aim for ",
+  "home.traits.criticalThinking.highlight": "robust insights",
+
+  "home.traits.communication.title": "Communication",
+  "home.traits.communication.before": "I translate technical analysis into ",
+  "home.traits.communication.highlight": "clear stories",
+  "home.traits.communication.after": ", decisions, and next steps.",
+
+  "home.next.title": "Where I’m heading next",
+
+  "home.next.beforeJunior": "My goal is to join a team as a ",
+  "home.next.junior": "junior profile",
+  "home.next.middle": ", contributing from day one to real-world projects while building a solid career in ",
+  "home.next.dataAnalysis": "Data Analysis",
+  "home.next.businessIntelligence": "Business Intelligence",
+  "home.next.dataOrientedDev": "data-oriented development",
+  "home.next.and": ", and ",
+  "home.next.webDev": "web development",
+
+  "home.cards.lookingFor.title": "What I’m looking for",
+  "home.cards.lookingFor.before": "A ",
+  "home.cards.lookingFor.highlight": "stable full-time",
+  "home.cards.lookingFor.after": " role with responsibility, continuous learning, and real production impact.",
+
+  "home.cards.notFocus.title": "Not my focus now",
+  "home.cards.notFocus.item1": "Standalone training programs",
+  "home.cards.notFocus.item2": "Master’s or PhD programs",
+  "home.cards.notFocus.item3": "Purely academic paths",
+
+  "home.cards.motivation.title": "Motivation",
+  "home.cards.motivation.before": "Roles that combine ",
+  "home.cards.motivation.analysis": "analysis",
+  "home.cards.motivation.middle": " and ",
+  "home.cards.motivation.visualization": "visualization",
+  "home.cards.motivation.after": " where data supports decisions and improves products, processes, or services.",
+  "home.work.title": "How I work with teams and challenges",
+
+  "home.work.cards.analytical.title": "Analytical & structured thinking",
+  "home.work.cards.analytical.text": "I break complex problems into clear steps and deliver solutions with a results-oriented mindset.",
+
+  "home.work.cards.consistency.title": "Consistency & perseverance",
+  "home.work.cards.consistency.text": "I stay focused under pressure and keep pushing until the solution is solid and production-ready.",
+
+  "home.work.cards.communication.title": "Communication & collaboration",
+  "home.work.cards.communication.text": "I communicate clearly and align solutions with both technical and business needs.",
+
+  "home.work.cards.planning.title": "Planning & time management",
+  "home.work.cards.planning.text": "I prioritize well, manage deadlines, and keep projects moving with consistent progress.",
+
+  "home.work.cards.adaptability.title": "Adaptability & learning",
+  "home.work.cards.adaptability.text": "I adapt quickly to new tools and environments and enjoy continuous learning in real projects.",
+
+  "home.work.cards.ownership.title": "Ownership & responsibility",
+  "home.work.cards.ownership.text": "I take ownership of my work, follow tasks through to completion, and care about the quality and impact of the final outcome.",
+
+  "home.workArrangement.title": "How I work best",
+
+  "home.workArrangement.remote.title": "Remote",
+  "home.workArrangement.remote.badge": "Preferred",
+  "home.workArrangement.remote.text": "My preferred option. Remote work allows better focus, optimized time management, and cost efficiency related to housing and commuting.",
+
+  "home.workArrangement.hybrid.title": "Hybrid",
+  "home.workArrangement.hybrid.text": "I’m open to hybrid arrangements depending on the team, project context, and professional stage.",
+
+  "home.languages.title": "Languages",
+
+  "home.languages.english.title": "English",
+  "home.languages.english.level": "B2 · Upper-Intermediate",
+  "home.languages.english.certificate": "Cambridge English Level 1 (B2)",
+  "home.languages.english.aria": "English level: B2",
+
+  "home.languages.spanish.title": "Spanish",
+  "home.languages.spanish.level": "Native",
+  "home.languages.spanish.aria": "Spanish level: Native"
+}

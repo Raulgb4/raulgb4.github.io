@@ -1,26 +1,32 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Reveal from "../components/Reveal.astro";
+import Layout from "../../layouts/Layout.astro";
+import Reveal from "../../components/Reveal.astro";
+import { LANGS, type Lang, t } from "../../i18n";
+
+export async function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
 ---
 
-<Layout>
+<Layout lang={lang}>
   <section class="max-w-5xl mx-auto px-4 py-20 space-y-8">
     <!-- FAQ Title -->
     <Reveal as="header" delay={0} class="mb-12 max-w-3xl mx-auto text-center">
       <h1
-        class="text-4xl md:text-5xl font-bold tracking-tight
-      bg-linear-to-r from-emerald-400 via-teal-400 to-green-500
-      bg-clip-text text-transparent"
+        class="text-4xl md:text-5xl font-bold tracking-tight leading-snug
+         bg-linear-to-r from-emerald-400 via-teal-400 to-green-500
+         bg-clip-text text-transparent"
       >
-        FAQ
+        {t(lang, "faq.title")}
       </h1>
 
       <p
         class="mt-5 text-lg md:text-xl leading-relaxed
       text-gray-600 dark:text-gray-300"
       >
-        Answers to common questions about my profile, experience, and
-        availability.
+        {t(lang, "faq.subtitle")}
       </p>
     </Reveal>
 
@@ -29,14 +35,12 @@ import Reveal from "../components/Reveal.astro";
         class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
         <summary class="cursor-pointer text-lg md:text-xl font-medium">
-          What roles am I currently looking for?
+          {t(lang, "faq.q1.q")}
         </summary>
         <p
           class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
         >
-          Junior roles related to Data Analysis, Business Intelligence, and
-          web/data-oriented development, where data supports decision-making and
-          real product or business impact.
+          {t(lang, "faq.q1.a")}
         </p>
       </details>
     </Reveal>
@@ -46,31 +50,28 @@ import Reveal from "../components/Reveal.astro";
         class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
         <summary class="cursor-pointer text-lg md:text-xl font-medium">
-          What type of position am I looking for?
+          {t(lang, "faq.q2.q")}
         </summary>
         <p
           class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
         >
-          Ideally a full-time junior position with responsibility, mentorship,
-          and room to grow. I prefer to focus on professional work in a company
-          rather than purely academic programs.
+          {t(lang, "faq.q2.a")}
         </p>
       </details>
     </Reveal>
 
-    <!-- Added: Availability -->
+    <!-- Availability -->
     <Reveal delay={240}>
       <details
         class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
         <summary class="cursor-pointer text-lg md:text-xl font-medium">
-          What is my availability?
+          {t(lang, "faq.q3.q")}
         </summary>
         <p
           class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
         >
-          I’m available to start soon. If you need a specific start date, feel
-          free to reach out and we can align.
+          {t(lang, "faq.q3.a")}
         </p>
       </details>
     </Reveal>
@@ -80,14 +81,12 @@ import Reveal from "../components/Reveal.astro";
         class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
         <summary class="cursor-pointer text-lg md:text-xl font-medium">
-          What work arrangement do I prefer?
+          {t(lang, "faq.q4.q")}
         </summary>
         <p
           class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
         >
-          Preferably remote work, as it helps with focus and time management.
-          I’m also open to hybrid arrangements depending on the team and project
-          context.
+          {t(lang, "faq.q4.a")}
         </p>
       </details>
     </Reveal>
@@ -97,14 +96,12 @@ import Reveal from "../components/Reveal.astro";
         class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
         <summary class="cursor-pointer text-lg md:text-xl font-medium">
-          What technologies do I work with?
+          {t(lang, "faq.q5.q")}
         </summary>
         <p
           class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
         >
-          My main stack includes Python and SQL, plus web development with
-          modern tooling. I’m also building hands-on experience with cloud
-          (Azure) and data tools for processing and visualization.
+          {t(lang, "faq.q5.a")}
         </p>
       </details>
     </Reveal>
@@ -114,14 +111,12 @@ import Reveal from "../components/Reveal.astro";
         class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
         <summary class="cursor-pointer text-lg md:text-xl font-medium">
-          Do I have professional experience?
+          {t(lang, "faq.q6.q")}
         </summary>
         <p
           class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
         >
-          Yes. During my internship at DEKRA Digital & Product Solutions, I
-          worked in a production environment, contributing to full-stack
-          features and collaborating in an agile team.
+          {t(lang, "faq.q6.a")}
         </p>
       </details>
     </Reveal>
@@ -131,14 +126,12 @@ import Reveal from "../components/Reveal.astro";
         class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
         <summary class="cursor-pointer text-lg md:text-xl font-medium">
-          What is my most relevant project?
+          {t(lang, "faq.q7.q")}
         </summary>
         <p
           class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
         >
-          My Final Degree Project: a browser-based tool that extracts,
-          processes, and visualizes Moodle course data, generating dashboards
-          and exportable analytical reports.
+          {t(lang, "faq.q7.a")}
         </p>
       </details>
     </Reveal>
@@ -148,14 +141,12 @@ import Reveal from "../components/Reveal.astro";
         class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
         <summary class="cursor-pointer text-lg md:text-xl font-medium">
-          How do I approach communication and teamwork?
+          {t(lang, "faq.q8.q")}
         </summary>
         <p
           class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
         >
-          I prioritize clear, structured communication and proactive
-          collaboration. I like aligning early on goals, asking the right
-          questions, and sharing progress to keep the team moving smoothly.
+          {t(lang, "faq.q8.a")}
         </p>
       </details>
     </Reveal>
@@ -165,14 +156,12 @@ import Reveal from "../components/Reveal.astro";
         class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
         <summary class="cursor-pointer text-lg md:text-xl font-medium">
-          What is my English level?
+          {t(lang, "faq.q9.q")}
         </summary>
         <p
           class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
         >
-          I have a B2 level of English (Cambridge B2 First). I’m comfortable
-          reading technical documentation and communicating in international
-          contexts.
+          {t(lang, "faq.q9.a")}
         </p>
       </details>
     </Reveal>
@@ -182,12 +171,12 @@ import Reveal from "../components/Reveal.astro";
         class="rounded-lg border border-gray-200 dark:border-gray-700 p-6"
       >
         <summary class="cursor-pointer text-lg md:text-xl font-medium">
-          How quickly can I respond?
+          {t(lang, "faq.q10.q")}
         </summary>
         <p
           class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300"
         >
-          I usually respond within 24–48 hours via email or LinkedIn.
+          {t(lang, "faq.q10.a")}
         </p>
       </details>
     </Reveal>

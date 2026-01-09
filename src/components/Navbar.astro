@@ -1,6 +1,10 @@
 ---
 const currentPath = Astro.url.pathname;
 
+import { t, type Lang } from "../i18n";
+
+const { lang = "en" } = Astro.props as { lang?: Lang };
+
 const isActive = (path: string) => currentPath === path;
 
 const linkClass = (path: string) =>
@@ -21,42 +25,54 @@ const linkClass = (path: string) =>
 >
   <nav class="flex flex-col gap-1 text-base">
     <a
-      href="/"
+      href={`/${lang}/`}
       class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
-      >Home</a
     >
-    <a
-      href="/about"
-      class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
-      >About</a
-    >
-    <a
-      href="/help"
-      class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
-      >How I Can Help</a
-    >
-    <a
-      href="/experience"
-      class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
-      >Experience</a
-    >
-    <a
-      href="/certifications"
-      class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
-      >Certifications</a
-    >
-    <a
-      href="/faq"
-      class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
-      >FAQ</a
-    >
+      {t(lang, "nav.home")}
+    </a>
 
     <a
-      href="/contact"
-      class="mt-2 inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold
-             bg-emerald-500 text-white hover:bg-emerald-600 transition"
+      href={`/${lang}/about`}
+      class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
     >
-      Contact <span
+      {t(lang, "nav.about")}
+    </a>
+
+    <a
+      href={`/${lang}/help`}
+      class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
+    >
+      {t(lang, "nav.help")}
+    </a>
+
+    <a
+      href={`/${lang}/experience`}
+      class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
+    >
+      {t(lang, "nav.experience")}
+    </a>
+
+    <a
+      href={`/${lang}/certifications`}
+      class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
+    >
+      {t(lang, "nav.certifications")}
+    </a>
+
+    <a
+      href={`/${lang}/faq`}
+      class="rounded-xl px-3 py-2 text-gray-800 dark:text-gray-200 hover:bg-emerald-500/10"
+    >
+      {t(lang, "nav.faq")}
+    </a>
+
+    <a
+      href={`/${lang}/contact`}
+      class="mt-2 inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold
+           bg-emerald-500 text-white hover:bg-emerald-600 transition"
+    >
+      {t(lang, "nav.contact")}
+      <span
         class="ml-2 inline-block h-2 w-2 rounded-full bg-white/90"
         aria-hidden="true"></span>
     </a>
@@ -122,41 +138,21 @@ const linkClass = (path: string) =>
     <!-- Center: Navigation links -->
     <ul class="hidden lg:flex items-center gap-6 text-lg">
       <li>
-        <a href="/" class={linkClass("/")}>
-          Home
+        <a href={`/${lang}/`} class={linkClass(`/${lang}/`)}>
+          {t(lang, "nav.home")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive("/") ? "scale-x-100" : "group-hover:scale-x-100"
+              isActive(`/${lang}/`) ? "scale-x-100" : "group-hover:scale-x-100"
             }`}></span>
         </a>
       </li>
 
       <li>
-        <a href="/about" class={linkClass("/about")}>
-          About
+        <a href={`/${lang}/about`} class={linkClass(`/${lang}/about`)}>
+          {t(lang, "nav.about")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive("/about") ? "scale-x-100" : "group-hover:scale-x-100"
-            }`}></span>
-        </a>
-      </li>
-
-      <li>
-        <a href="/help" class={linkClass("/help")}>
-          How I Can Help
-          <span
-            class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive("/help") ? "scale-x-100" : "group-hover:scale-x-100"
-            }`}></span>
-        </a>
-      </li>
-
-      <li>
-        <a href="/experience" class={linkClass("/experience")}>
-          Experience
-          <span
-            class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive("/experience")
+              isActive(`/${lang}/about`)
                 ? "scale-x-100"
                 : "group-hover:scale-x-100"
             }`}></span>
@@ -164,53 +160,84 @@ const linkClass = (path: string) =>
       </li>
 
       <li>
-        <a href="/certifications" class={linkClass("/certifications")}>
-          Certifications
+        <a href={`/${lang}/help`} class={linkClass(`/${lang}/help`)}>
+          {t(lang, "nav.help")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive("/certifications")
+              isActive(`/${lang}/help`)
                 ? "scale-x-100"
                 : "group-hover:scale-x-100"
-            }`}></span>
-        </a>
-      </li>
-
-      <li>
-        <a href="/faq" class={linkClass("/faq")}>
-          FAQ
-          <span
-            class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive("/faq") ? "scale-x-100" : "group-hover:scale-x-100"
             }`}></span>
         </a>
       </li>
 
       <li>
         <a
-          href="/contact"
-          aria-current={isActive("/contact") ? "page" : undefined}
-          class={`relative inline-flex items-center justify-center rounded-full px-5 py-2 font-semibold
-      transition-all duration-300
-      ${
-        isActive("/contact")
-          ? "bg-emerald-500 text-white shadow-lg shadow-emerald-500/25"
-          : "bg-emerald-500/10 text-emerald-600 ring-1 ring-emerald-500/30 hover:bg-emerald-500/15 hover:text-emerald-700 hover:ring-emerald-500/50"
-      }
-      dark:${
-        isActive("/contact")
-          ? "bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-400/20"
-          : "bg-emerald-400/10 text-emerald-300 ring-1 ring-emerald-400/30 hover:bg-emerald-400/15 hover:text-emerald-200 hover:ring-emerald-400/50"
-      }
-      hover:-translate-y-0.5 hover:shadow-xl`}
+          href={`/${lang}/experience`}
+          class={linkClass(`/${lang}/experience`)}
         >
-          Contact
+          {t(lang, "nav.experience")}
+          <span
+            class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
+              isActive(`/${lang}/experience`)
+                ? "scale-x-100"
+                : "group-hover:scale-x-100"
+            }`}></span>
+        </a>
+      </li>
 
-          {/* Solo mostrar el dot cuando NO está activo */}
+      <li>
+        <a
+          href={`/${lang}/certifications`}
+          class={linkClass(`/${lang}/certifications`)}
+        >
+          {t(lang, "nav.certifications")}
+          <span
+            class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
+              isActive(`/${lang}/certifications`)
+                ? "scale-x-100"
+                : "group-hover:scale-x-100"
+            }`}></span>
+        </a>
+      </li>
+
+      <li>
+        <a href={`/${lang}/faq`} class={linkClass(`/${lang}/faq`)}>
+          {t(lang, "nav.faq")}
+          <span
+            class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
+              isActive(`/${lang}/faq`)
+                ? "scale-x-100"
+                : "group-hover:scale-x-100"
+            }`}></span>
+        </a>
+      </li>
+
+      <li>
+        <a
+          href={`/${lang}/contact`}
+          aria-current={isActive(`/${lang}/contact`) ? "page" : undefined}
+          class={`relative inline-flex items-center justify-center rounded-full px-5 py-2 font-semibold
+        transition-all duration-300
+        ${
+          isActive(`/${lang}/contact`)
+            ? "bg-emerald-500 text-white shadow-lg shadow-emerald-500/25"
+            : "bg-emerald-500/10 text-emerald-600 ring-1 ring-emerald-500/30 hover:bg-emerald-500/15 hover:text-emerald-700 hover:ring-emerald-500/50"
+        }
+        dark:${
+          isActive(`/${lang}/contact`)
+            ? "bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-400/20"
+            : "bg-emerald-400/10 text-emerald-300 ring-1 ring-emerald-400/30 hover:bg-emerald-400/15 hover:text-emerald-200 hover:ring-emerald-400/50"
+        }
+        hover:-translate-y-0.5 hover:shadow-xl`}
+        >
+          {t(lang, "nav.contact")}
+
           {
-            !isActive("/contact") && (
+            !isActive(`/${lang}/contact`) && (
               <span
                 class="ml-2 inline-block h-2 w-2 rounded-full bg-emerald-400/80
-               shadow-[0_0_12px_rgba(52,211,153,0.65)]"
+                 shadow-[0_0_12px_rgba(52,211,153,0.65)]"
                 aria-hidden="true"
               />
             )
@@ -223,34 +250,94 @@ const linkClass = (path: string) =>
     <div
       class="flex items-center gap-4 text-base text-gray-700 dark:text-gray-300"
     >
-      <!-- Language toggle -->
-      <button
-        aria-label="Toggle language"
-        class="p-2 rounded-md hover:text-emerald-600 dark:hover:text-emerald-400
-           transition-colors"
+      <!-- Language switcher (pill with flags) -->
+      <div
+        class="flex items-center rounded-full
+            border border-gray-200 dark:border-white/10
+            bg-white/70 dark:bg-white/5 backdrop-blur
+            p-1"
       >
-        <!-- Heroicons: Globe -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          class="h-5 w-5"
-          aria-hidden="true"
+        <!-- EN -->
+        <a
+          href="/en/"
+          aria-label="Switch to English"
+          class={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold
+      transition
+      ${
+        lang === "en"
+          ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300"
+          : "text-gray-600 dark:text-gray-300 hover:bg-gray-200/40 dark:hover:bg-white/10"
+      }`}
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M12 3c4.97 0 9 4.03 9 9s-4.03 9-9 9
-           -9-4.03-9-9 4.03-9 9-9z"
-          ></path>
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3 12h18M12 3a15.3 15.3 0 010 18M12 3a15.3 15.3 0 000 18"></path>
-        </svg>
-      </button>
+          <span class="text-base">🇬🇧</span>
+          <span>EN</span>
+        </a>
+
+        <!-- ES -->
+        <a
+          href="/es/"
+          aria-label="Cambiar a Español"
+          class={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold
+      transition
+      ${
+        lang === "es"
+          ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300"
+          : "text-gray-600 dark:text-gray-300 hover:bg-gray-200/40 dark:hover:bg-white/10"
+      }`}
+        >
+          <span class="text-base">🇪🇸</span>
+          <span>ES</span>
+        </a>
+      </div>
+
+      <script>
+        const switcher = document.getElementById("lang-switcher");
+        const toggle = document.getElementById("lang-toggle");
+        const menu = document.getElementById("lang-menu");
+
+        const openMenu = () => {
+          menu?.classList.remove("hidden");
+          toggle?.setAttribute("aria-expanded", "true");
+        };
+
+        const closeMenu = () => {
+          menu?.classList.add("hidden");
+          toggle?.setAttribute("aria-expanded", "false");
+        };
+
+        toggle?.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (menu?.classList.contains("hidden")) openMenu();
+          else closeMenu();
+        });
+
+        // Click en una opción
+        menu?.addEventListener("click", (e) => {
+          const target = e.target;
+          if (!(target instanceof HTMLElement)) return;
+
+          const lang = target.getAttribute("data-lang");
+          if (!lang) return;
+
+          const parts = window.location.pathname.split("/").filter(Boolean); // ["en","contact"]
+          // Si no hay /en o /es en la url, asumimos que la primera parte es "en"
+          if (parts[0] === "en" || parts[0] === "es") parts[0] = lang;
+          else parts.unshift(lang);
+
+          window.location.pathname = "/" + parts.join("/");
+        });
+
+        // Cerrar al clicar fuera
+        document.addEventListener("click", (e) => {
+          if (!switcher) return;
+          if (!switcher.contains(e.target)) closeMenu();
+        });
+
+        // Cerrar con Escape
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeMenu();
+        });
+      </script>
     </div>
 
     <!-- Mobile menu button -->

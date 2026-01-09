@@ -1,9 +1,15 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Reveal from "../components/Reveal.astro";
+import Layout from "../../layouts/Layout.astro";
+import Reveal from "../../components/Reveal.astro";
+import { LANGS, type Lang, t } from "../../i18n";
+const lang = Astro.params.lang as Lang;
+
+export async function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang } }));
+}
 ---
 
-<Layout>
+<Layout lang={lang}>
   <!-- ABOUT HERO -->
   <section class="max-w-6xl mx-auto px-4 pt-24 pb-16">
     <div class="grid items-center gap-10 md:grid-cols-2">
@@ -11,7 +17,7 @@ import Reveal from "../components/Reveal.astro";
       <Reveal delay={0} class="will-change-transform">
         <div>
           <h1 class="mt-3 text-4xl md:text-5xl font-bold tracking-tight">
-            I’m
+            {t(lang, "about.hero.intro")}
             <span
               class="bg-linear-to-r from-emerald-400 via-teal-400 to-green-500
                  bg-clip-text text-transparent"
@@ -21,7 +27,7 @@ import Reveal from "../components/Reveal.astro";
           </h1>
 
           <h2 class="mt-3 text-xl md:text-2xl text-gray-700 dark:text-gray-200">
-            Computer Science Engineer
+            {t(lang, "about.hero.role")}
           </h2>
         </div>
       </Reveal>
@@ -105,21 +111,25 @@ import Reveal from "../components/Reveal.astro";
         <Reveal delay={0} class="lg:col-span-7">
           <header class="mb-6">
             <h2 class="mt-4 text-3xl md:text-4xl font-bold tracking-tight">
-              Turning data into <span
+              {t(lang, "home.hero.title.beforeDecisions")}
+              <span
                 class="bg-linear-to-r from-emerald-400 via-teal-400 to-green-500 bg-clip-text text-transparent"
-                >decisions</span
-              >, and ideas into reliable <span
+              >
+                {t(lang, "home.hero.title.decisions")}
+              </span>
+              {t(lang, "home.hero.title.middle")}
+              <span
                 class="bg-linear-to-r from-emerald-400 via-teal-400 to-green-500 bg-clip-text text-transparent"
-                >products</span
-              >.
+              >
+                {t(lang, "home.hero.title.products")}
+              </span>
+              {t(lang, "home.hero.title.afterProducts")}
             </h2>
 
             <p
               class="mt-4 text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl"
             >
-              Computer Science Engineer (Information Systems) from the
-              University of Málaga, focused on data analysis and building
-              practical solutions that support decision-making.
+              {t(lang, "home.hero.subtitle")}
             </p>
           </header>
 
@@ -129,9 +139,9 @@ import Reveal from "../components/Reveal.astro";
               <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-emerald-400/90"
               ></span>
               <span class="leading-relaxed">
-                Strong foundation in{" "}
+                {t(lang, "home.hero.bullets.1.before")}
                 <span class="font-semibold"
-                  >mathematics, statistics, and logical reasoning</span
+                  >{t(lang, "home.hero.bullets.1.highlight")}</span
                 >.
               </span>
             </li>
@@ -140,12 +150,13 @@ import Reveal from "../components/Reveal.astro";
               <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-emerald-400/90"
               ></span>
               <span class="leading-relaxed">
-                Comfortable with{" "}
+                {t(lang, "home.hero.bullets.2.before")}
                 <span class="font-semibold"
-                  >Python, SQL, Spark, Power BI, Tableau</span
-                >{" "}
-                and cloud environments like <span class="font-semibold"
-                  >Azure</span
+                  >{t(lang, "home.hero.bullets.2.tech")}</span
+                >
+                {t(lang, "home.hero.bullets.2.middle")}
+                <span class="font-semibold"
+                  >{t(lang, "home.hero.bullets.2.cloud")}</span
                 >.
               </span>
             </li>
@@ -154,9 +165,11 @@ import Reveal from "../components/Reveal.astro";
               <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-emerald-400/90"
               ></span>
               <span class="leading-relaxed">
-                Experienced working in teams with{" "}
-                <span class="font-semibold">agile workflows</span> and clean, maintainable
-                code.
+                {t(lang, "home.hero.bullets.3.before")}
+                <span class="font-semibold"
+                  >{t(lang, "home.hero.bullets.3.highlight")}</span
+                >
+                {t(lang, "home.hero.bullets.3.after")}
               </span>
             </li>
           </ul>
@@ -167,8 +180,8 @@ import Reveal from "../components/Reveal.astro";
           <Reveal delay={180}>
             <div
               class="group rounded-2xl border border-gray-200/70 dark:border-white/10
-               bg-white/70 dark:bg-white/5 p-5
-               hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
+             bg-white/70 dark:bg-white/5 p-5
+             hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
             >
               <div class="flex items-start gap-3">
                 <div
@@ -178,12 +191,14 @@ import Reveal from "../components/Reveal.astro";
                 </div>
                 <div>
                   <h3 class="font-semibold text-gray-900 dark:text-gray-100">
-                    Curiosity
+                    {t(lang, "home.traits.curiosity.title")}
                   </h3>
                   <p class="mt-1 text-gray-600 dark:text-gray-300">
-                    I enjoy understanding the <span class="font-medium"
-                      >“why” behind the data</span
-                    > and exploring patterns.
+                    {t(lang, "home.traits.curiosity.beforeWhy")}
+                    <span class="font-medium"
+                      >{t(lang, "home.traits.curiosity.why")}</span
+                    >
+                    {t(lang, "home.traits.curiosity.afterWhy")}
                   </p>
                 </div>
               </div>
@@ -193,8 +208,8 @@ import Reveal from "../components/Reveal.astro";
           <Reveal delay={240}>
             <div
               class="group rounded-2xl border border-gray-200/70 dark:border-white/10
-               bg-white/70 dark:bg-white/5 p-5
-               hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
+             bg-white/70 dark:bg-white/5 p-5
+             hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
             >
               <div class="flex items-start gap-3">
                 <div
@@ -204,13 +219,13 @@ import Reveal from "../components/Reveal.astro";
                 </div>
                 <div>
                   <h3 class="font-semibold text-gray-900 dark:text-gray-100">
-                    Critical thinking
+                    {t(lang, "home.traits.criticalThinking.title")}
                   </h3>
                   <p class="mt-1 text-gray-600 dark:text-gray-300">
-                    I question conclusions, validate assumptions, and aim for{
-                      " "
-                    }
-                    <span class="font-medium">robust insights</span>.
+                    {t(lang, "home.traits.criticalThinking.before")}
+                    <span class="font-medium"
+                      >{t(lang, "home.traits.criticalThinking.highlight")}</span
+                    >.
                   </p>
                 </div>
               </div>
@@ -220,8 +235,8 @@ import Reveal from "../components/Reveal.astro";
           <Reveal delay={300}>
             <div
               class="group rounded-2xl border border-gray-200/70 dark:border-white/10
-               bg-white/70 dark:bg-white/5 p-5
-               hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
+             bg-white/70 dark:bg-white/5 p-5
+             hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
             >
               <div class="flex items-start gap-3">
                 <div
@@ -231,12 +246,14 @@ import Reveal from "../components/Reveal.astro";
                 </div>
                 <div>
                   <h3 class="font-semibold text-gray-900 dark:text-gray-100">
-                    Communication
+                    {t(lang, "home.traits.communication.title")}
                   </h3>
                   <p class="mt-1 text-gray-600 dark:text-gray-300">
-                    I translate technical analysis into <span
-                      class="font-medium">clear stories</span
-                    >, decisions, and next steps.
+                    {t(lang, "home.traits.communication.before")}
+                    <span class="font-medium"
+                      >{t(lang, "home.traits.communication.highlight")}</span
+                    >
+                    {t(lang, "home.traits.communication.after")}
                   </p>
                 </div>
               </div>
@@ -272,7 +289,7 @@ import Reveal from "../components/Reveal.astro";
             <h2
               class="mt-3 text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100"
             >
-              Where I’m heading next
+              {t(lang, "home.next.title")}
             </h2>
           </div>
         </div>
@@ -282,25 +299,30 @@ import Reveal from "../components/Reveal.astro";
       <Reveal delay={120}>
         <div
           class="mt-6 relative rounded-2xl border border-emerald-200/70 dark:border-emerald-500/20
-             bg-emerald-50/60 dark:bg-emerald-500/10 p-5 md:p-6"
+           bg-emerald-50/60 dark:bg-emerald-500/10 p-5 md:p-6"
         >
           <div
             class="pointer-events-none absolute inset-0 rounded-2xl
-               bg-linear-to-r from-emerald-500/10 via-transparent to-transparent"
+             bg-linear-to-r from-emerald-500/10 via-transparent to-transparent"
             aria-hidden="true"
           >
           </div>
 
           <p class="relative text-gray-800 dark:text-gray-100 leading-relaxed">
-            My goal is to join a team as a <span class="font-semibold"
-              >junior profile</span
-            >, contributing from day one to real-world projects while building a
-            solid career in
-            <span class="font-semibold">Data Analysis</span>, <span
-              class="font-semibold">Business Intelligence</span
+            {t(lang, "home.next.beforeJunior")}
+            <span class="font-semibold">{t(lang, "home.next.junior")}</span>,
+            {t(lang, "home.next.middle")}
+            <span class="font-semibold"
+              >{t(lang, "home.next.dataAnalysis")}</span
             >,
-            <span class="font-semibold">data-oriented development</span>, and
-            <span class="font-semibold">web development</span>.
+            <span class="font-semibold"
+              >{t(lang, "home.next.businessIntelligence")}</span
+            >,
+            <span class="font-semibold"
+              >{t(lang, "home.next.dataOrientedDev")}</span
+            >
+            {t(lang, "home.next.and")}
+            <span class="font-semibold">{t(lang, "home.next.webDev")}</span>.
           </p>
         </div>
       </Reveal>
@@ -311,17 +333,17 @@ import Reveal from "../components/Reveal.astro";
         <Reveal delay={200}>
           <div
             class="group rounded-2xl border border-gray-200/70 dark:border-white/10
-               bg-white/70 dark:bg-white/5 p-5
-               hover:-translate-y-1 hover:border-emerald-500/30
-               hover:shadow-lg hover:shadow-emerald-500/10
-               transition-all duration-300"
+             bg-white/70 dark:bg-white/5 p-5
+             hover:-translate-y-1 hover:border-emerald-500/30
+             hover:shadow-lg hover:shadow-emerald-500/10
+             transition-all duration-300"
           >
             <div class="flex items-center gap-2">
               <span
                 class="inline-flex h-9 w-9 items-center justify-center rounded-xl
-                   bg-emerald-500/10 text-emerald-600 dark:text-emerald-300
-                   border border-emerald-500/20
-                   group-hover:bg-emerald-500/15 transition"
+                 bg-emerald-500/10 text-emerald-600 dark:text-emerald-300
+                 border border-emerald-500/20
+                 group-hover:bg-emerald-500/15 transition"
               >
                 <!-- icon: target -->
                 <svg
@@ -339,13 +361,16 @@ import Reveal from "../components/Reveal.astro";
                 </svg>
               </span>
               <h3 class="font-semibold text-gray-900 dark:text-gray-100">
-                What I’m looking for
+                {t(lang, "home.cards.lookingFor.title")}
               </h3>
             </div>
 
             <p class="mt-3 text-gray-600 dark:text-gray-300 leading-relaxed">
-              A <span class="font-medium">stable full-time</span> role with responsibility,
-              continuous learning, and real production impact.
+              {t(lang, "home.cards.lookingFor.before")}
+              <span class="font-medium"
+                >{t(lang, "home.cards.lookingFor.highlight")}</span
+              >
+              {t(lang, "home.cards.lookingFor.after")}
             </p>
           </div>
         </Reveal>
@@ -354,16 +379,16 @@ import Reveal from "../components/Reveal.astro";
         <Reveal delay={260}>
           <div
             class="group rounded-2xl border border-gray-200/70 dark:border-white/10
-               bg-white/70 dark:bg-white/5 p-5
-               hover:-translate-y-1 hover:border-gray-400/40
-               hover:shadow-lg hover:shadow-black/5
-               transition-all duration-300"
+             bg-white/70 dark:bg-white/5 p-5
+             hover:-translate-y-1 hover:border-gray-400/40
+             hover:shadow-lg hover:shadow-black/5
+             transition-all duration-300"
           >
             <div class="flex items-center gap-2">
               <span
                 class="inline-flex h-9 w-9 items-center justify-center rounded-xl
-                   bg-gray-500/10 text-gray-700 dark:text-gray-200
-                   border border-gray-500/20"
+                 bg-gray-500/10 text-gray-700 dark:text-gray-200
+                 border border-gray-500/20"
               >
                 <!-- icon: ban -->
                 <svg
@@ -380,7 +405,7 @@ import Reveal from "../components/Reveal.astro";
                 </svg>
               </span>
               <h3 class="font-semibold text-gray-900 dark:text-gray-100">
-                Not my focus now
+                {t(lang, "home.cards.notFocus.title")}
               </h3>
             </div>
 
@@ -388,17 +413,17 @@ import Reveal from "../components/Reveal.astro";
               <li class="flex items-baseline gap-2">
                 <span class="inline-block h-1.5 w-1.5 rounded-full bg-gray-400"
                 ></span>
-                <span>Standalone training programs</span>
+                <span>{t(lang, "home.cards.notFocus.item1")}</span>
               </li>
               <li class="flex items-baseline gap-2">
                 <span class="inline-block h-1.5 w-1.5 rounded-full bg-gray-400"
                 ></span>
-                <span>Master’s or PhD programs</span>
+                <span>{t(lang, "home.cards.notFocus.item2")}</span>
               </li>
               <li class="flex items-baseline gap-2">
                 <span class="inline-block h-1.5 w-1.5 rounded-full bg-gray-400"
                 ></span>
-                <span>Purely academic paths</span>
+                <span>{t(lang, "home.cards.notFocus.item3")}</span>
               </li>
             </ul>
           </div>
@@ -408,17 +433,17 @@ import Reveal from "../components/Reveal.astro";
         <Reveal delay={320}>
           <div
             class="group rounded-2xl border border-gray-200/70 dark:border-white/10
-               bg-white/70 dark:bg-white/5 p-5
-               hover:-translate-y-1 hover:border-emerald-500/30
-               hover:shadow-lg hover:shadow-emerald-500/10
-               transition-all duration-300"
+             bg-white/70 dark:bg-white/5 p-5
+             hover:-translate-y-1 hover:border-emerald-500/30
+             hover:shadow-lg hover:shadow-emerald-500/10
+             transition-all duration-300"
           >
             <div class="flex items-center gap-2">
               <span
                 class="inline-flex h-9 w-9 items-center justify-center rounded-xl
-                   bg-emerald-500/10 text-emerald-600 dark:text-emerald-300
-                   border border-emerald-500/20
-                   group-hover:bg-emerald-500/15 transition"
+                 bg-emerald-500/10 text-emerald-600 dark:text-emerald-300
+                 border border-emerald-500/20
+                 group-hover:bg-emerald-500/15 transition"
               >
                 <!-- icon: spark -->
                 <svg
@@ -436,14 +461,20 @@ import Reveal from "../components/Reveal.astro";
                 </svg>
               </span>
               <h3 class="font-semibold text-gray-900 dark:text-gray-100">
-                Motivation
+                {t(lang, "home.cards.motivation.title")}
               </h3>
             </div>
 
             <p class="mt-3 text-gray-600 dark:text-gray-300 leading-relaxed">
-              Roles that combine <span class="font-medium">analysis</span> and
-              <span class="font-medium">visualization</span> where data supports decisions
-              and improves products, processes, or services.
+              {t(lang, "home.cards.motivation.before")}
+              <span class="font-medium"
+                >{t(lang, "home.cards.motivation.analysis")}</span
+              >
+              {t(lang, "home.cards.motivation.middle")}
+              <span class="font-medium"
+                >{t(lang, "home.cards.motivation.visualization")}</span
+              >
+              {t(lang, "home.cards.motivation.after")}
             </p>
           </div>
         </Reveal>
@@ -475,7 +506,7 @@ import Reveal from "../components/Reveal.astro";
           <h2
             class="mt-3 text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100"
           >
-            How I work with teams and challenges
+            {t(lang, "home.work.title")}
           </h2>
         </header>
       </Reveal>
@@ -486,25 +517,25 @@ import Reveal from "../components/Reveal.astro";
         <Reveal delay={120}>
           <article
             class="group relative overflow-hidden rounded-2xl
-               border border-gray-200/70 dark:border-white/10
-               bg-white/70 dark:bg-white/5 backdrop-blur p-6
-               shadow-sm transition-all duration-300
-               hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-               hover:border-emerald-500/40"
+           border border-gray-200/70 dark:border-white/10
+           bg-white/70 dark:bg-white/5 backdrop-blur p-6
+           shadow-sm transition-all duration-300
+           hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+           hover:border-emerald-500/40"
           >
             <div
               class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
-                 bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-                 group-hover:opacity-100"
+             bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+             group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
 
             <div
               class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
-                 bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
-                 border border-emerald-500/15
-                 transition-transform duration-300 group-hover:scale-[1.05]"
+             bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
+             border border-emerald-500/15
+             transition-transform duration-300 group-hover:scale-[1.05]"
               aria-hidden="true"
             >
               <!-- Chart icon -->
@@ -528,16 +559,15 @@ import Reveal from "../components/Reveal.astro";
             </div>
 
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              Analytical & structured thinking
+              {t(lang, "home.work.cards.analytical.title")}
             </h3>
             <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
-              I break complex problems into clear steps and deliver solutions
-              with a results-oriented mindset.
+              {t(lang, "home.work.cards.analytical.text")}
             </p>
 
             <div
               class="mt-4 h-px w-full bg-linear-to-r from-transparent via-emerald-500/25 to-transparent
-                 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+             opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
@@ -548,25 +578,25 @@ import Reveal from "../components/Reveal.astro";
         <Reveal delay={170}>
           <article
             class="group relative overflow-hidden rounded-2xl
-               border border-gray-200/70 dark:border-white/10
-               bg-white/70 dark:bg-white/5 backdrop-blur p-6
-               shadow-sm transition-all duration-300
-               hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-               hover:border-emerald-500/40"
+           border border-gray-200/70 dark:border-white/10
+           bg-white/70 dark:bg-white/5 backdrop-blur p-6
+           shadow-sm transition-all duration-300
+           hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+           hover:border-emerald-500/40"
           >
             <div
               class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
-                 bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-                 group-hover:opacity-100"
+             bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+             group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
 
             <div
               class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
-                 bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
-                 border border-emerald-500/15
-                 transition-transform duration-300 group-hover:scale-[1.05]"
+             bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
+             border border-emerald-500/15
+             transition-transform duration-300 group-hover:scale-[1.05]"
               aria-hidden="true"
             >
               <!-- Bolt icon -->
@@ -586,16 +616,15 @@ import Reveal from "../components/Reveal.astro";
             </div>
 
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              Consistency & perseverance
+              {t(lang, "home.work.cards.consistency.title")}
             </h3>
             <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
-              I stay focused under pressure and keep pushing until the solution
-              is solid and production-ready.
+              {t(lang, "home.work.cards.consistency.text")}
             </p>
 
             <div
               class="mt-4 h-px w-full bg-linear-to-r from-transparent via-emerald-500/25 to-transparent
-                 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+             opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
@@ -606,25 +635,25 @@ import Reveal from "../components/Reveal.astro";
         <Reveal delay={220}>
           <article
             class="group relative overflow-hidden rounded-2xl
-               border border-gray-200/70 dark:border-white/10
-               bg-white/70 dark:bg-white/5 backdrop-blur p-6
-               shadow-sm transition-all duration-300
-               hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-               hover:border-emerald-500/40"
+           border border-gray-200/70 dark:border-white/10
+           bg-white/70 dark:bg-white/5 backdrop-blur p-6
+           shadow-sm transition-all duration-300
+           hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+           hover:border-emerald-500/40"
           >
             <div
               class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
-                 bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-                 group-hover:opacity-100"
+             bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+             group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
 
             <div
               class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
-                 bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
-                 border border-emerald-500/15
-                 transition-transform duration-300 group-hover:scale-[1.05]"
+             bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
+             border border-emerald-500/15
+             transition-transform duration-300 group-hover:scale-[1.05]"
               aria-hidden="true"
             >
               <!-- Chat icon -->
@@ -645,16 +674,15 @@ import Reveal from "../components/Reveal.astro";
             </div>
 
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              Communication & collaboration
+              {t(lang, "home.work.cards.communication.title")}
             </h3>
             <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
-              I communicate clearly and align solutions with both technical and
-              business needs.
+              {t(lang, "home.work.cards.communication.text")}
             </p>
 
             <div
               class="mt-4 h-px w-full bg-linear-to-r from-transparent via-emerald-500/25 to-transparent
-                 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+             opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
@@ -665,25 +693,25 @@ import Reveal from "../components/Reveal.astro";
         <Reveal delay={270}>
           <article
             class="group relative overflow-hidden rounded-2xl
-               border border-gray-200/70 dark:border-white/10
-               bg-white/70 dark:bg-white/5 backdrop-blur p-6
-               shadow-sm transition-all duration-300
-               hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-               hover:border-emerald-500/40"
+           border border-gray-200/70 dark:border-white/10
+           bg-white/70 dark:bg-white/5 backdrop-blur p-6
+           shadow-sm transition-all duration-300
+           hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+           hover:border-emerald-500/40"
           >
             <div
               class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
-                 bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-                 group-hover:opacity-100"
+             bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+             group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
 
             <div
               class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
-                 bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
-                 border border-emerald-500/15
-                 transition-transform duration-300 group-hover:scale-[1.05]"
+             bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
+             border border-emerald-500/15
+             transition-transform duration-300 group-hover:scale-[1.05]"
               aria-hidden="true"
             >
               <!-- Calendar icon -->
@@ -704,16 +732,15 @@ import Reveal from "../components/Reveal.astro";
             </div>
 
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              Planning & time management
+              {t(lang, "home.work.cards.planning.title")}
             </h3>
             <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
-              I prioritize well, manage deadlines, and keep projects moving with
-              consistent progress.
+              {t(lang, "home.work.cards.planning.text")}
             </p>
 
             <div
               class="mt-4 h-px w-full bg-linear-to-r from-transparent via-emerald-500/25 to-transparent
-                 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+             opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
@@ -724,25 +751,25 @@ import Reveal from "../components/Reveal.astro";
         <Reveal delay={320}>
           <article
             class="group relative overflow-hidden rounded-2xl
-               border border-gray-200/70 dark:border-white/10
-               bg-white/70 dark:bg-white/5 backdrop-blur p-6
-               shadow-sm transition-all duration-300
-               hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-               hover:border-emerald-500/40"
+           border border-gray-200/70 dark:border-white/10
+           bg-white/70 dark:bg-white/5 backdrop-blur p-6
+           shadow-sm transition-all duration-300
+           hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+           hover:border-emerald-500/40"
           >
             <div
               class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
-                 bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-                 group-hover:opacity-100"
+             bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+             group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
 
             <div
               class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
-                 bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
-                 border border-emerald-500/15
-                 transition-transform duration-300 group-hover:scale-[1.05]"
+             bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
+             border border-emerald-500/15
+             transition-transform duration-300 group-hover:scale-[1.05]"
               aria-hidden="true"
             >
               <!-- Arrows icon -->
@@ -762,16 +789,15 @@ import Reveal from "../components/Reveal.astro";
             </div>
 
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              Adaptability & learning
+              {t(lang, "home.work.cards.adaptability.title")}
             </h3>
             <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
-              I adapt quickly to new tools and environments and enjoy continuous
-              learning in real projects.
+              {t(lang, "home.work.cards.adaptability.text")}
             </p>
 
             <div
               class="mt-4 h-px w-full bg-linear-to-r from-transparent via-emerald-500/25 to-transparent
-                 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+             opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
@@ -782,26 +808,26 @@ import Reveal from "../components/Reveal.astro";
         <Reveal delay={370}>
           <article
             class="group relative h-full overflow-hidden rounded-2xl
-       border border-gray-200/70 dark:border-white/10
-       bg-white/70 dark:bg-white/5 backdrop-blur p-6
-       shadow-sm transition-all duration-300
-       hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-       hover:border-emerald-500/40
-       flex flex-col"
+           border border-gray-200/70 dark:border-white/10
+           bg-white/70 dark:bg-white/5 backdrop-blur p-6
+           shadow-sm transition-all duration-300
+           hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+           hover:border-emerald-500/40
+           flex flex-col"
           >
             <div
               class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
-         bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-         group-hover:opacity-100"
+             bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+             group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
 
             <div
               class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
-         bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
-         border border-emerald-500/15
-         transition-transform duration-300 group-hover:scale-[1.05]"
+             bg-emerald-500/12 text-emerald-600 dark:text-emerald-400
+             border border-emerald-500/15
+             transition-transform duration-300 group-hover:scale-[1.05]"
               aria-hidden="true"
             >
               <!-- Check-circle icon -->
@@ -822,16 +848,15 @@ import Reveal from "../components/Reveal.astro";
             </div>
 
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              Ownership & responsibility
+              {t(lang, "home.work.cards.ownership.title")}
             </h3>
             <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
-              I take ownership of my work, follow tasks through to completion,
-              and care about the quality and impact of the final outcome.
+              {t(lang, "home.work.cards.ownership.text")}
             </p>
 
             <div
               class="mt-4 h-px w-full bg-linear-to-r from-transparent via-emerald-500/25 to-transparent
-                 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+             opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
@@ -865,7 +890,7 @@ import Reveal from "../components/Reveal.astro";
           <h2
             class="mt-3 text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100"
           >
-            How I work best
+            {t(lang, "home.workArrangement.title")}
           </h2>
         </header>
       </Reveal>
@@ -922,7 +947,7 @@ import Reveal from "../components/Reveal.astro";
                   <h3
                     class="text-lg font-semibold text-gray-900 dark:text-white"
                   >
-                    Remote
+                    {t(lang, "home.workArrangement.remote.title")}
                   </h3>
 
                   <span
@@ -930,16 +955,14 @@ import Reveal from "../components/Reveal.astro";
                        bg-emerald-500/10 text-emerald-700 dark:text-emerald-300
                        ring-1 ring-emerald-500/25"
                   >
-                    Preferred
+                    {t(lang, "home.workArrangement.remote.badge")}
                   </span>
                 </div>
 
                 <p
                   class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed"
                 >
-                  My preferred option. Remote work allows better focus,
-                  optimized time management, and cost efficiency related to
-                  housing and commuting.
+                  {t(lang, "home.workArrangement.remote.text")}
                 </p>
 
                 <div
@@ -1006,15 +1029,14 @@ import Reveal from "../components/Reveal.astro";
                   <h3
                     class="text-lg font-semibold text-gray-900 dark:text-white"
                   >
-                    Hybrid
+                    {t(lang, "home.workArrangement.hybrid.title")}
                   </h3>
                 </div>
 
                 <p
                   class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed"
                 >
-                  I’m open to hybrid arrangements depending on the team, project
-                  context, and professional stage.
+                  {t(lang, "home.workArrangement.hybrid.text")}
                 </p>
 
                 <div
@@ -1055,7 +1077,7 @@ import Reveal from "../components/Reveal.astro";
           <h2
             class="mt-3 text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100"
           >
-            Languages
+            {t(lang, "home.languages.title")}
           </h2>
         </header>
       </Reveal>
@@ -1065,43 +1087,43 @@ import Reveal from "../components/Reveal.astro";
         <Reveal delay={120}>
           <article
             class="group relative overflow-hidden rounded-2xl
-           border border-gray-200/70 dark:border-white/10
-           bg-white/70 dark:bg-white/5 backdrop-blur p-6
-           shadow-sm transition-all duration-300
-           hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-           hover:border-emerald-500/40"
+             border border-gray-200/70 dark:border-white/10
+             bg-white/70 dark:bg-white/5 backdrop-blur p-6
+             shadow-sm transition-all duration-300
+             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+             hover:border-emerald-500/40"
           >
             <!-- Glow -->
             <div
               class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
-             bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-             group-hover:opacity-100"
+               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+               group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
 
-            <!-- Top row: title + bars -->
+            <!-- Top row -->
             <div class="flex items-start justify-between gap-4">
               <div class="min-w-0">
                 <div
                   class="text-lg font-semibold text-gray-900 dark:text-white"
                 >
-                  English
+                  {t(lang, "home.languages.english.title")}
                 </div>
 
                 <div class="mt-1 flex flex-wrap items-center gap-2">
                   <span
                     class="text-sm font-medium text-emerald-600 dark:text-emerald-300"
                   >
-                    B2 · Upper-Intermediate
+                    {t(lang, "home.languages.english.level")}
                   </span>
                 </div>
               </div>
 
-              <!-- Level bars (4/5) -->
+              <!-- Level bars -->
               <div
                 class="shrink-0 flex items-end gap-2 pt-1"
-                aria-label="English level: B2"
+                aria-label={t(lang, "home.languages.english.aria")}
               >
                 <span class="h-2 w-10 rounded-sm bg-emerald-500/80"></span>
                 <span class="h-3 w-10 rounded-sm bg-emerald-500/70"></span>
@@ -1113,26 +1135,28 @@ import Reveal from "../components/Reveal.astro";
               </div>
             </div>
 
-            <!-- Compact certificate row -->
+            <!-- Certificate -->
             <div
               class="mt-3 flex items-center gap-2 min-w-0 text-sm text-gray-600 dark:text-gray-300"
             >
               <span
                 class="inline-flex h-8 w-8 items-center justify-center rounded-xl
-               bg-emerald-500/10 text-emerald-600 dark:text-emerald-300
-               border border-emerald-500/20"
+                 bg-emerald-500/10 text-emerald-600 dark:text-emerald-300
+                 border border-emerald-500/20"
                 aria-hidden="true"
               >
                 ✓
               </span>
 
-              <p class="min-w-0 truncate">Cambridge English Level 1 (B2)</p>
+              <p class="min-w-0 truncate">
+                {t(lang, "home.languages.english.certificate")}
+              </p>
             </div>
 
             <div
               class="pointer-events-none mt-4 h-px w-full bg-linear-to-r
-             from-transparent via-emerald-500/25 to-transparent
-             opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+               from-transparent via-emerald-500/25 to-transparent
+               opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
@@ -1143,16 +1167,16 @@ import Reveal from "../components/Reveal.astro";
         <Reveal delay={180}>
           <article
             class="group relative overflow-hidden rounded-2xl
-           border border-gray-200/70 dark:border-white/10
-           bg-white/70 dark:bg-white/5 backdrop-blur p-6
-           shadow-sm transition-all duration-300
-           hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-           hover:border-emerald-500/40"
+             border border-gray-200/70 dark:border-white/10
+             bg-white/70 dark:bg-white/5 backdrop-blur p-6
+             shadow-sm transition-all duration-300
+             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+             hover:border-emerald-500/40"
           >
             <div
               class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
-             bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-             group-hover:opacity-100"
+               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+               group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
@@ -1162,19 +1186,19 @@ import Reveal from "../components/Reveal.astro";
                 <div
                   class="text-lg font-semibold text-gray-900 dark:text-white"
                 >
-                  Spanish
+                  {t(lang, "home.languages.spanish.title")}
                 </div>
                 <div
                   class="mt-1 text-sm font-medium text-emerald-600 dark:text-emerald-300"
                 >
-                  Native
+                  {t(lang, "home.languages.spanish.level")}
                 </div>
               </div>
 
-              <!-- Level bars (5/5) -->
+              <!-- Level bars -->
               <div
                 class="shrink-0 flex items-end gap-2 pt-1"
-                aria-label="Spanish level: Native"
+                aria-label={t(lang, "home.languages.spanish.aria")}
               >
                 <span class="h-2 w-10 rounded-sm bg-emerald-500/80"></span>
                 <span class="h-3 w-10 rounded-sm bg-emerald-500/70"></span>
@@ -1186,8 +1210,8 @@ import Reveal from "../components/Reveal.astro";
 
             <div
               class="pointer-events-none mt-4 h-px w-full bg-linear-to-r
-             from-transparent via-emerald-500/25 to-transparent
-             opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+               from-transparent via-emerald-500/25 to-transparent
+               opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>

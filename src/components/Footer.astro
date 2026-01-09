@@ -1,11 +1,15 @@
 ---
+import { t, type Lang } from "../i18n";
+
+const { lang = "en" } = Astro.props as { lang?: Lang };
+
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "How I Can Help", href: "/help" },
-  { label: "Experience", href: "/experience" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
+  { key: "nav.home", href: `/${lang}/` },
+  { key: "nav.about", href: `/${lang}/about` },
+  { key: "nav.help", href: `/${lang}/help` },
+  { key: "nav.experience", href: `/${lang}/experience` },
+  { key: "nav.faq", href: `/${lang}/faq` },
+  { key: "nav.contact", href: `/${lang}/contact` },
 ];
 
 const socialLinks = [
@@ -48,7 +52,7 @@ const email = "raulgarciabalongoes@gmail.com";
         {
           navLinks.map((l) => (
             <a href={l.href} class="hover:text-emerald-400 transition-colors">
-              {l.label}
+              {t(lang, l.key)}
             </a>
           ))
         }
@@ -144,7 +148,9 @@ const email = "raulgarciabalongoes@gmail.com";
     <div
       class="border-t border-white/10 py-6 text-center text-base md:text-lg text-slate-400"
     >
-      © {new Date().getFullYear()} Raúl García Balongo. All rights reserved.
+      © {new Date().getFullYear()} Raúl García Balongo. {
+        t(lang, "footer.rights")
+      }
     </div>
   </div>
 </footer>
