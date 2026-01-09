@@ -8,9 +8,23 @@ export async function getStaticPaths() {
 }
 
 const lang = Astro.params.lang as Lang;
+
+// ✅ SEO por página
+const pageSeo = {
+  en: {
+    title: "FAQ | Raúl García Balongo",
+    description:
+      "Answers to common questions about my profile, skills, availability, and professional interests.",
+  },
+  es: {
+    title: "Preguntas frecuentes | Raúl García Balongo",
+    description:
+      "Respuestas a preguntas frecuentes sobre mi perfil, habilidades, disponibilidad e intereses profesionales.",
+  },
+};
 ---
 
-<Layout lang={lang}>
+<Layout lang={lang} pageSeo={pageSeo}>
   <section class="max-w-5xl mx-auto px-4 py-20 space-y-8">
     <!-- FAQ Title -->
     <Reveal as="header" delay={0} class="mb-12 max-w-3xl mx-auto text-center">

@@ -9,6 +9,20 @@ export async function getStaticPaths() {
 
 const lang = Astro.params.lang as Lang;
 
+// ✅ SEO por página
+const pageSeo = {
+  en: {
+    title: "Certifications | Raúl García Balongo",
+    description:
+      "Professional certifications and continuous learning focused on data, cloud, and software engineering.",
+  },
+  es: {
+    title: "Certificaciones | Raúl García Balongo",
+    description:
+      "Certificaciones profesionales y formación continua enfocadas en datos, cloud y desarrollo de software.",
+  },
+};
+
 const certifications = [
   {
     title:
@@ -362,7 +376,7 @@ const certifications = [
 ];
 ---
 
-<Layout lang={lang}>
+<Layout lang={lang} pageSeo={pageSeo}>
   <section class="max-w-5xl mx-auto px-4 py-20 space-y-16">
     <!-- PAGE TITLE -->
     <header class="max-w-3xl mx-auto text-center">

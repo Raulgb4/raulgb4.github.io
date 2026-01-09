@@ -2,14 +2,29 @@
 import Layout from "../../layouts/Layout.astro";
 import Reveal from "../../components/Reveal.astro";
 import { LANGS, type Lang, t } from "../../i18n";
+
 const lang = Astro.params.lang as Lang;
 
 export async function getStaticPaths() {
   return LANGS.map((lang) => ({ params: { lang } }));
 }
+
+// ✅ SEO por página
+const pageSeo = {
+  en: {
+    title: "About Me | Raúl García Balongo",
+    description:
+      "Professional background, mindset, and strengths with a focus on data analysis and software development.",
+  },
+  es: {
+    title: "Sobre mí | Raúl García Balongo",
+    description:
+      "Perfil profesional, mentalidad y fortalezas con enfoque en análisis de datos y desarrollo de software.",
+  },
+};
 ---
 
-<Layout lang={lang}>
+<Layout lang={lang} pageSeo={pageSeo}>
   <!-- ABOUT HERO -->
   <section class="max-w-6xl mx-auto px-4 pt-24 pb-16">
     <div class="grid items-center gap-10 md:grid-cols-2">

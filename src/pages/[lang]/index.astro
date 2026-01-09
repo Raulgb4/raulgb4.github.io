@@ -10,6 +10,20 @@ export async function getStaticPaths() {
 
 const lang = Astro.params.lang as Lang;
 
+// ✅ SEO por página (Home / Index)
+const pageSeo = {
+  en: {
+    title: "Raúl García Balongo | Data & Software Engineer",
+    description:
+      "Personal portfolio of Raúl García Balongo. Data analysis, business intelligence, and web development projects, experience, and certifications.",
+  },
+  es: {
+    title: "Raúl García Balongo | Datos y Desarrollo de Software",
+    description:
+      "Portfolio personal de Raúl García Balongo. Proyectos, experiencia y certificaciones en análisis de datos, business intelligence y desarrollo web.",
+  },
+};
+
 type TechIcon = {
   name: string;
   src: string;
@@ -174,7 +188,7 @@ const devIcons: TechIcon[] = [
 const techStack: TechIcon[] = [...dataIcons, ...devIcons];
 ---
 
-<Layout lang={lang}>
+<Layout lang={lang} pageSeo={pageSeo}>
   <!-- HERO -->
   <section class="max-w-7xl mx-auto px-4 pt-10 pb-10 md:pt-14 md:pb-14">
     <div class="grid items-center gap-12 md:grid-cols-2">
