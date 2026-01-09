@@ -1028,19 +1028,25 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
 
             <!-- Download button -->
             <a
-              href="/assets/genericCV/Mi_CV_en_inglés.pdf"
+              href={lang === "es"
+                ? "/assets/genericCV/Mi_CV_en_español.pdf"
+                : "/assets/genericCV/Mi_CV_en_inglés.pdf"}
               download
-              class="relative inline-flex items-center justify-center rounded-full
-                   px-8 py-3 text-base font-semibold
-                   bg-emerald-600 text-white
-                   shadow-lg shadow-emerald-600/40
-                   transition-all duration-300
-                   hover:bg-emerald-700 hover:scale-105
-                   focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2
-                   animate-[pulse_2.8s_ease-in-out_infinite]"
+              class="relative inline-flex items-center justify-center
+                     rounded-full
+                     px-8 py-3
+                     text-base font-semibold
+                     whitespace-nowrap
+                     bg-emerald-600 text-white
+                     shadow-lg shadow-emerald-600/40
+                     transition-all duration-300
+                     hover:bg-emerald-700 hover:scale-105
+                     focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2
+                     animate-[pulse_2.8s_ease-in-out_infinite]"
             >
               {t(lang, "cv.download")}
             </a>
+
           </div>
         </div>
       </Reveal>
