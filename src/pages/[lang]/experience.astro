@@ -417,6 +417,7 @@ const pageSeo = {
 
                 institution: t(lang, "projects.moodle.institution"),
                 type: t(lang, "projects.moodle.type"),
+                period: undefined, // ✅ AÑADIR
                 grade: "9.8/10",
 
                 description: t(lang, "projects.moodle.desc.short"),
@@ -445,8 +446,7 @@ const pageSeo = {
                   t(lang, "projects.tech.agile"),
                 ],
 
-                repoUrl:
-                  "https://github.com/Raulgb4/BrowserExtension-MoodleDataAnalysis/tree/develop",
+                repoUrl: "...",
               },
 
               {
@@ -454,28 +454,30 @@ const pageSeo = {
                 badge: t(lang, "projects.badge.public"),
 
                 description: t(lang, "projects.portfolio.desc"),
+                period: undefined, // ✅ AÑADIR
+                grade: undefined, // (opcional pero recomendable)
                 cover: "/assets/images/projects/portfolio.png",
+
                 tech: "Astro · Tailwind CSS · TypeScript · React",
                 demoUrl: "#",
-                repoUrl: "https://github.com/Raulgb4/raulgb4.github.io",
+                repoUrl: "...",
               },
             ]
-
               .slice(0, 3)
               .map((p, idx) => (
                 <Reveal delay={260 + idx * 90}>
                   <article
                     class="group relative overflow-hidden rounded-2xl
-             border border-emerald-500/25
-             bg-white/60 dark:bg-white/5 backdrop-blur
-             shadow-sm transition-all duration-300
-             hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20
-             hover:border-emerald-400/60"
+              border border-emerald-500/25
+              bg-white/60 dark:bg-white/5 backdrop-blur
+              shadow-sm transition-all duration-300
+              hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20
+              hover:border-emerald-400/60"
                   >
                     <div
                       class="pointer-events-none absolute -top-24 -left-24 h-64 w-64 rounded-full
-               bg-emerald-500/15 blur-3xl opacity-0 transition-opacity duration-500
-               group-hover:opacity-100"
+                bg-emerald-500/15 blur-3xl opacity-0 transition-opacity duration-500
+                group-hover:opacity-100"
                       aria-hidden="true"
                     />
 
@@ -488,26 +490,25 @@ const pageSeo = {
                             data-carousel-track
                             style="transform: translateX(0%)"
                           >
-                            {(p.covers ?? [p.cover]).map((src, i) => (
-                              <div class="h-full w-full shrink-0">
-                                <img
-                                  src={src}
-                                  alt={`${p.titleKey ? t(lang, p.titleKey) : p.title} ${t(
-                                    lang,
-                                    "projects.screenshot",
-                                  )} ${i + 1}`}
-                                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                                  loading="lazy"
-                                />
-                              </div>
-                            ))}
+                            {(p.covers ?? [p.cover].filter(Boolean)).map(
+                              (src, i) => (
+                                <div class="h-full w-full shrink-0">
+                                  <img
+                                    src={src}
+                                    alt={`${p.title} ${t(lang, "projects.screenshot")} ${i + 1}`}
+                                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                    loading="lazy"
+                                  />
+                                </div>
+                              ),
+                            )}
                           </div>
 
                           {/* Overlay */}
                           <div
                             class="pointer-events-none absolute inset-0
-                     bg-linear-to-t from-black/35 via-black/10 to-transparent
-                     md:bg-linear-to-r md:from-black/25 md:via-black/10 md:to-transparent"
+                      bg-linear-to-t from-black/35 via-black/10 to-transparent
+                      md:bg-linear-to-r md:from-black/25 md:via-black/10 md:to-transparent"
                             aria-hidden="true"
                           />
                         </div>
@@ -516,10 +517,10 @@ const pageSeo = {
                         <button
                           type="button"
                           class="absolute left-3 top-1/2 -translate-y-1/2
-                   inline-flex h-9 w-9 items-center justify-center rounded-full
-                   bg-black/35 text-white border border-white/20
-                   opacity-0 transition-opacity duration-200
-                   group-hover:opacity-100 focus:opacity-100"
+                    inline-flex h-9 w-9 items-center justify-center rounded-full
+                    bg-black/35 text-white border border-white/20
+                    opacity-0 transition-opacity duration-200
+                    group-hover:opacity-100 focus:opacity-100"
                           aria-label={t(lang, "projects.prevImage")}
                           data-carousel-prev
                         >
@@ -529,10 +530,10 @@ const pageSeo = {
                         <button
                           type="button"
                           class="absolute right-3 top-1/2 -translate-y-1/2
-                   inline-flex h-9 w-9 items-center justify-center rounded-full
-                   bg-black/35 text-white border border-white/20
-                   opacity-0 transition-opacity duration-200
-                   group-hover:opacity-100 focus:opacity-100"
+                    inline-flex h-9 w-9 items-center justify-center rounded-full
+                    bg-black/35 text-white border border-white/20
+                    opacity-0 transition-opacity duration-200
+                    group-hover:opacity-100 focus:opacity-100"
                           aria-label={t(lang, "projects.nextImage")}
                           data-carousel-next
                         >
@@ -542,10 +543,10 @@ const pageSeo = {
                         {/* Dots */}
                         <div
                           class="absolute bottom-3 left-1/2 -translate-x-1/2
-                   flex items-center gap-2 rounded-full
-                   bg-black/25 border border-white/15 px-3 py-1.5
-                   opacity-0 transition-opacity duration-200
-                   group-hover:opacity-100 focus-within:opacity-100"
+                    flex items-center gap-2 rounded-full
+                    bg-black/25 border border-white/15 px-3 py-1.5
+                    opacity-0 transition-opacity duration-200
+                    group-hover:opacity-100 focus-within:opacity-100"
                           data-carousel-dots
                           aria-label={t(lang, "projects.carouselPagination")}
                         />
@@ -555,23 +556,20 @@ const pageSeo = {
                         <div class="flex items-start justify-between gap-4">
                           <div class="min-w-0">
                             <h3 class="text-xl md:text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                              {p.titleKey ? t(lang, p.titleKey) : p.title}
+                              {p.title}
                             </h3>
 
-                            {(p.institutionKey ||
-                              p.typeKey ||
-                              p.institution ||
-                              p.type) && (
+                            {(p.institution || p.type) && (
                               <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">
-                                <span class="font-medium">
-                                  {p.institutionKey
-                                    ? t(lang, p.institutionKey)
-                                    : p.institution}
-                                </span>
-                                {(p.typeKey || p.type) && (
+                                {p.institution && (
+                                  <span class="font-medium">
+                                    {p.institution}
+                                  </span>
+                                )}
+                                {p.type && (
                                   <span class="text-gray-500 dark:text-gray-400">
                                     {" "}
-                                    · {p.typeKey ? t(lang, p.typeKey) : p.type}
+                                    · {p.type}
                                   </span>
                                 )}
                               </p>
@@ -581,31 +579,21 @@ const pageSeo = {
                           <div class="shrink-0 flex flex-col items-end gap-2">
                             <span
                               class="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium
-                       border border-emerald-500/25
-                       bg-emerald-500/10 text-emerald-500"
+                        border border-emerald-500/25
+                        bg-emerald-500/10 text-emerald-500"
                             >
-                              {p.badgeKey ? t(lang, p.badgeKey) : p.badge}
+                              {p.badge}
                             </span>
 
-                            {(p.periodKey ||
-                              p.period ||
-                              p.gradeKey ||
-                              p.grade) && (
+                            {(p.period || p.grade) && (
                               <div class="text-xs text-gray-500 dark:text-gray-400 text-right leading-snug">
-                                {(p.periodKey || p.period) && (
-                                  <div>
-                                    {p.periodKey
-                                      ? t(lang, p.periodKey)
-                                      : p.period}
-                                  </div>
-                                )}
-                                {(p.gradeKey || p.grade) && (
+                                {p.period && <div>{p.period}</div>}
+
+                                {p.grade && (
                                   <div class="mt-1">
                                     {t(lang, "projects.gradeLabel")}{" "}
                                     <span class="font-medium text-gray-700 dark:text-gray-200">
-                                      {p.gradeKey
-                                        ? t(lang, p.gradeKey)
-                                        : p.grade}
+                                      {p.grade}
                                     </span>
                                   </div>
                                 )}
@@ -615,9 +603,7 @@ const pageSeo = {
                         </div>
 
                         <p class="mt-3 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
-                          {p.descriptionKey
-                            ? t(lang, p.descriptionKey)
-                            : p.description}
+                          {p.description}
                         </p>
 
                         <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-600 dark:text-gray-300">
@@ -637,13 +623,13 @@ const pageSeo = {
                             target="_blank"
                             rel="noopener noreferrer"
                             class="inline-flex items-center justify-center gap-2
-                     rounded-lg px-4 py-2
-                     text-sm font-semibold
-                     text-emerald-400
-                     border border-emerald-500/40
-                     transition-all duration-300
-                     hover:bg-emerald-500/10 hover:-translate-y-0.5
-                     hover:border-emerald-400"
+                      rounded-lg px-4 py-2
+                      text-sm font-semibold
+                      text-emerald-400
+                      border border-emerald-500/40
+                      transition-all duration-300
+                      hover:bg-emerald-500/10 hover:-translate-y-0.5
+                      hover:border-emerald-400"
                           >
                             {t(lang, "projects.repository")}
                             <span aria-hidden="true">↗</span>

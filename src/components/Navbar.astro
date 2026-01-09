@@ -120,7 +120,7 @@ const linkClass = (path: string) =>
       </div>
 
       <!-- Name -->
-      <a href="/" class="group">
+      <a href={`/${lang}/`} class="group">
         <span
           class="text-xl md:text-2xl
            bg-linear-to-r from-emerald-400 via-teal-400 to-green-500
@@ -252,22 +252,23 @@ const linkClass = (path: string) =>
     >
       <!-- Language switcher (pill with flags) -->
       <div
+        id="lang-switcher-pill"
         class="flex items-center rounded-full
-            border border-gray-200 dark:border-white/10
-            bg-white/70 dark:bg-white/5 backdrop-blur
-            p-1"
+           border border-gray-200 dark:border-white/10
+           bg-white/70 dark:bg-white/5 backdrop-blur
+           p-1"
       >
         <!-- EN -->
         <a
           href="/en/"
+          data-lang="en"
           aria-label="Switch to English"
-          class={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold
-      transition
-      ${
-        lang === "en"
-          ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300"
-          : "text-gray-600 dark:text-gray-300 hover:bg-gray-200/40 dark:hover:bg-white/10"
-      }`}
+          class={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold transition
+        ${
+          lang === "en"
+            ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300"
+            : "text-gray-600 dark:text-gray-300 hover:bg-gray-200/40 dark:hover:bg-white/10"
+        }`}
         >
           <span class="text-base">🇬🇧</span>
           <span>EN</span>
@@ -276,14 +277,14 @@ const linkClass = (path: string) =>
         <!-- ES -->
         <a
           href="/es/"
+          data-lang="es"
           aria-label="Cambiar a Español"
-          class={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold
-      transition
-      ${
-        lang === "es"
-          ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300"
-          : "text-gray-600 dark:text-gray-300 hover:bg-gray-200/40 dark:hover:bg-white/10"
-      }`}
+          class={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold transition
+        ${
+          lang === "es"
+            ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300"
+            : "text-gray-600 dark:text-gray-300 hover:bg-gray-200/40 dark:hover:bg-white/10"
+        }`}
         >
           <span class="text-base">🇪🇸</span>
           <span>ES</span>
@@ -291,51 +292,39 @@ const linkClass = (path: string) =>
       </div>
 
       <script>
-        const switcher = document.getElementById("lang-switcher");
-        const toggle = document.getElementById("lang-toggle");
-        const menu = document.getElementById("lang-menu");
+        type Lang = "en" | "es";
 
-        const openMenu = () => {
-          menu?.classList.remove("hidden");
-          toggle?.setAttribute("aria-expanded", "true");
-        };
+        // Mantiene: path + query + hash (sección)
+        function buildLangUrl(newLang: Lang): string {
+          const { pathname, search, hash } = window.location;
 
-        const closeMenu = () => {
-          menu?.classList.add("hidden");
-          toggle?.setAttribute("aria-expanded", "false");
-        };
+          // Quita el prefijo /en o /es si existe
+          const pathWithoutLang = pathname.replace(/^\/(en|es)(?=\/|$)/, "");
 
-        toggle?.addEventListener("click", (e) => {
-          e.preventDefault();
-          if (menu?.classList.contains("hidden")) openMenu();
-          else closeMenu();
-        });
+          // Evita doble slash
+          const normalized = pathWithoutLang.startsWith("/")
+            ? pathWithoutLang
+            : `/${pathWithoutLang}`;
 
-        // Click en una opción
-        menu?.addEventListener("click", (e) => {
+          return `/${newLang}${normalized}${search}${hash}`;
+        }
+
+        const pill = document.getElementById("lang-switcher-pill");
+
+        pill?.addEventListener("click", (e: MouseEvent) => {
+          // EventTarget no tiene closest(), por eso convertimos a Element
           const target = e.target;
-          if (!(target instanceof HTMLElement)) return;
+          if (!(target instanceof Element)) return;
 
-          const lang = target.getAttribute("data-lang");
-          if (!lang) return;
+          const a = target.closest<HTMLAnchorElement>("a[data-lang]");
+          if (!a) return;
 
-          const parts = window.location.pathname.split("/").filter(Boolean); // ["en","contact"]
-          // Si no hay /en o /es en la url, asumimos que la primera parte es "en"
-          if (parts[0] === "en" || parts[0] === "es") parts[0] = lang;
-          else parts.unshift(lang);
+          e.preventDefault();
 
-          window.location.pathname = "/" + parts.join("/");
-        });
+          const newLang = a.getAttribute("data-lang") as Lang | null;
+          if (!newLang) return;
 
-        // Cerrar al clicar fuera
-        document.addEventListener("click", (e) => {
-          if (!switcher) return;
-          if (!switcher.contains(e.target)) closeMenu();
-        });
-
-        // Cerrar con Escape
-        document.addEventListener("keydown", (e) => {
-          if (e.key === "Escape") closeMenu();
+          window.location.href = buildLangUrl(newLang);
         });
       </script>
     </div>
