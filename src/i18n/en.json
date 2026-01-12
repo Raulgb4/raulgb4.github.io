@@ -139,7 +139,7 @@
   "projects.repository": "Repository",
   "projects.featured.title": "Featured Projects",
   "projects.featured.subtitle": "A selection of projects where I applied data, engineering, and visualization to solve real problems.",
-  "hero.subtitle": "Computer Science Engineer · Data & Analytics",
+  "hero.subtitle": "Computer Science Engineer · Data Analysis",
   "hero.description": "I design and build practical software solutions, transforming ideas and requirements into reliable tools that create real-world value.",
   "highlights.growth.title": "Continuous growth",
   "highlights.growth.desc": "Strong technical background combined with a constant drive to learn, improve, and adapt to new technologies in real project environments.",
@@ -149,7 +149,7 @@
 
   "highlights.stack.title": "Tech Stack",
   "metrics.title": "Highlights",
-  "metrics.subtitle": "Key highlights of my junior profile, technical background, and hands-on project experience.",
+  "metrics.subtitle": "Key highlights of my profile, technical background, and hands-on project experience.",
 
   "metrics.junior.value": "Junior",
   "metrics.junior.label": "Ready to contribute and keep growing",
@@ -196,7 +196,7 @@
   "about.hero.role": "Computer Science Engineer",
   "home.hero.title.beforeDecisions": "Turning data into",
   "home.hero.title.decisions": "decisions",
-  "home.hero.title.middle": ", and ideas into reliable",
+  "home.hero.title.middle": "and ideas into reliable",
   "home.hero.title.products": "products",
   "home.hero.title.afterProducts": ".",
   "home.hero.subtitle": "Computer Science Engineer (Information Systems) from the University of Málaga, focused on data analysis and building practical solutions that support decision-making.",

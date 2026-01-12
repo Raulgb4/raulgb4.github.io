@@ -1,6 +1,7 @@
 {
-  "contact.title": "Hablemos",
-  "contact.subtitle": "Me encanta colaborar en proyectos innovadores o hablar sobre tu próxima idea. Escríbeme por email o LinkedIn.",
+  "contact.title": "Contacto",
+  "contact.subtitle": "Si quieres comentar un proyecto, compartir una idea o simplemente charlar, puedes escribirme por correo electrónico o a través de LinkedIn.",
+
   "contact.infoTitle": "Información de contacto",
   "contact.cta": "Escríbeme si te interesa colaborar. Estoy abierto a nuevas oportunidades y retos.",
   "common.email": "Email",
@@ -49,8 +50,8 @@
   "lang.en": "Inglés (EN)",
   "lang.es": "Español (ES)",
 
-  "help.title": "Convertir datos en impacto",
-  "help.subtitle": "Un enfoque práctico y estructurado para crear soluciones basadas en datos que aporten valor real.",
+  "help.title": "¿Qué puedo aportar?",
+  "help.subtitle": "Un enfoque práctico y estructurado para analizar datos y crear soluciones útiles en contextos reales.",
 
   "help.cards.analysis.title": "Análisis de Datos y BI",
   "help.cards.analysis.desc": "Trabajo con datos para explorar patrones, crear visualizaciones y apoyar la toma de decisiones mediante un análisis claro y bien estructurado.",
@@ -58,8 +59,8 @@
   "help.cards.web.title": "Desarrollo Web y Orientado a Datos",
   "help.cards.web.desc": "Desarrollo soluciones web donde los datos tienen un papel central, trabajando en backend y frontend para construir funcionalidades útiles y mantenibles.",
 
-  "help.cards.cloud.title": "Fundamentos de Cloud e Infraestructura",
-  "help.cards.cloud.desc": "Trabajo con conceptos básicos de cloud para entender despliegue, entornos e infraestructura escalable, apoyando proyectos reales con un enfoque práctico y de aprendizaje.",
+  "help.cards.cloud.title": "Fundamentos de infraestructura en la nube",
+  "help.cards.cloud.desc": "Trabajo con conceptos básicos de infraestructura en la nube para comprender el despliegue de aplicaciones, la gestión de entornos y la escalabilidad, siempre desde un enfoque práctico aplicado a proyectos reales.",
 
   "help.cards.comm.title": "Comunicación y Resolución de Problemas",
   "help.cards.comm.desc": "Comunico ideas con claridad, colaboro eficazmente en equipos técnicos y afronto problemas de forma estructurada y orientada a resultados.",
@@ -67,18 +68,19 @@
   "approach.subtitle": "Un flujo de trabajo sencillo y estructurado que utilizo para aprender, alinear objetivos y aportar valor.",
 
   "approach.steps.1.title": "Entender",
-  "approach.steps.1.desc": "Aclarar objetivos, contexto, restricciones y cómo se define el “éxito”.",
+  "approach.steps.1.desc": "Aclarar objetivos, contexto y requisitos.",
+
   "approach.steps.2.title": "Planificar",
-  "approach.steps.2.desc": "Definir fuentes de datos, métricas, alcance y un plan de entrega realista con el equipo.",
+  "approach.steps.2.desc": "Definir fuentes de datos, alcance y un plan de entrega realista con el equipo.",
 
   "approach.steps.3.title": "Construir",
-  "approach.steps.3.desc": "Implementar análisis, pipelines, dashboards o funcionalidades siguiendo buenas prácticas de código.",
+  "approach.steps.3.desc": "Desarrollar análisis, flujos de datos, paneles visuales o funcionalidades, siguiendo buenas prácticas de programación.",
 
   "approach.steps.4.title": "Validar",
-  "approach.steps.4.desc": "Comprobar corrección, casos límite y rendimiento, incorporando feedback y revisiones.",
+  "approach.steps.4.desc": "Comprobar la corrección, los casos límite y el rendimiento, incorporando revisiones y aportaciones del equipo.",
 
   "approach.steps.5.title": "Entregar",
-  "approach.steps.5.desc": "Documentar el trabajo, realizar una entrega clara y iterar según el feedback.",
+  "approach.steps.5.desc": "Documentar el trabajo, realizar una entrega clara y mejorar la solución a partir de las revisiones.",
 
   "certs.title": "Certificaciones",
   "certs.subtitle": "Una selección de certificaciones que reflejan mi aprendizaje práctico en datos, cloud e ingeniería.",
@@ -98,7 +100,7 @@
   "experience.items.mda.title": "Moodle Data Analyzer",
   "experience.items.mda.subtitle": "Universidad de Málaga · Trabajo de Fin de Grado",
   "experience.items.mda.period": "Enero 2025 – Septiembre 2025",
-  "experience.items.mda.desc": "Diseño y desarrollo de una herramienta de análisis de datos basada en navegador para extraer, procesar y visualizar datos académicos de Moodle con el fin de apoyar la toma de decisiones basada en datos. Se construyeron dashboards interactivos con foco en data storytelling y se generaron informes analíticos exportables (PDF, CSV, DOCX).",
+  "experience.items.mda.desc": "Diseño y desarrollo de una herramienta de análisis de datos basada en navegador para extraer, procesar y visualizar datos académicos de Moodle con el fin de apoyar a los docentes mediante la toma de decisiones basada en datos. Se construyeron paneles interactivos y se generaron informes exportables en diferentes formatos.",
 
   "experience.items.dekra.title": "DEKRA Digital & Product Solutions",
   "experience.items.dekra.subtitle": "Prácticas",
@@ -124,7 +126,7 @@
   "projects.moodle.institution": "Universidad de Málaga",
   "projects.moodle.type": "Trabajo de Fin de Grado",
 
-  "projects.moodle.desc.short": "Herramienta de análisis de datos basada en navegador que extrae, procesa y visualiza datos académicos de Moodle, transformando datos en bruto en información accionable y paneles analíticos.",
+  "projects.moodle.desc.short": "Herramienta de análisis de datos basada en navegador que extrae, procesa y visualiza datos académicos de Moodle, transformando datos en bruto en gráficas atractivas.",
 
   "projects.moodle.desc.long": "Diseño y desarrollo de una herramienta de análisis de datos basada en navegador para la extracción, procesamiento y visualización de datos académicos de Moodle, orientada a apoyar la toma de decisiones basada en datos en contextos educativos. Aplicación de técnicas de extracción de datos, procesamiento analítico y flujos de análisis para transformar datos en bruto en información estructurada y paneles interactivos. Generación de informes analíticos exportables en formatos PDF, CSV y DOCX, facilitando una interpretación clara y un uso práctico de los resultados. Fuerte enfoque en visualización de datos y data storytelling para comunicar claramente patrones de uso, participación y rendimiento académico. Uso de React, Webpack, Chart.js, TailwindCSS, Docker y metodologías ágiles en el desarrollo de la solución. Preparación de un artículo científico actualmente en curso, reforzando la relevancia analítica y el impacto práctico del proyecto en el ámbito de la analítica educativa.",
 
@@ -140,53 +142,56 @@
   "projects.repository": "Repositorio",
   "projects.featured.title": "Proyectos destacados",
   "projects.featured.subtitle": "Una selección de proyectos donde apliqué datos, ingeniería y visualización para resolver problemas reales.",
-  "hero.subtitle": "Ingeniero Informático · Datos y Analítica",
-  "hero.description": "Diseño y desarrollo soluciones software prácticas, transformando ideas y requisitos en herramientas fiables que generan valor real.",
-  "highlights.growth.title": "Crecimiento continuo",
-  "highlights.growth.desc": "Sólida base técnica combinada con una motivación constante por aprender, mejorar y adaptarme a nuevas tecnologías en entornos de proyectos reales.",
+  "hero.subtitle": "Ingeniero Informático · Análisis de datos",
+  "hero.description": "Diseño y desarrollo soluciones de software prácticas, convirtiendo ideas y requisitos en herramientas fiables que aportan valor real.",
+  "highlights.growth.title": "En continuo crecimiento",
+  "highlights.growth.desc": "Sólida base técnica, junto con una motivación constante por aprender, mejorar y adaptarme a nuevas tecnologías en proyectos reales.",
 
   "highlights.enjoy.title": "Qué disfruto construir",
-  "highlights.enjoy.desc": "Soluciones software que combinan desarrollo, datos y comunicación clara para apoyar la toma de decisiones y mejorar productos reales.",
+  "highlights.enjoy.desc": "Soluciones software que combinan desarrollo, datos y comunicación para apoyar la toma de decisiones y mejorar productos reales.",
 
   "highlights.stack.title": "Stack tecnológico",
-  "metrics.title": "Destacados",
-  "metrics.subtitle": "Aspectos clave de mi perfil junior, base técnica y experiencia práctica en proyectos.",
+  "metrics.title": "Aspectos destacados",
+  "metrics.subtitle": "Aspectos clave de mi perfil, base técnica y experiencia práctica en proyectos.",
 
   "metrics.junior.value": "Junior",
   "metrics.junior.label": "Listo para contribuir y seguir creciendo",
 
   "metrics.certs": "Certificaciones",
   "metrics.tech": "Tecnologías utilizadas en proyectos",
-  "metrics.projects": "Proyectos end-to-end desarrollados",
+  "metrics.projects": "Proyectos desarrollados",
 
   "interests.title": "Intereses",
-  "interests.subtitle": "Áreas en las que estoy enfocado en crecer y generar impacto real.",
+  "interests.subtitle": "Áreas en las que quiero crecer y generar impacto real.",
 
-  "interests.cards.data.title": "Análisis de datos y dashboards",
-  "interests.cards.data.text": "Análisis de datos y diseño de dashboards y herramientas visuales claras para apoyar la comprensión y la toma de decisiones.",
+  "interests.cards.data.title": "Análisis de datos y visualización",
+  "interests.cards.data.text": "Análisis de datos y creación de visualizaciones claras y herramientas visuales que facilitan la comprensión y la toma de decisiones.",
 
   "interests.cards.web.title": "Desarrollo web",
-  "interests.cards.web.text": "Desarrollo de interfaces y funcionalidades interactivas centradas en la claridad y la usabilidad.",
+  "interests.cards.web.text": "Desarrollo de interfaces y funcionalidades interactivas, con especial atención a la claridad y la usabilidad.",
 
-  "interests.cards.cloud.title": "Cloud y automatización",
-  "interests.cards.cloud.text": "Trabajo con entornos cloud y automatización básica para desplegar y mantener aplicaciones modernas.",
+  "interests.cards.cloud.title": "Entornos en la nube y automatización",
+  "interests.cards.cloud.text": "Trabajo con entornos en la nube y automatización básica para el despliegue y mantenimiento de aplicaciones modernas.",
+
   "keyTech.title": "Tecnologías clave",
-  "keyTech.subtitle": "Herramientas y tecnologías que utilizo para construir soluciones data-driven de principio a fin.",
+  "keyTech.subtitle": "Herramientas y tecnologías que utilizo para desarrollar soluciones basadas en datos de principio a fin.",
 
   "keyTech.data.title": "Datos y analítica",
-  "keyTech.data.description": "Exploración de datos, creación de dashboards y transformación de información en insights claros y prácticos.",
+  "keyTech.data.description": "Exploración de datos, creación de paneles visuales y transformación de la información en conclusiones claras y prácticas.",
 
   "keyTech.additional": "Herramientas adicionales",
+
   "keyTech.dev.title": "Desarrollo y herramientas",
-  "keyTech.dev.description": "Construcción de interfaces web y aplicaciones fiables utilizando herramientas modernas, control de versiones y flujos preparados para la nube.",
+  "keyTech.dev.description": "Desarrollo de interfaces web y aplicaciones mediante herramientas modernas, control de versiones y flujos de trabajo ágiles.",
+
   "reviews.title": "Valoraciones profesionales",
   "reviews.subtitle": "Algunas palabras de supervisores y mentores que han seguido mi trabajo en proyectos reales.",
   "reviews.viewLinkedIn": "Ver en LinkedIn",
 
-  "reviews.uma.quote": "Mi más sincera enhorabuena por el excelente trabajo que has desarrollado, logrando una calificación que realmente mereces. Te deseo lo mejor en esta nueva etapa, y qué mejor forma de comenzarla que convirtiendo ese trabajo en un sólido artículo científico.",
+  "reviews.uma.quote": "Mi más sincera enhorabuena por el proyecto tan cuidado que has desarrollado y por la excelente calificación obtenida, que sin duda mereces. Te deseo lo mejor en esta nueva etapa y qué mejor forma de iniciarla que dando el salto hacia un buen artículo científico a partir del gran trabajo realizado.",
   "reviews.uma.role": "Profesor e investigador en IA · Universidad de Málaga",
 
-  "reviews.dekra.quote": "¡Gracias, Raúl! Nos impresionó la rapidez con la que te adaptaste al proyecto, aportando desde el primer día y desarrollando funcionalidades de alto nivel. Fue un placer contar contigo en el equipo. Te espera una carrera profesional llena de éxitos.",
+  "reviews.dekra.quote": "Gracias, Raúl. Nos sorprendió la rapidez con la que te adaptaste al proyecto, aportando desde el primer día y entregando funcionalidades de primer nivel. Ha sido un placer contar contigo en el equipo. Te espera una carrera profesional llena de éxitos.",
   "reviews.dekra.role": "Desarrollo Full Stack · DEKRA Digital Solutions",
   "cv.title": "Currículum Vitae",
   "cv.subtitle": "Descarga mi CV para una visión detallada de mi formación y experiencia.",
@@ -197,15 +202,16 @@
   "about.hero.role": "Ingeniero Informático",
   "home.hero.title.beforeDecisions": "Transformando datos en",
   "home.hero.title.decisions": "decisiones",
-  "home.hero.title.middle": " e ideas en",
+  "home.hero.title.middle": " y convirtiendo ideas en",
   "home.hero.title.products": "productos",
   "home.hero.title.afterProducts": " fiables.",
+
   "home.hero.subtitle": "Ingeniero Informático (Sistemas de Información) por la Universidad de Málaga, centrado en el análisis de datos y en crear soluciones prácticas que apoyen la toma de decisiones.",
 
   "home.hero.bullets.1.before": "Base sólida en",
   "home.hero.bullets.1.highlight": "matemáticas, estadística y razonamiento lógico",
 
-  "home.hero.bullets.2.before": "Cómodo trabajando con",
+  "home.hero.bullets.2.before": "Experiencia trabajando con",
   "home.hero.bullets.2.tech": "Python, SQL, Spark, Power BI, Tableau",
   "home.hero.bullets.2.middle": "y entornos cloud como",
   "home.hero.bullets.2.cloud": "Azure",
@@ -221,12 +227,12 @@
 
   "home.traits.criticalThinking.title": "Pensamiento crítico",
   "home.traits.criticalThinking.before": "Cuestiono conclusiones, valido supuestos y busco ",
-  "home.traits.criticalThinking.highlight": "insights sólidos",
+  "home.traits.criticalThinking.highlight": "conclusiones sólidas",
 
   "home.traits.communication.title": "Comunicación",
   "home.traits.communication.before": "Transformo el análisis técnico en ",
-  "home.traits.communication.highlight": "historias claras",
-  "home.traits.communication.after": ", decisiones y siguientes pasos.",
+  "home.traits.communication.highlight": "mensajes claros",
+  "home.traits.communication.after": ", orientados a la toma de decisiones y a los siguientes pasos.",
 
   "home.next.title": "Hacia dónde quiero avanzar",
 
@@ -244,7 +250,7 @@
   "home.cards.lookingFor.highlight": "estable a jornada completa",
   "home.cards.lookingFor.after": ", con responsabilidad, aprendizaje continuo y un impacto real en producción.",
 
-  "home.cards.notFocus.title": "Ahora no es mi prioridad",
+  "home.cards.notFocus.title": "No es mi prioridad",
   "home.cards.notFocus.item1": "Programas de formación independientes",
   "home.cards.notFocus.item2": "Másteres o doctorados",
   "home.cards.notFocus.item3": "Trayectorias puramente académicas",
@@ -261,27 +267,27 @@
   "home.work.cards.analytical.text": "Descompongo problemas complejos en pasos claros y aporto soluciones con un enfoque orientado a resultados.",
 
   "home.work.cards.consistency.title": "Constancia y perseverancia",
-  "home.work.cards.consistency.text": "Mantengo el foco bajo presión y sigo avanzando hasta que la solución es sólida y lista para producción.",
+  "home.work.cards.consistency.text": "Trabajo con constancia incluso en situaciones exigentes, avanzando hasta lograr una solución sólida y lista para producción.",
 
   "home.work.cards.communication.title": "Comunicación y colaboración",
-  "home.work.cards.communication.text": "Me comunico con claridad y alineo las soluciones con necesidades tanto técnicas como de negocio.",
+  "home.work.cards.communication.text": "Me comunico con claridad para asegurar que las soluciones respondan tanto a las necesidades técnicas como a las del negocio.",
 
   "home.work.cards.planning.title": "Planificación y gestión del tiempo",
   "home.work.cards.planning.text": "Priorizo correctamente, gestiono plazos y mantengo los proyectos avanzando de forma constante.",
 
   "home.work.cards.adaptability.title": "Adaptabilidad y aprendizaje",
-  "home.work.cards.adaptability.text": "Me adapto rápidamente a nuevas herramientas y entornos y disfruto del aprendizaje continuo en proyectos reales.",
+  "home.work.cards.adaptability.text": "Me adapto con rapidez a nuevas herramientas y entornos, y mantengo una actitud de aprendizaje continuo en proyectos reales.",
 
   "home.work.cards.ownership.title": "Responsabilidad y compromiso",
   "home.work.cards.ownership.text": "Asumo la responsabilidad de mi trabajo, llevo las tareas hasta el final y cuido la calidad y el impacto del resultado final.",
-  "home.workArrangement.title": "Cómo trabajo mejor",
+  "home.workArrangement.title": "Modalidad de trabajo",
 
-  "home.workArrangement.remote.title": "Remoto",
-  "home.workArrangement.remote.badge": "Preferido",
-  "home.workArrangement.remote.text": "Mi opción preferida. El trabajo remoto permite mayor concentración, una mejor gestión del tiempo y eficiencia de costes relacionados con vivienda y desplazamientos.",
+  "home.workArrangement.remote.title": "Trabajo remoto",
+  "home.workArrangement.remote.badge": "Preferente",
+  "home.workArrangement.remote.text": "Es la modalidad en la que mejor rindo. El trabajo remoto facilita la concentración, una gestión más eficiente del tiempo y reduce los costes asociados a vivienda y desplazamientos.",
 
-  "home.workArrangement.hybrid.title": "Híbrido",
-  "home.workArrangement.hybrid.text": "Estoy abierto a modelos híbridos según el equipo, el contexto del proyecto y la etapa profesional.",
+  "home.workArrangement.hybrid.title": "Trabajo híbrido",
+  "home.workArrangement.hybrid.text": "También estoy abierto a modelos híbridos, en función del equipo, el contexto del proyecto y la etapa profesional.",
 
   "home.languages.title": "Idiomas",
 
