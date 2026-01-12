@@ -250,13 +250,13 @@ const linkClass = (path: string) =>
     <div
       class="flex items-center gap-4 text-base text-gray-700 dark:text-gray-300"
     >
-      <!-- Language switcher (pill with flags) -->
+      <!-- Language switcher (pill with icons) -->
       <div
         id="lang-switcher-pill"
         class="flex items-center rounded-full
-           border border-gray-200 dark:border-white/10
-           bg-white/70 dark:bg-white/5 backdrop-blur
-           p-1"
+         border border-gray-200 dark:border-white/10
+         bg-white/70 dark:bg-white/5 backdrop-blur
+         p-1"
       >
         <!-- EN -->
         <a
@@ -264,13 +264,29 @@ const linkClass = (path: string) =>
           data-lang="en"
           aria-label="Switch to English"
           class={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold transition
-        ${
-          lang === "en"
-            ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300"
-            : "text-gray-600 dark:text-gray-300 hover:bg-gray-200/40 dark:hover:bg-white/10"
-        }`}
+      ${
+        lang === "en"
+          ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300"
+          : "text-gray-600 dark:text-gray-300 hover:bg-gray-200/40 dark:hover:bg-white/10"
+      }`}
         >
-          <span class="text-base">🇬🇧</span>
+          <!-- Globe / language icon -->
+          <svg
+            class="h-4 w-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path
+              d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+            ></path>
+          </svg>
           <span>EN</span>
         </a>
 
@@ -280,13 +296,29 @@ const linkClass = (path: string) =>
           data-lang="es"
           aria-label="Cambiar a Español"
           class={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold transition
-        ${
-          lang === "es"
-            ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300"
-            : "text-gray-600 dark:text-gray-300 hover:bg-gray-200/40 dark:hover:bg-white/10"
-        }`}
+      ${
+        lang === "es"
+          ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300"
+          : "text-gray-600 dark:text-gray-300 hover:bg-gray-200/40 dark:hover:bg-white/10"
+      }`}
         >
-          <span class="text-base">🇪🇸</span>
+          <!-- Same icon, reused -->
+          <svg
+            class="h-4 w-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path
+              d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+            ></path>
+          </svg>
           <span>ES</span>
         </a>
       </div>
