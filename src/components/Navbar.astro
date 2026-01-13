@@ -148,11 +148,11 @@ const linkClass = (path: string) =>
       </li>
 
       <li>
-        <a href={`/${lang}/about`} class={linkClass(`/${lang}/about`)}>
+        <a href={`/${lang}/about/`} class={linkClass(`/${lang}/about/`)}>
           {t(lang, "nav.about")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive(`/${lang}/about`)
+              isActive(`/${lang}/about/`)
                 ? "scale-x-100"
                 : "group-hover:scale-x-100"
             }`}></span>
@@ -160,11 +160,11 @@ const linkClass = (path: string) =>
       </li>
 
       <li>
-        <a href={`/${lang}/help`} class={linkClass(`/${lang}/help`)}>
+        <a href={`/${lang}/help/`} class={linkClass(`/${lang}/help/`)}>
           {t(lang, "nav.help")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive(`/${lang}/help`)
+              isActive(`/${lang}/help/`)
                 ? "scale-x-100"
                 : "group-hover:scale-x-100"
             }`}></span>
@@ -173,13 +173,13 @@ const linkClass = (path: string) =>
 
       <li>
         <a
-          href={`/${lang}/experience`}
-          class={linkClass(`/${lang}/experience`)}
+          href={`/${lang}/experience/`}
+          class={linkClass(`/${lang}/experience/`)}
         >
           {t(lang, "nav.experience")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive(`/${lang}/experience`)
+              isActive(`/${lang}/experience/`)
                 ? "scale-x-100"
                 : "group-hover:scale-x-100"
             }`}></span>
@@ -188,13 +188,13 @@ const linkClass = (path: string) =>
 
       <li>
         <a
-          href={`/${lang}/certifications`}
-          class={linkClass(`/${lang}/certifications`)}
+          href={`/${lang}/certifications/`}
+          class={linkClass(`/${lang}/certifications/`)}
         >
           {t(lang, "nav.certifications")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive(`/${lang}/certifications`)
+              isActive(`/${lang}/certifications/`)
                 ? "scale-x-100"
                 : "group-hover:scale-x-100"
             }`}></span>
@@ -202,11 +202,11 @@ const linkClass = (path: string) =>
       </li>
 
       <li>
-        <a href={`/${lang}/faq`} class={linkClass(`/${lang}/faq`)}>
+        <a href={`/${lang}/faq/`} class={linkClass(`/${lang}/faq/`)}>
           {t(lang, "nav.faq")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive(`/${lang}/faq`)
+              isActive(`/${lang}/faq/`)
                 ? "scale-x-100"
                 : "group-hover:scale-x-100"
             }`}></span>
@@ -215,17 +215,17 @@ const linkClass = (path: string) =>
 
       <li>
         <a
-          href={`/${lang}/contact`}
-          aria-current={isActive(`/${lang}/contact`) ? "page" : undefined}
+          href={`/${lang}/contact/`}
+          aria-current={isActive(`/${lang}/contact/`) ? "page" : undefined}
           class={`relative inline-flex items-center justify-center rounded-full px-5 py-2 font-semibold
         transition-all duration-300
         ${
-          isActive(`/${lang}/contact`)
+          isActive(`/${lang}/contact/`)
             ? "bg-emerald-500 text-white shadow-lg shadow-emerald-500/25"
             : "bg-emerald-500/10 text-emerald-600 ring-1 ring-emerald-500/30 hover:bg-emerald-500/15 hover:text-emerald-700 hover:ring-emerald-500/50"
         }
         dark:${
-          isActive(`/${lang}/contact`)
+          isActive(`/${lang}/contact/`)
             ? "bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-400/20"
             : "bg-emerald-400/10 text-emerald-300 ring-1 ring-emerald-400/30 hover:bg-emerald-400/15 hover:text-emerald-200 hover:ring-emerald-400/50"
         }
@@ -234,7 +234,7 @@ const linkClass = (path: string) =>
           {t(lang, "nav.contact")}
 
           {
-            !isActive(`/${lang}/contact`) && (
+            !isActive(`/${lang}/contact/`) && (
               <span
                 class="ml-2 inline-block h-2 w-2 rounded-full bg-emerald-400/80
                  shadow-[0_0_12px_rgba(52,211,153,0.65)]"

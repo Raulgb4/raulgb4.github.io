@@ -8,6 +8,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://raulgb4.github.io",
   base: "/",
+  trailingSlash: "always",
 
   vite: {
     plugins: [tailwindcss()],
