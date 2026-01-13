@@ -415,12 +415,19 @@ const certifications = [
               <article
                 class="group relative w-full min-w-0 overflow-x-hidden rounded-2xl
                        border border-emerald-500/25
-                       bg-white/60 dark:bg-white/5 backdrop-blur
+                       bg-white/60 dark:bg-white/5
                        p-6 sm:p-7
                        shadow-sm transition-all duration-300
                        hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20
                        hover:border-emerald-400/60"
               >
+                <!-- Blur layer iOS-safe -->
+                <div
+                  class="absolute inset-0 -z-10 rounded-2xl pointer-events-none
+             supports-[backdrop-filter]:backdrop-blur
+             supports-[backdrop-filter]:bg-white/30
+             supports-[backdrop-filter]:dark:bg-white/5"
+                ></div>
                 {/* Top row: provider + date + badge */}
                 <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 min-w-0">
                   <div class="flex items-center gap-4 min-w-0 flex-1">
