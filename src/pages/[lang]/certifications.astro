@@ -391,9 +391,9 @@ const certifications = [
       <Reveal delay={0}>
         <h1
           class="text-4xl md:text-5xl font-bold tracking-tight
-             leading-[1.15] pb-1
-             bg-linear-to-r from-emerald-400 via-teal-400 to-green-500
-             bg-clip-text text-transparent"
+                 leading-[1.15] pb-1
+                 bg-linear-to-r from-emerald-400 via-teal-400 to-green-500
+                 bg-clip-text text-transparent"
         >
           {t(lang, "certs.title")}
         </h1>
@@ -410,40 +410,40 @@ const certifications = [
 
     <!-- CERTIFICATIONS -->
     <section class="space-y-6">
-      <!-- Grid -->
       <div class="grid gap-6">
         {
           certifications.map((c, idx) => (
             <Reveal delay={Math.min(idx * 50, 300)}>
               <article
                 class="group relative overflow-hidden rounded-2xl
-           border border-emerald-500/25
-           bg-white/60 dark:bg-white/5 backdrop-blur
-           p-7 shadow-sm transition-all duration-300
-           hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20
-           hover:border-emerald-400/60"
+                       border border-emerald-500/25
+                       bg-white/60 dark:bg-white/5 backdrop-blur
+                       p-6 sm:p-7
+                       shadow-sm transition-all duration-300
+                       hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20
+                       hover:border-emerald-400/60"
               >
-                {/* Top row: provider + date */}
-                <div class="flex items-start justify-between gap-4">
+                {/* Top row: provider + date + badge */}
+                <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                   <div class="flex items-center gap-4 min-w-0">
                     <div
-                      class="h-14 w-14 md:h-16 md:w-16
-                 shrink-0 rounded-xl
-                 border border-emerald-500/20
-                 bg-white/90 dark:bg-white/10
-                 flex items-center justify-center
-                 p-1.5 md:p-1"
+                      class="h-14 w-14 sm:h-16 sm:w-16
+                             shrink-0 rounded-xl
+                             border border-emerald-500/20
+                             bg-white/90 dark:bg-white/10
+                             flex items-center justify-center
+                             p-1.5 sm:p-1"
                     >
                       <img
                         src={c.providerLogo}
                         alt={`${c.provider} logo`}
-                        class="max-h-full max-w-full object-contain scale-125"
+                        class="max-h-full max-w-full object-contain"
                         loading="lazy"
                       />
                     </div>
 
                     <div class="min-w-0">
-                      <p class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white truncate">
+                      <p class="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white truncate">
                         {c.provider}
                       </p>
                       <p class="text-base text-gray-500 dark:text-gray-400">
@@ -453,22 +453,31 @@ const certifications = [
                   </div>
 
                   <span
-                    class="shrink-0 inline-flex items-center rounded-full px-3 py-1.5
-               text-sm font-medium
-               border border-emerald-500/25
-               bg-emerald-500/10 text-emerald-500"
+                    class="self-start sm:self-auto shrink-0 inline-flex items-center
+                           rounded-full px-3 py-1.5
+                           text-sm font-medium
+                           border border-emerald-500/25
+                           bg-emerald-500/10 text-emerald-500"
                   >
                     {t(lang, "certs.badge")}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 class="mt-5 text-xl md:text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                <h3
+                  class="mt-5 text-xl sm:text-2xl font-semibold tracking-tight
+                         text-gray-900 dark:text-white
+                         break-words [overflow-wrap:anywhere] hyphens-auto"
+                >
                   {c.title}
                 </h3>
 
                 {/* Description */}
-                <p class="mt-4 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                <p
+                  class="mt-4 text-base sm:text-lg leading-relaxed
+                         text-gray-600 dark:text-gray-300
+                         break-words [overflow-wrap:anywhere]"
+                >
                   {c.description}
                 </p>
 
@@ -477,10 +486,11 @@ const certifications = [
                   {c.skills.map((s) => (
                     <span
                       class="inline-flex items-center rounded-full px-3 py-1.5
-                 text-sm font-medium
-                 border border-emerald-500/25
-                 bg-white/60 dark:bg-white/5
-                 text-gray-700 dark:text-gray-200"
+                             text-sm font-medium
+                             border border-emerald-500/25
+                             bg-white/60 dark:bg-white/5
+                             text-gray-700 dark:text-gray-200
+                             max-w-full break-words"
                     >
                       {s}
                     </span>
@@ -494,17 +504,18 @@ const certifications = [
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center justify-center gap-2
-               rounded-lg px-5 py-2.5
-               text-base font-semibold
-               text-emerald-400
-               border border-emerald-500/40
-               transition-all duration-300
-               hover:bg-emerald-500/10 hover:-translate-y-0.5
-               hover:border-emerald-400"
+                           rounded-lg px-5 py-2.5
+                           text-base font-semibold
+                           text-emerald-400
+                           border border-emerald-500/40
+                           transition-all duration-300
+                           hover:bg-emerald-500/10 hover:-translate-y-0.5
+                           hover:border-emerald-400
+                           max-w-full"
                   >
-                    {t(lang, "certs.view")}
+                    <span class="truncate">{t(lang, "certs.view")}</span>
                     <svg
-                      class="inline-block h-3.5 w-3.5 ml-1 align-text-top"
+                      class="inline-block h-3.5 w-3.5 shrink-0"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"

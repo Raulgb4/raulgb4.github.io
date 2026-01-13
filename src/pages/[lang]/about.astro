@@ -1109,24 +1109,24 @@ const pageSeo = {
         <Reveal delay={120}>
           <article
             class="group relative overflow-hidden rounded-2xl
-             border border-gray-200/70 dark:border-white/10
-             bg-white/70 dark:bg-white/5 backdrop-blur p-6
-             shadow-sm transition-all duration-300
-             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-             hover:border-emerald-500/40"
+      border border-gray-200/70 dark:border-white/10
+      bg-white/70 dark:bg-white/5 backdrop-blur p-6
+      shadow-sm transition-all duration-300
+      hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+      hover:border-emerald-500/40"
           >
             <!-- Glow -->
             <div
               class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
-               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-               group-hover:opacity-100"
+        bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+        group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
 
-            <!-- Top row -->
-            <div class="flex items-start justify-between gap-4">
-              <div class="min-w-0">
+            <!-- Top row (FIX: allow wrap) -->
+            <div class="flex flex-wrap items-start gap-4">
+              <div class="min-w-0 flex-1">
                 <div
                   class="text-lg font-semibold text-gray-900 dark:text-white"
                 >
@@ -1142,17 +1142,21 @@ const pageSeo = {
                 </div>
               </div>
 
-              <!-- Level bars -->
+              <!-- Level bars (FIX: responsive + can wrap, and full width on mobile) -->
               <div
-                class="shrink-0 flex items-end gap-2 pt-1"
+                class="w-full sm:w-auto flex flex-wrap items-end justify-start sm:justify-end gap-2 pt-1"
                 aria-label={t(lang, "home.languages.english.aria")}
               >
-                <span class="h-2 w-10 rounded-sm bg-emerald-500/80"></span>
-                <span class="h-3 w-10 rounded-sm bg-emerald-500/70"></span>
-                <span class="h-4 w-10 rounded-sm bg-emerald-500/55"></span>
-                <span class="h-5 w-10 rounded-sm bg-emerald-500/35"></span>
+                <span class="h-2 w-7 sm:w-10 rounded-sm bg-emerald-500/80"
+                ></span>
+                <span class="h-3 w-7 sm:w-10 rounded-sm bg-emerald-500/70"
+                ></span>
+                <span class="h-4 w-7 sm:w-10 rounded-sm bg-emerald-500/55"
+                ></span>
+                <span class="h-5 w-7 sm:w-10 rounded-sm bg-emerald-500/35"
+                ></span>
                 <span
-                  class="h-6 w-10 rounded-sm bg-gray-200/80 dark:bg-white/10"
+                  class="h-6 w-7 sm:w-10 rounded-sm bg-gray-200/80 dark:bg-white/10"
                 ></span>
               </div>
             </div>
@@ -1163,8 +1167,8 @@ const pageSeo = {
             >
               <span
                 class="inline-flex h-8 w-8 items-center justify-center rounded-xl
-                 bg-emerald-500/10 text-emerald-600 dark:text-emerald-300
-                 border border-emerald-500/20"
+          bg-emerald-500/10 text-emerald-600 dark:text-emerald-300
+          border border-emerald-500/20"
                 aria-hidden="true"
               >
                 ✓
@@ -1177,8 +1181,8 @@ const pageSeo = {
 
             <div
               class="pointer-events-none mt-4 h-px w-full bg-linear-to-r
-               from-transparent via-emerald-500/25 to-transparent
-               opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        from-transparent via-emerald-500/25 to-transparent
+        opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
@@ -1189,27 +1193,29 @@ const pageSeo = {
         <Reveal delay={180}>
           <article
             class="group relative overflow-hidden rounded-2xl
-             border border-gray-200/70 dark:border-white/10
-             bg-white/70 dark:bg-white/5 backdrop-blur p-6
-             shadow-sm transition-all duration-300
-             hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
-             hover:border-emerald-500/40"
+      border border-gray-200/70 dark:border-white/10
+      bg-white/70 dark:bg-white/5 backdrop-blur p-6
+      shadow-sm transition-all duration-300
+      hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
+      hover:border-emerald-500/40"
           >
             <div
               class="pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full
-               bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
-               group-hover:opacity-100"
+        bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
+        group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
 
-            <div class="flex items-start justify-between gap-4">
-              <div class="min-w-0">
+            <!-- Top row (FIX: allow wrap) -->
+            <div class="flex flex-wrap items-start gap-4">
+              <div class="min-w-0 flex-1">
                 <div
                   class="text-lg font-semibold text-gray-900 dark:text-white"
                 >
                   {t(lang, "home.languages.spanish.title")}
                 </div>
+
                 <div
                   class="mt-1 text-sm font-medium text-emerald-600 dark:text-emerald-300"
                 >
@@ -1217,23 +1223,28 @@ const pageSeo = {
                 </div>
               </div>
 
-              <!-- Level bars -->
+              <!-- Level bars (FIX: responsive + can wrap, and full width on mobile) -->
               <div
-                class="shrink-0 flex items-end gap-2 pt-1"
+                class="w-full sm:w-auto flex flex-wrap items-end justify-start sm:justify-end gap-2 pt-1"
                 aria-label={t(lang, "home.languages.spanish.aria")}
               >
-                <span class="h-2 w-10 rounded-sm bg-emerald-500/80"></span>
-                <span class="h-3 w-10 rounded-sm bg-emerald-500/70"></span>
-                <span class="h-4 w-10 rounded-sm bg-emerald-500/55"></span>
-                <span class="h-5 w-10 rounded-sm bg-emerald-500/45"></span>
-                <span class="h-6 w-10 rounded-sm bg-emerald-500/35"></span>
+                <span class="h-2 w-7 sm:w-10 rounded-sm bg-emerald-500/80"
+                ></span>
+                <span class="h-3 w-7 sm:w-10 rounded-sm bg-emerald-500/70"
+                ></span>
+                <span class="h-4 w-7 sm:w-10 rounded-sm bg-emerald-500/55"
+                ></span>
+                <span class="h-5 w-7 sm:w-10 rounded-sm bg-emerald-500/45"
+                ></span>
+                <span class="h-6 w-7 sm:w-10 rounded-sm bg-emerald-500/35"
+                ></span>
               </div>
             </div>
 
             <div
               class="pointer-events-none mt-4 h-px w-full bg-linear-to-r
-               from-transparent via-emerald-500/25 to-transparent
-               opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        from-transparent via-emerald-500/25 to-transparent
+        opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               aria-hidden="true"
             >
             </div>
