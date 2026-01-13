@@ -1,3 +1,15 @@
+/* ==========================================================================
+   Global UI Effects & Animations
+   --------------------------------------------------------------------------
+   Shared styles for animated UI elements used across the portfolio.
+   Includes:
+   - A continuously scrolling technology marquee with hover pause support.
+   - Normalized sizing and visual alignment for technology icons and wordmarks.
+   - Accessible motion handling via prefers-reduced-motion.
+   - Reusable scroll-reveal animation utilities for progressive content entry.
+   These styles prioritize visual consistency, performance, and accessibility.
+   ========================================================================== */
+
 @import "tailwindcss";
 
 /* ===========================

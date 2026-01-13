@@ -16,7 +16,6 @@ export async function getStaticPaths() {
 
 const lang = Astro.params.lang as Lang;
 
-// ✅ SEO por página
 const pageSeo = {
   en: {
     title: "How I Can Help | Raúl García Balongo",
@@ -31,6 +30,16 @@ const pageSeo = {
 };
 ---
 
+<!--
+  Help.astro
+  ----------
+  Internationalized "How I Can Help" page that presents the main areas where
+  value is delivered, such as data analysis, software development, cloud
+  foundations, and communication. The page defines language-specific SEO
+  metadata, generates static routes per language, and uses reusable cards
+  with icons and reveal animations to clearly communicate services and working
+  approach in a structured and visually engaging way.
+-->
 <Layout lang={lang} pageSeo={pageSeo}>
   <section class="max-w-7xl mx-auto px-4 py-20">
     <!-- Title -->

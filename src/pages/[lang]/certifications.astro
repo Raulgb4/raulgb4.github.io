@@ -9,7 +9,6 @@ export async function getStaticPaths() {
 
 const lang = Astro.params.lang as Lang;
 
-// ✅ SEO por página
 const pageSeo = {
   en: {
     title: "Certifications | Raúl García Balongo",
@@ -376,6 +375,15 @@ const certifications = [
 ];
 ---
 
+<!--
+  Certifications.astro
+  --------------------
+  Internationalized certifications page that showcases completed courses
+  and credentials in a structured, visually rich layout. It leverages
+  shared layout and reveal animations, supports per-language content,
+  and presents certification details such as provider, description,
+  skills, and external verification links.
+-->
 <Layout lang={lang} pageSeo={pageSeo}>
   <section class="max-w-5xl mx-auto px-4 py-20 space-y-16">
     <!-- PAGE TITLE -->

@@ -1,12 +1,20 @@
 ---
 const {
   as: Tag = "div",
-  delay = 0, // ms
-  once = true, // animar solo una vez
+  delay = 0,
+  once = true,
   class: className = "",
 } = Astro.props;
 ---
 
+<!--
+  Reveal.astro
+  ------------
+  Utility wrapper component that applies a reveal animation to its children.
+  It exposes configurable options such as delay and one-time animation via
+  data attributes, allowing a lightweight and reusable way to trigger
+  scroll-based or scripted animations across the site.
+-->
 <Tag
   class={`reveal ${className}`}
   data-reveal

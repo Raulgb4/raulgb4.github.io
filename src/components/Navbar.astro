@@ -15,7 +15,15 @@ const linkClass = (path: string) =>
   }`;
 ---
 
-<!-- Mobile dropdown -->
+<!--
+  Navbar.astro
+  ------------
+  Global navigation bar component that provides primary site navigation,
+  language switching, and responsive behavior for desktop and mobile views.
+  It highlights the active section based on the current route, adapts links
+  to the selected language, and includes an accessible mobile menu with
+  client-side toggling logic.
+--><!-- Mobile dropdown -->
 <div
   id="mobile-nav"
   class="lg:hidden hidden mt-3 rounded-2xl border border-gray-200/70 dark:border-white/10

@@ -10,7 +10,6 @@ export async function getStaticPaths() {
 
 const lang = Astro.params.lang as Lang;
 
-// ✅ SEO por página (Home / Index)
 const pageSeo = {
   en: {
     title: "Raúl García Balongo | Data & Software Engineer",
@@ -27,9 +26,7 @@ const pageSeo = {
 type TechIcon = {
   name: string;
   src: string;
-  /** Logos tipo wordmark suelen ser más anchos */
   wordmark?: boolean;
-  /** Para assets locales (png, etc.) */
   local?: boolean;
 };
 
@@ -188,6 +185,16 @@ const devIcons: TechIcon[] = [
 const techStack: TechIcon[] = [...dataIcons, ...devIcons];
 ---
 
+<!--
+  Home.astro
+  ---------
+  Main landing page of the portfolio, internationalized by language and
+  generated as static routes. This page introduces the profile, highlights
+  professional focus and mindset, and showcases the technical stack through
+  animated counters, reveal transitions, and a scrolling technology marquee.
+  It defines language-specific SEO metadata and serves as the primary entry
+  point for recruiters and visitors.
+-->
 <Layout lang={lang} pageSeo={pageSeo}>
   <!-- HERO -->
   <section class="max-w-7xl mx-auto px-4 pt-10 pb-10 md:pt-14 md:pb-14">
@@ -337,7 +344,6 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
     </Reveal>
   </section>
 
-
   <!-- METRICS / HIGHLIGHTS -->
   <section class="max-w-7xl mx-auto px-4 pb-24">
     <Reveal as="header" class="mb-10 max-w-3xl mx-auto text-center" delay={0}>
@@ -374,12 +380,14 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
             class="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full
                  bg-emerald-500/25 blur-3xl opacity-80"
             aria-hidden="true"
-          ></div>
+          >
+          </div>
           <div
             class="pointer-events-none absolute -bottom-28 -right-24 h-80 w-80 rounded-full
                  bg-teal-400/15 blur-3xl opacity-70"
             aria-hidden="true"
-          ></div>
+          >
+          </div>
 
           <!-- Items -->
           <div
@@ -444,7 +452,6 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
     </div>
   </section>
 
-
   <!-- INTERESTS -->
   <section class="max-w-7xl mx-auto px-4 pb-24">
     <Reveal as="header" class="mb-12 max-w-3xl mx-auto text-center" delay={0}>
@@ -491,7 +498,6 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
                    hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10
                    hover:border-emerald-500/40"
             >
-              <!-- Glow -->
               <div
                 class="pointer-events-none absolute -top-20 -right-24 h-56 w-56 rounded-full
                      bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
@@ -499,7 +505,6 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
                 aria-hidden="true"
               />
 
-              <!-- Icon -->
               <div class="flex justify-center mb-4">
                 <div
                   class="flex h-11 w-11 items-center justify-center rounded-xl
@@ -507,32 +512,58 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
                        transition group-hover:scale-110"
                 >
                   {card.icon === "chart" && (
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3 3v18h18M9 17V9m4 8v-5m4 5V7" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 3v18h18M9 17V9m4 8v-5m4 5V7"
+                      />
                     </svg>
                   )}
 
                   {card.icon === "code" && (
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M16 18l6-6-6-6M8 6l-6 6 6 6"
+                      />
                     </svg>
                   )}
 
                   {card.icon === "cloud" && (
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3 15a4 4 0 004 4h10a4 4 0 000-8 5 5 0 00-9-3A4 4 0 003 15z" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 15a4 4 0 004 4h10a4 4 0 000-8 5 5 0 00-9-3A4 4 0 003 15z"
+                      />
                     </svg>
                   )}
                 </div>
               </div>
 
-              <!-- Title -->
               <h4
                 class="text-center text-xl font-semibold
                      text-gray-900 dark:text-white
@@ -541,7 +572,6 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
                 {card.title}
               </h4>
 
-              <!-- Text -->
               <p class="mt-3 text-center text-lg leading-relaxed text-gray-600 dark:text-gray-300">
                 {card.text}
               </p>
@@ -587,14 +617,16 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
             class="pointer-events-none absolute inset-x-0 top-0 h-0.75
                  bg-linear-to-r from-emerald-400/50 via-teal-400/40 to-green-400/50"
             aria-hidden="true"
-          ></div>
+          >
+          </div>
 
           <div
             class="pointer-events-none absolute -top-20 -right-24 h-56 w-56 rounded-full
                  bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
                  group-hover:opacity-100"
             aria-hidden="true"
-          ></div>
+          >
+          </div>
 
           <!-- header row -->
           <div class="flex items-start justify-between gap-4">
@@ -606,10 +638,18 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
                   aria-hidden="true"
                 >
                   <!-- chart icon -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
-                       viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M3 3v18h18M9 17V9m4 8v-5m4 5V7" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 3v18h18M9 17V9m4 8v-5m4 5V7"></path>
                   </svg>
                 </div>
 
@@ -618,7 +658,9 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
                 </h4>
               </div>
 
-              <p class="mt-2 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+              <p
+                class="mt-2 text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+              >
                 {t(lang, "keyTech.data.description")}
               </p>
             </div>
@@ -626,7 +668,9 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
 
           <!-- Core (featured + emphasis) -->
           <div class="mt-8">
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-10 items-start">
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-10 items-start"
+            >
               {
                 dataIcons.slice(0, 5).map((i, idx) => (
                   <Reveal delay={220 + idx * 60}>
@@ -651,21 +695,21 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
             </div>
           </div>
 
-          <!-- Divider -->
-          {dataIcons.length > 5 && (
-            <div class="mt-10">
-              <div class="h-px w-full bg-gray-200/70 dark:bg-white/10"></div>
-              <div class="mt-4 text-sm font-semibold tracking-wide text-gray-500 dark:text-gray-400 text-center">
-                {t(lang, "keyTech.additional")}
+          {
+            dataIcons.length > 5 && (
+              <div class="mt-10">
+                <div class="h-px w-full bg-gray-200/70 dark:bg-white/10" />
+                <div class="mt-4 text-sm font-semibold tracking-wide text-gray-500 dark:text-gray-400 text-center">
+                  {t(lang, "keyTech.additional")}
+                </div>
               </div>
-            </div>
-          )}
+            )
+          }
 
-          <!-- Support -->
-          {dataIcons.length > 5 && (
-            <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-10 items-start">
-              {
-                dataIcons.slice(5).map((i, idx) => (
+          {
+            dataIcons.length > 5 && (
+              <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-10 items-start">
+                {dataIcons.slice(5).map((i, idx) => (
                   <Reveal delay={560 + idx * 45}>
                     <div class="tech-item tech-item--grid opacity-90 group-hover:opacity-100 transition">
                       <div
@@ -683,14 +727,13 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
                       <span class="tech-label opacity-90">{i.name}</span>
                     </div>
                   </Reveal>
-                ))
-              }
-            </div>
-          )}
+                ))}
+              </div>
+            )
+          }
         </div>
       </Reveal>
 
-      <!-- Card: Web / Tooling -->
       <Reveal delay={220}>
         <div
           class="group relative overflow-hidden rounded-2xl
@@ -705,14 +748,16 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
             class="pointer-events-none absolute inset-x-0 top-0 h-0.75
              bg-linear-to-r from-emerald-400/40 via-teal-400/35 to-green-400/40"
             aria-hidden="true"
-          ></div>
+          >
+          </div>
 
           <div
             class="pointer-events-none absolute -top-20 -right-24 h-56 w-56 rounded-full
              bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
              group-hover:opacity-100"
             aria-hidden="true"
-          ></div>
+          >
+          </div>
 
           <!-- header row -->
           <div class="flex items-start justify-between gap-4">
@@ -724,10 +769,18 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
                   aria-hidden="true"
                 >
                   <!-- code icon -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
-                       viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path>
                   </svg>
                 </div>
 
@@ -736,7 +789,9 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
                 </h4>
               </div>
 
-              <p class="mt-2 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+              <p
+                class="mt-2 text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+              >
                 {t(lang, "keyTech.dev.description")}
               </p>
             </div>
@@ -744,7 +799,9 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
 
           <!-- Core -->
           <div class="mt-8">
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-10 items-start">
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-10 items-start"
+            >
               {
                 devIcons.slice(0, 5).map((i, idx) => (
                   <Reveal delay={320 + idx * 60}>
@@ -770,20 +827,22 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
           </div>
 
           <!-- Divider -->
-          {devIcons.length > 5 && (
-            <div class="mt-10">
-              <div class="h-px w-full bg-gray-200/70 dark:bg-white/10"></div>
-              <div class="mt-4 text-sm font-semibold tracking-wide text-gray-500 dark:text-gray-400 text-center">
-                {t(lang, "keyTech.additional")}
+          {
+            devIcons.length > 5 && (
+              <div class="mt-10">
+                <div class="h-px w-full bg-gray-200/70 dark:bg-white/10" />
+                <div class="mt-4 text-sm font-semibold tracking-wide text-gray-500 dark:text-gray-400 text-center">
+                  {t(lang, "keyTech.additional")}
+                </div>
               </div>
-            </div>
-          )}
+            )
+          }
 
           <!-- Support -->
-          {devIcons.length > 5 && (
-            <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-10 items-start">
-              {
-                devIcons.slice(5).map((i, idx) => (
+          {
+            devIcons.length > 5 && (
+              <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-10 items-start">
+                {devIcons.slice(5).map((i, idx) => (
                   <Reveal delay={660 + idx * 45}>
                     <div class="tech-item tech-item--grid opacity-90 group-hover:opacity-100 transition">
                       <div
@@ -801,15 +860,13 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
                       <span class="tech-label opacity-90">{i.name}</span>
                     </div>
                   </Reveal>
-                ))
-              }
-            </div>
-          )}
+                ))}
+              </div>
+            )
+          }
         </div>
       </Reveal>
-
     </div>
-
   </section>
 
   <!-- REVIEWS -->
@@ -847,7 +904,8 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
                  bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
                  group-hover:opacity-100"
             aria-hidden="true"
-          ></div>
+          >
+          </div>
 
           <!-- Quote mark -->
           <div
@@ -924,7 +982,8 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
                  bg-emerald-500/20 blur-3xl opacity-0 transition-opacity duration-300
                  group-hover:opacity-100"
             aria-hidden="true"
-          ></div>
+          >
+          </div>
 
           <div
             class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl
@@ -987,7 +1046,6 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
     </div>
   </section>
 
-
   <!-- DOWNLOAD CV -->
   <section class="max-w-7xl mx-auto px-4 pb-24">
     <!-- Title + subtitle -->
@@ -1023,7 +1081,8 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
             class="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full
                  bg-emerald-500/30 blur-3xl opacity-80"
             aria-hidden="true"
-          ></div>
+          >
+          </div>
 
           <div
             class="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
@@ -1060,7 +1119,6 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
             >
               {t(lang, "cv.download")}
             </a>
-
           </div>
         </div>
       </Reveal>

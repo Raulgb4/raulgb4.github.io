@@ -7,7 +7,6 @@ import BackToTop from "../components/BackToTop.astro";
 type SeoData = { title: string; description: string };
 type PageSeo = { en?: SeoData; es?: SeoData };
 
-// 👇 AHORA Layout acepta pageSeo
 const { lang = "en", pageSeo } = Astro.props as {
   lang?: "en" | "es";
   pageSeo?: PageSeo;
@@ -34,18 +33,14 @@ const site = {
   ogImage: "https://raulgb4.github.io/curriculum-vitae/og/og-image.png",
 };
 
-// ✅ Resolver SEO final: si la página pasa pageSeo, se usa; si no, global
 const resolvedTitle = pageSeo?.[lang]?.title ?? seo[lang].title;
 const resolvedDescription =
   pageSeo?.[lang]?.description ?? seo[lang].description;
 
-// pathname actual, ej: "/en/about" o "/es/"
 const pathname = Astro.url.pathname;
 
-// canonical de la página actual
 const canonicalUrl = `${site.baseUrl}${pathname}`;
 
-// alternates
 const altPathEn = pathname.replace(/^\/(es|en)/, "/en");
 const altPathEs = pathname.replace(/^\/(es|en)/, "/es");
 const hrefEn = `${site.baseUrl}${altPathEn}`;
@@ -68,13 +63,20 @@ const personSchema = {
 const personSchemaJson = JSON.stringify(personSchema);
 ---
 
-<!doctype html>
+<!--
+  Layout.astro
+  ------------
+  Global layout component that defines the base HTML structure of the site.
+  It centralizes SEO metadata, internationalization-aware URLs, Open Graph
+  and Twitter tags, structured data (Person schema), analytics integration,
+  and shared UI elements such as the navbar, footer, and back-to-top button.
+  All pages are rendered within this layout to ensure consistency.
+--><!doctype html>
 <html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
 
-    <!-- ✅ AHORA usa el SEO resuelto por página -->
     <title>{resolvedTitle}</title>
     <meta name="description" content={resolvedDescription} />
 
@@ -84,7 +86,6 @@ const personSchemaJson = JSON.stringify(personSchema);
     <link rel="alternate" hreflang="es" href={hrefEs} />
     <link rel="alternate" hreflang="x-default" href={`${site.baseUrl}/en/`} />
 
-    <!-- Open Graph ✅ también por página -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.name} />
     <meta property="og:title" content={resolvedTitle} />
@@ -99,7 +100,6 @@ const personSchemaJson = JSON.stringify(personSchema);
       content={lang === "es" ? "en_US" : "es_ES"}
     />
 
-    <!-- Twitter ✅ también por página -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={resolvedTitle} />
     <meta name="twitter:description" content={resolvedDescription} />

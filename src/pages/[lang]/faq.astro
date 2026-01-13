@@ -9,7 +9,6 @@ export async function getStaticPaths() {
 
 const lang = Astro.params.lang as Lang;
 
-// ✅ SEO por página
 const pageSeo = {
   en: {
     title: "FAQ | Raúl García Balongo",
@@ -24,6 +23,15 @@ const pageSeo = {
 };
 ---
 
+<!--
+  FAQ.astro
+  ---------
+  Internationalized Frequently Asked Questions page that addresses common
+  topics about the profile, skills, availability, and professional interests.
+  It defines language-specific SEO metadata, generates static pages per language,
+  and presents the content using accessible <details>/<summary> elements with
+  progressive reveal animations for a clean and user-friendly reading experience.
+-->
 <Layout lang={lang} pageSeo={pageSeo}>
   <section class="max-w-5xl mx-auto px-4 py-20 space-y-8">
     <!-- FAQ Title -->

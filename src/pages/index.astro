@@ -1,4 +1,11 @@
 ---
-// src/pages/index.astro
-return Astro.redirect("/en/", 302); // o "/es/"
+return Astro.redirect("/en/", 302);
 ---
+
+<!--
+  index.astro
+  -----------
+  Entry point for the root route ("/"). This page performs a server-side
+  redirect to the default language version of the site, ensuring a
+  consistent, language-prefixed URL structure.
+-->
