@@ -411,9 +411,9 @@ const certifications = [
       <div class="grid gap-6">
         {
           certifications.map((c, idx) => (
-            <Reveal delay={Math.min(idx * 50, 300)}>
+            <Reveal delay={Math.min(idx * 50, 300)} class="w-full">
               <article
-                class="group relative  rounded-2xl
+                class="group relative w-full min-w-0 overflow-x-hidden rounded-2xl
                        border border-emerald-500/25
                        bg-white/60 dark:bg-white/5 backdrop-blur
                        p-6 sm:p-7
@@ -422,8 +422,8 @@ const certifications = [
                        hover:border-emerald-400/60"
               >
                 {/* Top row: provider + date + badge */}
-                <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-                  <div class="flex items-center gap-4 min-w-0">
+                <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 min-w-0">
+                  <div class="flex items-center gap-4 min-w-0 flex-1">
                     <div
                       class="h-14 w-14 sm:h-16 sm:w-16
                              shrink-0 rounded-xl

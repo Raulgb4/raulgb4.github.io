@@ -159,6 +159,11 @@
 /* ===== Scroll reveal ===== */
 .reveal {
     --reveal-delay: 0ms;
+    opacity: 1;
+    transform: none;
+}
+
+.reveal > .reveal-inner {
     opacity: 0;
     transform: translateY(12px);
     transition: opacity 350ms ease-out, transform 350ms ease-out;
@@ -166,14 +171,13 @@
     will-change: opacity, transform;
 }
 
-.reveal.is-visible {
+.reveal.is-visible > .reveal-inner {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* accesibilidad */
 @media (prefers-reduced-motion: reduce) {
-    .reveal {
+    .reveal > .reveal-inner {
         opacity: 1;
         transform: none;
         transition: none;
