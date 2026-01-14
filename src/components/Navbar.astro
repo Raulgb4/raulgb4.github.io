@@ -260,7 +260,7 @@ const linkClass = (path: string) =>
     <div
       class="flex items-center gap-4 text-base text-gray-700 dark:text-gray-300"
     >
-      <!-- Language switcher (pill with icons) -->
+      <!-- Language switcher (pill with flags) -->
       <div
         id="lang-switcher-pill"
         class="flex items-center rounded-full
@@ -280,23 +280,15 @@ const linkClass = (path: string) =>
           : "text-gray-600 dark:text-gray-300 hover:bg-gray-200/40 dark:hover:bg-white/10"
       }`}
         >
-          <!-- Globe / language icon -->
-          <svg
-            class="h-4 w-4"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="2" y1="12" x2="22" y2="12"></line>
-            <path
-              d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-            ></path>
-          </svg>
+          <span class="h-4 w-4 rounded-sm overflow-hidden shrink-0">
+            <img
+              src="/assets/flags/UKFlag.svg"
+              alt=""
+              class="h-full w-full object-cover"
+              loading="eager"
+              aria-hidden="true"
+            />
+          </span>
           <span>EN</span>
         </a>
 
@@ -312,23 +304,13 @@ const linkClass = (path: string) =>
           : "text-gray-600 dark:text-gray-300 hover:bg-gray-200/40 dark:hover:bg-white/10"
       }`}
         >
-          <!-- Same icon, reused -->
-          <svg
-            class="h-4 w-4"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+          <img
+            src="/assets/flags/SpainFlag.svg"
+            alt="Español"
+            class="h-4 w-4 rounded-sm overflow-hidden"
+            loading="eager"
             aria-hidden="true"
-          >
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="2" y1="12" x2="22" y2="12"></line>
-            <path
-              d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-            ></path>
-          </svg>
+          />
           <span>ES</span>
         </a>
       </div>
