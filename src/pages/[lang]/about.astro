@@ -149,14 +149,16 @@ const pageSeo = {
             </h2>
 
             <p
-              class="mt-4 text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl"
+              class="mt-4 text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl"
             >
               {t(lang, "home.hero.subtitle")}
             </p>
           </header>
 
           <!-- Bullets -->
-          <ul class="space-y-3 text-gray-700 dark:text-gray-200">
+          <ul
+            class="space-y-3 text-base md:text-lg text-gray-700 dark:text-gray-200"
+          >
             <li class="flex items-start gap-3">
               <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-emerald-400/90"
               ></span>
@@ -202,8 +204,8 @@ const pageSeo = {
           <Reveal delay={180}>
             <div
               class="group rounded-2xl border border-gray-200/70 dark:border-white/10
-             bg-white/70 dark:bg-white/5 p-5
-             hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
+               bg-white/70 dark:bg-white/5 p-5
+               hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
             >
               <div class="flex items-start gap-3">
                 <div
@@ -212,10 +214,14 @@ const pageSeo = {
                   <span class="text-emerald-600 dark:text-emerald-300">✦</span>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-gray-900 dark:text-gray-100">
+                  <h3
+                    class="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100"
+                  >
                     {t(lang, "home.traits.curiosity.title")}
                   </h3>
-                  <p class="mt-1 text-gray-600 dark:text-gray-300">
+                  <p
+                    class="mt-1 text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed"
+                  >
                     {t(lang, "home.traits.curiosity.beforeWhy")}
                     <span class="font-medium"
                       >{t(lang, "home.traits.curiosity.why")}</span
@@ -230,8 +236,8 @@ const pageSeo = {
           <Reveal delay={240}>
             <div
               class="group rounded-2xl border border-gray-200/70 dark:border-white/10
-             bg-white/70 dark:bg-white/5 p-5
-             hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
+               bg-white/70 dark:bg-white/5 p-5
+               hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
             >
               <div class="flex items-start gap-3">
                 <div
@@ -240,10 +246,14 @@ const pageSeo = {
                   <span class="text-emerald-600 dark:text-emerald-300">⌁</span>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-gray-900 dark:text-gray-100">
+                  <h3
+                    class="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100"
+                  >
                     {t(lang, "home.traits.criticalThinking.title")}
                   </h3>
-                  <p class="mt-1 text-gray-600 dark:text-gray-300">
+                  <p
+                    class="mt-1 text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed"
+                  >
                     {t(lang, "home.traits.criticalThinking.before")}
                     <span class="font-medium"
                       >{t(lang, "home.traits.criticalThinking.highlight")}</span
@@ -257,8 +267,8 @@ const pageSeo = {
           <Reveal delay={300}>
             <div
               class="group rounded-2xl border border-gray-200/70 dark:border-white/10
-             bg-white/70 dark:bg-white/5 p-5
-             hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
+               bg-white/70 dark:bg-white/5 p-5
+               hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
             >
               <div class="flex items-start gap-3">
                 <div
@@ -267,10 +277,14 @@ const pageSeo = {
                   <span class="text-emerald-600 dark:text-emerald-300">↗</span>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-gray-900 dark:text-gray-100">
+                  <h3
+                    class="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100"
+                  >
                     {t(lang, "home.traits.communication.title")}
                   </h3>
-                  <p class="mt-1 text-gray-600 dark:text-gray-300">
+                  <p
+                    class="mt-1 text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed"
+                  >
                     {t(lang, "home.traits.communication.before")}
                     <span class="font-medium"
                       >{t(lang, "home.traits.communication.highlight")}</span
@@ -330,9 +344,12 @@ const pageSeo = {
           >
           </div>
 
-          <p class="relative text-gray-800 dark:text-gray-100 leading-relaxed">
+          <p
+            class="relative text-base md:text-lg
+             text-gray-800 dark:text-gray-100 leading-relaxed"
+          >
             {t(lang, "home.next.beforeJunior")}
-            <span class="font-semibold">{t(lang, "home.next.junior")}</span>,
+            <span class="font-semibold">{t(lang, "home.next.junior")}</span>
             {t(lang, "home.next.middle")}
             <span class="font-semibold"
               >{t(lang, "home.next.dataAnalysis")}</span
@@ -382,12 +399,16 @@ const pageSeo = {
                   <path d="M12 7v5l3 3"></path>
                 </svg>
               </span>
-              <h3 class="font-semibold text-gray-900 dark:text-gray-100">
+              <h3
+                class="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100"
+              >
                 {t(lang, "home.cards.lookingFor.title")}
               </h3>
             </div>
 
-            <p class="mt-3 text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p
+              class="mt-3 text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed"
+            >
               {t(lang, "home.cards.lookingFor.before")}
               <span class="font-medium"
                 >{t(lang, "home.cards.lookingFor.highlight")}</span
@@ -426,12 +447,16 @@ const pageSeo = {
                   <path d="M5.5 5.5l13 13"></path>
                 </svg>
               </span>
-              <h3 class="font-semibold text-gray-900 dark:text-gray-100">
+              <h3
+                class="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100"
+              >
                 {t(lang, "home.cards.notFocus.title")}
               </h3>
             </div>
 
-            <ul class="mt-3 space-y-2 text-gray-600 dark:text-gray-300">
+            <ul
+              class="mt-3 space-y-2 text-sm md:text-base text-gray-600 dark:text-gray-300"
+            >
               <li class="flex items-baseline gap-2">
                 <span class="inline-block h-1.5 w-1.5 rounded-full bg-gray-400"
                 ></span>
@@ -482,12 +507,16 @@ const pageSeo = {
                   ></path>
                 </svg>
               </span>
-              <h3 class="font-semibold text-gray-900 dark:text-gray-100">
+              <h3
+                class="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100"
+              >
                 {t(lang, "home.cards.motivation.title")}
               </h3>
             </div>
 
-            <p class="mt-3 text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p
+              class="mt-3 text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed"
+            >
               {t(lang, "home.cards.motivation.before")}
               <span class="font-medium"
                 >{t(lang, "home.cards.motivation.analysis")}</span
@@ -967,7 +996,7 @@ const pageSeo = {
               <div class="min-w-0">
                 <div class="flex items-center justify-between gap-3">
                   <h3
-                    class="text-lg font-semibold text-gray-900 dark:text-white"
+                    class="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white"
                   >
                     {t(lang, "home.workArrangement.remote.title")}
                   </h3>
@@ -982,7 +1011,7 @@ const pageSeo = {
                 </div>
 
                 <p
-                  class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed"
+                  class="mt-2 text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
                 >
                   {t(lang, "home.workArrangement.remote.text")}
                 </p>
@@ -1049,14 +1078,14 @@ const pageSeo = {
               <div class="min-w-0">
                 <div class="flex items-center justify-between gap-3">
                   <h3
-                    class="text-lg font-semibold text-gray-900 dark:text-white"
+                    class="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white"
                   >
                     {t(lang, "home.workArrangement.hybrid.title")}
                   </h3>
                 </div>
 
                 <p
-                  class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed"
+                  class="mt-2 text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
                 >
                   {t(lang, "home.workArrangement.hybrid.text")}
                 </p>
