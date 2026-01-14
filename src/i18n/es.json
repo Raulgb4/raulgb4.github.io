@@ -142,6 +142,9 @@
   "projects.repository": "Repositorio",
   "projects.featured.title": "Proyectos destacados",
   "projects.featured.subtitle": "Una selección de proyectos donde apliqué datos, ingeniería y visualización para resolver problemas reales.",
+  "projects.linkedin.title": "Análisis del mercado laboral en LinkedIn",
+  "projects.linkedin.desc": "Análisis de un conjunto de datos a gran escala de ofertas de empleo publicadas en LinkedIn (2023–2024), orientado a extraer insights sobre demanda laboral, habilidades, ubicaciones, modalidades de trabajo y patrones salariales mediante flujos de análisis propios de entornos de business analytics.",
+
   "hero.subtitle": "Ingeniero Informático · Análisis de datos",
   "hero.description": "Diseño y desarrollo soluciones de software prácticas, convirtiendo ideas y requisitos en herramientas fiables que aportan valor real.",
   "highlights.growth.title": "En continuo crecimiento",

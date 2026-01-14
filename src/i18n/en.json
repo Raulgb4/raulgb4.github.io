@@ -139,6 +139,10 @@
   "projects.repository": "Repository",
   "projects.featured.title": "Featured Projects",
   "projects.featured.subtitle": "A selection of projects where I applied data, engineering, and visualization to solve real problems.",
+
+  "projects.linkedin.title": "LinkedIn job market analysis",
+  "projects.linkedin.desc": "End-to-end analysis of a large-scale dataset of LinkedIn job postings (2023–2024), aimed at extracting insights on job demand, skills, locations, work modalities, and salary patterns using workflows typical of business analytics environments.",
+
   "hero.subtitle": "Computer Science Engineer · Data Analysis",
   "hero.description": "I design and build practical software solutions, transforming ideas and requirements into reliable tools that create real-world value.",
   "highlights.growth.title": "Continuous growth",

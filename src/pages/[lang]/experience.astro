@@ -360,11 +360,11 @@ const pageSeo = {
     </section>
 
     <!-- RESEARCH -->
-    <section class="space-y-4">
+    <section class="space-y-8">
       <!-- Header -->
-      <Reveal as="header" class="space-y-3" delay={0}>
+      <Reveal as="header" class="space-y-4" delay={0}>
         <h2
-          class="text-2xl md:text-3xl font-semibold
+          class="text-3xl md:text-4xl font-semibold
              text-emerald-500 tracking-tight"
         >
           {t(lang, "experience.research.title")}
@@ -372,7 +372,7 @@ const pageSeo = {
 
         <Reveal delay={80}>
           <div
-            class="h-0.5 w-16
+            class="h-0.5 w-20
                bg-linear-to-r from-emerald-400 to-teal-400
                rounded-full"
           >
@@ -382,8 +382,15 @@ const pageSeo = {
 
       <!-- Content -->
       <Reveal delay={160}>
-        <div class="rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-          <p class="text-gray-600 dark:text-gray-300">
+        <div
+          class="rounded-xl border border-gray-200 dark:border-gray-700
+             p-7 md:p-8"
+        >
+          <p
+            class="text-base md:text-lg
+               leading-relaxed
+               text-gray-700 dark:text-gray-300"
+          >
             {t(lang, "experience.research.desc")}
           </p>
         </div>
@@ -405,12 +412,6 @@ const pageSeo = {
             class="h-0.5 w-16 bg-linear-to-r from-emerald-400 to-teal-400 rounded-full"
           >
           </div>
-        </Reveal>
-
-        <Reveal delay={140}>
-          <p class="text-gray-600 dark:text-gray-300 max-w-3xl">
-            {t(lang, "projects.featured.subtitle")}
-          </p>
         </Reveal>
       </Reveal>
 
@@ -471,6 +472,20 @@ const pageSeo = {
                 demoUrl: "#",
                 repoUrl: "https://github.com/Raulgb4/raulgb4.github.io",
               },
+
+              {
+                title: t(lang, "projects.linkedin.title"),
+                badge: t(lang, "projects.badge.public"),
+
+                description: t(lang, "projects.linkedin.desc"),
+                grade: undefined,
+                cover: "/assets/images/projects/LinkedInEDAproject.jpg",
+
+                tech: "Python · Pandas · SQL · Matplotlib · Seaborn",
+                demoUrl: "#",
+                repoUrl:
+                  "https://github.com/Raulgb4/linkedin-job-market-analysis",
+              },
             ]
               .slice(0, 3)
               .map((p, idx) => (
@@ -501,11 +516,11 @@ const pageSeo = {
                           >
                             {(p.covers ?? [p.cover].filter(Boolean)).map(
                               (src, i) => (
-                                <div class="h-full w-full shrink-0">
+                                <div class="h-full w-full shrink-0 bg-slate-900">
                                   <img
                                     src={src}
                                     alt={`${p.title} ${t(lang, "projects.screenshot")} ${i + 1}`}
-                                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                    class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
                                     loading="lazy"
                                   />
                                 </div>
