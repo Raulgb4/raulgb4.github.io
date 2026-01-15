@@ -26,7 +26,8 @@ const linkClass = (path: string) =>
 --><!-- Mobile dropdown -->
 <div
   id="mobile-nav"
-  class="lg:hidden hidden mt-3 rounded-2xl border border-gray-200/70 dark:border-white/10
+  class="lg:hidden hidden fixed left-4 right-4 top-[72px]
+         rounded-2xl border border-gray-200/70 dark:border-white/10
          bg-white/80 dark:bg-slate-900/40 backdrop-blur p-3
          shadow-lg shadow-emerald-500/10"
   data-mobile-menu
@@ -89,10 +90,9 @@ const linkClass = (path: string) =>
 
 <nav
   data-navbar
-  class="sticky top-0 z-100 isolate w-full border-b
+  class="sticky top-0 z-[100] relative isolate w-full border-b
          border-gray-200 dark:border-gray-700
-         bg-transparent transition-colors duration-200
-         will-change-[backdrop-filter]"
+         bg-transparent transition-colors duration-200"
 >
   <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
     <!-- Left: Name + Mini Avatar -->
@@ -396,14 +396,17 @@ const linkClass = (path: string) =>
       btn.setAttribute("aria-expanded", open ? "true" : "false");
     };
 
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       const isOpen = btn.getAttribute("aria-expanded") === "true";
       setOpen(!isOpen);
     });
 
     // Close on outside click
-    document.addEventListener("click", (e) => {
-      if (!menu.contains(e.target) && !btn.contains(e.target)) setOpen(false);
+    document.addEventListener("pointerdown", (e) => {
+      const t = e.target;
+      if (!menu.contains(t) && !btn.contains(t)) setOpen(false);
     });
 
     // Close on ESC
