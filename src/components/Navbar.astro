@@ -88,7 +88,10 @@ const linkClass = (path: string) =>
 </div>
 
 <nav
-  class="relative z-50 isolate w-full border-b border-gray-200 dark:border-gray-700"
+  data-navbar
+  class="sticky top-0 z-50 isolate w-full border-b
+         border-gray-200 dark:border-gray-700
+         bg-transparent transition-colors duration-200"
 >
   <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
     <!-- Left: Name + Mini Avatar -->
@@ -411,4 +414,18 @@ const linkClass = (path: string) =>
       .querySelectorAll("a")
       .forEach((a) => a.addEventListener("click", () => setOpen(false)));
   }
+</script>
+
+<script is:inline>
+  const navbar = document.querySelector("[data-navbar]");
+
+  const onScroll = () => {
+    const scrolled = window.scrollY > 8;
+    navbar?.classList.toggle("bg-white/70", scrolled);
+    navbar?.classList.toggle("dark:bg-slate-900/40", scrolled);
+    navbar?.classList.toggle("backdrop-blur", scrolled);
+  };
+
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
 </script>
