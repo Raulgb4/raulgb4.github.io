@@ -23,13 +23,20 @@ const linkClass = (path: string) =>
   It highlights the active section based on the current route, adapts links
   to the selected language, and includes an accessible mobile menu with
   client-side toggling logic.
---><!-- Mobile dropdown -->
+--><!-- Mobile dropdown --><!-- Mobile menu backdrop -->
+<div
+  class="lg:hidden fixed inset-0 z-[110] hidden bg-black/50"
+  data-mobile-backdrop
+  aria-hidden="true"
+>
+</div>
 <div
   id="mobile-nav"
-  class="lg:hidden hidden fixed left-4 right-4 top-[72px]
+  class="lg:hidden fixed inset-x-4 top-16 z-[120] hidden
+         max-h-[calc(100vh-5rem)] overflow-auto
          rounded-2xl border border-gray-200/70 dark:border-white/10
-         bg-white/80 dark:bg-slate-900/40 backdrop-blur p-3
-         shadow-lg shadow-emerald-500/10"
+         bg-white dark:bg-slate-900
+         p-3 shadow-xl shadow-emerald-500/10"
   data-mobile-menu
 >
   <nav class="flex flex-col gap-1 text-base">
@@ -78,7 +85,7 @@ const linkClass = (path: string) =>
     <a
       href={`/${lang}/contact/`}
       class="mt-2 inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold
-           bg-emerald-500 text-white hover:bg-emerald-600 transition"
+             bg-emerald-500 text-white hover:bg-emerald-600 transition"
     >
       {t(lang, "nav.contact")}
       <span
@@ -387,14 +394,26 @@ const linkClass = (path: string) =>
 </nav>
 
 <script is:inline>
-  const btn = document.querySelector("[data-mobile-menu-button]");
-  const menu = document.querySelector("[data-mobile-menu]");
+  function initMobileMenu() {
+    const btn = document.querySelector("[data-mobile-menu-button]");
+    const menu = document.querySelector("[data-mobile-menu]");
+    const backdrop = document.querySelector("[data-mobile-backdrop]"); // puede ser null
 
-  if (btn && menu) {
+    if (!btn || !menu) return;
+
+    // Evita duplicar listeners si Astro rehidrata / hace swaps
+    if (btn.dataset.bound === "true") return;
+    btn.dataset.bound = "true";
+
     const setOpen = (open) => {
       menu.classList.toggle("hidden", !open);
+      if (backdrop) backdrop.classList.toggle("hidden", !open);
       btn.setAttribute("aria-expanded", open ? "true" : "false");
+      document.documentElement.classList.toggle("overflow-hidden", open);
     };
+
+    // Estado inicial
+    setOpen(false);
 
     btn.addEventListener("click", (e) => {
       e.preventDefault();
@@ -403,34 +422,82 @@ const linkClass = (path: string) =>
       setOpen(!isOpen);
     });
 
-    // Close on outside click
+    if (backdrop) backdrop.addEventListener("click", () => setOpen(false));
+
     document.addEventListener("pointerdown", (e) => {
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+      if (!isOpen) return;
+
       const t = e.target;
       if (!menu.contains(t) && !btn.contains(t)) setOpen(false);
     });
 
-    // Close on ESC
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") setOpen(false);
     });
 
-    // Close after clicking a link
     menu
       .querySelectorAll("a")
       .forEach((a) => a.addEventListener("click", () => setOpen(false)));
+
+    // Si pasas a desktop, cierra
+    const mq = window.matchMedia("(min-width: 1024px)");
+    mq.addEventListener?.("change", (ev) => {
+      if (ev.matches) setOpen(false);
+    });
   }
+
+  document.addEventListener("DOMContentLoaded", initMobileMenu);
+  document.addEventListener("astro:page-load", initMobileMenu);
 </script>
 
 <script is:inline>
-  const navbar = document.querySelector("[data-navbar]");
+  function initStickyNavbar() {
+    const navbar = document.querySelector("[data-navbar]");
+    const menuBtn = document.querySelector("[data-mobile-menu-button]");
+    const isDesktop = window.matchMedia("(min-width: 1024px)");
 
-  const onScroll = () => {
-    const scrolled = window.scrollY > 8;
-    navbar?.classList.toggle("bg-white/70", scrolled);
-    navbar?.classList.toggle("dark:bg-slate-900/40", scrolled);
-    navbar?.classList.toggle("backdrop-blur", scrolled);
-  };
+    if (!navbar) return;
 
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
+    const applyStickyStyles = (scrolled) => {
+      // Si el menú móvil está abierto, no tocar estilos del navbar
+      const menuOpen =
+        menuBtn && menuBtn.getAttribute("aria-expanded") === "true";
+      if (menuOpen) return;
+
+      const desktop = isDesktop.matches;
+
+      navbar.classList.remove(
+        "bg-white/70",
+        "dark:bg-slate-900/40",
+        "backdrop-blur",
+        "bg-white",
+        "dark:bg-slate-900",
+      );
+
+      if (!scrolled) return;
+
+      if (desktop) {
+        navbar.classList.add(
+          "bg-white/70",
+          "dark:bg-slate-900/40",
+          "backdrop-blur",
+        );
+      } else {
+        navbar.classList.add("bg-white", "dark:bg-slate-900");
+      }
+    };
+
+    const onScroll = () => applyStickyStyles(window.scrollY > 8);
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    if (isDesktop.addEventListener) {
+      isDesktop.addEventListener("change", onScroll);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", initStickyNavbar);
+  document.addEventListener("astro:page-load", initStickyNavbar);
 </script>
