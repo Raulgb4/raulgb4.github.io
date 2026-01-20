@@ -17,10 +17,10 @@
   "faq.subtitle": "Answers to common questions about my profile, experience, and availability.",
 
   "faq.q1.q": "What roles am I currently looking for?",
-  "faq.q1.a": "Junior roles related to Data Analysis, Business Intelligence, and web/data-oriented development, where data supports decision-making and real product or business impact.",
+  "faq.q1.a": "Roles related to Data Analysis, Business Intelligence, and web/data-oriented development, where data supports decision-making and real product or business impact.",
 
   "faq.q2.q": "What type of position am I looking for?",
-  "faq.q2.a": "Ideally a full-time junior position with responsibility, mentorship, and room to grow. I prefer to focus on professional work in a company rather than purely academic programs.",
+  "faq.q2.a": "Ideally a full-time position with responsibility, mentorship, and room to grow. I prefer to focus on professional work in a company rather than purely academic programs.",
 
   "faq.q3.q": "What is my availability?",
   "faq.q3.a": "I’m available to start soon. If you need a specific start date, feel free to reach out and we can align.",
@@ -155,8 +155,8 @@
   "metrics.title": "Highlights",
   "metrics.subtitle": "Key highlights of my profile, technical background, and hands-on project experience.",
 
-  "metrics.junior.value": "Junior",
-  "metrics.junior.label": "Ready to contribute and keep growing",
+  "metrics.engineer.value": "Engineer",
+  "metrics.engineer.label": "Ready to solve problems",
 
   "metrics.certs": "Certifications",
   "metrics.tech": "Technologies used across projects",
@@ -234,7 +234,7 @@
   "home.next.title": "Where I’m heading next",
 
   "home.next.beforeJunior": "My goal is to join a team as a ",
-  "home.next.junior": "junior profile",
+  "home.next.engineer": "engineer",
   "home.next.middle": ", contributing from day one to real-world projects while building a solid career in ",
   "home.next.dataAnalysis": "Data Analysis",
   "home.next.businessIntelligence": "Business Intelligence",

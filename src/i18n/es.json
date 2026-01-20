@@ -18,10 +18,10 @@
   "faq.subtitle": "Respuestas a preguntas comunes sobre mi perfil, experiencia y disponibilidad.",
 
   "faq.q1.q": "¿Qué puestos estoy buscando actualmente?",
-  "faq.q1.a": "Puestos junior relacionados con Análisis de Datos, Business Intelligence y desarrollo web/orientado a datos, donde los datos apoyen la toma de decisiones y tengan impacto real en producto o negocio.",
+  "faq.q1.a": "Puestos relacionados con Análisis de Datos, Business Intelligence y desarrollo web/orientado a datos, donde los datos apoyen la toma de decisiones y tengan impacto real en producto o negocio.",
 
   "faq.q2.q": "¿Qué tipo de posición estoy buscando?",
-  "faq.q2.a": "Idealmente un puesto junior a tiempo completo con responsabilidad, mentoría y margen de crecimiento. Prefiero enfocarme en trabajo profesional en empresa y no únicamente en programas académicos.",
+  "faq.q2.a": "Idealmente un puesto a tiempo completo con responsabilidad, mentoría y margen de crecimiento. Prefiero enfocarme en trabajo profesional en empresa y no únicamente en programas académicos.",
 
   "faq.q3.q": "¿Cuál es mi disponibilidad?",
   "faq.q3.a": "Puedo incorporarme pronto. Si necesitas una fecha concreta, escríbeme y lo coordinamos.",
@@ -157,8 +157,8 @@
   "metrics.title": "Aspectos destacados",
   "metrics.subtitle": "Aspectos clave de mi perfil, base técnica y experiencia práctica en proyectos.",
 
-  "metrics.junior.value": "Junior",
-  "metrics.junior.label": "Listo para contribuir y seguir creciendo",
+  "metrics.engineer.value": "Ingeniero",
+  "metrics.engineer.label": "Listo para resolver problemas",
 
   "metrics.certs": "Certificaciones",
   "metrics.tech": "Tecnologías utilizadas en proyectos",
@@ -240,7 +240,7 @@
   "home.next.title": "Hacia dónde quiero avanzar",
 
   "home.next.beforeJunior": "Mi objetivo es incorporarme a un equipo como ",
-  "home.next.junior": "perfil junior",
+  "home.next.engineer": "ingeniero",
   "home.next.middle": ", aportando desde el primer día en proyectos reales mientras construyo una carrera sólida en ",
   "home.next.dataAnalysis": "Análisis de Datos",
   "home.next.businessIntelligence": "Business Intelligence",
