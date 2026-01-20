@@ -90,13 +90,13 @@
 
   "experience.items.paper.title": "Research Paper (In Progress)",
   "experience.items.paper.subtitle": "Scientific article based on my Final Degree Project",
-  "experience.items.paper.period": "October 2025 – Present",
+  "experience.items.paper.period": "Oct. 2025 – Present",
   "experience.items.paper.grade": "In progress",
   "experience.items.paper.desc": "Currently collaborating on the preparation of a scientific article based on my Final Degree Project, with the goal of submitting it to a journal or conference focused on educational technology and data analysis.",
 
   "experience.items.mda.title": "Moodle Data Analyzer",
   "experience.items.mda.subtitle": "University of Málaga · Final Degree Project",
-  "experience.items.mda.period": "January 2025 – September 2025",
+  "experience.items.mda.period": "Jan. 2025 – Sept. 2025",
   "experience.items.mda.desc": "Design and development of a browser-based data analysis tool for extracting, processing, and visualizing Moodle academic data to support data-driven decision-making. Built interactive dashboards with strong focus on data storytelling, and generated exportable analytical reports (PDF, CSV, DOCX).",
 
   "experience.items.dekra.title": "DEKRA Digital & Product Solutions",
@@ -111,7 +111,7 @@
 
   "experience.items.bach.title": "Technological Baccalaureate",
   "experience.items.bach.subtitle": "IES Torre Almirante",
-  "experience.items.bach.period": "September 2018 – June 2020",
+  "experience.items.bach.period": "2018 – 2020",
   "experience.items.bach.desc": "Technological Baccalaureate focused on logical thinking, academic mathematics, and structured problem solving, serving as the foundation of my subsequent technical education. This stage strengthened analytical reasoning skills and provided a solid base for further studies in computer science engineering.",
   "experience.gradeLabel": "Grade:",
   "common.logo": "logo",

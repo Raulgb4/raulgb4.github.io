@@ -93,13 +93,13 @@
 
   "experience.items.paper.title": "Artículo científico (en progreso)",
   "experience.items.paper.subtitle": "Artículo basado en mi Trabajo de Fin de Grado",
-  "experience.items.paper.period": "Octubre 2025 – Actualidad",
+  "experience.items.paper.period": "Oct. 2025 – Actualidad",
   "experience.items.paper.grade": "En progreso",
   "experience.items.paper.desc": "Actualmente colaboro en la preparación de un artículo científico basado en mi Trabajo de Fin de Grado, con el objetivo de enviarlo a una revista o conferencia centrada en tecnología educativa y análisis de datos.",
 
   "experience.items.mda.title": "Moodle Data Analyzer",
   "experience.items.mda.subtitle": "Universidad de Málaga · Trabajo de Fin de Grado",
-  "experience.items.mda.period": "Enero 2025 – Septiembre 2025",
+  "experience.items.mda.period": "Enero 2025 – Sept. 2025",
   "experience.items.mda.desc": "Diseño y desarrollo de una herramienta de análisis de datos basada en navegador para extraer, procesar y visualizar datos académicos de Moodle con el fin de apoyar a los docentes mediante la toma de decisiones basada en datos. Se construyeron paneles interactivos y se generaron informes exportables en diferentes formatos.",
 
   "experience.items.dekra.title": "DEKRA Digital & Product Solutions",
@@ -114,7 +114,7 @@
 
   "experience.items.bach.title": "Bachillerato Tecnológico",
   "experience.items.bach.subtitle": "IES Torre Almirante",
-  "experience.items.bach.period": "Septiembre 2018 – Junio 2020",
+  "experience.items.bach.period": "2018 – 2020",
   "experience.items.bach.desc": "Bachillerato Tecnológico centrado en pensamiento lógico, matemáticas académicas y resolución estructurada de problemas, sirviendo como base de mi formación técnica posterior. Esta etapa reforzó el razonamiento analítico y proporcionó una base sólida para estudios posteriores en ingeniería informática.",
   "experience.gradeLabel": "Nota:",
   "common.logo": "logo",
