@@ -173,8 +173,8 @@
   "interests.cards.web.title": "Desarrollo web",
   "interests.cards.web.text": "Desarrollo de interfaces y funcionalidades interactivas, con especial atención a la claridad y la usabilidad.",
 
-  "interests.cards.cloud.title": "Entornos en la nube y automatización",
-  "interests.cards.cloud.text": "Trabajo con entornos en la nube y automatización básica para el despliegue y mantenimiento de aplicaciones modernas.",
+  "interests.cards.cloud.title": "Datos y sistemas basados en IA",
+  "interests.cards.cloud.text": "Interés en el diseño de flujos de datos y su integración con modelos de inteligencia artificial, incluyendo embeddings, búsqueda semántica y sistemas tipo RAG.",
 
   "keyTech.title": "Tecnologías clave",
   "keyTech.subtitle": "Herramientas y tecnologías que utilizo para desarrollar soluciones basadas en datos de principio a fin.",

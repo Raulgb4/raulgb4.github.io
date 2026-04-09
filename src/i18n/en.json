@@ -171,8 +171,8 @@
   "interests.cards.web.title": "Web Development",
   "interests.cards.web.text": "Building user-facing interfaces and interactive features with a focus on clarity and usability.",
 
-  "interests.cards.cloud.title": "Cloud & Automation",
-  "interests.cards.cloud.text": "Working with cloud environments and basic automation to deploy and support modern applications.",
+  "interests.cards.cloud.title": "Data and AI-based systems",
+  "interests.cards.cloud.text": "Interest in designing data pipelines and integrating them with artificial intelligence models, including embeddings, semantic search, and RAG-based systems.",
   "keyTech.title": "Key Technologies",
   "keyTech.subtitle": "Tools and technologies I use to build data-driven solutions end to end.",
 
