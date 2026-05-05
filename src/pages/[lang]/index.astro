@@ -266,9 +266,7 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
   <!-- HIGHLIGHTS -->
   <section class="max-w-7xl mx-auto px-4 pb-20 grid gap-6 md:grid-cols-2">
     <!-- Left card -->
-    <Reveal
-      as="div"
-      delay={0}
+    <div
       class="min-w-0 rounded-lg border border-gray-200 dark:border-gray-700 p-5 sm:p-6"
     >
       <h3 class="font-semibold text-xl text-center">
@@ -280,12 +278,10 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
       >
         {t(lang, "highlights.growth.desc")}
       </p>
-    </Reveal>
+    </div>
 
     <!-- Right card -->
-    <Reveal
-      as="div"
-      delay={140}
+    <div
       class="min-w-0 rounded-lg border border-gray-200 dark:border-gray-700 p-5 sm:p-6"
     >
       <h3 class="font-semibold text-xl text-center">
@@ -297,7 +293,7 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
       >
         {t(lang, "highlights.enjoy.desc")}
       </p>
-    </Reveal>
+    </div>
 
     <!-- Center card (Tech stack) -->
     <Reveal
@@ -340,116 +336,7 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
             }
           </div>
         </div>
-      </div>
-    </Reveal>
-  </section>
-
-  <!-- METRICS / HIGHLIGHTS -->
-  <section class="max-w-7xl mx-auto px-4 pb-24">
-    <Reveal as="header" class="mb-10 max-w-3xl mx-auto text-center" delay={0}>
-      <h3
-        class="mt-4 text-4xl md:text-5xl font-bold tracking-tight leading-snug
-             bg-linear-to-r from-emerald-400 via-teal-400 to-green-500
-             bg-clip-text text-transparent"
-      >
-        {t(lang, "metrics.title")}
-      </h3>
-
-      <p
-        class="mt-5 text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300"
-      >
-        {t(lang, "metrics.subtitle")}
-      </p>
-    </Reveal>
-
-    <!-- Bar -->
-    <div class="flex justify-center">
-      <Reveal delay={160} class="w-full max-w-5xl">
-        <div
-          class="group relative overflow-hidden rounded-2xl
-               border border-emerald-500/25
-               bg-linear-to-r from-emerald-700/30 via-teal-700/25 to-green-700/30
-               dark:bg-white/5 backdrop-blur
-               p-8 md:p-10
-               shadow-lg shadow-emerald-500/15
-               transition-all duration-500
-               hover:-translate-y-1 hover:shadow-emerald-500/30"
-        >
-          <!-- Glow -->
-          <div
-            class="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full
-                 bg-emerald-500/25 blur-3xl opacity-80"
-            aria-hidden="true"
-          >
-          </div>
-          <div
-            class="pointer-events-none absolute -bottom-28 -right-24 h-80 w-80 rounded-full
-                 bg-teal-400/15 blur-3xl opacity-70"
-            aria-hidden="true"
-          >
-          </div>
-
-          <!-- Items -->
-          <div
-            class="relative grid grid-cols-2 md:grid-cols-4
-                 items-stretch
-                 gap-y-10 gap-x-6 text-center"
-          >
-            {
-              [
-                {
-                  kind: "text",
-                  value: t(lang, "metrics.engineer.value"),
-                  label: t(lang, "metrics.engineer.label"),
-                },
-                {
-                  kind: "count",
-                  to: 20,
-                  suffix: "+",
-                  label: t(lang, "metrics.certs"),
-                },
-                {
-                  kind: "count",
-                  to: 25,
-                  suffix: "+",
-                  label: t(lang, "metrics.tech"),
-                },
-                {
-                  kind: "count",
-                  to: 3,
-                  suffix: "",
-                  label: t(lang, "metrics.projects"),
-                },
-              ].map((m, idx) => (
-                <Reveal delay={220 + idx * 90}>
-                  <div class="flex h-full flex-col items-center justify-center">
-                    <div
-                      class="text-4xl md:text-5xl font-extrabold tracking-tight text-white
-                           drop-shadow-[0_8px_18px_rgba(16,185,129,0.25)] tabular-nums"
-                    >
-                      {m.kind === "count" ? (
-                        <CountUp
-                          client:load
-                          to={m.to}
-                          duration={2200}
-                          suffix={m.suffix}
-                        />
-                      ) : (
-                        m.value
-                      )}
-                    </div>
-
-                    <div class="mt-3 text-sm md:text-base text-white/85 leading-snug max-w-[20ch]">
-                      {m.label}
-                    </div>
-                  </div>
-                </Reveal>
-              ))
-            }
-          </div>
-        </div>
-      </Reveal>
-    </div>
+</div>
   </section>
 
   <!-- INTERESTS -->
