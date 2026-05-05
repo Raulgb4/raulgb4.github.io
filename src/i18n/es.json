@@ -146,16 +146,15 @@
   "projects.linkedin.desc": "Análisis de un conjunto de datos a gran escala de ofertas de empleo publicadas en LinkedIn (2023–2024), orientado a extraer insights sobre demanda laboral, habilidades, ubicaciones, modalidades de trabajo y patrones salariales mediante flujos de análisis propios de entornos de business analytics.",
 
   "hero.subtitle": "Ingeniero Informático · Análisis de datos",
-  "hero.description": "Diseño y desarrollo soluciones de software prácticas, convirtiendo ideas y requisitos en herramientas fiables que aportan valor real.",
-  "highlights.growth.title": "En continuo crecimiento",
-  "highlights.growth.desc": "Sólida base técnica, junto con una motivación constante por aprender, mejorar y adaptarme a nuevas tecnologías en proyectos reales.",
+  "hero.description": "Diseño soluciones de software basadas en datos para ayudar a tomar mejores decisiones.",
+  "highlights.growth.title": "Cómo trabajo",
+  "highlights.growth.desc": "Aprendizaje constante y adaptación a nuevas tecnologías en proyectos reales.",
 
-  "highlights.enjoy.title": "Qué disfruto construir",
-  "highlights.enjoy.desc": "Soluciones software que combinan desarrollo, datos y comunicación para apoyar la toma de decisiones y mejorar productos reales.",
+  "highlights.enjoy.title": "Qué construyo",
+  "highlights.enjoy.desc": "Herramientas basadas en datos que mejoran productos y decisiones.",
 
   "highlights.stack.title": "Stack tecnológico",
   "metrics.title": "Aspectos destacados",
-  "metrics.subtitle": "Aspectos clave de mi perfil, base técnica y experiencia práctica en proyectos.",
 
   "metrics.engineer.value": "Ingeniero",
   "metrics.engineer.label": "Listo para resolver problemas",
@@ -165,7 +164,6 @@
   "metrics.projects": "Proyectos desarrollados",
 
   "interests.title": "Intereses",
-  "interests.subtitle": "Áreas en las que quiero crecer y generar impacto real.",
 
   "interests.cards.data.title": "Análisis de datos y visualización",
   "interests.cards.data.text": "Análisis de datos y creación de visualizaciones claras y herramientas visuales que facilitan la comprensión y la toma de decisiones.",
@@ -177,15 +175,13 @@
   "interests.cards.cloud.text": "Interés en el diseño de flujos de datos y su integración con modelos de inteligencia artificial, incluyendo embeddings, búsqueda semántica y sistemas tipo RAG.",
 
   "keyTech.title": "Tecnologías clave",
-  "keyTech.subtitle": "Herramientas y tecnologías que utilizo para desarrollar soluciones basadas en datos de principio a fin.",
 
   "keyTech.data.title": "Datos y analítica",
-  "keyTech.data.description": "Exploración de datos, creación de paneles visuales y transformación de la información en conclusiones claras y prácticas.",
+  
 
   "keyTech.additional": "Herramientas adicionales",
 
   "keyTech.dev.title": "Desarrollo y herramientas",
-  "keyTech.dev.description": "Desarrollo de interfaces web y aplicaciones mediante herramientas modernas, control de versiones y flujos de trabajo ágiles.",
 
   "reviews.title": "Valoraciones profesionales",
   "reviews.subtitle": "Algunas palabras de supervisores y mentores que han seguido mi trabajo en proyectos reales.",
@@ -197,9 +193,9 @@
   "reviews.dekra.quote": "Gracias, Raúl. Nos sorprendió la rapidez con la que te adaptaste al proyecto, aportando desde el primer día y entregando funcionalidades de primer nivel. Ha sido un placer contar contigo en el equipo. Te espera una carrera profesional llena de éxitos.",
   "reviews.dekra.role": "Desarrollo Full Stack · DEKRA Digital Solutions",
   "cv.title": "Currículum Vitae",
-  "cv.subtitle": "Descarga mi CV para una visión detallada de mi formación y experiencia.",
-  "cv.cardTitle": "CV · Raúl García Balongo",
-  "cv.cardText": "Incluye formación académica, proyectos, habilidades técnicas y experiencia.",
+  
+  "cv.cardTitle": "Curriculum Vitae",
+  
   "cv.download": "Descargar CV",
   "about.hero.intro": "Soy ",
   "about.hero.role": "Ingeniero Informático",
@@ -207,41 +203,44 @@
   "home.hero.title.decisions": "decisiones",
   "home.hero.title.middle": " y convirtiendo ideas en",
   "home.hero.title.products": "productos",
-  "home.hero.title.afterProducts": " fiables.",
+  "home.hero.title.afterProducts": " fiables",
 
-  "home.hero.subtitle": "Ingeniero Informático (Sistemas de Información) por la Universidad de Málaga, centrado en el análisis de datos y en crear soluciones prácticas que apoyen la toma de decisiones.",
+
+
+
+  "home.hero.subtitle": "Ingeniero Informático enfocado en análisis de datos y desarrollo de soluciones prácticas para la toma de decisiones.",
 
   "home.hero.bullets.1.before": "Base sólida en",
   "home.hero.bullets.1.highlight": "matemáticas, estadística y razonamiento lógico",
 
-  "home.hero.bullets.2.before": "Experiencia trabajando con",
-  "home.hero.bullets.2.tech": "Python, SQL, Spark, Power BI, Tableau",
+  "home.hero.bullets.2.before": "Experiencia con",
+  "home.hero.bullets.2.tech": "Python, SQL, Spark, Power BI y Tableau",
   "home.hero.bullets.2.middle": "y entornos cloud como",
   "home.hero.bullets.2.cloud": "Azure",
 
-  "home.hero.bullets.3.before": "Experiencia trabajando en equipo con",
+  "home.hero.bullets.3.before": "Trabajo en equipo con",
   "home.hero.bullets.3.highlight": "metodologías ágiles",
   "home.hero.bullets.3.after": "y código limpio y mantenible.",
 
   "home.traits.curiosity.title": "Curiosidad",
-  "home.traits.curiosity.beforeWhy": "Me gusta entender el ",
-  "home.traits.curiosity.why": "“por qué” detrás de los datos",
-  "home.traits.curiosity.afterWhy": " y explorar patrones.",
+  "home.traits.curiosity.beforeWhy": "",
+  "home.traits.curiosity.why": "Entender el “por qué” de los datos",
+  "home.traits.curiosity.afterWhy": " y detectar patrones.",
 
   "home.traits.criticalThinking.title": "Pensamiento crítico",
-  "home.traits.criticalThinking.before": "Cuestiono conclusiones, valido supuestos y busco ",
-  "home.traits.criticalThinking.highlight": "conclusiones sólidas",
+  "home.traits.criticalThinking.before": "",
+  "home.traits.criticalThinking.highlight": "Cuestionar supuestos y validar conclusiones con datos",
 
   "home.traits.communication.title": "Comunicación",
-  "home.traits.communication.before": "Transformo el análisis técnico en ",
-  "home.traits.communication.highlight": "mensajes claros",
-  "home.traits.communication.after": ", orientados a la toma de decisiones y a los siguientes pasos.",
+  "home.traits.communication.before": "",
+  "home.traits.communication.highlight": "Convertir análisis técnico en mensajes claros",
+  "home.traits.communication.after": " para la toma de decisiones.",
 
   "home.next.title": "Hacia dónde quiero avanzar",
 
   "home.next.beforeJunior": "Mi objetivo es incorporarme a un equipo como ",
   "home.next.engineer": "ingeniero",
-  "home.next.middle": ", aportando desde el primer día en proyectos reales mientras construyo una carrera sólida en ",
+  "home.next.middle": "aportando desde el primer día en proyectos reales mientras construyo una carrera sólida en ",
   "home.next.dataAnalysis": "Análisis de Datos",
   "home.next.businessIntelligence": "Business Intelligence",
   "home.next.dataOrientedDev": "desarrollo orientado a datos",

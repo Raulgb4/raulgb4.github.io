@@ -156,43 +156,47 @@ const pageSeo = {
           </header>
 
           <!-- Bullets -->
-          <ul
-            class="space-y-3 text-base md:text-lg text-gray-700 dark:text-gray-200"
-          >
-            <li class="flex items-start gap-3">
-              <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-emerald-400/90"
+          <ul class="space-y-3 text-base md:text-lg text-gray-700 dark:text-gray-200">
+            <li class="grid grid-cols-[0.5rem_1fr] gap-3">
+              <span
+                class="mt-[0.7rem] h-2 w-2 rounded-full bg-emerald-400/90"
+                aria-hidden="true"
               ></span>
               <span class="leading-relaxed">
                 {t(lang, "home.hero.bullets.1.before")}
-                <span class="font-semibold"
-                  >{t(lang, "home.hero.bullets.1.highlight")}</span
-                >.
+                <span class="font-semibold">
+                  {t(lang, "home.hero.bullets.1.highlight")}.
+                </span>
               </span>
             </li>
 
-            <li class="flex items-start gap-3">
-              <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-emerald-400/90"
+            <li class="grid grid-cols-[0.5rem_1fr] gap-3">
+              <span
+                class="mt-[0.7rem] h-2 w-2 rounded-full bg-emerald-400/90"
+                aria-hidden="true"
               ></span>
               <span class="leading-relaxed">
                 {t(lang, "home.hero.bullets.2.before")}
-                <span class="font-semibold"
-                  >{t(lang, "home.hero.bullets.2.tech")}</span
-                >
+                <span class="font-semibold">
+                  {t(lang, "home.hero.bullets.2.tech")}
+                </span>
                 {t(lang, "home.hero.bullets.2.middle")}
-                <span class="font-semibold"
-                  >{t(lang, "home.hero.bullets.2.cloud")}</span
-                >.
+                <span class="font-semibold">
+                  {t(lang, "home.hero.bullets.2.cloud")}.
+                </span>
               </span>
             </li>
 
-            <li class="flex items-start gap-3">
-              <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-emerald-400/90"
+            <li class="grid grid-cols-[0.5rem_1fr] gap-3">
+              <span
+                class="mt-[0.7rem] h-2 w-2 rounded-full bg-emerald-400/90"
+                aria-hidden="true"
               ></span>
               <span class="leading-relaxed">
                 {t(lang, "home.hero.bullets.3.before")}
-                <span class="font-semibold"
-                  >{t(lang, "home.hero.bullets.3.highlight")}</span
-                >
+                <span class="font-semibold">
+                  {t(lang, "home.hero.bullets.3.highlight")}
+                </span>
                 {t(lang, "home.hero.bullets.3.after")}
               </span>
             </li>
@@ -208,11 +212,6 @@ const pageSeo = {
                hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
             >
               <div class="flex items-start gap-3">
-                <div
-                  class="h-10 w-10 shrink-0 rounded-xl bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center"
-                >
-                  <span class="text-emerald-600 dark:text-emerald-300">✦</span>
-                </div>
                 <div>
                   <h3
                     class="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100"
@@ -240,11 +239,7 @@ const pageSeo = {
                hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
             >
               <div class="flex items-start gap-3">
-                <div
-                  class="h-10 w-10 shrink-0 rounded-xl bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center"
-                >
-                  <span class="text-emerald-600 dark:text-emerald-300">⌁</span>
-                </div>
+                
                 <div>
                   <h3
                     class="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100"
@@ -271,11 +266,6 @@ const pageSeo = {
                hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300"
             >
               <div class="flex items-start gap-3">
-                <div
-                  class="h-10 w-10 shrink-0 rounded-xl bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center"
-                >
-                  <span class="text-emerald-600 dark:text-emerald-300">↗</span>
-                </div>
                 <div>
                   <h3
                     class="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100"
@@ -349,7 +339,7 @@ const pageSeo = {
              text-gray-800 dark:text-gray-100 leading-relaxed"
           >
             {t(lang, "home.next.beforeJunior")}
-            <span class="font-semibold">{t(lang, "home.next.engineer")}</span>
+            <span class="font-semibold">{t(lang, "home.next.engineer")},</span>
             {t(lang, "home.next.middle")}
             <span class="font-semibold"
               >{t(lang, "home.next.dataAnalysis")}</span
@@ -380,11 +370,10 @@ const pageSeo = {
             <div class="flex items-center gap-2">
               <span
                 class="inline-flex h-9 w-9 items-center justify-center rounded-xl
-                 bg-emerald-500/10 text-emerald-600 dark:text-emerald-300
-                 border border-emerald-500/20
-                 group-hover:bg-emerald-500/15 transition"
+              bg-emerald-500/10 text-emerald-600 dark:text-emerald-300
+                border border-emerald-500/20
+              group-hover:bg-emerald-500/15 transition"
               >
-                <!-- icon: target -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -393,10 +382,11 @@ const pageSeo = {
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                 >
-                  <circle cx="12" cy="12" r="9"></circle>
-                  <circle cx="12" cy="12" r="5"></circle>
-                  <path d="M12 7v5l3 3"></path>
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
               </span>
               <h3
@@ -454,23 +444,35 @@ const pageSeo = {
               </h3>
             </div>
 
-            <ul
-              class="mt-3 space-y-2 text-sm md:text-base text-gray-600 dark:text-gray-300"
-            >
-              <li class="flex items-baseline gap-2">
-                <span class="inline-block h-1.5 w-1.5 rounded-full bg-gray-400"
+            <ul class="mt-3 space-y-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
+              <li class="flex items-start gap-2">
+                <span
+                  class="relative top-[0.68em] h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"
+                  aria-hidden="true"
                 ></span>
-                <span>{t(lang, "home.cards.notFocus.item1")}</span>
+                <span class="leading-7 md:leading-7">
+                  {t(lang, "home.cards.notFocus.item1")}
+                </span>
               </li>
-              <li class="flex items-baseline gap-2">
-                <span class="inline-block h-1.5 w-1.5 rounded-full bg-gray-400"
+
+              <li class="flex items-start gap-2">
+                <span
+                  class="relative top-[0.68em] h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"
+                  aria-hidden="true"
                 ></span>
-                <span>{t(lang, "home.cards.notFocus.item2")}</span>
+                <span class="leading-7 md:leading-7">
+                  {t(lang, "home.cards.notFocus.item2")}
+                </span>
               </li>
-              <li class="flex items-baseline gap-2">
-                <span class="inline-block h-1.5 w-1.5 rounded-full bg-gray-400"
+
+              <li class="flex items-start gap-2">
+                <span
+                  class="relative top-[0.68em] h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"
+                  aria-hidden="true"
                 ></span>
-                <span>{t(lang, "home.cards.notFocus.item3")}</span>
+                <span class="leading-7 md:leading-7">
+                  {t(lang, "home.cards.notFocus.item3")}
+                </span>
               </li>
             </ul>
           </div>
@@ -488,11 +490,10 @@ const pageSeo = {
             <div class="flex items-center gap-2">
               <span
                 class="inline-flex h-9 w-9 items-center justify-center rounded-xl
-                 bg-emerald-500/10 text-emerald-600 dark:text-emerald-300
-                 border border-emerald-500/20
-                 group-hover:bg-emerald-500/15 transition"
+                      bg-emerald-500/10 text-emerald-600 dark:text-emerald-300
+                      border border-emerald-500/20
+                      group-hover:bg-emerald-500/15 transition"
               >
-                <!-- icon: spark -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -502,9 +503,12 @@ const pageSeo = {
                   stroke="currentColor"
                   stroke-width="2"
                 >
-                  <path
-                    d="M12 2l1.5 6L20 10l-6.5 2L12 22l-1.5-10L4 10l6.5-2L12 2z"
-                  ></path>
+                  <circle cx="12" cy="12" r="8"></circle>
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <line x1="12" y1="2" x2="12" y2="4"></line>
+                  <line x1="12" y1="20" x2="12" y2="22"></line>
+                  <line x1="2" y1="12" x2="4" y2="12"></line>
+                  <line x1="20" y1="12" x2="22" y2="12"></line>
                 </svg>
               </span>
               <h3

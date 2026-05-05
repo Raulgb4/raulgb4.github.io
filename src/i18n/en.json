@@ -144,16 +144,16 @@
   "projects.linkedin.desc": "End-to-end analysis of a large-scale dataset of LinkedIn job postings (2023–2024), aimed at extracting insights on job demand, skills, locations, work modalities, and salary patterns using workflows typical of business analytics environments.",
 
   "hero.subtitle": "Computer Science Engineer · Data Analysis",
-  "hero.description": "I design and build practical software solutions, transforming ideas and requirements into reliable tools that create real-world value.",
-  "highlights.growth.title": "Continuous growth",
-  "highlights.growth.desc": "Strong technical background combined with a constant drive to learn, improve, and adapt to new technologies in real project environments.",
+  "hero.description": "I design data-driven software solutionsto help make better decisions.",
 
-  "highlights.enjoy.title": "What I enjoy building",
-  "highlights.enjoy.desc": "Software solutions that combine development, data, and clear communication to support decision-making and improve real products.",
+  "highlights.growth.title": "How I work",
+"highlights.growth.desc": "Continuous learning and adaptation to new technologies in real projects.",
+
+"highlights.enjoy.title": "What I build",
+"highlights.enjoy.desc": "Data-driven tools that improve products and decision-making.",
 
   "highlights.stack.title": "Tech Stack",
   "metrics.title": "Highlights",
-  "metrics.subtitle": "Key highlights of my profile, technical background, and hands-on project experience.",
 
   "metrics.engineer.value": "Engineer",
   "metrics.engineer.label": "Ready to solve problems",
@@ -163,7 +163,6 @@
   "metrics.projects": "End-to-end projects built",
 
   "interests.title": "Interests",
-  "interests.subtitle": "Areas where I’m focused on growing and building real impact.",
 
   "interests.cards.data.title": "Data Analysis & Dashboards",
   "interests.cards.data.text": "Analyzing data and designing clear dashboards and visual tools to support understanding and decision-making.",
@@ -174,14 +173,13 @@
   "interests.cards.cloud.title": "Data and AI-based systems",
   "interests.cards.cloud.text": "Interest in designing data pipelines and integrating them with artificial intelligence models, including embeddings, semantic search, and RAG-based systems.",
   "keyTech.title": "Key Technologies",
-  "keyTech.subtitle": "Tools and technologies I use to build data-driven solutions end to end.",
 
   "keyTech.data.title": "Data & Analytics",
-  "keyTech.data.description": "Exploring data, building dashboards, and turning information into clear, practical insights.",
+  
 
   "keyTech.additional": "Additional tools",
   "keyTech.dev.title": "Development & Tooling",
-  "keyTech.dev.description": "Building web interfaces and reliable apps with modern tools, version control, and cloud-ready workflows.",
+  
   "reviews.title": "Professional Feedback",
   "reviews.subtitle": "A couple of words from supervisors and mentors who followed my work in real projects.",
   "reviews.viewLinkedIn": "View on LinkedIn",
@@ -192,9 +190,7 @@
   "reviews.dekra.quote": "Thank you, Raúl! We were impressed by how quickly you adapted to the project—contributing from day one and delivering top-level features. It was a pleasure having you on the team. You have a professional career full of success ahead.",
   "reviews.dekra.role": "Full Stack Development · DEKRA Digital Solutions",
   "cv.title": "Curriculum Vitae",
-  "cv.subtitle": "Download my CV for a detailed overview of my background and experience.",
-  "cv.cardTitle": "CV · Raúl García Balongo",
-  "cv.cardText": "Includes education, projects, technical skills, and experience.",
+  "cv.cardTitle": "Curriculum Vitae",
   "cv.download": "Download CV",
   "about.hero.intro": "I’m ",
   "about.hero.role": "Computer Science Engineer",
@@ -202,34 +198,39 @@
   "home.hero.title.decisions": "decisions",
   "home.hero.title.middle": "and ideas into reliable",
   "home.hero.title.products": "products",
-  "home.hero.title.afterProducts": ".",
-  "home.hero.subtitle": "Computer Science Engineer (Information Systems) from the University of Málaga, focused on data analysis and building practical solutions that support decision-making.",
+  "home.hero.title.afterProducts": "",
 
-  "home.hero.bullets.1.before": "Strong foundation in",
-  "home.hero.bullets.1.highlight": "mathematics, statistics, and logical reasoning",
 
-  "home.hero.bullets.2.before": "Comfortable with",
-  "home.hero.bullets.2.tech": "Python, SQL, Spark, Power BI, Tableau",
-  "home.hero.bullets.2.middle": "and cloud environments like",
-  "home.hero.bullets.2.cloud": "Azure",
 
-  "home.hero.bullets.3.before": "Experienced working in teams with",
-  "home.hero.bullets.3.highlight": "agile workflows",
-  "home.hero.bullets.3.after": "and clean, maintainable code.",
+  "home.hero.subtitle": "Computer Science Engineer focused on data analysis and building practical solutions for better decision-making.",
 
-  "home.traits.curiosity.title": "Curiosity",
-  "home.traits.curiosity.beforeWhy": "I enjoy understanding the ",
-  "home.traits.curiosity.why": "“why” behind the data",
-  "home.traits.curiosity.afterWhy": " and exploring patterns.",
+"home.hero.bullets.1.before": "Strong foundation in",
+"home.hero.bullets.1.highlight": "mathematics, statistics, and logical reasoning",
 
-  "home.traits.criticalThinking.title": "Critical thinking",
-  "home.traits.criticalThinking.before": "I question conclusions, validate assumptions, and aim for ",
-  "home.traits.criticalThinking.highlight": "robust insights",
+"home.hero.bullets.2.before": "Experience with",
+"home.hero.bullets.2.tech": "Python, SQL, Spark, Power BI and Tableau",
+"home.hero.bullets.2.middle": "and cloud platforms like",
+"home.hero.bullets.2.cloud": "Azure",
 
-  "home.traits.communication.title": "Communication",
-  "home.traits.communication.before": "I translate technical analysis into ",
-  "home.traits.communication.highlight": "clear stories",
-  "home.traits.communication.after": ", decisions, and next steps.",
+"home.hero.bullets.3.before": "Teamwork with",
+"home.hero.bullets.3.highlight": "agile methodologies",
+"home.hero.bullets.3.after": "and clean, maintainable code.",
+
+"home.traits.curiosity.title": "Curiosity",
+"home.traits.curiosity.beforeWhy": "",
+"home.traits.curiosity.why": "Understanding the “why” behind data",
+"home.traits.curiosity.afterWhy": " and identifying patterns.",
+
+"home.traits.criticalThinking.title": "Critical thinking",
+"home.traits.criticalThinking.before": "",
+"home.traits.criticalThinking.highlight": "Challenging assumptions and validating conclusions with data",
+
+"home.traits.communication.title": "Communication",
+"home.traits.communication.before": "",
+"home.traits.communication.highlight": "Turning technical analysis into clear insights",
+"home.traits.communication.after": " for better decisions.",
+
+
 
   "home.next.title": "Where I’m heading next",
 

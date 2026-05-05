@@ -407,19 +407,9 @@ const linkClass = (path: string) =>
 
     const setOpen = (open) => {
       menu.classList.toggle("hidden", !open);
-      if (backdrop) {
-        backdrop.classList.toggle("hidden", !open);
-        backdrop.inert = open ? false : true;
-      }
+      if (backdrop) backdrop.classList.toggle("hidden", !open);
       btn.setAttribute("aria-expanded", open ? "true" : "false");
       document.documentElement.classList.toggle("overflow-hidden", open);
-
-      if (open) {
-        requestAnimationFrame(() => {
-          const firstLink = menu.querySelector("a");
-          firstLink?.focus();
-        });
-      }
     };
 
     // Estado inicial
