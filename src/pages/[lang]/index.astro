@@ -397,8 +397,6 @@ const snapshotItems = [
       >
         {t(lang, "metrics.title")}
       </h3>
-
-    
     </Reveal>
 
     <!-- Bar -->
@@ -501,7 +499,6 @@ const snapshotItems = [
       >
         {t(lang, "interests.title")}
       </h3>
-
     </Reveal>
 
     <div class="grid gap-6 md:grid-cols-3">
@@ -627,7 +624,6 @@ const snapshotItems = [
       >
         {t(lang, "keyTech.title")}
       </h3>
-
     </Reveal>
 
     <div class="grid gap-6 md:grid-cols-2">
@@ -686,8 +682,6 @@ const snapshotItems = [
                   {t(lang, "keyTech.data.title")}
                 </h4>
               </div>
-
-              
             </div>
           </div>
 
@@ -813,8 +807,6 @@ const snapshotItems = [
                   {t(lang, "keyTech.dev.title")}
                 </h4>
               </div>
-
-            
             </div>
           </div>
 
@@ -1078,73 +1070,77 @@ const snapshotItems = [
       >
         {t(lang, "cv.title")}
       </h3>
-
-      
     </Reveal>
 
-  <!-- CTA Card (visual version) -->
-  <div class="flex justify-center">
-    <Reveal delay={180} class="w-full max-w-3xl">
-      <div
-        class="group relative overflow-hidden rounded-3xl
+    <!-- CTA Card (visual version) -->
+    <div class="flex justify-center">
+      <Reveal delay={180} class="w-full max-w-3xl">
+        <div
+          class="group relative overflow-hidden rounded-3xl
               border border-emerald-500/25
               bg-white/70 dark:bg-white/5 backdrop-blur
               p-6 md:p-7
               shadow-lg shadow-emerald-500/15
               transition-all duration-300
               hover:-translate-y-1 hover:shadow-emerald-500/25"
-      >
-        <!-- Decorative glow -->
-        <div
-          class="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full
+        >
+          <!-- Decorative glow -->
+          <div
+            class="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full
                 bg-emerald-500/25 blur-3xl opacity-70"
-          aria-hidden="true"
-        ></div>
+            aria-hidden="true"
+          >
+          </div>
 
-        <div
-          class="pointer-events-none absolute inset-x-0 top-0 h-px
+          <div
+            class="pointer-events-none absolute inset-x-0 top-0 h-px
                 bg-linear-to-r from-transparent via-emerald-400/60 to-transparent"
-          aria-hidden="true"
-        ></div>
+            aria-hidden="true"
+          >
+          </div>
 
-        <div class="relative flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-          <!-- Left content -->
-          <div class="flex items-center gap-4">
-            <div
-              class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl
+          <div
+            class="relative flex flex-col gap-5 md:flex-row md:items-center md:justify-between"
+          >
+            <!-- Left content -->
+            <div class="flex items-center gap-4">
+              <div
+                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl
                     border border-emerald-500/30
                     bg-emerald-500/10
                     shadow-inner shadow-emerald-500/10"
-              aria-hidden="true"
-            >
-              <svg
-                class="h-7 w-7 text-emerald-500"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                aria-hidden="true"
               >
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                <path d="M14 2v6h6" />
-                <path d="M12 18v-6" />
-                <path d="m9 15 3 3 3-3" />
-              </svg>
+                <svg
+                  class="h-7 w-7 text-emerald-500"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  ></path>
+                  <path d="M14 2v6h6"></path>
+                  <path d="M12 18v-6"></path>
+                  <path d="m9 15 3 3 3-3"></path>
+                </svg>
+              </div>
+
+              <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
+                {t(lang, "cv.cardTitle")}
+              </h4>
             </div>
 
-            <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
-              {t(lang, "cv.cardTitle")}
-            </h4>
-          </div>
-
-          <!-- Download button -->
-          <a
-            href={lang === "es"
-              ? "/assets/genericCV/Mi_CV_en_español.pdf"
-              : "/assets/genericCV/Mi_CV_en_inglés.pdf"}
-            download
-            class="inline-flex items-center justify-center
+            <!-- Download button -->
+            <a
+              href={lang === "es"
+                ? "/assets/genericCV/Mi_CV_en_español.pdf"
+                : "/assets/genericCV/Mi_CV_en_inglés.pdf"}
+              download
+              class="inline-flex items-center justify-center
                   rounded-full
                   px-7 py-3
                   text-sm font-semibold
@@ -1154,12 +1150,12 @@ const snapshotItems = [
                   transition-all duration-200
                   hover:bg-emerald-700 hover:scale-105
                   focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2"
-          >
-            {t(lang, "cv.download")}
-          </a>
+            >
+              {t(lang, "cv.download")}
+            </a>
+          </div>
         </div>
-      </div>
-    </Reveal>
-  </div>
+      </Reveal>
+    </div>
   </section>
 </Layout>
