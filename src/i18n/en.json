@@ -1,8 +1,7 @@
 {
-  "contact.title": "Let’s Talk",
+  "contact.title": "Contact",
   "contact.subtitle": "I’m excited to collaborate on innovative projects or discuss your next idea. Reach out via email or LinkedIn.",
   "contact.infoTitle": "Contact Information",
-  "contact.cta": "Feel free to reach out if you're interested in collaborating. I'm always open to new opportunities and challenges.",
   "common.email": "Email",
   "common.location": "Location",
   "nav.home": "Home",
@@ -86,33 +85,40 @@
 
   "experience.title": "Experience",
   "experience.subtitle": "Professional experience, academic projects, education, certifications, and research activities.",
-  "experience.timeline.title": "Experience Timeline",
 
-  "experience.items.paper.title": "Research Paper (In Progress)",
-  "experience.items.paper.subtitle": "Scientific article based on my Final Degree Project",
+
+
+
+
+  "experience.items.paper.title": "Research Paper in Progress",
+  "experience.items.paper.subtitle": "Based on my Final Degree Project",
   "experience.items.paper.period": "Oct. 2025 – Present",
   "experience.items.paper.grade": "In progress",
-  "experience.items.paper.desc": "Currently collaborating on the preparation of a scientific article based on my Final Degree Project, with the goal of submitting it to a journal or conference focused on educational technology and data analysis.",
+  "experience.items.paper.desc": "Collaborating on a research paper based on my Final Degree Project, focused on educational technology and data analysis.",
 
   "experience.items.mda.title": "Moodle Data Analyzer",
   "experience.items.mda.subtitle": "University of Málaga · Final Degree Project",
   "experience.items.mda.period": "Jan. 2025 – Sept. 2025",
-  "experience.items.mda.desc": "Design and development of a browser-based data analysis tool for extracting, processing, and visualizing Moodle academic data to support data-driven decision-making. Built interactive dashboards with strong focus on data storytelling, and generated exportable analytical reports (PDF, CSV, DOCX).",
+  "experience.items.mda.desc": "Development of a Moodle data analysis tool focused on academic data visualization and decision support through interactive dashboards and exportable reports.",
+
 
   "experience.items.dekra.title": "DEKRA Digital & Product Solutions",
   "experience.items.dekra.subtitle": "Internship",
   "experience.items.dekra.period": "March 2025 – May 2025",
-  "experience.items.dekra.desc": "Developed and maintained full-stack web features for a cybersecurity platform, working with Django, Angular, and PostgreSQL in a production environment. Implemented backend logic and integrated frontend components, improving the consistency and functionality of multiple application modules. Participated in deployment and environment management using Docker, enabling a more stable and reproducible development process. Collaborated in an agile working environment, using Jira for task planning and GitLab for version control and code integration. Actively contributed to production code, gaining hands-on professional experience and strengthening teamwork skills.",
+  "experience.items.dekra.desc": "Developed and maintained full-stack web features for a cybersecurity platform using Django, Angular, and PostgreSQL. Worked in an agile environment with Docker, Jira, and GitLab, contributing to production code and data-oriented application modules.",
 
   "experience.items.degree.title": "Bachelor’s Degree in Computer Science Engineering",
   "experience.items.degree.subtitle": "University of Málaga · Specialization in Information Systems",
   "experience.items.degree.period": "2020 – 2025",
-  "experience.items.degree.desc": "Bachelor’s Degree in Computer Engineering from the University of Málaga, with a specialization in Information Systems and an education focused on data analysis and information management to support decision-making. Acquired a solid foundation in programming, databases, mathematics, and statistics, as well as in the design and analysis of information systems, developing a structured view of the data lifecycle. Progressive specialization in data analysis and Business Intelligence, working with Python, SQL, Power BI, and cloud environments. Applied these skills in academic projects and industry internships, strengthening teamwork and technical communication.",
+  "experience.items.degree.desc": "Education focused on data analysis, Business Intelligence, and software development, with a strong foundation in programming, databases, statistics, and information systems applied through academic projects and professional internships.",
 
   "experience.items.bach.title": "Technological Baccalaureate",
   "experience.items.bach.subtitle": "IES Torre Almirante",
   "experience.items.bach.period": "2018 – 2020",
-  "experience.items.bach.desc": "Technological Baccalaureate focused on logical thinking, academic mathematics, and structured problem solving, serving as the foundation of my subsequent technical education. This stage strengthened analytical reasoning skills and provided a solid base for further studies in computer science engineering.",
+  "experience.items.bach.desc": "Education focused on mathematics, logical thinking, and structured problem solving, providing the foundation for my later studies in computer science engineering.",
+
+  
+  
   "experience.gradeLabel": "Grade:",
   "common.logo": "logo",
   "experience.research.title": "Research Paper",
@@ -194,11 +200,10 @@
   "cv.download": "Download CV",
   "about.hero.intro": "I’m ",
   "about.hero.role": "Computer Science Engineer",
-  "home.hero.title.beforeDecisions": "Turning data into",
-  "home.hero.title.decisions": "decisions",
-  "home.hero.title.middle": "and ideas into reliable",
-  "home.hero.title.products": "products",
-  "home.hero.title.afterProducts": "",
+
+
+
+  "home.hero.title": "Turning data into decisions and ideas into reliable products",
 
 
 

@@ -3,7 +3,6 @@
   "contact.subtitle": "Si quieres comentar un proyecto, compartir una idea o simplemente charlar, puedes escribirme por correo electrónico o a través de LinkedIn.",
 
   "contact.infoTitle": "Información de contacto",
-  "contact.cta": "Escríbeme si te interesa colaborar. Estoy abierto a nuevas oportunidades y retos.",
   "common.email": "Email",
   "common.location": "Ubicación",
   "nav.home": "Inicio",
@@ -89,33 +88,42 @@
 
   "experience.title": "Experiencia",
   "experience.subtitle": "Experiencia profesional, proyectos académicos, formación, certificaciones y actividades de investigación.",
-  "experience.timeline.title": "Línea temporal de experiencia",
 
-  "experience.items.paper.title": "Artículo científico (en progreso)",
-  "experience.items.paper.subtitle": "Artículo basado en mi Trabajo de Fin de Grado",
+
+
+
+
+
+  "experience.items.paper.title": "Artículo científico en progreso",
+  "experience.items.paper.subtitle": "Basado en mi Trabajo de Fin de Grado",
   "experience.items.paper.period": "Oct. 2025 – Actualidad",
   "experience.items.paper.grade": "En progreso",
-  "experience.items.paper.desc": "Actualmente colaboro en la preparación de un artículo científico basado en mi Trabajo de Fin de Grado, con el objetivo de enviarlo a una revista o conferencia centrada en tecnología educativa y análisis de datos.",
+  "experience.items.paper.desc": "Colaboración en la preparación de un artículo científico basado en mi TFG, orientado a tecnología educativa y análisis de datos.",
+
 
   "experience.items.mda.title": "Moodle Data Analyzer",
   "experience.items.mda.subtitle": "Universidad de Málaga · Trabajo de Fin de Grado",
   "experience.items.mda.period": "Enero 2025 – Sept. 2025",
-  "experience.items.mda.desc": "Diseño y desarrollo de una herramienta de análisis de datos basada en navegador para extraer, procesar y visualizar datos académicos de Moodle con el fin de apoyar a los docentes mediante la toma de decisiones basada en datos. Se construyeron paneles interactivos y se generaron informes exportables en diferentes formatos.",
+  "experience.items.mda.desc": "Desarrollo de una herramienta de análisis de datos para Moodle orientada a la visualización de información académica y apoyo a la toma de decisiones mediante paneles interactivos e informes exportables.",
 
   "experience.items.dekra.title": "DEKRA Digital & Product Solutions",
   "experience.items.dekra.subtitle": "Prácticas",
   "experience.items.dekra.period": "Marzo 2025 – Mayo 2025",
-  "experience.items.dekra.desc": "Desarrollé y mantuve funcionalidades web full-stack para una plataforma de ciberseguridad, trabajando con Django, Angular y PostgreSQL en un entorno de producción. Implementé lógica de backend e integré componentes de frontend, mejorando la consistencia y funcionalidad de varios módulos. Participé en despliegue y gestión de entornos con Docker, permitiendo un desarrollo más estable y reproducible. Colaboré en un entorno ágil usando Jira para la planificación y GitLab para control de versiones e integración. Contribuí a código en producción, ganando experiencia profesional práctica y reforzando habilidades de trabajo en equipo.",
+  "experience.items.dekra.desc": "Desarrollo y mantenimiento de funcionalidades web full-stack para una plataforma de ciberseguridad usando Django, Angular y PostgreSQL. Trabajo en entorno ágil con Docker, Jira y GitLab, contribuyendo a código en producción y módulos orientados a análisis y gestión de datos.",
+
 
   "experience.items.degree.title": "Grado en Ingeniería Informática",
   "experience.items.degree.subtitle": "Universidad de Málaga · Especialidad en Sistemas de Información",
   "experience.items.degree.period": "2020 – 2025",
-  "experience.items.degree.desc": "Grado en Ingeniería Informática en la Universidad de Málaga, con especialidad en Sistemas de Información y una formación orientada al análisis y gestión de datos para apoyar la toma de decisiones. Adquirí una base sólida en programación, bases de datos, matemáticas y estadística, así como en el diseño y análisis de sistemas de información, desarrollando una visión estructurada del ciclo de vida de los datos. Especialización progresiva en análisis de datos y Business Intelligence, trabajando con Python, SQL, Power BI y entornos cloud. Apliqué estas habilidades en proyectos académicos y prácticas en empresa, reforzando el trabajo en equipo y la comunicación técnica.",
+  "experience.items.degree.desc": "Formación en Ingeniería Informática con especialidad en Sistemas de Información, orientada al análisis de datos, Business Intelligence y desarrollo de soluciones software. Base técnica en programación, bases de datos, estadística y sistemas de información aplicada en proyectos académicos y prácticas profesionales.",
+
 
   "experience.items.bach.title": "Bachillerato Tecnológico",
   "experience.items.bach.subtitle": "IES Torre Almirante",
   "experience.items.bach.period": "2018 – 2020",
-  "experience.items.bach.desc": "Bachillerato Tecnológico centrado en pensamiento lógico, matemáticas académicas y resolución estructurada de problemas, sirviendo como base de mi formación técnica posterior. Esta etapa reforzó el razonamiento analítico y proporcionó una base sólida para estudios posteriores en ingeniería informática.",
+  "experience.items.bach.desc": "Formación centrada en matemáticas, razonamiento lógico y resolución estructurada de problemas, como base para mi posterior formación en ingeniería informática.",
+
+
   "experience.gradeLabel": "Nota:",
   "common.logo": "logo",
   "experience.research.title": "Artículo científico",
@@ -199,11 +207,9 @@
   "cv.download": "Descargar CV",
   "about.hero.intro": "Soy ",
   "about.hero.role": "Ingeniero Informático",
-  "home.hero.title.beforeDecisions": "Transformando datos en",
-  "home.hero.title.decisions": "decisiones",
-  "home.hero.title.middle": " y convirtiendo ideas en",
-  "home.hero.title.products": "productos",
-  "home.hero.title.afterProducts": " fiables",
+
+
+  "home.hero.title": "Transformando datos en decisiones y convirtiendo ideas en productos fiables",
 
 
 

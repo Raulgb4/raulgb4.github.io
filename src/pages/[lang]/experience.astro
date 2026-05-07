@@ -57,24 +57,6 @@ const pageSeo = {
 
     <!-- TIMELINE -->
     <section class="space-y-8">
-      <!-- Header -->
-      <Reveal as="header" class="space-y-3" delay={0}>
-        <h2
-          class="text-2xl md:text-3xl font-semibold
-         text-emerald-500 tracking-tight"
-        >
-          {t(lang, "experience.timeline.title")}
-        </h2>
-
-        <Reveal delay={120}>
-          <div
-            class="h-0.5 w-16
-               bg-linear-to-r from-emerald-400 to-teal-400
-               rounded-full"
-          >
-          </div>
-        </Reveal>
-      </Reveal>
 
       <!-- Timeline -->
       <div class="relative">
@@ -644,17 +626,42 @@ const pageSeo = {
                             href={p.repoUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="inline-flex items-center justify-center gap-2
-                      rounded-lg px-4 py-2
-                      text-sm font-semibold
-                      text-emerald-400
-                      border border-emerald-500/40
-                      transition-all duration-300
-                      hover:bg-emerald-500/10 hover:-translate-y-0.5
-                      hover:border-emerald-400"
+                            class="group inline-flex items-center justify-center gap-2
+                                  rounded-xl px-6 py-3
+                                  text-base font-semibold
+                                  text-emerald-300
+                                  border border-emerald-400/40
+                                  bg-emerald-500/10
+                                  shadow-md shadow-emerald-500/10
+                                  transition-all duration-300
+                                  hover:bg-emerald-500/15
+                                  hover:border-emerald-300
+                                  hover:shadow-emerald-500/20
+                                  hover:-translate-y-0.5"
                           >
-                            {t(lang, "projects.repository")}
-                            <span aria-hidden="true">↗</span>
+                            <!-- GitHub icon -->
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="h-5 w-5"
+                              aria-hidden="true"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.58 2 12.238c0 4.525 2.865 8.362 6.839 9.718.5.096.682-.22.682-.487 0-.241-.009-.88-.013-1.728-2.782.62-3.369-1.37-3.369-1.37-.455-1.183-1.11-1.498-1.11-1.498-.907-.637.069-.624.069-.624 1.003.073 1.531 1.056 1.531 1.056.892 1.563 2.341 1.112 2.91.85.091-.667.349-1.112.635-1.368-2.22-.26-4.555-1.14-4.555-5.071 0-1.12.39-2.036 1.03-2.754-.103-.26-.447-1.309.098-2.729 0 0 .84-.275 2.75 1.052A9.33 9.33 0 0112 6.844c.85.004 1.705.118 2.505.345 1.909-1.327 2.748-1.052 2.748-1.052.546 1.42.202 2.469.1 2.729.64.718 1.028 1.634 1.028 2.754 0 3.942-2.339 4.808-4.566 5.063.359.316.678.94.678 1.894 0 1.368-.013 2.472-.013 2.808 0 .269.18.588.688.486C19.137 20.596 22 16.76 22 12.238 22 6.58 17.523 2 12 2z"
+                              ></path>
+                            </svg>
+
+                            <span>{t(lang, "projects.repository")}</span>
+
+                            <span
+                              class="text-lg transition-transform duration-300 group-hover:translate-x-0.5"
+                              aria-hidden="true"
+                            >
+                              ↗
+                            </span>
                           </a>
                         </div>
                       </div>
