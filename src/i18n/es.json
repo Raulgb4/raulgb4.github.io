@@ -156,6 +156,15 @@
   "projects.linkedin.title": "Análisis del mercado laboral en LinkedIn",
   "projects.linkedin.desc": "Análisis de un conjunto de datos a gran escala de ofertas de empleo publicadas en LinkedIn (2023–2024), orientado a extraer insights sobre demanda laboral, habilidades, ubicaciones, modalidades de trabajo y patrones salariales mediante flujos de análisis propios de entornos de business analytics.",
 
+  "snapshot.role.label": "Perfil",
+  "snapshot.role.value": "Datos · IA · Full-stack",
+  "snapshot.target.label": "Busco",
+  "snapshot.target.value": "Puesto a jornada completa",
+  "snapshot.focus.label": "Enfoque",
+  "snapshot.focus.value": "Python, SQL, IA aplicada, APIs y herramientas web",
+  "snapshot.work.label": "Modalidad",
+  "snapshot.work.value": "Remoto preferente · Híbrido abierto",
+
   "hero.subtitle": "Ingeniero Informático · Análisis de datos",
   "hero.description": "Diseño soluciones de software basadas en datos para ayudar a tomar mejores decisiones.",
   "highlights.growth.title": "Cómo trabajo",

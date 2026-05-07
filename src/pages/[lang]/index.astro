@@ -183,6 +183,25 @@ const devIcons: TechIcon[] = [
 ];
 
 const techStack: TechIcon[] = [...dataIcons, ...devIcons];
+
+const snapshotItems = [
+  {
+    label: t(lang, "snapshot.role.label"),
+    value: t(lang, "snapshot.role.value"),
+  },
+  {
+    label: t(lang, "snapshot.target.label"),
+    value: t(lang, "snapshot.target.value"),
+  },
+  {
+    label: t(lang, "snapshot.focus.label"),
+    value: t(lang, "snapshot.focus.value"),
+  },
+  {
+    label: t(lang, "snapshot.work.label"),
+    value: t(lang, "snapshot.work.value"),
+  },
+];
 ---
 
 <!--
@@ -196,6 +215,30 @@ const techStack: TechIcon[] = [...dataIcons, ...devIcons];
   point for recruiters and visitors.
 -->
 <Layout lang={lang} pageSeo={pageSeo}>
+  <!-- RECRUITER SNAPSHOT -->
+  <section class="max-w-7xl mx-auto px-4 pt-6">
+    <div
+      class="rounded-2xl border border-gray-200/70 dark:border-white/10
+             bg-white/70 dark:bg-white/5 backdrop-blur
+             px-4 py-4 shadow-sm shadow-emerald-500/5"
+    >
+      <dl class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          snapshotItems.map((item) => (
+            <div class="min-w-0 border-l-2 border-emerald-500/40 pl-3">
+              <dt class="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                {item.label}
+              </dt>
+              <dd class="mt-1 text-sm font-semibold leading-snug text-gray-900 dark:text-white">
+                {item.value}
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </section>
+
   <!-- HERO -->
   <section class="max-w-7xl mx-auto px-4 pt-10 pb-10 md:pt-14 md:pb-14">
     <div class="grid items-center gap-12 md:grid-cols-2">

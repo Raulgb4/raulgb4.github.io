@@ -152,6 +152,15 @@
   "projects.linkedin.title": "LinkedIn job market analysis",
   "projects.linkedin.desc": "End-to-end analysis of a large-scale dataset of LinkedIn job postings (2023–2024), aimed at extracting insights on job demand, skills, locations, work modalities, and salary patterns using workflows typical of business analytics environments.",
 
+  "snapshot.role.label": "Profile",
+  "snapshot.role.value": "Data · AI · Full-stack",
+  "snapshot.target.label": "Looking for",
+  "snapshot.target.value": "Full-time role",
+  "snapshot.focus.label": "Focus",
+  "snapshot.focus.value": "Python, SQL, applied AI, APIs and web tools",
+  "snapshot.work.label": "Work style",
+  "snapshot.work.value": "Remote preferred · Hybrid open",
+
   "hero.subtitle": "Computer Science Engineer · Data Analysis",
   "hero.description": "I design data-driven software solutionsto help make better decisions.",
 
