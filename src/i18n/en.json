@@ -2,6 +2,13 @@
   "contact.title": "Contact",
   "contact.subtitle": "I’m excited to collaborate on innovative projects or discuss your next idea. Reach out via email or LinkedIn.",
   "contact.infoTitle": "Contact Information",
+  "contact.sendEmail": "Send email",
+  "contact.linkedin": "Connect on LinkedIn",
+  "contact.downloadCv": "Download CV",
+  "contact.responseTime": "I usually reply within 24–48 hours.",
+  "contact.mapToggle": "View map",
+  "contact.copyEmail": "Copy email",
+  "contact.emailCopied": "Email copied",
   "common.email": "Email",
   "common.location": "Location",
   "nav.home": "Home",
@@ -147,7 +154,7 @@
   "projects.portfolio.title": "Personal Portfolio Website",
 
   "projects.portfolio.desc": "Multilingual portfolio website designed to showcase my professional profile, experience, and projects through a modern frontend architecture, interactive visualizations, and an interface optimized for clarity, performance, and usability.",
-  
+
   
   
   "projects.screenshot": "screenshot",

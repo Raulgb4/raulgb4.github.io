@@ -3,6 +3,13 @@
   "contact.subtitle": "Si quieres comentar un proyecto, compartir una idea o simplemente charlar, puedes escribirme por correo electrónico o a través de LinkedIn.",
 
   "contact.infoTitle": "Información de contacto",
+  "contact.sendEmail": "Enviar email",
+  "contact.linkedin": "Contactar en LinkedIn",
+  "contact.downloadCv": "Descargar CV",
+  "contact.responseTime": "Normalmente respondo en 24–48 horas.",
+  "contact.mapToggle": "Ver mapa",
+  "contact.copyEmail": "Copiar email",
+  "contact.emailCopied": "Email copiado",
   "common.email": "Email",
   "common.location": "Ubicación",
   "nav.home": "Inicio",
@@ -149,7 +156,7 @@
   "projects.portfolio.title": "Sitio web de portafolio personal",
   "projects.portfolio.desc": "Portfolio web multilingüe diseñado para presentar mi perfil profesional, experiencia y proyectos mediante una arquitectura frontend moderna, visualizaciones interactivas y una interfaz optimizada para claridad, rendimiento y usabilidad.",
   
-  
+
   "projects.screenshot": "captura",
   "projects.prevImage": "Imagen anterior",
   "projects.nextImage": "Imagen siguiente",
