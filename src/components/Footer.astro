@@ -5,11 +5,11 @@ const { lang = "en" } = Astro.props as { lang?: Lang };
 
 const navLinks = [
   { key: "nav.home", href: `/${lang}/` },
-  { key: "nav.about", href: `/${lang}/about` },
-  { key: "nav.help", href: `/${lang}/help` },
-  { key: "nav.experience", href: `/${lang}/experience` },
-  { key: "nav.faq", href: `/${lang}/faq` },
-  { key: "nav.contact", href: `/${lang}/contact` },
+  { key: "nav.about", href: `/${lang}/about/` },
+  { key: "nav.help", href: `/${lang}/help/` },
+  { key: "nav.experience", href: `/${lang}/experience/` },
+  { key: "nav.faq", href: `/${lang}/faq/` },
+  { key: "nav.contact", href: `/${lang}/contact/` },
 ];
 
 const socialLinks = [
@@ -32,12 +32,10 @@ const email = "raulgarciabalongoes@gmail.com";
   (LinkedIn, GitHub) and email. Designed as a consistent, lightweight footer
   shared across all pages.
 -->
-<footer class="mt-24 border-t border-white/10 bg-slate-950">
+<footer class="mt-24 border-t border-gray-200 bg-white dark:border-white/10 dark:bg-slate-950">
   <div class="max-w-7xl mx-auto px-4">
     <!-- Top row -->
-    <div
-      class="flex flex-col gap-6 py-10 md:flex-row md:items-center md:justify-between"
-    >
+    <div class="flex flex-col gap-6 py-10 md:flex-row md:items-center md:justify-between">
       <!-- Left: Brand -->
       <a href={`/${lang}/`} class="inline-flex items-center gap-2">
         <!-- Left: Name -->
@@ -56,11 +54,14 @@ const email = "raulgarciabalongoes@gmail.com";
 
       <!-- Center: Links -->
       <nav
-        class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg text-slate-300"
+        class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg text-gray-700 dark:text-slate-300"
       >
         {
           navLinks.map((l) => (
-            <a href={l.href} class="hover:text-emerald-400 transition-colors">
+            <a
+              href={l.href}
+              class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            >
               {t(lang, l.key)}
             </a>
           ))
@@ -69,7 +70,7 @@ const email = "raulgarciabalongoes@gmail.com";
 
       <!-- Right: Social -->
       <div
-        class="flex items-center justify-center gap-4 text-slate-300 md:justify-end"
+        class="flex items-center justify-center gap-4 text-gray-600 dark:text-slate-300 md:justify-end"
       >
         <!-- LinkedIn -->
         <a
@@ -77,7 +78,7 @@ const email = "raulgarciabalongoes@gmail.com";
           aria-label={socialLinks[0].label}
           target="_blank"
           rel="noreferrer"
-          class="text-slate-400 hover:text-emerald-400 transition-colors"
+          class="text-gray-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
         >
           <!-- LinkedIn original logo -->
           <svg
@@ -110,7 +111,7 @@ const email = "raulgarciabalongoes@gmail.com";
           aria-label={socialLinks[1].label}
           target="_blank"
           rel="noreferrer"
-          class="hover:text-emerald-400 transition-colors"
+          class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +133,7 @@ const email = "raulgarciabalongoes@gmail.com";
           href={`mailto:${email}`}
           aria-label="Email"
           title={email}
-          class="hover:text-emerald-400 transition-colors"
+          class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -155,11 +156,9 @@ const email = "raulgarciabalongoes@gmail.com";
 
     <!-- Bottom row -->
     <div
-      class="border-t border-white/10 py-6 text-center text-base md:text-lg text-slate-400"
+      class="border-t border-gray-200 dark:border-white/10 py-6 text-center text-base md:text-lg text-gray-500 dark:text-slate-400"
     >
-      © {new Date().getFullYear()} Raúl García Balongo. {
-        t(lang, "footer.rights")
-      }
+      © {new Date().getFullYear()} Raúl García Balongo. {t(lang, "footer.rights")}
     </div>
   </div>
 </footer>

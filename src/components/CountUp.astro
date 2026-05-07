@@ -1,11 +1,5 @@
 ---
-const {
-  to = 100,
-  duration = 900,
-  suffix = "",
-  prefix = "",
-  decimals = 0,
-} = Astro.props;
+const { to = 100, duration = 900, suffix = "", prefix = "", decimals = 0 } = Astro.props;
 
 const id = `countup-${Math.random().toString(36).slice(2)}`;
 ---
@@ -48,7 +42,7 @@ Fully configurable via props (duration, decimals, prefix, suffix).
         obs.disconnect();
       }
     },
-    { threshold: 0.35 },
+    { threshold: 0.35 }
   );
 
   obs.observe(el);

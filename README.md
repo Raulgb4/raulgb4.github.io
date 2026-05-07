@@ -8,12 +8,47 @@ The portfolio serves both as a professional presentation and as a demonstration 
 
 ## Tech Stack
 
-- **Astro** – Static site framework optimized for performance, SEO, and clean architecture
-- **TypeScript** – Strong typing for reliability and scalable development
-- **Tailwind CSS** – Utility-first styling for a consistent and maintainable design system
-- **React (optional)** – Used only for isolated interactive components where it provides clear value
+- **Astro** — Static site framework optimized for performance, SEO, and clean architecture
+- **TypeScript** — Strong typing for reliability and scalable development
+- **Tailwind CSS v4** — Utility-first styling for a consistent and maintainable design system
+- **React** — Used only for isolated interactive components (counters, animated elements)
 
-The site is built primarily as a static application, prioritizing speed, accessibility, and simplicity.
+## Quick Start
+
+```bash
+npm ci
+npm run dev
+```
+
+## Scripts
+
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start development server |
+| `npm run build`   | Build for production     |
+| `npm run preview` | Preview production build |
+
+## Project Structure
+
+```
+src/
+├── components/     # Reusable UI components (Navbar, Footer, Reveal, BackToTop)
+├── i18n/         # Internationalization (en.json, es.json, index.ts)
+├── layouts/       # Page layouts (Layout.astro)
+├── pages/         # Routes ([lang]/*.astro)
+└── styles/       # Global CSS and animations
+```
+
+## Routing
+
+- Root (`/`) redirects to `/en/`
+- Language-prefixed routes: `/en/` and `/es/`
+- All localized pages must export `getStaticPaths()` from `LANGS` in `src/i18n/index.ts`
+
+## SEO & Metadata
+
+- Centralized in `src/layouts/Layout.astro`
+- Includes canonical URLs, hreflang, Open Graph, Twitter Cards, sitemap
 
 ## Project Goals
 
@@ -28,7 +63,7 @@ The site is built primarily as a static application, prioritizing speed, accessi
 - Work experience and academic background
 - Technologies, tools, and technical stack
 - Certifications and continuous learning
-- Selected projects (including my Final Degree Project)
+- Selected projects (including Final Degree Project)
 - Contact information and external profiles
 - Multilingual support (English / Spanish)
 
@@ -36,7 +71,8 @@ The site is built primarily as a static application, prioritizing speed, accessi
 
 The portfolio is deployed using **GitHub Pages** and built as a fully static site via Astro.
 
-It uses a language-prefixed routing structure (`/en`, `/es`) and includes SEO best practices such as:
+It uses a language-prefixed routing structure (`/en`, `/es`) and includes SEO best practices:
+
 - Canonical URLs
 - Language alternates (`hreflang`)
 - Open Graph and Twitter metadata
@@ -44,4 +80,4 @@ It uses a language-prefixed routing structure (`/en`, `/es`) and includes SEO be
 
 ---
 
-© Raúl García Balongo
+Built with Astro + Tailwind CSS + React

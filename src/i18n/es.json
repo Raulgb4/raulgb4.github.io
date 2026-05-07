@@ -3,7 +3,13 @@
   "contact.subtitle": "Si quieres comentar un proyecto, compartir una idea o simplemente charlar, puedes escribirme por correo electrónico o a través de LinkedIn.",
 
   "contact.infoTitle": "Información de contacto",
-  "contact.cta": "Escríbeme si te interesa colaborar. Estoy abierto a nuevas oportunidades y retos.",
+  "contact.sendEmail": "Enviar email",
+  "contact.linkedin": "Contactar en LinkedIn",
+  "contact.downloadCv": "Descargar CV",
+  "contact.responseTime": "Normalmente respondo en 24–48 horas.",
+  "contact.mapToggle": "Ver mapa",
+  "contact.copyEmail": "Copiar email",
+  "contact.emailCopied": "Email copiado",
   "common.email": "Email",
   "common.location": "Ubicación",
   "nav.home": "Inicio",
@@ -49,6 +55,9 @@
   "lang.toggle": "Cambiar idioma",
   "lang.en": "Inglés (EN)",
   "lang.es": "Español (ES)",
+  "theme.toggle": "Cambiar tema de color",
+  "theme.switchToLight": "Cambiar a modo claro",
+  "theme.switchToDark": "Cambiar a modo oscuro",
 
   "help.title": "¿Qué puedo aportar?",
   "help.subtitle": "Un enfoque práctico y estructurado para analizar datos y crear soluciones útiles en contextos reales.",
@@ -89,51 +98,50 @@
 
   "experience.title": "Experiencia",
   "experience.subtitle": "Experiencia profesional, proyectos académicos, formación, certificaciones y actividades de investigación.",
-  "experience.timeline.title": "Línea temporal de experiencia",
 
-  "experience.items.paper.title": "Artículo científico (en progreso)",
-  "experience.items.paper.subtitle": "Artículo basado en mi Trabajo de Fin de Grado",
+  "experience.items.paper.title": "Artículo científico en progreso",
+  "experience.items.paper.subtitle": "Basado en mi Trabajo de Fin de Grado",
   "experience.items.paper.period": "Oct. 2025 – Actualidad",
   "experience.items.paper.grade": "En progreso",
-  "experience.items.paper.desc": "Actualmente colaboro en la preparación de un artículo científico basado en mi Trabajo de Fin de Grado, con el objetivo de enviarlo a una revista o conferencia centrada en tecnología educativa y análisis de datos.",
+  "experience.items.paper.desc": "Colaboración en la preparación de un artículo científico basado en mi TFG, orientado a tecnología educativa y análisis de datos.",
 
   "experience.items.mda.title": "Moodle Data Analyzer",
   "experience.items.mda.subtitle": "Universidad de Málaga · Trabajo de Fin de Grado",
   "experience.items.mda.period": "Enero 2025 – Sept. 2025",
-  "experience.items.mda.desc": "Diseño y desarrollo de una herramienta de análisis de datos basada en navegador para extraer, procesar y visualizar datos académicos de Moodle con el fin de apoyar a los docentes mediante la toma de decisiones basada en datos. Se construyeron paneles interactivos y se generaron informes exportables en diferentes formatos.",
+  "experience.items.mda.desc": "Desarrollo de una herramienta de análisis de datos para Moodle orientada a la visualización de información académica y apoyo a la toma de decisiones mediante paneles interactivos e informes exportables.",
 
   "experience.items.dekra.title": "DEKRA Digital & Product Solutions",
   "experience.items.dekra.subtitle": "Prácticas",
   "experience.items.dekra.period": "Marzo 2025 – Mayo 2025",
-  "experience.items.dekra.desc": "Desarrollé y mantuve funcionalidades web full-stack para una plataforma de ciberseguridad, trabajando con Django, Angular y PostgreSQL en un entorno de producción. Implementé lógica de backend e integré componentes de frontend, mejorando la consistencia y funcionalidad de varios módulos. Participé en despliegue y gestión de entornos con Docker, permitiendo un desarrollo más estable y reproducible. Colaboré en un entorno ágil usando Jira para la planificación y GitLab para control de versiones e integración. Contribuí a código en producción, ganando experiencia profesional práctica y reforzando habilidades de trabajo en equipo.",
+  "experience.items.dekra.desc": "Desarrollo y mantenimiento de funcionalidades web full-stack para una plataforma de ciberseguridad usando Django, Angular y PostgreSQL. Trabajo en entorno ágil con Docker, Jira y GitLab, contribuyendo a código en producción y módulos orientados a análisis y gestión de datos.",
 
   "experience.items.degree.title": "Grado en Ingeniería Informática",
   "experience.items.degree.subtitle": "Universidad de Málaga · Especialidad en Sistemas de Información",
   "experience.items.degree.period": "2020 – 2025",
-  "experience.items.degree.desc": "Grado en Ingeniería Informática en la Universidad de Málaga, con especialidad en Sistemas de Información y una formación orientada al análisis y gestión de datos para apoyar la toma de decisiones. Adquirí una base sólida en programación, bases de datos, matemáticas y estadística, así como en el diseño y análisis de sistemas de información, desarrollando una visión estructurada del ciclo de vida de los datos. Especialización progresiva en análisis de datos y Business Intelligence, trabajando con Python, SQL, Power BI y entornos cloud. Apliqué estas habilidades en proyectos académicos y prácticas en empresa, reforzando el trabajo en equipo y la comunicación técnica.",
+  "experience.items.degree.desc": "Formación en Ingeniería Informática con especialidad en Sistemas de Información, orientada al análisis de datos, Business Intelligence y desarrollo de soluciones software. Base técnica en programación, bases de datos, estadística y sistemas de información aplicada en proyectos académicos y prácticas profesionales.",
 
   "experience.items.bach.title": "Bachillerato Tecnológico",
   "experience.items.bach.subtitle": "IES Torre Almirante",
   "experience.items.bach.period": "2018 – 2020",
-  "experience.items.bach.desc": "Bachillerato Tecnológico centrado en pensamiento lógico, matemáticas académicas y resolución estructurada de problemas, sirviendo como base de mi formación técnica posterior. Esta etapa reforzó el razonamiento analítico y proporcionó una base sólida para estudios posteriores en ingeniería informática.",
+  "experience.items.bach.desc": "Formación centrada en matemáticas, razonamiento lógico y resolución estructurada de problemas, como base para mi posterior formación en ingeniería informática.",
+
   "experience.gradeLabel": "Nota:",
   "common.logo": "logo",
   "experience.research.title": "Artículo científico",
   "experience.research.desc": "Actualmente colaboro en la preparación de un artículo científico basado en mi Trabajo de Fin de Grado, con el objetivo de enviarlo a una revista o conferencia centrada en tecnología educativa y análisis de datos.",
+
   "projects.badge.public": "Público",
 
   "projects.moodle.title": "Moodle Data Analyzer",
   "projects.moodle.institution": "Universidad de Málaga",
   "projects.moodle.type": "Trabajo de Fin de Grado",
-
-  "projects.moodle.desc.short": "Herramienta de análisis de datos basada en navegador que extrae, procesa y visualiza datos académicos de Moodle, transformando datos en bruto en gráficas atractivas.",
-
-  "projects.moodle.desc.long": "Diseño y desarrollo de una herramienta de análisis de datos basada en navegador para la extracción, procesamiento y visualización de datos académicos de Moodle, orientada a apoyar la toma de decisiones basada en datos en contextos educativos. Aplicación de técnicas de extracción de datos, procesamiento analítico y flujos de análisis para transformar datos en bruto en información estructurada y paneles interactivos. Generación de informes analíticos exportables en formatos PDF, CSV y DOCX, facilitando una interpretación clara y un uso práctico de los resultados. Fuerte enfoque en visualización de datos y data storytelling para comunicar claramente patrones de uso, participación y rendimiento académico. Uso de React, Webpack, Chart.js, TailwindCSS, Docker y metodologías ágiles en el desarrollo de la solución. Preparación de un artículo científico actualmente en curso, reforzando la relevancia analítica y el impacto práctico del proyecto en el ámbito de la analítica educativa.",
+  "projects.moodle.desc": "Extensión para Google Chrome que extrae, procesa y visualiza datos académicos de Moodle mediante scraping del DOM, transformando métricas de participación y rendimiento en dashboards interactivos y reportes exportables para facilitar el análisis y la toma de decisiones educativas.",
 
   "projects.tech.agile": "Metodologías ágiles",
 
   "projects.portfolio.title": "Sitio web de portafolio personal",
-  "projects.portfolio.desc": "Sitio web de portafolio personal diseñado para presentar mi perfil profesional, experiencia y proyectos con una interfaz limpia y moderna, con un fuerte enfoque en claridad, estructura y usabilidad.",
+  "projects.portfolio.desc": "Portfolio web multilingüe diseñado para presentar mi perfil profesional, experiencia y proyectos mediante una arquitectura frontend moderna, visualizaciones interactivas y una interfaz optimizada para claridad, rendimiento y usabilidad.",
+
   "projects.screenshot": "captura",
   "projects.prevImage": "Imagen anterior",
   "projects.nextImage": "Imagen siguiente",
@@ -142,20 +150,29 @@
   "projects.repository": "Repositorio",
   "projects.featured.title": "Proyectos destacados",
   "projects.featured.subtitle": "Una selección de proyectos donde apliqué datos, ingeniería y visualización para resolver problemas reales.",
+
   "projects.linkedin.title": "Análisis del mercado laboral en LinkedIn",
   "projects.linkedin.desc": "Análisis de un conjunto de datos a gran escala de ofertas de empleo publicadas en LinkedIn (2023–2024), orientado a extraer insights sobre demanda laboral, habilidades, ubicaciones, modalidades de trabajo y patrones salariales mediante flujos de análisis propios de entornos de business analytics.",
 
-  "hero.subtitle": "Ingeniero Informático · Análisis de datos",
-  "hero.description": "Diseño y desarrollo soluciones de software prácticas, convirtiendo ideas y requisitos en herramientas fiables que aportan valor real.",
-  "highlights.growth.title": "En continuo crecimiento",
-  "highlights.growth.desc": "Sólida base técnica, junto con una motivación constante por aprender, mejorar y adaptarme a nuevas tecnologías en proyectos reales.",
+  "snapshot.role.label": "Perfil",
+  "snapshot.role.value": "Datos · IA · Full-stack",
+  "snapshot.target.label": "Busco",
+  "snapshot.target.value": "Puesto a jornada completa",
+  "snapshot.focus.label": "Enfoque",
+  "snapshot.focus.value": "Python, SQL, IA aplicada, APIs y herramientas web",
+  "snapshot.work.label": "Modalidad",
+  "snapshot.work.value": "Remoto preferente · Híbrido abierto",
 
-  "highlights.enjoy.title": "Qué disfruto construir",
-  "highlights.enjoy.desc": "Soluciones software que combinan desarrollo, datos y comunicación para apoyar la toma de decisiones y mejorar productos reales.",
+  "hero.subtitle": "Ingeniero Informático · Análisis de datos",
+  "hero.description": "Diseño soluciones de software basadas en datos para ayudar a tomar mejores decisiones.",
+  "highlights.growth.title": "Cómo trabajo",
+  "highlights.growth.desc": "Aprendizaje constante y adaptación a nuevas tecnologías en proyectos reales.",
+
+  "highlights.enjoy.title": "Qué construyo",
+  "highlights.enjoy.desc": "Herramientas basadas en datos que mejoran productos y decisiones.",
 
   "highlights.stack.title": "Stack tecnológico",
   "metrics.title": "Aspectos destacados",
-  "metrics.subtitle": "Aspectos clave de mi perfil, base técnica y experiencia práctica en proyectos.",
 
   "metrics.engineer.value": "Ingeniero",
   "metrics.engineer.label": "Listo para resolver problemas",
@@ -165,7 +182,6 @@
   "metrics.projects": "Proyectos desarrollados",
 
   "interests.title": "Intereses",
-  "interests.subtitle": "Áreas en las que quiero crecer y generar impacto real.",
 
   "interests.cards.data.title": "Análisis de datos y visualización",
   "interests.cards.data.text": "Análisis de datos y creación de visualizaciones claras y herramientas visuales que facilitan la comprensión y la toma de decisiones.",
@@ -177,15 +193,12 @@
   "interests.cards.cloud.text": "Interés en el diseño de flujos de datos y su integración con modelos de inteligencia artificial, incluyendo embeddings, búsqueda semántica y sistemas tipo RAG.",
 
   "keyTech.title": "Tecnologías clave",
-  "keyTech.subtitle": "Herramientas y tecnologías que utilizo para desarrollar soluciones basadas en datos de principio a fin.",
 
   "keyTech.data.title": "Datos y analítica",
-  "keyTech.data.description": "Exploración de datos, creación de paneles visuales y transformación de la información en conclusiones claras y prácticas.",
 
   "keyTech.additional": "Herramientas adicionales",
 
   "keyTech.dev.title": "Desarrollo y herramientas",
-  "keyTech.dev.description": "Desarrollo de interfaces web y aplicaciones mediante herramientas modernas, control de versiones y flujos de trabajo ágiles.",
 
   "reviews.title": "Valoraciones profesionales",
   "reviews.subtitle": "Algunas palabras de supervisores y mentores que han seguido mi trabajo en proyectos reales.",
@@ -197,51 +210,48 @@
   "reviews.dekra.quote": "Gracias, Raúl. Nos sorprendió la rapidez con la que te adaptaste al proyecto, aportando desde el primer día y entregando funcionalidades de primer nivel. Ha sido un placer contar contigo en el equipo. Te espera una carrera profesional llena de éxitos.",
   "reviews.dekra.role": "Desarrollo Full Stack · DEKRA Digital Solutions",
   "cv.title": "Currículum Vitae",
-  "cv.subtitle": "Descarga mi CV para una visión detallada de mi formación y experiencia.",
-  "cv.cardTitle": "CV · Raúl García Balongo",
-  "cv.cardText": "Incluye formación académica, proyectos, habilidades técnicas y experiencia.",
+
+  "cv.cardTitle": "Curriculum Vitae",
+
   "cv.download": "Descargar CV",
   "about.hero.intro": "Soy ",
   "about.hero.role": "Ingeniero Informático",
-  "home.hero.title.beforeDecisions": "Transformando datos en",
-  "home.hero.title.decisions": "decisiones",
-  "home.hero.title.middle": " y convirtiendo ideas en",
-  "home.hero.title.products": "productos",
-  "home.hero.title.afterProducts": " fiables.",
 
-  "home.hero.subtitle": "Ingeniero Informático (Sistemas de Información) por la Universidad de Málaga, centrado en el análisis de datos y en crear soluciones prácticas que apoyen la toma de decisiones.",
+  "home.hero.title": "Transformando datos en decisiones y convirtiendo ideas en productos fiables",
+
+  "home.hero.subtitle": "Ingeniero Informático enfocado en análisis de datos y desarrollo de soluciones prácticas para la toma de decisiones.",
 
   "home.hero.bullets.1.before": "Base sólida en",
   "home.hero.bullets.1.highlight": "matemáticas, estadística y razonamiento lógico",
 
-  "home.hero.bullets.2.before": "Experiencia trabajando con",
-  "home.hero.bullets.2.tech": "Python, SQL, Spark, Power BI, Tableau",
+  "home.hero.bullets.2.before": "Experiencia con",
+  "home.hero.bullets.2.tech": "Python, SQL, Spark, Power BI y Tableau",
   "home.hero.bullets.2.middle": "y entornos cloud como",
   "home.hero.bullets.2.cloud": "Azure",
 
-  "home.hero.bullets.3.before": "Experiencia trabajando en equipo con",
+  "home.hero.bullets.3.before": "Trabajo en equipo con",
   "home.hero.bullets.3.highlight": "metodologías ágiles",
   "home.hero.bullets.3.after": "y código limpio y mantenible.",
 
   "home.traits.curiosity.title": "Curiosidad",
-  "home.traits.curiosity.beforeWhy": "Me gusta entender el ",
-  "home.traits.curiosity.why": "“por qué” detrás de los datos",
-  "home.traits.curiosity.afterWhy": " y explorar patrones.",
+  "home.traits.curiosity.beforeWhy": "",
+  "home.traits.curiosity.why": "Entender el “por qué” de los datos",
+  "home.traits.curiosity.afterWhy": " y detectar patrones.",
 
   "home.traits.criticalThinking.title": "Pensamiento crítico",
-  "home.traits.criticalThinking.before": "Cuestiono conclusiones, valido supuestos y busco ",
-  "home.traits.criticalThinking.highlight": "conclusiones sólidas",
+  "home.traits.criticalThinking.before": "",
+  "home.traits.criticalThinking.highlight": "Cuestionar supuestos y validar conclusiones con datos",
 
   "home.traits.communication.title": "Comunicación",
-  "home.traits.communication.before": "Transformo el análisis técnico en ",
-  "home.traits.communication.highlight": "mensajes claros",
-  "home.traits.communication.after": ", orientados a la toma de decisiones y a los siguientes pasos.",
+  "home.traits.communication.before": "",
+  "home.traits.communication.highlight": "Convertir análisis técnico en mensajes claros",
+  "home.traits.communication.after": " para la toma de decisiones.",
 
   "home.next.title": "Hacia dónde quiero avanzar",
 
   "home.next.beforeJunior": "Mi objetivo es incorporarme a un equipo como ",
   "home.next.engineer": "ingeniero",
-  "home.next.middle": ", aportando desde el primer día en proyectos reales mientras construyo una carrera sólida en ",
+  "home.next.middle": "aportando desde el primer día en proyectos reales mientras construyo una carrera sólida en ",
   "home.next.dataAnalysis": "Análisis de Datos",
   "home.next.businessIntelligence": "Business Intelligence",
   "home.next.dataOrientedDev": "desarrollo orientado a datos",

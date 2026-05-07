@@ -25,14 +25,14 @@ const linkClass = (path: string) =>
   client-side toggling logic.
 --><!-- Mobile dropdown --><!-- Mobile menu backdrop -->
 <div
-  class="lg:hidden fixed inset-0 z-[110] hidden bg-black/50"
+  class="lg:hidden fixed inset-0 z-110 hidden bg-black/50"
   data-mobile-backdrop
   aria-hidden="true"
 >
 </div>
 <div
   id="mobile-nav"
-  class="lg:hidden fixed inset-x-4 top-16 z-[120] hidden
+  class="lg:hidden fixed inset-x-4 top-16 z-120 hidden
          max-h-[calc(100vh-5rem)] overflow-auto
          rounded-2xl border border-gray-200/70 dark:border-white/10
          bg-white dark:bg-slate-900
@@ -88,16 +88,14 @@ const linkClass = (path: string) =>
              bg-emerald-500 text-white hover:bg-emerald-600 transition"
     >
       {t(lang, "nav.contact")}
-      <span
-        class="ml-2 inline-block h-2 w-2 rounded-full bg-white/90"
-        aria-hidden="true"></span>
+      <span class="ml-2 inline-block h-2 w-2 rounded-full bg-white/90" aria-hidden="true"></span>
     </a>
   </nav>
 </div>
 
 <nav
   data-navbar
-  class="sticky top-0 z-[100] relative isolate w-full border-b
+  class="sticky top-0 z-100 isolate w-full border-b
          border-gray-200 dark:border-gray-700
          bg-transparent transition-colors duration-200"
 >
@@ -173,9 +171,7 @@ const linkClass = (path: string) =>
           {t(lang, "nav.about")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive(`/${lang}/about/`)
-                ? "scale-x-100"
-                : "group-hover:scale-x-100"
+              isActive(`/${lang}/about/`) ? "scale-x-100" : "group-hover:scale-x-100"
             }`}></span>
         </a>
       </li>
@@ -185,39 +181,27 @@ const linkClass = (path: string) =>
           {t(lang, "nav.help")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive(`/${lang}/help/`)
-                ? "scale-x-100"
-                : "group-hover:scale-x-100"
+              isActive(`/${lang}/help/`) ? "scale-x-100" : "group-hover:scale-x-100"
             }`}></span>
         </a>
       </li>
 
       <li>
-        <a
-          href={`/${lang}/experience/`}
-          class={linkClass(`/${lang}/experience/`)}
-        >
+        <a href={`/${lang}/experience/`} class={linkClass(`/${lang}/experience/`)}>
           {t(lang, "nav.experience")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive(`/${lang}/experience/`)
-                ? "scale-x-100"
-                : "group-hover:scale-x-100"
+              isActive(`/${lang}/experience/`) ? "scale-x-100" : "group-hover:scale-x-100"
             }`}></span>
         </a>
       </li>
 
       <li>
-        <a
-          href={`/${lang}/certifications/`}
-          class={linkClass(`/${lang}/certifications/`)}
-        >
+        <a href={`/${lang}/certifications/`} class={linkClass(`/${lang}/certifications/`)}>
           {t(lang, "nav.certifications")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive(`/${lang}/certifications/`)
-                ? "scale-x-100"
-                : "group-hover:scale-x-100"
+              isActive(`/${lang}/certifications/`) ? "scale-x-100" : "group-hover:scale-x-100"
             }`}></span>
         </a>
       </li>
@@ -227,9 +211,7 @@ const linkClass = (path: string) =>
           {t(lang, "nav.faq")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive(`/${lang}/faq/`)
-                ? "scale-x-100"
-                : "group-hover:scale-x-100"
+              isActive(`/${lang}/faq/`) ? "scale-x-100" : "group-hover:scale-x-100"
             }`}></span>
         </a>
       </li>
@@ -268,9 +250,57 @@ const linkClass = (path: string) =>
     </ul>
 
     <!-- Right: Actions -->
-    <div
-      class="flex items-center gap-4 text-base text-gray-700 dark:text-gray-300"
-    >
+    <div class="flex items-center gap-4 text-base text-gray-700 dark:text-gray-300">
+      <!-- Theme toggle -->
+      <button
+        type="button"
+        data-theme-toggle
+        data-label-light={t(lang, "theme.switchToLight")}
+        data-label-dark={t(lang, "theme.switchToDark")}
+        aria-label={t(lang, "theme.toggle")}
+        aria-pressed="false"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-full
+         border border-gray-200 dark:border-white/10
+         bg-white/70 dark:bg-white/5 backdrop-blur
+         text-gray-600 dark:text-gray-300
+         hover:bg-gray-200/40 dark:hover:bg-white/10
+         hover:text-emerald-600 dark:hover:text-emerald-300
+         focus:outline-none focus:ring-2 focus:ring-emerald-500
+         transition"
+      >
+        <svg
+          data-theme-icon="dark"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          class="h-5 w-5"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+        </svg>
+        <svg
+          data-theme-icon="light"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          class="hidden h-5 w-5"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.36-6.36-1.42 1.42M7.06 16.94l-1.42 1.42m12.72 0-1.42-1.42M7.06 7.06 5.64 5.64M12 8a4 4 0 100 8 4 4 0 000-8z"
+          ></path>
+        </svg>
+      </button>
+
       <!-- Language switcher (pill with flags) -->
       <div
         id="lang-switcher-pill"
@@ -362,6 +392,51 @@ const linkClass = (path: string) =>
           window.location.href = buildLangUrl(newLang);
         });
       </script>
+
+      <script>
+        function initThemeToggle() {
+          const btn = document.querySelector("[data-theme-toggle]");
+
+          if (!(btn instanceof HTMLElement)) return;
+          if (btn.dataset.bound === "true") return;
+
+          btn.dataset.bound = "true";
+
+          const root = document.documentElement;
+          const darkIcon = btn.querySelector('[data-theme-icon="dark"]');
+          const lightIcon = btn.querySelector('[data-theme-icon="light"]');
+
+          const updateButton = () => {
+            const isDark = root.classList.contains("dark");
+            const label = isDark ? btn.dataset.labelLight : btn.dataset.labelDark;
+
+            btn.setAttribute("aria-pressed", isDark ? "true" : "false");
+
+            if (label) {
+              btn.setAttribute("aria-label", label);
+              btn.setAttribute("title", label);
+            }
+
+            darkIcon?.classList.toggle("hidden", isDark);
+            lightIcon?.classList.toggle("hidden", !isDark);
+          };
+
+          btn.addEventListener("click", () => {
+            const nextTheme = root.classList.contains("dark") ? "light" : "dark";
+
+            root.classList.toggle("dark", nextTheme === "dark");
+            root.style.colorScheme = nextTheme;
+            localStorage.setItem("theme", nextTheme);
+
+            updateButton();
+          });
+
+          updateButton();
+        }
+
+        document.addEventListener("DOMContentLoaded", initThemeToggle);
+        document.addEventListener("astro:page-load", initThemeToggle);
+      </script>
     </div>
 
     <!-- Mobile menu button -->
@@ -436,9 +511,7 @@ const linkClass = (path: string) =>
       if (e.key === "Escape") setOpen(false);
     });
 
-    menu
-      .querySelectorAll("a")
-      .forEach((a) => a.addEventListener("click", () => setOpen(false)));
+    menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
 
     // Si pasas a desktop, cierra
     const mq = window.matchMedia("(min-width: 1024px)");
@@ -461,8 +534,7 @@ const linkClass = (path: string) =>
 
     const applyStickyStyles = (scrolled) => {
       // Si el menú móvil está abierto, no tocar estilos del navbar
-      const menuOpen =
-        menuBtn && menuBtn.getAttribute("aria-expanded") === "true";
+      const menuOpen = menuBtn && menuBtn.getAttribute("aria-expanded") === "true";
       if (menuOpen) return;
 
       const desktop = isDesktop.matches;
@@ -472,17 +544,13 @@ const linkClass = (path: string) =>
         "dark:bg-slate-900/40",
         "backdrop-blur",
         "bg-white",
-        "dark:bg-slate-900",
+        "dark:bg-slate-900"
       );
 
       if (!scrolled) return;
 
       if (desktop) {
-        navbar.classList.add(
-          "bg-white/70",
-          "dark:bg-slate-900/40",
-          "backdrop-blur",
-        );
+        navbar.classList.add("bg-white/70", "dark:bg-slate-900/40", "backdrop-blur");
       } else {
         navbar.classList.add("bg-white", "dark:bg-slate-900");
       }
