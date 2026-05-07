@@ -48,6 +48,9 @@
   "lang.toggle": "Cambiar idioma",
   "lang.en": "Inglés (EN)",
   "lang.es": "Español (ES)",
+  "theme.toggle": "Cambiar tema de color",
+  "theme.switchToLight": "Cambiar a modo claro",
+  "theme.switchToDark": "Cambiar a modo oscuro",
 
   "help.title": "¿Qué puedo aportar?",
   "help.subtitle": "Un enfoque práctico y estructurado para analizar datos y crear soluciones útiles en contextos reales.",

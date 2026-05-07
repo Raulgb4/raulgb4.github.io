@@ -77,6 +77,29 @@ const personSchemaJson = JSON.stringify(personSchema);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
 
+    <script is:inline>
+      (() => {
+        try {
+          const root = document.documentElement;
+          const storedTheme = localStorage.getItem("theme");
+          const prefersDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+          const theme =
+            storedTheme === "light" || storedTheme === "dark"
+              ? storedTheme
+              : prefersDark
+                ? "dark"
+                : "light";
+
+          root.classList.toggle("dark", theme === "dark");
+          root.style.colorScheme = theme;
+        } catch {
+          document.documentElement.style.colorScheme = "light dark";
+        }
+      })();
+    </script>
+
     <title>{resolvedTitle}</title>
     <meta name="description" content={resolvedDescription} />
 

@@ -47,6 +47,9 @@
   "lang.toggle": "Change language",
   "lang.en": "English (EN)",
   "lang.es": "Spanish (ES)",
+  "theme.toggle": "Toggle color theme",
+  "theme.switchToLight": "Switch to light mode",
+  "theme.switchToDark": "Switch to dark mode",
 
   "help.title": "Turning Data Into Impact",
   "help.subtitle": "A practical, structured approach to building data-driven solutions that deliver real value.",
