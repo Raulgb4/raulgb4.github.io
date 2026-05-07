@@ -88,9 +88,7 @@ const linkClass = (path: string) =>
              bg-emerald-500 text-white hover:bg-emerald-600 transition"
     >
       {t(lang, "nav.contact")}
-      <span
-        class="ml-2 inline-block h-2 w-2 rounded-full bg-white/90"
-        aria-hidden="true"></span>
+      <span class="ml-2 inline-block h-2 w-2 rounded-full bg-white/90" aria-hidden="true"></span>
     </a>
   </nav>
 </div>
@@ -173,9 +171,7 @@ const linkClass = (path: string) =>
           {t(lang, "nav.about")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive(`/${lang}/about/`)
-                ? "scale-x-100"
-                : "group-hover:scale-x-100"
+              isActive(`/${lang}/about/`) ? "scale-x-100" : "group-hover:scale-x-100"
             }`}></span>
         </a>
       </li>
@@ -185,39 +181,27 @@ const linkClass = (path: string) =>
           {t(lang, "nav.help")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive(`/${lang}/help/`)
-                ? "scale-x-100"
-                : "group-hover:scale-x-100"
+              isActive(`/${lang}/help/`) ? "scale-x-100" : "group-hover:scale-x-100"
             }`}></span>
         </a>
       </li>
 
       <li>
-        <a
-          href={`/${lang}/experience/`}
-          class={linkClass(`/${lang}/experience/`)}
-        >
+        <a href={`/${lang}/experience/`} class={linkClass(`/${lang}/experience/`)}>
           {t(lang, "nav.experience")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive(`/${lang}/experience/`)
-                ? "scale-x-100"
-                : "group-hover:scale-x-100"
+              isActive(`/${lang}/experience/`) ? "scale-x-100" : "group-hover:scale-x-100"
             }`}></span>
         </a>
       </li>
 
       <li>
-        <a
-          href={`/${lang}/certifications/`}
-          class={linkClass(`/${lang}/certifications/`)}
-        >
+        <a href={`/${lang}/certifications/`} class={linkClass(`/${lang}/certifications/`)}>
           {t(lang, "nav.certifications")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive(`/${lang}/certifications/`)
-                ? "scale-x-100"
-                : "group-hover:scale-x-100"
+              isActive(`/${lang}/certifications/`) ? "scale-x-100" : "group-hover:scale-x-100"
             }`}></span>
         </a>
       </li>
@@ -227,9 +211,7 @@ const linkClass = (path: string) =>
           {t(lang, "nav.faq")}
           <span
             class={`absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-emerald-600 dark:bg-emerald-400 transition-transform duration-200 ${
-              isActive(`/${lang}/faq/`)
-                ? "scale-x-100"
-                : "group-hover:scale-x-100"
+              isActive(`/${lang}/faq/`) ? "scale-x-100" : "group-hover:scale-x-100"
             }`}></span>
         </a>
       </li>
@@ -268,9 +250,7 @@ const linkClass = (path: string) =>
     </ul>
 
     <!-- Right: Actions -->
-    <div
-      class="flex items-center gap-4 text-base text-gray-700 dark:text-gray-300"
-    >
+    <div class="flex items-center gap-4 text-base text-gray-700 dark:text-gray-300">
       <!-- Theme toggle -->
       <button
         type="button"
@@ -301,8 +281,7 @@ const linkClass = (path: string) =>
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
-            d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"
-          ></path>
+            d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
         </svg>
         <svg
           data-theme-icon="light"
@@ -416,44 +395,44 @@ const linkClass = (path: string) =>
 
       <script>
         function initThemeToggle() {
-  const btn = document.querySelector("[data-theme-toggle]");
+          const btn = document.querySelector("[data-theme-toggle]");
 
-  if (!(btn instanceof HTMLElement)) return;
-  if (btn.dataset.bound === "true") return;
+          if (!(btn instanceof HTMLElement)) return;
+          if (btn.dataset.bound === "true") return;
 
-  btn.dataset.bound = "true";
+          btn.dataset.bound = "true";
 
-  const root = document.documentElement;
-  const darkIcon = btn.querySelector('[data-theme-icon="dark"]');
-  const lightIcon = btn.querySelector('[data-theme-icon="light"]');
+          const root = document.documentElement;
+          const darkIcon = btn.querySelector('[data-theme-icon="dark"]');
+          const lightIcon = btn.querySelector('[data-theme-icon="light"]');
 
-  const updateButton = () => {
-    const isDark = root.classList.contains("dark");
-    const label = isDark ? btn.dataset.labelLight : btn.dataset.labelDark;
+          const updateButton = () => {
+            const isDark = root.classList.contains("dark");
+            const label = isDark ? btn.dataset.labelLight : btn.dataset.labelDark;
 
-    btn.setAttribute("aria-pressed", isDark ? "true" : "false");
+            btn.setAttribute("aria-pressed", isDark ? "true" : "false");
 
-    if (label) {
-      btn.setAttribute("aria-label", label);
-      btn.setAttribute("title", label);
-    }
+            if (label) {
+              btn.setAttribute("aria-label", label);
+              btn.setAttribute("title", label);
+            }
 
-    darkIcon?.classList.toggle("hidden", isDark);
-    lightIcon?.classList.toggle("hidden", !isDark);
-  };
+            darkIcon?.classList.toggle("hidden", isDark);
+            lightIcon?.classList.toggle("hidden", !isDark);
+          };
 
-  btn.addEventListener("click", () => {
-    const nextTheme = root.classList.contains("dark") ? "light" : "dark";
+          btn.addEventListener("click", () => {
+            const nextTheme = root.classList.contains("dark") ? "light" : "dark";
 
-    root.classList.toggle("dark", nextTheme === "dark");
-    root.style.colorScheme = nextTheme;
-    localStorage.setItem("theme", nextTheme);
+            root.classList.toggle("dark", nextTheme === "dark");
+            root.style.colorScheme = nextTheme;
+            localStorage.setItem("theme", nextTheme);
 
-    updateButton();
-  });
+            updateButton();
+          });
 
-  updateButton();
-}
+          updateButton();
+        }
 
         document.addEventListener("DOMContentLoaded", initThemeToggle);
         document.addEventListener("astro:page-load", initThemeToggle);
@@ -532,9 +511,7 @@ const linkClass = (path: string) =>
       if (e.key === "Escape") setOpen(false);
     });
 
-    menu
-      .querySelectorAll("a")
-      .forEach((a) => a.addEventListener("click", () => setOpen(false)));
+    menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
 
     // Si pasas a desktop, cierra
     const mq = window.matchMedia("(min-width: 1024px)");
@@ -557,8 +534,7 @@ const linkClass = (path: string) =>
 
     const applyStickyStyles = (scrolled) => {
       // Si el menú móvil está abierto, no tocar estilos del navbar
-      const menuOpen =
-        menuBtn && menuBtn.getAttribute("aria-expanded") === "true";
+      const menuOpen = menuBtn && menuBtn.getAttribute("aria-expanded") === "true";
       if (menuOpen) return;
 
       const desktop = isDesktop.matches;
@@ -568,17 +544,13 @@ const linkClass = (path: string) =>
         "dark:bg-slate-900/40",
         "backdrop-blur",
         "bg-white",
-        "dark:bg-slate-900",
+        "dark:bg-slate-900"
       );
 
       if (!scrolled) return;
 
       if (desktop) {
-        navbar.classList.add(
-          "bg-white/70",
-          "dark:bg-slate-900/40",
-          "backdrop-blur",
-        );
+        navbar.classList.add("bg-white/70", "dark:bg-slate-900/40", "backdrop-blur");
       } else {
         navbar.classList.add("bg-white", "dark:bg-slate-900");
       }

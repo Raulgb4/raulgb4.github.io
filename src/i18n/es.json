@@ -99,17 +99,11 @@
   "experience.title": "Experiencia",
   "experience.subtitle": "Experiencia profesional, proyectos académicos, formación, certificaciones y actividades de investigación.",
 
-
-
-
-
-
   "experience.items.paper.title": "Artículo científico en progreso",
   "experience.items.paper.subtitle": "Basado en mi Trabajo de Fin de Grado",
   "experience.items.paper.period": "Oct. 2025 – Actualidad",
   "experience.items.paper.grade": "En progreso",
   "experience.items.paper.desc": "Colaboración en la preparación de un artículo científico basado en mi TFG, orientado a tecnología educativa y análisis de datos.",
-
 
   "experience.items.mda.title": "Moodle Data Analyzer",
   "experience.items.mda.subtitle": "Universidad de Málaga · Trabajo de Fin de Grado",
@@ -121,28 +115,21 @@
   "experience.items.dekra.period": "Marzo 2025 – Mayo 2025",
   "experience.items.dekra.desc": "Desarrollo y mantenimiento de funcionalidades web full-stack para una plataforma de ciberseguridad usando Django, Angular y PostgreSQL. Trabajo en entorno ágil con Docker, Jira y GitLab, contribuyendo a código en producción y módulos orientados a análisis y gestión de datos.",
 
-
   "experience.items.degree.title": "Grado en Ingeniería Informática",
   "experience.items.degree.subtitle": "Universidad de Málaga · Especialidad en Sistemas de Información",
   "experience.items.degree.period": "2020 – 2025",
   "experience.items.degree.desc": "Formación en Ingeniería Informática con especialidad en Sistemas de Información, orientada al análisis de datos, Business Intelligence y desarrollo de soluciones software. Base técnica en programación, bases de datos, estadística y sistemas de información aplicada en proyectos académicos y prácticas profesionales.",
-
 
   "experience.items.bach.title": "Bachillerato Tecnológico",
   "experience.items.bach.subtitle": "IES Torre Almirante",
   "experience.items.bach.period": "2018 – 2020",
   "experience.items.bach.desc": "Formación centrada en matemáticas, razonamiento lógico y resolución estructurada de problemas, como base para mi posterior formación en ingeniería informática.",
 
-
   "experience.gradeLabel": "Nota:",
   "common.logo": "logo",
   "experience.research.title": "Artículo científico",
   "experience.research.desc": "Actualmente colaboro en la preparación de un artículo científico basado en mi Trabajo de Fin de Grado, con el objetivo de enviarlo a una revista o conferencia centrada en tecnología educativa y análisis de datos.",
-  
-  
-  
-  
-  
+
   "projects.badge.public": "Público",
 
   "projects.moodle.title": "Moodle Data Analyzer",
@@ -150,12 +137,10 @@
   "projects.moodle.type": "Trabajo de Fin de Grado",
   "projects.moodle.desc": "Extensión para Google Chrome que extrae, procesa y visualiza datos académicos de Moodle mediante scraping del DOM, transformando métricas de participación y rendimiento en dashboards interactivos y reportes exportables para facilitar el análisis y la toma de decisiones educativas.",
 
-  
   "projects.tech.agile": "Metodologías ágiles",
 
   "projects.portfolio.title": "Sitio web de portafolio personal",
   "projects.portfolio.desc": "Portfolio web multilingüe diseñado para presentar mi perfil profesional, experiencia y proyectos mediante una arquitectura frontend moderna, visualizaciones interactivas y una interfaz optimizada para claridad, rendimiento y usabilidad.",
-  
 
   "projects.screenshot": "captura",
   "projects.prevImage": "Imagen anterior",
@@ -168,9 +153,6 @@
 
   "projects.linkedin.title": "Análisis del mercado laboral en LinkedIn",
   "projects.linkedin.desc": "Análisis de un conjunto de datos a gran escala de ofertas de empleo publicadas en LinkedIn (2023–2024), orientado a extraer insights sobre demanda laboral, habilidades, ubicaciones, modalidades de trabajo y patrones salariales mediante flujos de análisis propios de entornos de business analytics.",
-
-
-
 
   "snapshot.role.label": "Perfil",
   "snapshot.role.value": "Datos · IA · Full-stack",
@@ -213,7 +195,6 @@
   "keyTech.title": "Tecnologías clave",
 
   "keyTech.data.title": "Datos y analítica",
-  
 
   "keyTech.additional": "Herramientas adicionales",
 
@@ -229,18 +210,14 @@
   "reviews.dekra.quote": "Gracias, Raúl. Nos sorprendió la rapidez con la que te adaptaste al proyecto, aportando desde el primer día y entregando funcionalidades de primer nivel. Ha sido un placer contar contigo en el equipo. Te espera una carrera profesional llena de éxitos.",
   "reviews.dekra.role": "Desarrollo Full Stack · DEKRA Digital Solutions",
   "cv.title": "Currículum Vitae",
-  
+
   "cv.cardTitle": "Curriculum Vitae",
-  
+
   "cv.download": "Descargar CV",
   "about.hero.intro": "Soy ",
   "about.hero.role": "Ingeniero Informático",
 
-
   "home.hero.title": "Transformando datos en decisiones y convirtiendo ideas en productos fiables",
-
-
-
 
   "home.hero.subtitle": "Ingeniero Informático enfocado en análisis de datos y desarrollo de soluciones prácticas para la toma de decisiones.",
 

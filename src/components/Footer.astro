@@ -32,14 +32,10 @@ const email = "raulgarciabalongoes@gmail.com";
   (LinkedIn, GitHub) and email. Designed as a consistent, lightweight footer
   shared across all pages.
 -->
-<footer
-  class="mt-24 border-t border-gray-200 bg-white dark:border-white/10 dark:bg-slate-950"
->
+<footer class="mt-24 border-t border-gray-200 bg-white dark:border-white/10 dark:bg-slate-950">
   <div class="max-w-7xl mx-auto px-4">
     <!-- Top row -->
-    <div
-      class="flex flex-col gap-6 py-10 md:flex-row md:items-center md:justify-between"
-    >
+    <div class="flex flex-col gap-6 py-10 md:flex-row md:items-center md:justify-between">
       <!-- Left: Brand -->
       <a href={`/${lang}/`} class="inline-flex items-center gap-2">
         <!-- Left: Name -->
@@ -162,9 +158,7 @@ const email = "raulgarciabalongoes@gmail.com";
     <div
       class="border-t border-gray-200 dark:border-white/10 py-6 text-center text-base md:text-lg text-gray-500 dark:text-slate-400"
     >
-      © {new Date().getFullYear()} Raúl García Balongo. {
-        t(lang, "footer.rights")
-      }
+      © {new Date().getFullYear()} Raúl García Balongo. {t(lang, "footer.rights")}
     </div>
   </div>
 </footer>

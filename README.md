@@ -22,10 +22,10 @@ npm run dev
 
 ## Scripts
 
-| Command | Description |
-| ------- | ----------- |
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start development server |
+| `npm run build`   | Build for production     |
 | `npm run preview` | Preview production build |
 
 ## Project Structure
@@ -72,6 +72,7 @@ src/
 The portfolio is deployed using **GitHub Pages** and built as a fully static site via Astro.
 
 It uses a language-prefixed routing structure (`/en`, `/es`) and includes SEO best practices:
+
 - Canonical URLs
 - Language alternates (`hreflang`)
 - Open Graph and Twitter metadata

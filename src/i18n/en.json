@@ -96,10 +96,6 @@
   "experience.title": "Experience",
   "experience.subtitle": "Professional experience, academic projects, education, certifications, and research activities.",
 
-
-
-
-
   "experience.items.paper.title": "Research Paper in Progress",
   "experience.items.paper.subtitle": "Based on my Final Degree Project",
   "experience.items.paper.period": "Oct. 2025 – Present",
@@ -110,7 +106,6 @@
   "experience.items.mda.subtitle": "University of Málaga · Final Degree Project",
   "experience.items.mda.period": "Jan. 2025 – Sept. 2025",
   "experience.items.mda.desc": "Development of a Moodle data analysis tool focused on academic data visualization and decision support through interactive dashboards and exportable reports.",
-
 
   "experience.items.dekra.title": "DEKRA Digital & Product Solutions",
   "experience.items.dekra.subtitle": "Internship",
@@ -127,19 +122,11 @@
   "experience.items.bach.period": "2018 – 2020",
   "experience.items.bach.desc": "Education focused on mathematics, logical thinking, and structured problem solving, providing the foundation for my later studies in computer science engineering.",
 
-  
-  
   "experience.gradeLabel": "Grade:",
   "common.logo": "logo",
   "experience.research.title": "Research Paper",
   "experience.research.desc": "I am currently collaborating on the preparation of a scientific article based on my Final Degree Project, with the goal of submitting it to a journal or conference focused on educational technology and data analysis.",
-  
-  
-  
-  
-  
-  
-  
+
   "projects.badge.public": "Public",
 
   "projects.moodle.title": "Moodle Data Analyzer",
@@ -148,15 +135,12 @@
 
   "projects.moodle.desc": "Google Chrome extension that extracts, processes, and visualizes Moodle academic data through DOM scraping, transforming participation and performance metrics into interactive dashboards and exportable reports to support educational analysis and decision-making.",
 
-
   "projects.tech.agile": "Agile methodologies",
 
   "projects.portfolio.title": "Personal Portfolio Website",
 
   "projects.portfolio.desc": "Multilingual portfolio website designed to showcase my professional profile, experience, and projects through a modern frontend architecture, interactive visualizations, and an interface optimized for clarity, performance, and usability.",
 
-  
-  
   "projects.screenshot": "screenshot",
   "projects.prevImage": "Previous image",
   "projects.nextImage": "Next image",
@@ -168,12 +152,6 @@
 
   "projects.linkedin.title": "LinkedIn job market analysis",
   "projects.linkedin.desc": "End-to-end analysis of a large-scale dataset of LinkedIn job postings (2023–2024), aimed at extracting insights on job demand, skills, locations, work modalities, and salary patterns using workflows typical of business analytics environments.",
-
-
-
-
-
-
 
   "snapshot.role.label": "Profile",
   "snapshot.role.value": "Data · AI · Full-stack",
@@ -188,10 +166,10 @@
   "hero.description": "I design data-driven software solutionsto help make better decisions.",
 
   "highlights.growth.title": "How I work",
-"highlights.growth.desc": "Continuous learning and adaptation to new technologies in real projects.",
+  "highlights.growth.desc": "Continuous learning and adaptation to new technologies in real projects.",
 
-"highlights.enjoy.title": "What I build",
-"highlights.enjoy.desc": "Data-driven tools that improve products and decision-making.",
+  "highlights.enjoy.title": "What I build",
+  "highlights.enjoy.desc": "Data-driven tools that improve products and decision-making.",
 
   "highlights.stack.title": "Tech Stack",
   "metrics.title": "Highlights",
@@ -216,11 +194,10 @@
   "keyTech.title": "Key Technologies",
 
   "keyTech.data.title": "Data & Analytics",
-  
 
   "keyTech.additional": "Additional tools",
   "keyTech.dev.title": "Development & Tooling",
-  
+
   "reviews.title": "Professional Feedback",
   "reviews.subtitle": "A couple of words from supervisors and mentors who followed my work in real projects.",
   "reviews.viewLinkedIn": "View on LinkedIn",
@@ -236,41 +213,35 @@
   "about.hero.intro": "I’m ",
   "about.hero.role": "Computer Science Engineer",
 
-
-
   "home.hero.title": "Turning data into decisions and ideas into reliable products",
-
-
 
   "home.hero.subtitle": "Computer Science Engineer focused on data analysis and building practical solutions for better decision-making.",
 
-"home.hero.bullets.1.before": "Strong foundation in",
-"home.hero.bullets.1.highlight": "mathematics, statistics, and logical reasoning",
+  "home.hero.bullets.1.before": "Strong foundation in",
+  "home.hero.bullets.1.highlight": "mathematics, statistics, and logical reasoning",
 
-"home.hero.bullets.2.before": "Experience with",
-"home.hero.bullets.2.tech": "Python, SQL, Spark, Power BI and Tableau",
-"home.hero.bullets.2.middle": "and cloud platforms like",
-"home.hero.bullets.2.cloud": "Azure",
+  "home.hero.bullets.2.before": "Experience with",
+  "home.hero.bullets.2.tech": "Python, SQL, Spark, Power BI and Tableau",
+  "home.hero.bullets.2.middle": "and cloud platforms like",
+  "home.hero.bullets.2.cloud": "Azure",
 
-"home.hero.bullets.3.before": "Teamwork with",
-"home.hero.bullets.3.highlight": "agile methodologies",
-"home.hero.bullets.3.after": "and clean, maintainable code.",
+  "home.hero.bullets.3.before": "Teamwork with",
+  "home.hero.bullets.3.highlight": "agile methodologies",
+  "home.hero.bullets.3.after": "and clean, maintainable code.",
 
-"home.traits.curiosity.title": "Curiosity",
-"home.traits.curiosity.beforeWhy": "",
-"home.traits.curiosity.why": "Understanding the “why” behind data",
-"home.traits.curiosity.afterWhy": " and identifying patterns.",
+  "home.traits.curiosity.title": "Curiosity",
+  "home.traits.curiosity.beforeWhy": "",
+  "home.traits.curiosity.why": "Understanding the “why” behind data",
+  "home.traits.curiosity.afterWhy": " and identifying patterns.",
 
-"home.traits.criticalThinking.title": "Critical thinking",
-"home.traits.criticalThinking.before": "",
-"home.traits.criticalThinking.highlight": "Challenging assumptions and validating conclusions with data",
+  "home.traits.criticalThinking.title": "Critical thinking",
+  "home.traits.criticalThinking.before": "",
+  "home.traits.criticalThinking.highlight": "Challenging assumptions and validating conclusions with data",
 
-"home.traits.communication.title": "Communication",
-"home.traits.communication.before": "",
-"home.traits.communication.highlight": "Turning technical analysis into clear insights",
-"home.traits.communication.after": " for better decisions.",
-
-
+  "home.traits.communication.title": "Communication",
+  "home.traits.communication.before": "",
+  "home.traits.communication.highlight": "Turning technical analysis into clear insights",
+  "home.traits.communication.after": " for better decisions.",
 
   "home.next.title": "Where I’m heading next",
 

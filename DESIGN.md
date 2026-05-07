@@ -51,9 +51,9 @@
 
 - **Structure**: Wrapper with translucent background (`bg-white/60 dark:bg-white/5`) + subtle border + soft shadow. Hover: lift + shadow increase.
 - **Types**:
-  - *Info cards*: Title + short description (1–2 lines). No hover interaction beyond lift.
-  - *Interactive cards*: Title + description + link/button. Hover shows clickable affordance (border color change + lift).
-  - *Stat cards*: Number prominent + label below.
+  - _Info cards_: Title + short description (1–2 lines). No hover interaction beyond lift.
+  - _Interactive cards_: Title + description + link/button. Hover shows clickable affordance (border color change + lift).
+  - _Stat cards_: Number prominent + label below.
 - **Rule**: If you have more than 4 cards in a row, enable filtering or grouping; don't stack 10+ identical cards.
 
 ### Navigation
@@ -141,4 +141,4 @@
 
 ---
 
-*Last reviewed: May 2026*
+_Last reviewed: May 2026_

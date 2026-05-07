@@ -57,7 +57,6 @@ const pageSeo = {
 
     <!-- TIMELINE -->
     <section class="space-y-8">
-
       <!-- Timeline -->
       <div class="relative">
         <!-- Vertical line -->
@@ -158,12 +157,7 @@ const pageSeo = {
                 grade: "8/10",
                 logo: "/assets/images/LogoTorreAlmirante.png",
                 descKey: "experience.items.bach.desc",
-                tags: [
-                  "Logical Thinking",
-                  "Mathematics",
-                  "Problem Solving",
-                  "Foundations",
-                ],
+                tags: ["Logical Thinking", "Mathematics", "Problem Solving", "Foundations"],
               },
             ].map((item, idx) => (
               <Reveal delay={80 + idx * 60}>
@@ -229,9 +223,7 @@ const pageSeo = {
                             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
                               {t(lang, "experience.gradeLabel")}{" "}
                               <span class="font-medium text-gray-700 dark:text-gray-200">
-                                {item.gradeKey
-                                  ? t(lang, item.gradeKey)
-                                  : item.grade}
+                                {item.gradeKey ? t(lang, item.gradeKey) : item.grade}
                               </span>
                             </p>
                           </div>
@@ -306,9 +298,7 @@ const pageSeo = {
                             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
                               {t(lang, "experience.gradeLabel")}{" "}
                               <span class="font-medium text-gray-700 dark:text-gray-200">
-                                {item.gradeKey
-                                  ? t(lang, item.gradeKey)
-                                  : item.grade}
+                                {item.gradeKey ? t(lang, item.gradeKey) : item.grade}
                               </span>
                             </p>
                           </div>
@@ -362,10 +352,8 @@ const pageSeo = {
 
       <!-- Content -->
       <Reveal delay={160}>
-        <div
-          class="rounded-xl border border-gray-200 dark:border-gray-700
-             p-7 md:p-8"
-        >
+        <div class="rounded-xl border border-gray-200 dark:border-gray-700
+             p-7 md:p-8">
           <p
             class="text-base md:text-lg
                leading-relaxed
@@ -381,17 +369,12 @@ const pageSeo = {
     <section class="space-y-6">
       <!-- Section header -->
       <Reveal as="header" class="space-y-3" delay={0}>
-        <h2
-          class="text-2xl md:text-3xl font-semibold text-emerald-500 tracking-tight"
-        >
+        <h2 class="text-2xl md:text-3xl font-semibold text-emerald-500 tracking-tight">
           {t(lang, "projects.featured.title")}
         </h2>
 
         <Reveal delay={80}>
-          <div
-            class="h-0.5 w-16 bg-linear-to-r from-emerald-400 to-teal-400 rounded-full"
-          >
-          </div>
+          <div class="h-0.5 w-16 bg-linear-to-r from-emerald-400 to-teal-400 rounded-full"></div>
         </Reveal>
       </Reveal>
 
@@ -462,8 +445,7 @@ const pageSeo = {
 
                 tech: "Python · Pandas · SQL · Matplotlib · Seaborn",
                 demoUrl: "#",
-                repoUrl:
-                  "https://github.com/Raulgb4/linkedin-job-market-analysis",
+                repoUrl: "https://github.com/Raulgb4/linkedin-job-market-analysis",
               },
             ]
               .slice(0, 3)
@@ -493,18 +475,16 @@ const pageSeo = {
                             data-carousel-track
                             style="transform: translateX(0%)"
                           >
-                            {(p.covers ?? [p.cover].filter(Boolean)).map(
-                              (src, i) => (
-                                <div class="h-full w-full shrink-0 bg-slate-900">
-                                  <img
-                                    src={src}
-                                    alt={`${p.title} ${t(lang, "projects.screenshot")} ${i + 1}`}
-                                    class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
-                                    loading="lazy"
-                                  />
-                                </div>
-                              ),
-                            )}
+                            {(p.covers ?? [p.cover].filter(Boolean)).map((src, i) => (
+                              <div class="h-full w-full shrink-0 bg-slate-900">
+                                <img
+                                  src={src}
+                                  alt={`${p.title} ${t(lang, "projects.screenshot")} ${i + 1}`}
+                                  class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                                  loading="lazy"
+                                />
+                              </div>
+                            ))}
                           </div>
 
                           {/* Overlay */}
@@ -564,16 +544,9 @@ const pageSeo = {
 
                             {(p.institution || p.type) && (
                               <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">
-                                {p.institution && (
-                                  <span class="font-medium">
-                                    {p.institution}
-                                  </span>
-                                )}
+                                {p.institution && <span class="font-medium">{p.institution}</span>}
                                 {p.type && (
-                                  <span class="text-gray-500 dark:text-gray-400">
-                                    {" "}
-                                    · {p.type}
-                                  </span>
+                                  <span class="text-gray-500 dark:text-gray-400"> · {p.type}</span>
                                 )}
                               </p>
                             )}
@@ -638,7 +611,7 @@ const pageSeo = {
                                   hover:shadow-emerald-500/20
                                   hover:-translate-y-0.5"
                           >
-                            <!-- GitHub icon -->
+                            {/* GitHub icon */}
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 24 24"
@@ -650,7 +623,7 @@ const pageSeo = {
                                 fill-rule="evenodd"
                                 clip-rule="evenodd"
                                 d="M12 2C6.477 2 2 6.58 2 12.238c0 4.525 2.865 8.362 6.839 9.718.5.096.682-.22.682-.487 0-.241-.009-.88-.013-1.728-2.782.62-3.369-1.37-3.369-1.37-.455-1.183-1.11-1.498-1.11-1.498-.907-.637.069-.624.069-.624 1.003.073 1.531 1.056 1.531 1.056.892 1.563 2.341 1.112 2.91.85.091-.667.349-1.112.635-1.368-2.22-.26-4.555-1.14-4.555-5.071 0-1.12.39-2.036 1.03-2.754-.103-.26-.447-1.309.098-2.729 0 0 .84-.275 2.75 1.052A9.33 9.33 0 0112 6.844c.85.004 1.705.118 2.505.345 1.909-1.327 2.748-1.052 2.748-1.052.546 1.42.202 2.469.1 2.729.64.718 1.028 1.634 1.028 2.754 0 3.942-2.339 4.808-4.566 5.063.359.316.678.94.678 1.894 0 1.368-.013 2.472-.013 2.808 0 .269.18.588.688.486C19.137 20.596 22 16.76 22 12.238 22 6.58 17.523 2 12 2z"
-                              ></path>
+                              />
                             </svg>
 
                             <span>{t(lang, "projects.repository")}</span>
@@ -705,8 +678,7 @@ const pageSeo = {
         const b = document.createElement("button");
         b.type = "button";
         b.setAttribute("aria-label", `Go to image ${i + 1}`);
-        b.className =
-          "h-2 w-2 rounded-full border border-white/20 transition-all duration-200";
+        b.className = "h-2 w-2 rounded-full border border-white/20 transition-all duration-200";
         b.addEventListener("click", () => goTo(i));
         dotsWrap.appendChild(b);
         dots.push(b);
