@@ -131,20 +131,25 @@
   "common.logo": "logo",
   "experience.research.title": "Artículo científico",
   "experience.research.desc": "Actualmente colaboro en la preparación de un artículo científico basado en mi Trabajo de Fin de Grado, con el objetivo de enviarlo a una revista o conferencia centrada en tecnología educativa y análisis de datos.",
+  
+  
+  
+  
+  
   "projects.badge.public": "Público",
 
   "projects.moodle.title": "Moodle Data Analyzer",
   "projects.moodle.institution": "Universidad de Málaga",
   "projects.moodle.type": "Trabajo de Fin de Grado",
+  "projects.moodle.desc": "Extensión para Google Chrome que extrae, procesa y visualiza datos académicos de Moodle mediante scraping del DOM, transformando métricas de participación y rendimiento en dashboards interactivos y reportes exportables para facilitar el análisis y la toma de decisiones educativas.",
 
-  "projects.moodle.desc.short": "Herramienta de análisis de datos basada en navegador que extrae, procesa y visualiza datos académicos de Moodle, transformando datos en bruto en gráficas atractivas.",
-
-  "projects.moodle.desc.long": "Diseño y desarrollo de una herramienta de análisis de datos basada en navegador para la extracción, procesamiento y visualización de datos académicos de Moodle, orientada a apoyar la toma de decisiones basada en datos en contextos educativos. Aplicación de técnicas de extracción de datos, procesamiento analítico y flujos de análisis para transformar datos en bruto en información estructurada y paneles interactivos. Generación de informes analíticos exportables en formatos PDF, CSV y DOCX, facilitando una interpretación clara y un uso práctico de los resultados. Fuerte enfoque en visualización de datos y data storytelling para comunicar claramente patrones de uso, participación y rendimiento académico. Uso de React, Webpack, Chart.js, TailwindCSS, Docker y metodologías ágiles en el desarrollo de la solución. Preparación de un artículo científico actualmente en curso, reforzando la relevancia analítica y el impacto práctico del proyecto en el ámbito de la analítica educativa.",
-
+  
   "projects.tech.agile": "Metodologías ágiles",
 
   "projects.portfolio.title": "Sitio web de portafolio personal",
-  "projects.portfolio.desc": "Sitio web de portafolio personal diseñado para presentar mi perfil profesional, experiencia y proyectos con una interfaz limpia y moderna, con un fuerte enfoque en claridad, estructura y usabilidad.",
+  "projects.portfolio.desc": "Portfolio web multilingüe diseñado para presentar mi perfil profesional, experiencia y proyectos mediante una arquitectura frontend moderna, visualizaciones interactivas y una interfaz optimizada para claridad, rendimiento y usabilidad.",
+  
+  
   "projects.screenshot": "captura",
   "projects.prevImage": "Imagen anterior",
   "projects.nextImage": "Imagen siguiente",
@@ -153,8 +158,12 @@
   "projects.repository": "Repositorio",
   "projects.featured.title": "Proyectos destacados",
   "projects.featured.subtitle": "Una selección de proyectos donde apliqué datos, ingeniería y visualización para resolver problemas reales.",
+
   "projects.linkedin.title": "Análisis del mercado laboral en LinkedIn",
   "projects.linkedin.desc": "Análisis de un conjunto de datos a gran escala de ofertas de empleo publicadas en LinkedIn (2023–2024), orientado a extraer insights sobre demanda laboral, habilidades, ubicaciones, modalidades de trabajo y patrones salariales mediante flujos de análisis propios de entornos de business analytics.",
+
+
+
 
   "snapshot.role.label": "Perfil",
   "snapshot.role.value": "Datos · IA · Full-stack",

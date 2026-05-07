@@ -126,20 +126,30 @@
   "common.logo": "logo",
   "experience.research.title": "Research Paper",
   "experience.research.desc": "I am currently collaborating on the preparation of a scientific article based on my Final Degree Project, with the goal of submitting it to a journal or conference focused on educational technology and data analysis.",
+  
+  
+  
+  
+  
+  
+  
   "projects.badge.public": "Public",
 
   "projects.moodle.title": "Moodle Data Analyzer",
   "projects.moodle.institution": "University of Málaga",
   "projects.moodle.type": "Final Degree Project",
 
-  "projects.moodle.desc.short": "Browser-based data analysis tool that extracts, processes, and visualizes academic data from Moodle, transforming raw data into actionable insights and analytical dashboards.",
+  "projects.moodle.desc": "Google Chrome extension that extracts, processes, and visualizes Moodle academic data through DOM scraping, transforming participation and performance metrics into interactive dashboards and exportable reports to support educational analysis and decision-making.",
 
-  "projects.moodle.desc.long": "Design and development of a browser-based data analysis tool for the extraction, processing, and visualization of academic data from Moodle, aimed at supporting data-driven decision-making in educational contexts. Application of data extraction techniques, analytical processing, and analysis workflows to transform raw data into structured information and interactive dashboards. Generation of exportable analytical reports in PDF, CSV, and DOCX formats, enabling clear interpretation and practical use of results. Strong focus on data visualization and storytelling to clearly communicate usage patterns, participation, and academic performance. Use of React, Webpack, Chart.js, TailwindCSS, Docker, and agile methodologies in the development of the solution. Preparation of a scientific article currently in progress, reinforcing the analytical relevance and practical impact of the project in the field of educational analytics.",
 
   "projects.tech.agile": "Agile methodologies",
 
   "projects.portfolio.title": "Personal Portfolio Website",
-  "projects.portfolio.desc": "Personal portfolio website designed to present my professional profile, experience, and projects with a clean, modern interface and a strong focus on clarity, structure, and usability.",
+
+  "projects.portfolio.desc": "Multilingual portfolio website designed to showcase my professional profile, experience, and projects through a modern frontend architecture, interactive visualizations, and an interface optimized for clarity, performance, and usability.",
+  
+  
+  
   "projects.screenshot": "screenshot",
   "projects.prevImage": "Previous image",
   "projects.nextImage": "Next image",
@@ -151,6 +161,12 @@
 
   "projects.linkedin.title": "LinkedIn job market analysis",
   "projects.linkedin.desc": "End-to-end analysis of a large-scale dataset of LinkedIn job postings (2023–2024), aimed at extracting insights on job demand, skills, locations, work modalities, and salary patterns using workflows typical of business analytics environments.",
+
+
+
+
+
+
 
   "snapshot.role.label": "Profile",
   "snapshot.role.value": "Data · AI · Full-stack",
