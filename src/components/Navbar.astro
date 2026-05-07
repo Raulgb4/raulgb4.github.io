@@ -25,14 +25,14 @@ const linkClass = (path: string) =>
   client-side toggling logic.
 --><!-- Mobile dropdown --><!-- Mobile menu backdrop -->
 <div
-  class="lg:hidden fixed inset-0 z-[110] hidden bg-black/50"
+  class="lg:hidden fixed inset-0 z-110 hidden bg-black/50"
   data-mobile-backdrop
   aria-hidden="true"
 >
 </div>
 <div
   id="mobile-nav"
-  class="lg:hidden fixed inset-x-4 top-16 z-[120] hidden
+  class="lg:hidden fixed inset-x-4 top-16 z-120 hidden
          max-h-[calc(100vh-5rem)] overflow-auto
          rounded-2xl border border-gray-200/70 dark:border-white/10
          bg-white dark:bg-slate-900
@@ -97,7 +97,7 @@ const linkClass = (path: string) =>
 
 <nav
   data-navbar
-  class="sticky top-0 z-[100] relative isolate w-full border-b
+  class="sticky top-0 z-100 isolate w-full border-b
          border-gray-200 dark:border-gray-700
          bg-transparent transition-colors duration-200"
 >
@@ -416,38 +416,44 @@ const linkClass = (path: string) =>
 
       <script>
         function initThemeToggle() {
-          const btn = document.querySelector("[data-theme-toggle]");
-          if (!btn || btn.dataset.bound === "true") return;
-          btn.dataset.bound = "true";
+  const btn = document.querySelector("[data-theme-toggle]");
 
-          const root = document.documentElement;
-          const darkIcon = btn.querySelector('[data-theme-icon="dark"]');
-          const lightIcon = btn.querySelector('[data-theme-icon="light"]');
+  if (!(btn instanceof HTMLElement)) return;
+  if (btn.dataset.bound === "true") return;
 
-          const updateButton = () => {
-            const isDark = root.classList.contains("dark");
-            const label = isDark ? btn.dataset.labelLight : btn.dataset.labelDark;
+  btn.dataset.bound = "true";
 
-            btn.setAttribute("aria-pressed", isDark ? "true" : "false");
-            if (label) {
-              btn.setAttribute("aria-label", label);
-              btn.setAttribute("title", label);
-            }
+  const root = document.documentElement;
+  const darkIcon = btn.querySelector('[data-theme-icon="dark"]');
+  const lightIcon = btn.querySelector('[data-theme-icon="light"]');
 
-            darkIcon?.classList.toggle("hidden", isDark);
-            lightIcon?.classList.toggle("hidden", !isDark);
-          };
+  const updateButton = () => {
+    const isDark = root.classList.contains("dark");
+    const label = isDark ? btn.dataset.labelLight : btn.dataset.labelDark;
 
-          btn.addEventListener("click", () => {
-            const nextTheme = root.classList.contains("dark") ? "light" : "dark";
-            root.classList.toggle("dark", nextTheme === "dark");
-            root.style.colorScheme = nextTheme;
-            localStorage.setItem("theme", nextTheme);
-            updateButton();
-          });
+    btn.setAttribute("aria-pressed", isDark ? "true" : "false");
 
-          updateButton();
-        }
+    if (label) {
+      btn.setAttribute("aria-label", label);
+      btn.setAttribute("title", label);
+    }
+
+    darkIcon?.classList.toggle("hidden", isDark);
+    lightIcon?.classList.toggle("hidden", !isDark);
+  };
+
+  btn.addEventListener("click", () => {
+    const nextTheme = root.classList.contains("dark") ? "light" : "dark";
+
+    root.classList.toggle("dark", nextTheme === "dark");
+    root.style.colorScheme = nextTheme;
+    localStorage.setItem("theme", nextTheme);
+
+    updateButton();
+  });
+
+  updateButton();
+}
 
         document.addEventListener("DOMContentLoaded", initThemeToggle);
         document.addEventListener("astro:page-load", initThemeToggle);

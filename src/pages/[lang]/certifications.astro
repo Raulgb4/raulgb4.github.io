@@ -470,9 +470,9 @@ const certifications = [
                 <!-- Blur layer iOS-safe -->
                 <div
                   class="absolute inset-0 -z-10 rounded-2xl pointer-events-none
-             supports-[backdrop-filter]:backdrop-blur
-             supports-[backdrop-filter]:bg-white/30
-             supports-[backdrop-filter]:dark:bg-white/5"
+             supports-backdrop-filter:backdrop-blur
+             supports-backdrop-filter:bg-white/30
+             supports-backdrop-filter:dark:bg-white/5"
                 ></div>
                 {/* Top row: provider + date + badge */}
                 <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 min-w-0">
@@ -517,8 +517,7 @@ const certifications = [
                 {/* Title */}
                 <h3
                   class="mt-5 text-xl sm:text-2xl font-semibold tracking-tight
-                         text-gray-900 dark:text-white
-                         break-words [overflow-wrap:anywhere] hyphens-auto"
+                         text-gray-900 dark:text-white wrap-anywhere hyphens-auto"
                 >
                   {c.title}
                 </h3>
@@ -526,8 +525,7 @@ const certifications = [
                 {/* Description */}
                 <p
                   class="mt-4 text-base sm:text-lg leading-relaxed
-                         text-gray-600 dark:text-gray-300
-                         break-words [overflow-wrap:anywhere]"
+                         text-gray-600 dark:text-gray-300 wrap-anywhere"
                 >
                   {c.description}
                 </p>
