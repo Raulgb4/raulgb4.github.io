@@ -307,11 +307,16 @@ const locationText = "Urb. La Cornisa, Avd. Europa, 11204, Algeciras, Cádiz, Sp
   <script>
     function initCopyEmail() {
       const button = document.querySelector("[data-copy-email]");
-      if (!button || button.dataset.bound === "true") return;
+
+      if (!(button instanceof HTMLElement)) return;
+      if (button.dataset.bound === "true") return;
+
       button.dataset.bound = "true";
 
       const defaultLabel = button.dataset.copyLabel || button.textContent || "Copy email";
+
       const copiedLabel = button.dataset.copiedLabel || "Email copied";
+
       const email = button.dataset.email;
 
       button.addEventListener("click", async () => {
@@ -319,7 +324,9 @@ const locationText = "Urb. La Cornisa, Avd. Europa, 11204, Algeciras, Cádiz, Sp
 
         try {
           await navigator.clipboard.writeText(email);
+
           button.textContent = copiedLabel;
+
           window.setTimeout(() => {
             button.textContent = defaultLabel;
           }, 1800);
